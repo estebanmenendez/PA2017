@@ -11,7 +11,7 @@
  * Created on 9 de junio de 2017, 06:33 PM
  */
 
-#include "departamento.h"
+#include "Departamento.h"
 
 departamento::departamento() {
 }

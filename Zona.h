@@ -5,7 +5,7 @@
  */
 
 /* 
- * File:   zona.h
+ * File:   Zona.h
  * Author: lucia
  *
  * Created on 9 de junio de 2017, 06:45 PM
@@ -13,26 +13,30 @@
 #include <string.h>
 #include <stdio.h>
 #include <iostream>
-#include "propiedad.h"
+#include"ICollectible.h"
+#include "Propiedad.h"
+#include"Usuarios.h"
+#include"dtZonas.h"
+#include"dtPropiedadApto.h"
 
 #ifndef ZONA_H
 #define ZONA_H
 
 using namespace std;
 
-class zona {
+class Zona: public ICollectible {
 public:
-    zona();
-    zona(const zona& orig);
-    virtual ~zona();
+    Zona();
+    Zona(const Zona& orig);
+    virtual ~Zona();
     
-    dtZona** getZona();
-    dtPropZona** getPropZonaDpto(usuario inmobiliaria);
-    propiedad getPropiedad();
+    dtZonas** getZona();
+    dtPropZona** getPropZonaDpto(Usuarios inmobiliaria);
+    Propiedad getPropiedad();
 private:
     string codigoZona;
     string nombreZona;
-    propiedad* propiedad;
+    Propiedad* Propiedad;
 };
 
 #endif /* ZONA_H */

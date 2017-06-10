@@ -36,6 +36,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/Administrador.o \
+	${OBJECTDIR}/Apartamento.o \
+	${OBJECTDIR}/Casa.o \
 	${OBJECTDIR}/Edificio.o \
 	${OBJECTDIR}/ICollectible.o \
 	${OBJECTDIR}/IDictionary.o \
@@ -51,18 +53,26 @@ OBJECTFILES= \
 	${OBJECTDIR}/Nodo.o \
 	${OBJECTDIR}/NodoDicc.o \
 	${OBJECTDIR}/Par.o \
+	${OBJECTDIR}/Propiedad.o \
 	${OBJECTDIR}/Usuarios.o \
-	${OBJECTDIR}/apartamento.o \
-	${OBJECTDIR}/casa.o \
+	${OBJECTDIR}/Zona.o \
 	${OBJECTDIR}/departamento.o \
+	${OBJECTDIR}/dtConversaInmobiliaria.o \
 	${OBJECTDIR}/dtDepartamento.o \
 	${OBJECTDIR}/dtDireccion.o \
 	${OBJECTDIR}/dtEdificio.o \
+	${OBJECTDIR}/dtFecha.o \
+	${OBJECTDIR}/dtHora.o \
+	${OBJECTDIR}/dtMensajes.o \
+	${OBJECTDIR}/dtPropiedadApto.o \
+	${OBJECTDIR}/dtPropiedadCasa.o \
+	${OBJECTDIR}/dtPropiedadDsiponible.o \
+	${OBJECTDIR}/dtPropiedadInmobiliaria.o \
+	${OBJECTDIR}/dtPropiedadMensaje.o \
+	${OBJECTDIR}/dtReporteInmobiliaria.o \
 	${OBJECTDIR}/dtZonas.o \
 	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/propiedad.o \
-	${OBJECTDIR}/sistema.o \
-	${OBJECTDIR}/zona.o
+	${OBJECTDIR}/sistema.o
 
 
 # C Compiler Flags
@@ -83,16 +93,26 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/pa3
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/progavanzada2017
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/pa3: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/progavanzada2017: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/pa3 ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/progavanzada2017 ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/Administrador.o: Administrador.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Administrador.o Administrador.cpp
+
+${OBJECTDIR}/Apartamento.o: Apartamento.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Apartamento.o Apartamento.cpp
+
+${OBJECTDIR}/Casa.o: Casa.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Casa.o Casa.cpp
 
 ${OBJECTDIR}/Edificio.o: Edificio.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -169,25 +189,30 @@ ${OBJECTDIR}/Par.o: Par.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Par.o Par.cpp
 
+${OBJECTDIR}/Propiedad.o: Propiedad.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Propiedad.o Propiedad.cpp
+
 ${OBJECTDIR}/Usuarios.o: Usuarios.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Usuarios.o Usuarios.cpp
 
-${OBJECTDIR}/apartamento.o: apartamento.cpp
+${OBJECTDIR}/Zona.o: Zona.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/apartamento.o apartamento.cpp
-
-${OBJECTDIR}/casa.o: casa.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/casa.o casa.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Zona.o Zona.cpp
 
 ${OBJECTDIR}/departamento.o: departamento.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/departamento.o departamento.cpp
+
+${OBJECTDIR}/dtConversaInmobiliaria.o: dtConversaInmobiliaria.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/dtConversaInmobiliaria.o dtConversaInmobiliaria.cpp
 
 ${OBJECTDIR}/dtDepartamento.o: dtDepartamento.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -204,6 +229,51 @@ ${OBJECTDIR}/dtEdificio.o: dtEdificio.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/dtEdificio.o dtEdificio.cpp
 
+${OBJECTDIR}/dtFecha.o: dtFecha.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/dtFecha.o dtFecha.cpp
+
+${OBJECTDIR}/dtHora.o: dtHora.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/dtHora.o dtHora.cpp
+
+${OBJECTDIR}/dtMensajes.o: dtMensajes.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/dtMensajes.o dtMensajes.cpp
+
+${OBJECTDIR}/dtPropiedadApto.o: dtPropiedadApto.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/dtPropiedadApto.o dtPropiedadApto.cpp
+
+${OBJECTDIR}/dtPropiedadCasa.o: dtPropiedadCasa.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/dtPropiedadCasa.o dtPropiedadCasa.cpp
+
+${OBJECTDIR}/dtPropiedadDsiponible.o: dtPropiedadDsiponible.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/dtPropiedadDsiponible.o dtPropiedadDsiponible.cpp
+
+${OBJECTDIR}/dtPropiedadInmobiliaria.o: dtPropiedadInmobiliaria.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/dtPropiedadInmobiliaria.o dtPropiedadInmobiliaria.cpp
+
+${OBJECTDIR}/dtPropiedadMensaje.o: dtPropiedadMensaje.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/dtPropiedadMensaje.o dtPropiedadMensaje.cpp
+
+${OBJECTDIR}/dtReporteInmobiliaria.o: dtReporteInmobiliaria.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/dtReporteInmobiliaria.o dtReporteInmobiliaria.cpp
+
 ${OBJECTDIR}/dtZonas.o: dtZonas.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -214,20 +284,10 @@ ${OBJECTDIR}/main.o: main.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
-${OBJECTDIR}/propiedad.o: propiedad.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/propiedad.o propiedad.cpp
-
 ${OBJECTDIR}/sistema.o: sistema.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/sistema.o sistema.cpp
-
-${OBJECTDIR}/zona.o: zona.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/zona.o zona.cpp
 
 # Subprojects
 .build-subprojects:

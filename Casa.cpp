@@ -5,20 +5,20 @@
  */
 
 /* 
- * File:   casa.cpp
+ * File:   Casa.cpp
  * Author: lucia
  * 
  * Created on 9 de junio de 2017, 07:06 PM
  */
 
-#include "casa.h"
+#include "Casa.h"
 
-casa::casa() {
+Casa::Casa() {
 }
 
-casa::casa(const casa& orig) {
+Casa::Casa(const Casa& orig) {
 }
 
-casa::~casa() {
+Casa::~Casa() {
 }
 

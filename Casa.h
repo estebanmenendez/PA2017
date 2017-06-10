@@ -5,21 +5,21 @@
  */
 
 /* 
- * File:   casa.h
+ * File:   Casa.h
  * Author: lucia
  *
  * Created on 9 de junio de 2017, 07:06 PM
  */
-#include "propiedad.h"
+#include "Propiedad.h"
 
 #ifndef CASA_H
 #define CASA_H
 
-class casa: public propiedad  {
+class Casa: public Propiedad  {
 public:
-    casa();
-    casa(const casa& orig);
-    virtual ~casa();
+    Casa();
+    Casa(const Casa& orig);
+    virtual ~Casa();
     void esCasa();
     void esApto();
     

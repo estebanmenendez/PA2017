@@ -25,7 +25,11 @@ public:
     dtDepartamento(const dtDepartamento& orig);
     virtual ~dtDepartamento();
     dtDepartamento(string letraDepartamento, string nombreDepartamento);
-      
+    dtDepartamento seleccionaDepartamento(string letraDepartamento);
+    dtDepartamento** listarDepartamento();
+    
+    string getletraDepartamento() const;
+    string getnombreDepartamento() const;    
    
     
     

@@ -10,16 +10,16 @@
  *
  * Created on 9 de junio de 2017, 07:06 PM
  */
-#include "propiedad.h"
+#include "Propiedad.h"
 
 #ifndef APARTAMENTO_H
 #define APARTAMENTO_H
 
-class apartamento: public propiedad {
+class Apartamento: public Propiedad {
 public:
-    apartamento();
-    apartamento(const apartamento& orig);
-    virtual ~apartamento();
+    Apartamento();
+    Apartamento(const Apartamento& orig);
+    virtual ~Apartamento();
     
     void esCasa();
     void esApto();

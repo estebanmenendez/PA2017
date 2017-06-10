@@ -22,10 +22,16 @@ using namespace std;
 class dtZonas {
 public:
     dtZonas();
-    dtZonas(string codigoZona, string nombreZona);
     dtZonas(const dtZonas& orig);
     virtual ~dtZonas();
-       
+    dtZonas(string codigoZona, string nombreZona);
+    dtZonas seleccionaZona(string codigoZona);
+    dtZonas** listaZonaDepartamento();
+    
+    
+     string getcodigoZona() const;
+     string getnombreZona() const; 
+    
 private:
     
     string codigoZona;

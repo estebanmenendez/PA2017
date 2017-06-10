@@ -15,13 +15,14 @@
 
 dtEdificio::dtEdificio() {
 }
-dtEdificio::dtEdificio(string nombreEdificio) {
-    this->nombreEdificio = nombreEdificio;
-}
 
 dtEdificio::dtEdificio(const dtEdificio& orig) {
 }
 
 dtEdificio::~dtEdificio() {
 }
+string dtEdificio::getnombreEdificio() const {
+    return this->nombreEdificio;
+}
+
 

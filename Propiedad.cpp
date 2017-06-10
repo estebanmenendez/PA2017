@@ -5,20 +5,20 @@
  */
 
 /* 
- * File:   propiedad.cpp
+ * File:   Propiedad.cpp
  * Author: lucia
  * 
  * Created on 9 de junio de 2017, 06:46 PM
  */
 
-#include "propiedad.h"
+#include "Propiedad.h"
 
-propiedad::propiedad() {
+Propiedad::Propiedad() {
 }
 
-propiedad::propiedad(const propiedad& orig) {
+Propiedad::Propiedad(const Propiedad& orig) {
 }
 
-propiedad::~propiedad() {
+Propiedad::~Propiedad() {
 }
 

@@ -22,12 +22,15 @@ using namespace std;
 class dtEdificio {
 public:
     dtEdificio();
-    dtEdificio(string nombreEdificio);
     dtEdificio(const dtEdificio& orig);
     virtual ~dtEdificio();
-   
+    dtEdificio (string nombreEdificio);
     
+    dtEdificio seleccionarEdificio(string nombreEdificio);
+    dtEdificio** listarEdificioZona();
+    void altaEdificio(string nombreEdificio);
     
+    string getnombreEdificio() const;    
     
     
     

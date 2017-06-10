@@ -16,14 +16,18 @@
 dtZonas::dtZonas() {
 }
 
-dtZonas::dtZonas(string codigoZona, string nombreZona) {
-    this->codigoZona = codigoZona;
-    this->nombreZona = nombreZona;
-}
-
 dtZonas::dtZonas(const dtZonas& orig) {
 }
 
 dtZonas::~dtZonas() {
 }
+
+string dtZonas::getcodigoZona() const {
+    return this->codigoZona;
+}
+
+string dtZonas::getnombreZona() const {
+    return this->nombreZona;
+}
+
 

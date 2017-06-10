@@ -5,7 +5,7 @@
  */
 
 /* 
- * File:   departamento.h
+ * File:   Departamento.h
  * Author: lucia
  *
  * Created on 9 de junio de 2017, 06:33 PM
@@ -13,29 +13,31 @@
 #include <string.h>
 #include <stdio.h>
 #include <iostream>
-#include "zona.h"
+#include "Zona.h"
+#include"dtZonas.h"
+#include"dtPropiedadApto.h"
 
 #ifndef DEPARTAMENTO_H
 #define DEPARTAMENTO_H
 
 using namespace std;
 
-class departamento {
+class Departamento {
 public:
-    departamento();
-    departamento(const departamento& orig);
-    virtual ~departamento();
+    Departamento();
+    Departamento(const Departamento& orig);
+    virtual ~Departamento();
     
-    dtZona** getZonas(d departamento);
-    Zona getZona(codigoZona string);
+    dtZonas** getZonas(Departamento);
+    Zona getZona(string);
     dtDepartamento getDatos();
-    dtPropEnDepto** getpropEnDepto(usuario inmobiliaria);
-    zona * getZona();
+    dtPropEnDepto** getpropEnDepto(Usuarios inmobiliaria);
+    Zona * getZona();
     
 private:
     string letraDpto;
     string nombreDpto;
-    zona* zona;
+    Zona* zona;
 
 };
 

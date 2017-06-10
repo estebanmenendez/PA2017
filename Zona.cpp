@@ -5,20 +5,20 @@
  */
 
 /* 
- * File:   zona.cpp
+ * File:   Zona.cpp
  * Author: lucia
  * 
  * Created on 9 de junio de 2017, 06:45 PM
  */
 
-#include "zona.h"
+#include "Zona.h"
 
-zona::zona() {
+Zona::Zona() {
 }
 
-zona::zona(const zona& orig) {
+Zona::Zona(const Zona& orig) {
 }
 
-zona::~zona() {
+Zona::~Zona() {
 }
 

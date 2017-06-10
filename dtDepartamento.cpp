@@ -27,4 +27,13 @@ dtDepartamento::dtDepartamento(const dtDepartamento& orig) {
 dtDepartamento::~dtDepartamento() {
 }
 
+string dtDepartamento::getletraDepartamento() const {
+    return this->letraDepartamento;
+}
+
+string dtDepartamento::getnombreDepartamento() const {
+    return this->nombreDepartamento;
+}
+
+
 

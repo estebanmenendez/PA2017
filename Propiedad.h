@@ -5,7 +5,7 @@
  */
 
 /* 
- * File:   propiedad.h
+ * File:   Propiedad.h
  * Author: lucia
  *
  * Created on 9 de junio de 2017, 06:46 PM
@@ -14,23 +14,29 @@
 #include <string.h>
 #include <stdio.h>
 #include <iostream>
+#include"ICollectible.h"
+#include "dtDireccion.h"
+#include"Usuarios.h"
+#include"dtPropiedadMensaje.h"
+#include"dtMensajes.h"
+#include"dtPropiedad"
 
 #ifndef PROPIEDAD_H
 #define PROPIEDAD_H
 
 using namespace std;
 
-class propiedad {
+class Propiedad :public ICollectible {
 public:
-    propiedad();
-    propiedad(const propiedad& orig);
-    virtual ~propiedad();
+    Propiedad();
+    Propiedad(const Propiedad& orig);
+    virtual ~Propiedad();
     
   void esCasa();
   void esApto();
-  bool perteneceInmobiliaria(usuario inmobiliaria);
-  dtPropiedadMensaje** getPropiedad(usu usuario);
-  dtMensajes** getUltimosCinco(usu usuario);
+  bool perteneceInmobiliaria(Usuarios inmobiliaria);
+  dtPropiedadMensaje** getPropiedad(Usuarios usu );
+  dtMensajes** getUltimosCinco(Usuarios usu);
   void eliminarLinksPropInmo();
   dtPropiedad** getPropiedad();
     
@@ -40,7 +46,7 @@ private:
     int cantBanios;
     int cantDormitorios;
     bool garage;
-    direccion direccionProp;
+    dtDireccion direccionProp;
     float mCuadradosEdificado;
     float mCuadradosTotales;
 
