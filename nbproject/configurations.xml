@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>Administrador.h</itemPath>
+      <itemPath>Edificio.h</itemPath>
+      <itemPath>ICollectible.h</itemPath>
+      <itemPath>ICollection.h</itemPath>
+      <itemPath>IDictionary.h</itemPath>
+      <itemPath>IIterator.h</itemPath>
+      <itemPath>IKey.h</itemPath>
+      <itemPath>Inmobiliaria.h</itemPath>
+      <itemPath>Interesado.h</itemPath>
+      <itemPath>ListDiccIterator.h</itemPath>
+      <itemPath>ListDiccIteratorKey.h</itemPath>
+      <itemPath>ListDiccIteratorObj.h</itemPath>
+      <itemPath>Lista.h</itemPath>
+      <itemPath>ListaDicc.h</itemPath>
+      <itemPath>ListaIterator.h</itemPath>
+      <itemPath>Nodo.h</itemPath>
+      <itemPath>NodoDicc.h</itemPath>
+      <itemPath>Usuarios.h</itemPath>
+      <itemPath>apartamento.h</itemPath>
+      <itemPath>casa.h</itemPath>
+      <itemPath>departamento.h</itemPath>
+      <itemPath>dtDepartamento.h</itemPath>
+      <itemPath>dtDireccion.h</itemPath>
+      <itemPath>dtEdificio.h</itemPath>
+      <itemPath>dtZonas.h</itemPath>
+      <itemPath>propiedad.h</itemPath>
+      <itemPath>sistema.h</itemPath>
+      <itemPath>zona.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>Administrador.cpp</itemPath>
+      <itemPath>Edificio.cpp</itemPath>
+      <itemPath>ICollectible.cpp</itemPath>
+      <itemPath>IDictionary.cpp</itemPath>
+      <itemPath>IKey.cpp</itemPath>
+      <itemPath>Inmobiliaria.cpp</itemPath>
+      <itemPath>Interesado.cpp</itemPath>
+      <itemPath>ListDiccIterator.cpp</itemPath>
+      <itemPath>ListDiccIteratorKey.cpp</itemPath>
+      <itemPath>ListDiccIteratorObj.cpp</itemPath>
+      <itemPath>Lista.cpp</itemPath>
+      <itemPath>ListaDicc.cpp</itemPath>
+      <itemPath>ListaIterator.cpp</itemPath>
+      <itemPath>Nodo.cpp</itemPath>
+      <itemPath>NodoDicc.cpp</itemPath>
+      <itemPath>Par.cpp</itemPath>
+      <itemPath>Usuarios.cpp</itemPath>
+      <itemPath>apartamento.cpp</itemPath>
+      <itemPath>casa.cpp</itemPath>
+      <itemPath>departamento.cpp</itemPath>
+      <itemPath>dtDepartamento.cpp</itemPath>
+      <itemPath>dtDireccion.cpp</itemPath>
+      <itemPath>dtEdificio.cpp</itemPath>
+      <itemPath>dtZonas.cpp</itemPath>
+      <itemPath>main.cpp</itemPath>
+      <itemPath>propiedad.cpp</itemPath>
+      <itemPath>sistema.cpp</itemPath>
+      <itemPath>zona.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+      </compileType>
+      <item path="Administrador.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Administrador.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Edificio.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Edificio.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ICollectible.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ICollectible.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ICollection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IDictionary.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="IDictionary.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IIterator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IKey.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="IKey.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Inmobiliaria.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Inmobiliaria.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Interesado.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Interesado.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ListDiccIterator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ListDiccIterator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ListDiccIteratorKey.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ListDiccIteratorKey.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ListDiccIteratorObj.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ListDiccIteratorObj.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Lista.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Lista.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ListaDicc.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ListaDicc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ListaIterator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ListaIterator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Nodo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Nodo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="NodoDicc.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="NodoDicc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Par.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Usuarios.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Usuarios.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="apartamento.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="apartamento.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="casa.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="casa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="departamento.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="departamento.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="dtDepartamento.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="dtDepartamento.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="dtDireccion.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="dtDireccion.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="dtEdificio.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="dtEdificio.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="dtZonas.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="dtZonas.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="propiedad.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="propiedad.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sistema.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sistema.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="zona.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="zona.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="Administrador.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Administrador.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Edificio.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Edificio.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ICollectible.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ICollectible.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ICollection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IDictionary.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="IDictionary.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IIterator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IKey.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="IKey.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Inmobiliaria.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Inmobiliaria.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Interesado.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Interesado.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ListDiccIterator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ListDiccIterator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ListDiccIteratorKey.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ListDiccIteratorKey.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ListDiccIteratorObj.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ListDiccIteratorObj.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Lista.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Lista.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ListaDicc.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ListaDicc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ListaIterator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ListaIterator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Nodo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Nodo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="NodoDicc.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="NodoDicc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Par.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Usuarios.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Usuarios.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="apartamento.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="apartamento.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="casa.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="casa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="departamento.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="departamento.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="dtDepartamento.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="dtDepartamento.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="dtDireccion.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="dtDireccion.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="dtEdificio.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="dtEdificio.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="dtZonas.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="dtZonas.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="propiedad.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="propiedad.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sistema.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sistema.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="zona.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="zona.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
