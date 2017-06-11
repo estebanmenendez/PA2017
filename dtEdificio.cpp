@@ -18,7 +18,9 @@ dtEdificio::dtEdificio() {
 
 dtEdificio::dtEdificio(const dtEdificio& orig) {
 }
-
+dtEdificio:: dtEdificio (string nombreEdificio){
+    
+}
 dtEdificio::~dtEdificio() {
 }
 string dtEdificio::getnombreEdificio() const {
