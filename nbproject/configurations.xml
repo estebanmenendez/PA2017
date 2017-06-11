@@ -5,8 +5,11 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>Administrador.h</itemPath>
+      <itemPath>Alquiler.h</itemPath>
       <itemPath>Apartamento.h</itemPath>
+      <itemPath>Aviso.h</itemPath>
       <itemPath>Casa.h</itemPath>
+      <itemPath>Chat.h</itemPath>
       <itemPath>Departamento.h</itemPath>
       <itemPath>Edificio.h</itemPath>
       <itemPath>ICollectible.h</itemPath>
@@ -22,14 +25,17 @@
       <itemPath>Lista.h</itemPath>
       <itemPath>ListaDicc.h</itemPath>
       <itemPath>ListaIterator.h</itemPath>
+      <itemPath>Mensaje.h</itemPath>
       <itemPath>Nodo.h</itemPath>
       <itemPath>NodoDicc.h</itemPath>
+      <itemPath>PropInmo.h</itemPath>
       <itemPath>Propiedad.h</itemPath>
       <itemPath>Usuarios.h</itemPath>
       <itemPath>Zona.h</itemPath>
       <itemPath>dtDepartamento.h</itemPath>
       <itemPath>dtDireccion.h</itemPath>
       <itemPath>dtEdificio.h</itemPath>
+      <itemPath>dtPropiedad.h</itemPath>
       <itemPath>dtZonas.h</itemPath>
       <itemPath>sistema.h</itemPath>
     </logicalFolder>
@@ -42,7 +48,9 @@
                    projectFiles="true">
       <itemPath>Administrador.cpp</itemPath>
       <itemPath>Apartamento.cpp</itemPath>
+      <itemPath>Aviso.cpp</itemPath>
       <itemPath>Casa.cpp</itemPath>
+      <itemPath>Chat.cpp</itemPath>
       <itemPath>Edificio.cpp</itemPath>
       <itemPath>ICollectible.cpp</itemPath>
       <itemPath>IDictionary.cpp</itemPath>
@@ -55,9 +63,11 @@
       <itemPath>Lista.cpp</itemPath>
       <itemPath>ListaDicc.cpp</itemPath>
       <itemPath>ListaIterator.cpp</itemPath>
+      <itemPath>Mensaje.cpp</itemPath>
       <itemPath>Nodo.cpp</itemPath>
       <itemPath>NodoDicc.cpp</itemPath>
       <itemPath>Par.cpp</itemPath>
+      <itemPath>PropInmo.cpp</itemPath>
       <itemPath>Propiedad.cpp</itemPath>
       <itemPath>Usuarios.cpp</itemPath>
       <itemPath>Zona.cpp</itemPath>
@@ -118,13 +128,23 @@
       </item>
       <item path="Administrador.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Alquiler.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Apartamento.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Apartamento.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Aviso.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Aviso.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Casa.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Casa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Chat.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Chat.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Departamento.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -180,6 +200,10 @@
       </item>
       <item path="ListaIterator.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Mensaje.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Mensaje.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Nodo.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Nodo.h" ex="false" tool="3" flavor2="0">
@@ -189,6 +213,10 @@
       <item path="NodoDicc.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Par.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PropInmo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PropInmo.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Propiedad.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -231,6 +259,8 @@
       <item path="dtMensajes.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="dtMensajes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="dtPropiedad.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="dtPropiedadApto.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -291,13 +321,23 @@
       </item>
       <item path="Administrador.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Alquiler.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Apartamento.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Apartamento.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Aviso.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Aviso.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Casa.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Casa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Chat.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Chat.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Departamento.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -353,6 +393,10 @@
       </item>
       <item path="ListaIterator.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Mensaje.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Mensaje.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Nodo.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Nodo.h" ex="false" tool="3" flavor2="0">
@@ -362,6 +406,10 @@
       <item path="NodoDicc.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Par.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PropInmo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PropInmo.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Propiedad.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -404,6 +452,8 @@
       <item path="dtMensajes.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="dtMensajes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="dtPropiedad.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="dtPropiedadApto.cpp" ex="false" tool="1" flavor2="0">
       </item>

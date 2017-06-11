@@ -37,7 +37,9 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/Administrador.o \
 	${OBJECTDIR}/Apartamento.o \
+	${OBJECTDIR}/Aviso.o \
 	${OBJECTDIR}/Casa.o \
+	${OBJECTDIR}/Chat.o \
 	${OBJECTDIR}/Edificio.o \
 	${OBJECTDIR}/ICollectible.o \
 	${OBJECTDIR}/IDictionary.o \
@@ -50,9 +52,11 @@ OBJECTFILES= \
 	${OBJECTDIR}/Lista.o \
 	${OBJECTDIR}/ListaDicc.o \
 	${OBJECTDIR}/ListaIterator.o \
+	${OBJECTDIR}/Mensaje.o \
 	${OBJECTDIR}/Nodo.o \
 	${OBJECTDIR}/NodoDicc.o \
 	${OBJECTDIR}/Par.o \
+	${OBJECTDIR}/PropInmo.o \
 	${OBJECTDIR}/Propiedad.o \
 	${OBJECTDIR}/Usuarios.o \
 	${OBJECTDIR}/Zona.o \
@@ -109,10 +113,20 @@ ${OBJECTDIR}/Apartamento.o: Apartamento.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Apartamento.o Apartamento.cpp
 
+${OBJECTDIR}/Aviso.o: Aviso.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Aviso.o Aviso.cpp
+
 ${OBJECTDIR}/Casa.o: Casa.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Casa.o Casa.cpp
+
+${OBJECTDIR}/Chat.o: Chat.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Chat.o Chat.cpp
 
 ${OBJECTDIR}/Edificio.o: Edificio.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -174,6 +188,11 @@ ${OBJECTDIR}/ListaIterator.o: ListaIterator.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ListaIterator.o ListaIterator.cpp
 
+${OBJECTDIR}/Mensaje.o: Mensaje.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Mensaje.o Mensaje.cpp
+
 ${OBJECTDIR}/Nodo.o: Nodo.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -188,6 +207,11 @@ ${OBJECTDIR}/Par.o: Par.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Par.o Par.cpp
+
+${OBJECTDIR}/PropInmo.o: PropInmo.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/PropInmo.o PropInmo.cpp
 
 ${OBJECTDIR}/Propiedad.o: Propiedad.cpp
 	${MKDIR} -p ${OBJECTDIR}
