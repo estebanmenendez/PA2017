@@ -6,6 +6,19 @@
     </data>
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/home/ernesto/NetBeansProjects/ProgAvanzada2017/Zona.cpp</file>
+            <file>file:/home/ernesto/NetBeansProjects/ProgAvanzada2017/Casa.cpp</file>
+            <file>file:/home/ernesto/NetBeansProjects/ProgAvanzada2017/Apartamento.cpp</file>
+            <file>file:/home/ernesto/NetBeansProjects/ProgAvanzada2017/Apartamento.h</file>
+            <file>file:/home/ernesto/NetBeansProjects/ProgAvanzada2017/Propiedad.cpp</file>
+            <file>file:/home/ernesto/NetBeansProjects/ProgAvanzada2017/Departamento.h</file>
+            <file>file:/home/ernesto/NetBeansProjects/ProgAvanzada2017/Casa.h</file>
+            <file>file:/home/ernesto/NetBeansProjects/ProgAvanzada2017/Propiedad.h</file>
+            <file>file:/home/ernesto/NetBeansProjects/ProgAvanzada2017/Zona.h</file>
+            <file>file:/home/ernesto/NetBeansProjects/ProgAvanzada2017/Edificio.h</file>
+            <file>file:/home/ernesto/NetBeansProjects/ProgAvanzada2017/dtDireccion.h</file>
+            <file>file:/home/ernesto/NetBeansProjects/ProgAvanzada2017/dtDepartamento.h</file>
+        </group>
     </open-files>
 </project-private>

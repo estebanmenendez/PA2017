@@ -62,9 +62,29 @@
       <itemPath>Usuarios.cpp</itemPath>
       <itemPath>Zona.cpp</itemPath>
       <itemPath>departamento.cpp</itemPath>
+      <itemPath>dtConversaInmobiliaria.cpp</itemPath>
+      <itemPath>dtConversaInmobiliaria.h</itemPath>
       <itemPath>dtDepartamento.cpp</itemPath>
       <itemPath>dtDireccion.cpp</itemPath>
       <itemPath>dtEdificio.cpp</itemPath>
+      <itemPath>dtFecha.cpp</itemPath>
+      <itemPath>dtFecha.h</itemPath>
+      <itemPath>dtHora.cpp</itemPath>
+      <itemPath>dtHora.h</itemPath>
+      <itemPath>dtMensajes.cpp</itemPath>
+      <itemPath>dtMensajes.h</itemPath>
+      <itemPath>dtPropiedadApto.cpp</itemPath>
+      <itemPath>dtPropiedadApto.h</itemPath>
+      <itemPath>dtPropiedadCasa.cpp</itemPath>
+      <itemPath>dtPropiedadCasa.h</itemPath>
+      <itemPath>dtPropiedadDsiponible.cpp</itemPath>
+      <itemPath>dtPropiedadDsiponible.h</itemPath>
+      <itemPath>dtPropiedadInmobiliaria.cpp</itemPath>
+      <itemPath>dtPropiedadInmobiliaria.h</itemPath>
+      <itemPath>dtPropiedadMensaje.cpp</itemPath>
+      <itemPath>dtPropiedadMensaje.h</itemPath>
+      <itemPath>dtReporteInmobiliaria.cpp</itemPath>
+      <itemPath>dtReporteInmobiliaria.h</itemPath>
       <itemPath>dtZonas.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
       <itemPath>sistema.cpp</itemPath>
@@ -80,26 +100,6 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
-    <itemPath>dtConversaInmobiliaria.cpp</itemPath>
-    <itemPath>dtConversaInmobiliaria.h</itemPath>
-    <itemPath>dtFecha.cpp</itemPath>
-    <itemPath>dtFecha.h</itemPath>
-    <itemPath>dtHora.cpp</itemPath>
-    <itemPath>dtHora.h</itemPath>
-    <itemPath>dtMensajes.cpp</itemPath>
-    <itemPath>dtMensajes.h</itemPath>
-    <itemPath>dtPropiedadApto.cpp</itemPath>
-    <itemPath>dtPropiedadApto.h</itemPath>
-    <itemPath>dtPropiedadCasa.cpp</itemPath>
-    <itemPath>dtPropiedadCasa.h</itemPath>
-    <itemPath>dtPropiedadDsiponible.cpp</itemPath>
-    <itemPath>dtPropiedadDsiponible.h</itemPath>
-    <itemPath>dtPropiedadInmobiliaria.cpp</itemPath>
-    <itemPath>dtPropiedadInmobiliaria.h</itemPath>
-    <itemPath>dtPropiedadMensaje.cpp</itemPath>
-    <itemPath>dtPropiedadMensaje.h</itemPath>
-    <itemPath>dtReporteInmobiliaria.cpp</itemPath>
-    <itemPath>dtReporteInmobiliaria.h</itemPath>
   </logicalFolder>
   <sourceRootList>
     <Elem>.</Elem>

@@ -19,7 +19,7 @@
 #include"Usuarios.h"
 #include"dtPropiedadMensaje.h"
 #include"dtMensajes.h"
-#include"dtPropiedad"
+#include"dtPropiedad.h"
 
 #ifndef PROPIEDAD_H
 #define PROPIEDAD_H
