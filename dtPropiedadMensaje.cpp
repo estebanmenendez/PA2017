@@ -13,7 +13,7 @@
 
 #include "dtPropiedadMensaje.h"
 
-dtPropiedadMensaje::dtPropiedadMensaje(string codigoProp, dtDireccion direccionProp, int cantMensajesEnviados){
+dtPropiedadMensaje::dtPropiedadMensaje(string codigoProp, dtDireccion* direccionProp, int cantMensajesEnviados){
     this->cantMensajesEnviados = cantMensajesEnviados;
     this->codigoProp = codigoProp;
     this->direccionProp = direccionProp;
@@ -28,7 +28,7 @@ dtPropiedadMensaje::dtPropiedadMensaje(const dtPropiedadMensaje& orig) {
 dtPropiedadMensaje::~dtPropiedadMensaje() {
 }
 
-dtPropiedadMensaje::getcodigoProp() const{
+string dtPropiedadMensaje::getcodigoProp() const{
     return this->codigoProp;
 }
 
@@ -36,6 +36,6 @@ dtDireccion* dtPropiedadMensaje::getdireccionProp() const{
     return this->direccionProp;
 }
 
-dtPropiedadMensaje::cantMensajesEnviados() const{
+int dtPropiedadMensaje::getCantMensajesEnviados() const{
     return this->cantMensajesEnviados;
 }

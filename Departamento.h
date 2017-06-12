@@ -16,6 +16,8 @@
 #include "Zona.h"
 #include"dtZonas.h"
 #include"dtPropiedadApto.h"
+#include"dtDepartamento.h"
+#include"dtPropEnDpto.h"
 
 #ifndef DEPARTAMENTO_H
 #define DEPARTAMENTO_H
@@ -31,7 +33,7 @@ public:
     dtZonas** getZonas(Departamento);
     Zona getZona(string);
     dtDepartamento getDatos();
-    dtPropEnDepto** getpropEnDepto(Usuarios inmobiliaria);
+    dtPropEnDpto** getpropEnDepto(Usuarios inmobiliaria);
     Zona * getZona();
     
 private:

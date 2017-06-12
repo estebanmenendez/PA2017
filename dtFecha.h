@@ -11,7 +11,6 @@
  * Created on 10 de junio de 2017, 12:22 AM
  */
 
-#include <string.h>
 #include <stdio.h>
 #include <iostream>
 
@@ -25,16 +24,16 @@ public:
     dtFecha();
     dtFecha(const dtFecha& orig);
     virtual ~dtFecha();
-    dtFecha(string dd, string mm, string aa);
+    dtFecha(int dd, int mm, int aa);
     
-    string getDias() const;
-    string getMeses() const;
-    string getAños() const;
+    int getDias() const;
+    int getMeses() const;
+    int getAnios() const;
     
 private:
-    string dd;
-    string mm;
-    string aa;
+    int dd;
+    int mm;
+    int aa;
 
 };
 

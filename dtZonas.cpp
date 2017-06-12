@@ -18,7 +18,9 @@ dtZonas::dtZonas() {
 
 dtZonas::dtZonas(const dtZonas& orig) {
 }
-
+dtZonas::dtZonas(string codigoZona, string nombreZona){
+    
+}
 dtZonas::~dtZonas() {
 }
 

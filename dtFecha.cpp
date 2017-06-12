@@ -13,7 +13,7 @@
 
 #include "dtFecha.h"
 
-dtFecha::dtFecha(string dd, string mm, string aa) {
+dtFecha::dtFecha(int dd, int mm, int aa) {
     this->mm = mm;
     this->dd = dd;
     this->aa = aa;
@@ -28,14 +28,14 @@ dtFecha::dtFecha(const dtFecha& orig) {
 dtFecha::~dtFecha() {
 }
 
-dtFecha::getMeses() const{
+int dtFecha::getMeses() const{
     return this->mm;
 }
 
-dtFecha::getDias() const{
+int dtFecha::getDias() const{
     return this->dd;
 }
 
-dtFecha::getAños() const{
+int dtFecha::getAnios() const{
     return this->aa;
 }

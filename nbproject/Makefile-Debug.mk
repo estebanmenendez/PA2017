@@ -38,6 +38,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/Administrador.o \
 	${OBJECTDIR}/Apartamento.o \
 	${OBJECTDIR}/Casa.o \
+	${OBJECTDIR}/ContProp.o \
+	${OBJECTDIR}/Departamento.o \
 	${OBJECTDIR}/Edificio.o \
 	${OBJECTDIR}/ICollectible.o \
 	${OBJECTDIR}/IDictionary.o \
@@ -56,7 +58,6 @@ OBJECTFILES= \
 	${OBJECTDIR}/Propiedad.o \
 	${OBJECTDIR}/Usuarios.o \
 	${OBJECTDIR}/Zona.o \
-	${OBJECTDIR}/departamento.o \
 	${OBJECTDIR}/dtConversaInmobiliaria.o \
 	${OBJECTDIR}/dtDepartamento.o \
 	${OBJECTDIR}/dtDireccion.o \
@@ -64,9 +65,11 @@ OBJECTFILES= \
 	${OBJECTDIR}/dtFecha.o \
 	${OBJECTDIR}/dtHora.o \
 	${OBJECTDIR}/dtMensajes.o \
+	${OBJECTDIR}/dtPropEnDpto.o \
+	${OBJECTDIR}/dtPropZonas.o \
 	${OBJECTDIR}/dtPropiedadApto.o \
 	${OBJECTDIR}/dtPropiedadCasa.o \
-	${OBJECTDIR}/dtPropiedadDsiponible.o \
+	${OBJECTDIR}/dtPropiedadDisponible.o \
 	${OBJECTDIR}/dtPropiedadInmobiliaria.o \
 	${OBJECTDIR}/dtPropiedadMensaje.o \
 	${OBJECTDIR}/dtReporteInmobiliaria.o \
@@ -113,6 +116,16 @@ ${OBJECTDIR}/Casa.o: Casa.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Casa.o Casa.cpp
+
+${OBJECTDIR}/ContProp.o: ContProp.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ContProp.o ContProp.cpp
+
+${OBJECTDIR}/Departamento.o: Departamento.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Departamento.o Departamento.cpp
 
 ${OBJECTDIR}/Edificio.o: Edificio.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -204,11 +217,6 @@ ${OBJECTDIR}/Zona.o: Zona.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Zona.o Zona.cpp
 
-${OBJECTDIR}/departamento.o: departamento.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/departamento.o departamento.cpp
-
 ${OBJECTDIR}/dtConversaInmobiliaria.o: dtConversaInmobiliaria.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -244,6 +252,16 @@ ${OBJECTDIR}/dtMensajes.o: dtMensajes.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/dtMensajes.o dtMensajes.cpp
 
+${OBJECTDIR}/dtPropEnDpto.o: dtPropEnDpto.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/dtPropEnDpto.o dtPropEnDpto.cpp
+
+${OBJECTDIR}/dtPropZonas.o: dtPropZonas.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/dtPropZonas.o dtPropZonas.cpp
+
 ${OBJECTDIR}/dtPropiedadApto.o: dtPropiedadApto.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -254,10 +272,10 @@ ${OBJECTDIR}/dtPropiedadCasa.o: dtPropiedadCasa.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/dtPropiedadCasa.o dtPropiedadCasa.cpp
 
-${OBJECTDIR}/dtPropiedadDsiponible.o: dtPropiedadDsiponible.cpp
+${OBJECTDIR}/dtPropiedadDisponible.o: dtPropiedadDisponible.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/dtPropiedadDsiponible.o dtPropiedadDsiponible.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/dtPropiedadDisponible.o dtPropiedadDisponible.cpp
 
 ${OBJECTDIR}/dtPropiedadInmobiliaria.o: dtPropiedadInmobiliaria.cpp
 	${MKDIR} -p ${OBJECTDIR}

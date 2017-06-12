@@ -6,7 +6,7 @@
 
 #include "dtReporteInmobiliaria.h"
 
-dtReporteInmobiliaria::dtReporteInmobiliaria (string nombreInm, dtDireccion ubicacionInm, string email, string nombreDepto, string nombreZona, int CantCasa, int CantDeptos){
+dtReporteInmobiliaria::dtReporteInmobiliaria (string nombreInm, dtDireccion* ubicacionInm, string email, string nombreDepto, string nombreZona, int CantCasa, int CantDeptos){
     this->nombreInm = nombreInm;
     this->ubicacionInm = ubicacionInm;
     this->email = email;
@@ -26,7 +26,7 @@ dtReporteInmobiliaria::dtReporteInmobiliaria(const dtReporteInmobiliaria& orig){
 dtReporteInmobiliaria::~dtReporteInmobiliaria(){
 }
 
-strnig dtReporteInmobiliaria::getnombreInm() const{
+string dtReporteInmobiliaria::getnombreInm() const{
     return this->nombreInm;
 }
 

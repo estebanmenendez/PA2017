@@ -26,10 +26,10 @@ class dtReporteInmobiliaria{
         dtReporteInmobiliaria();
         dtReporteInmobiliaria(const dtReporteInmobiliaria& orig);
         virtual ~dtReporteInmobiliaria();
-        dtReporteInmobiliaria(string nombreInm, dtDireccion ubicacionInm, string email, string nombreDepto, string nombreZona, int CantCasa, int CantDeptos);
+        dtReporteInmobiliaria(string nombreInm, dtDireccion* ubicacionInm, string email, string nombreDepto, string nombreZona, int CantCasa, int CantDeptos);
         
         string getnombreInm() const;
-        dtDireccion getubicacionInm() const;
+        dtDireccion* getubicacionInm() const;
         string getemail() const;
         string getnombreDepto() const;
         string getnombreZona() const;
@@ -38,7 +38,7 @@ class dtReporteInmobiliaria{
         
     private:
         string nombreInm;
-        dtDireccion ubicacionInm;
+        dtDireccion* ubicacionInm;
         string email;
         string nombreDepto;
         string nombreZona;

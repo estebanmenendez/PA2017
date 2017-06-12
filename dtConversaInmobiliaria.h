@@ -10,6 +10,7 @@
  *
  * Created on 10 de junio de 2017, 12:36 AM
  */
+#include"dtFecha.h"
 
 #ifndef DTCONVERSAINMOBILIARIA_H
 #define DTCONVERSAINMOBILIARIA_H

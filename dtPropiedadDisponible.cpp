@@ -4,9 +4,9 @@
  * and open the template in the editor.
  */
 
-#include "dtPropiedadDsiponible.h"
+#include "dtPropiedadDisponible.h"
 
-dtPropiedadDisponible::dtPropiedadDisponible(string codigoProp, dtDireccion direccionProp, string alquilerOVenta){
+dtPropiedadDisponible::dtPropiedadDisponible(string codigoProp, dtDireccion* direccionProp, string alquilerOVenta){
     this->codigoProp = codigoProp;
     this->direccionProp = direccionProp;
     this->alquilerOVenta = alquilerOVenta;
@@ -21,13 +21,13 @@ dtPropiedadDisponible::dtPropiedadDisponible(const dtPropiedadDisponible& orig){
 dtPropiedadDisponible::~dtPropiedadDisponible(){
 }
 
-dtPropiedadDisponible::getcodigoProp() const{
+string dtPropiedadDisponible::getcodigoProp() const{
     return this->codigoProp;
 }
 dtDireccion* dtPropiedadDisponible::getdireccionProp() const{
     return this->direccionProp;
 }
 
-dtPropiedadDisponible::getalquilerOVenta() const{
+string dtPropiedadDisponible::getalquilerOVenta() const{
     return this->alquilerOVenta;
 }

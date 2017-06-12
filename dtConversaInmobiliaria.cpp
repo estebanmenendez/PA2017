@@ -27,10 +27,10 @@ dtConversaInmobiliaria::dtConversaInmobiliaria(const dtConversaInmobiliaria& ori
 dtConversaInmobiliaria::~dtConversaInmobiliaria() {
 }
 
-dtConversaInmobiliaria::getIdConversacion() const{
+string dtConversaInmobiliaria::getIdConversacion() const{
     return this->IdConversacion;
 }
 
-dtFecha* dtConversaInmobiliaria::getFechaUltimoMensaje() const{
+dtFecha dtConversaInmobiliaria::getFechaUltimoMensaje() const{
     return this->fechaUltimoMensaje;
 }

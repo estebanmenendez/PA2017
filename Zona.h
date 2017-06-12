@@ -14,10 +14,11 @@
 #include <stdio.h>
 #include <iostream>
 #include"ICollectible.h"
-#include "Propiedad.h"
+#include"Propiedad.h"
 #include"Usuarios.h"
 #include"dtZonas.h"
 #include"dtPropiedadApto.h"
+#include"dtPropZonas.h"
 
 #ifndef ZONA_H
 #define ZONA_H
@@ -31,12 +32,12 @@ public:
     virtual ~Zona();
     
     dtZonas** getZona();
-    dtPropZona** getPropZonaDpto(Usuarios inmobiliaria);
+    dtPropZonas** getPropZonaDpto(Usuarios inmobiliaria);
     Propiedad getPropiedad();
 private:
     string codigoZona;
     string nombreZona;
-    Propiedad* Propiedad;
+    Propiedad* propiedad;
 };
 
 #endif /* ZONA_H */

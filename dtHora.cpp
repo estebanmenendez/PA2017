@@ -28,14 +28,14 @@ dtHora::dtHora(const dtHora& orig) {
 dtHora::~dtHora() {
 }
 
-dtHora::getsegundos() const{
+int dtHora::getsegundos() const{
     return this->ss;
 }
 
-dtHora::getminutos() const{
+int dtHora::getminutos() const{
     return this->mm;
 }
 
-dtHora::gethoras() const{
+int dtHora::gethoras() const{
     return this->hh;
 }

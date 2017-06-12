@@ -7,6 +7,7 @@
       <itemPath>Administrador.h</itemPath>
       <itemPath>Apartamento.h</itemPath>
       <itemPath>Casa.h</itemPath>
+      <itemPath>ContProp.h</itemPath>
       <itemPath>Departamento.h</itemPath>
       <itemPath>Edificio.h</itemPath>
       <itemPath>ICollectible.h</itemPath>
@@ -24,12 +25,25 @@
       <itemPath>ListaIterator.h</itemPath>
       <itemPath>Nodo.h</itemPath>
       <itemPath>NodoDicc.h</itemPath>
+      <itemPath>Par.h</itemPath>
       <itemPath>Propiedad.h</itemPath>
       <itemPath>Usuarios.h</itemPath>
       <itemPath>Zona.h</itemPath>
+      <itemPath>dtConversaInmobiliaria.h</itemPath>
       <itemPath>dtDepartamento.h</itemPath>
       <itemPath>dtDireccion.h</itemPath>
       <itemPath>dtEdificio.h</itemPath>
+      <itemPath>dtFecha.h</itemPath>
+      <itemPath>dtHora.h</itemPath>
+      <itemPath>dtMensajes.h</itemPath>
+      <itemPath>dtPropEnDpto.h</itemPath>
+      <itemPath>dtPropZonas.h</itemPath>
+      <itemPath>dtPropiedadApto.h</itemPath>
+      <itemPath>dtPropiedadCasa.h</itemPath>
+      <itemPath>dtPropiedadDisponible.h</itemPath>
+      <itemPath>dtPropiedadInmobiliaria.h</itemPath>
+      <itemPath>dtPropiedadMensaje.h</itemPath>
+      <itemPath>dtReporteInmobiliaria.h</itemPath>
       <itemPath>dtZonas.h</itemPath>
       <itemPath>sistema.h</itemPath>
     </logicalFolder>
@@ -43,6 +57,8 @@
       <itemPath>Administrador.cpp</itemPath>
       <itemPath>Apartamento.cpp</itemPath>
       <itemPath>Casa.cpp</itemPath>
+      <itemPath>ContProp.cpp</itemPath>
+      <itemPath>Departamento.cpp</itemPath>
       <itemPath>Edificio.cpp</itemPath>
       <itemPath>ICollectible.cpp</itemPath>
       <itemPath>IDictionary.cpp</itemPath>
@@ -61,30 +77,21 @@
       <itemPath>Propiedad.cpp</itemPath>
       <itemPath>Usuarios.cpp</itemPath>
       <itemPath>Zona.cpp</itemPath>
-      <itemPath>departamento.cpp</itemPath>
       <itemPath>dtConversaInmobiliaria.cpp</itemPath>
-      <itemPath>dtConversaInmobiliaria.h</itemPath>
       <itemPath>dtDepartamento.cpp</itemPath>
       <itemPath>dtDireccion.cpp</itemPath>
       <itemPath>dtEdificio.cpp</itemPath>
       <itemPath>dtFecha.cpp</itemPath>
-      <itemPath>dtFecha.h</itemPath>
       <itemPath>dtHora.cpp</itemPath>
-      <itemPath>dtHora.h</itemPath>
       <itemPath>dtMensajes.cpp</itemPath>
-      <itemPath>dtMensajes.h</itemPath>
+      <itemPath>dtPropEnDpto.cpp</itemPath>
+      <itemPath>dtPropZonas.cpp</itemPath>
       <itemPath>dtPropiedadApto.cpp</itemPath>
-      <itemPath>dtPropiedadApto.h</itemPath>
       <itemPath>dtPropiedadCasa.cpp</itemPath>
-      <itemPath>dtPropiedadCasa.h</itemPath>
-      <itemPath>dtPropiedadDsiponible.cpp</itemPath>
-      <itemPath>dtPropiedadDsiponible.h</itemPath>
+      <itemPath>dtPropiedadDisponible.cpp</itemPath>
       <itemPath>dtPropiedadInmobiliaria.cpp</itemPath>
-      <itemPath>dtPropiedadInmobiliaria.h</itemPath>
       <itemPath>dtPropiedadMensaje.cpp</itemPath>
-      <itemPath>dtPropiedadMensaje.h</itemPath>
       <itemPath>dtReporteInmobiliaria.cpp</itemPath>
-      <itemPath>dtReporteInmobiliaria.h</itemPath>
       <itemPath>dtZonas.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
       <itemPath>sistema.cpp</itemPath>
@@ -125,6 +132,12 @@
       <item path="Casa.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Casa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ContProp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ContProp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Departamento.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Departamento.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -190,6 +203,8 @@
       </item>
       <item path="Par.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="Par.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Propiedad.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Propiedad.h" ex="false" tool="3" flavor2="0">
@@ -201,8 +216,6 @@
       <item path="Zona.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Zona.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="departamento.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="dtConversaInmobiliaria.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -232,6 +245,14 @@
       </item>
       <item path="dtMensajes.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="dtPropEnDpto.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="dtPropEnDpto.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="dtPropZonas.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="dtPropZonas.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="dtPropiedadApto.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="dtPropiedadApto.h" ex="false" tool="3" flavor2="0">
@@ -240,9 +261,9 @@
       </item>
       <item path="dtPropiedadCasa.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="dtPropiedadDsiponible.cpp" ex="false" tool="1" flavor2="0">
+      <item path="dtPropiedadDisponible.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="dtPropiedadDsiponible.h" ex="false" tool="3" flavor2="0">
+      <item path="dtPropiedadDisponible.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="dtPropiedadInmobiliaria.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -299,6 +320,12 @@
       </item>
       <item path="Casa.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="ContProp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ContProp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Departamento.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="Departamento.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Edificio.cpp" ex="false" tool="1" flavor2="0">
@@ -363,6 +390,8 @@
       </item>
       <item path="Par.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="Par.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Propiedad.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Propiedad.h" ex="false" tool="3" flavor2="0">
@@ -374,8 +403,6 @@
       <item path="Zona.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Zona.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="departamento.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="dtConversaInmobiliaria.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -405,6 +432,14 @@
       </item>
       <item path="dtMensajes.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="dtPropEnDpto.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="dtPropEnDpto.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="dtPropZonas.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="dtPropZonas.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="dtPropiedadApto.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="dtPropiedadApto.h" ex="false" tool="3" flavor2="0">
@@ -413,9 +448,9 @@
       </item>
       <item path="dtPropiedadCasa.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="dtPropiedadDsiponible.cpp" ex="false" tool="1" flavor2="0">
+      <item path="dtPropiedadDisponible.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="dtPropiedadDsiponible.h" ex="false" tool="3" flavor2="0">
+      <item path="dtPropiedadDisponible.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="dtPropiedadInmobiliaria.cpp" ex="false" tool="1" flavor2="0">
       </item>

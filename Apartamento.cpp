@@ -16,7 +16,7 @@
 Apartamento::Apartamento() {
 }
 
-Apartamento::Apartamento(const apartamento& orig) {
+Apartamento::Apartamento(const Apartamento& orig) {
 }
 
 Apartamento::~Apartamento() {

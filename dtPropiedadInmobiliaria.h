@@ -26,13 +26,13 @@ public:
     dtPropiedadInmobiliaria();
     dtPropiedadInmobiliaria(const dtPropiedadInmobiliaria& orig);
     virtual ~dtPropiedadInmobiliaria();
-    dtPropiedadInmobiliaria(int cantAmbiente, int cantBanios, int cantDormitorios, bool garage, dtDireccion direccionProp, float mCuadradosEdificado, float mCuadradosTotales, string nombreInm);
+    dtPropiedadInmobiliaria(int cantAmbiente, int cantBanios, int cantDormitorios, bool garage, dtDireccion* direccionProp, float mCuadradosEdificado, float mCuadradosTotales, string nombreInm);
     
     int getcantAmbiente() const;
     int getcantBanios() const;
     int getcantDormitorios() const;
     bool getgarage() const;
-    dtDirectcon getdireccionProp() const;
+    dtDireccion* getdireccionProp() const;
     float getmCuadradosEdificado() const;
     float getmCuadradosTotales() const;
     string getnombreInm() const;
@@ -42,7 +42,7 @@ private:
         int cantBanios;
         int cantDormitorios;
         bool garage;
-        dtDireccion direccionProp;
+        dtDireccion* direccionProp;
         float mCuadradosEdificado;
         float mCuadradosTotales;
         string nombreInm;

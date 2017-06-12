@@ -5,7 +5,7 @@
  */
 
 /* 
- * File:   departamento.cpp
+ * File:   Departamento.cpp
  * Author: lucia
  * 
  * Created on 9 de junio de 2017, 06:33 PM
@@ -13,12 +13,12 @@
 
 #include "Departamento.h"
 
-departamento::departamento() {
+Departamento::Departamento() {
 }
 
-departamento::departamento(const departamento& orig) {
+Departamento::Departamento(const Departamento& orig) {
 }
 
-departamento::~departamento() {
+Departamento::~Departamento() {
 }
 

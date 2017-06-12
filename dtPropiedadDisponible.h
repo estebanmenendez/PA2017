@@ -21,20 +21,20 @@
 
 using namespace std;
 
-class dtPropiedaDisponible{
+class dtPropiedadDisponible{
     public:
         dtPropiedadDisponible();
-        dtPropiedadDisponible(const dtPropiedaddisponible& orig);
+        dtPropiedadDisponible(const dtPropiedadDisponible& orig);
         virtual ~dtPropiedadDisponible();
-        dtPropiedadDisponible(string codigoProp, dtDireccion direccionProp, string alquilerOVenta);
+        dtPropiedadDisponible(string codigoProp, dtDireccion* direccionProp, string alquilerOVenta);
         
         string getcodigoProp() const;
-        dtDireccion getdireccionProp() const;
+        dtDireccion* getdireccionProp() const;
         string getalquilerOVenta() const;
         
     private:
         string codigoProp;
-        dtDireccion direccionProp;
+        dtDireccion* direccionProp;
         string alquilerOVenta;
 };
 

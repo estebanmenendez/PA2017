@@ -29,18 +29,18 @@ dtMensajes::dtMensajes(const dtMensajes& orig) {
 dtMensajes::~dtMensajes() {
 }
 
-dtMensajes::getidMensaje() const{
+string dtMensajes::getidMensaje() const{
     return this->idMensaje;
 }
 
-dtMensajes::gettextoMsj() const{
+string dtMensajes::gettextoMsj() const{
     return this->textoMsj;
 }
 
-dtFecha* dtMensajes::getfechaMsj() const{
+dtFecha dtMensajes::getfechaMsj() const{
     return this->fechaMsj;
 }
 
-dtHora* dtMensajes::gethoraMsj() const{
+dtHora dtMensajes::gethoraMsj() const{
     return this->horaMsj;
 }

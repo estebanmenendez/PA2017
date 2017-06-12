@@ -27,15 +27,15 @@ public:
     dtPropiedadMensaje();
     dtPropiedadMensaje(const dtPropiedadMensaje& orig);
     virtual ~dtPropiedadMensaje();
-    dtPropiedadMensaje(string codigoProp, dtDireccion direccionProp, int cantMensajesEnviados);
+    dtPropiedadMensaje(string codigoProp, dtDireccion* direccionProp, int cantMensajesEnviados);
     
     string getcodigoProp() const;
-    dtDireccion getdireccionProp() const;
-    int cantMensajesEnviados() const;
-    
+    dtDireccion* getdireccionProp() const;
+    int getCantMensajesEnviados() const;
+        
 private:
     string codigoProp;
-    dtDireccion direccionProp;
+    dtDireccion* direccionProp;
     int cantMensajesEnviados;
     
 
