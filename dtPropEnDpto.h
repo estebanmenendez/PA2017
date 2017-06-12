@@ -19,7 +19,14 @@ public:
     dtPropEnDpto();
     dtPropEnDpto(const dtPropEnDpto& orig);
     virtual ~dtPropEnDpto();
+    dtPropEnDpto(string codigoProp, string letraDepartamento);
+    
+    string getcodigoProp() const;
+    string getletraDepartamento() const;
+    
 private:
+    string codigoProp;
+    string letraDepartamento;
 
 };
 

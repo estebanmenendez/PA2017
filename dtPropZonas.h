@@ -19,7 +19,14 @@ public:
     dtPropZonas();
     dtPropZonas(const dtPropZonas& orig);
     virtual ~dtPropZonas();
+    dtPropZonas(string codigoProp, string codigoZona);
+    
+    string getcodigoProp() const;
+    string getcodigoZona() const;
+    
 private:
+    strng codigoProp;
+    string codigoZona;
 
 };
 
