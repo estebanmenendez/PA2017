@@ -11,10 +11,12 @@
       <itemPath>Casa.h</itemPath>
       <itemPath>Chat.h</itemPath>
       <itemPath>ContProp.h</itemPath>
+      <itemPath>ContUsuario.h</itemPath>
       <itemPath>Departamento.h</itemPath>
       <itemPath>Edificio.h</itemPath>
       <itemPath>ICollectible.h</itemPath>
       <itemPath>ICollection.h</itemPath>
+      <itemPath>IContUsuario.h</itemPath>
       <itemPath>IDictionary.h</itemPath>
       <itemPath>IIterator.h</itemPath>
       <itemPath>IKey.h</itemPath>
@@ -69,6 +71,7 @@
       <itemPath>Casa.cpp</itemPath>
       <itemPath>Chat.cpp</itemPath>
       <itemPath>ContProp.cpp</itemPath>
+      <itemPath>ContUsuario.cpp</itemPath>
       <itemPath>Departamento.cpp</itemPath>
       <itemPath>Edificio.cpp</itemPath>
       <itemPath>ICollectible.cpp</itemPath>
@@ -165,6 +168,10 @@
       </item>
       <item path="ContProp.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="ContUsuario.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ContUsuario.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Departamento.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Departamento.h" ex="false" tool="3" flavor2="0">
@@ -178,6 +185,8 @@
       <item path="ICollectible.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="ICollection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IContUsuario.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="IDictionary.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -384,6 +393,10 @@
       </item>
       <item path="ContProp.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="ContUsuario.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ContUsuario.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Departamento.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Departamento.h" ex="false" tool="3" flavor2="0">
@@ -397,6 +410,8 @@
       <item path="ICollectible.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="ICollection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IContUsuario.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="IDictionary.cpp" ex="false" tool="1" flavor2="0">
       </item>

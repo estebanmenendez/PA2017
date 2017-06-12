@@ -42,6 +42,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Casa.o \
 	${OBJECTDIR}/Chat.o \
 	${OBJECTDIR}/ContProp.o \
+	${OBJECTDIR}/ContUsuario.o \
 	${OBJECTDIR}/Departamento.o \
 	${OBJECTDIR}/Edificio.o \
 	${OBJECTDIR}/ICollectible.o \
@@ -144,6 +145,11 @@ ${OBJECTDIR}/ContProp.o: ContProp.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ContProp.o ContProp.cpp
+
+${OBJECTDIR}/ContUsuario.o: ContUsuario.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ContUsuario.o ContUsuario.cpp
 
 ${OBJECTDIR}/Departamento.o: Departamento.cpp
 	${MKDIR} -p ${OBJECTDIR}
