@@ -76,7 +76,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/dtReporteInmobiliaria.o \
 	${OBJECTDIR}/dtZonas.o \
 	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/sistema.o
+	${OBJECTDIR}/sistema.o \
+	${OBJECTDIR}/venta.o
 
 
 # C Compiler Flags
@@ -312,6 +313,11 @@ ${OBJECTDIR}/sistema.o: sistema.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/sistema.o sistema.cpp
+
+${OBJECTDIR}/venta.o: venta.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/venta.o venta.cpp
 
 # Subprojects
 .build-subprojects:
