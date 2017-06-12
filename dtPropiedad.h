@@ -19,8 +19,26 @@ public:
     dtPropiedad();
     dtPropiedad(const dtPropiedad& orig);
     virtual ~dtPropiedad();
+    dtPropiedad(string codigoProp, int cantAmbiente, int cantBanios, int cantDormitorios, bool garage, dtDireccion direccionProp, float mCuadradosEdificado, float mCuadradosTotales);
+    
+    string getcodigoProp() const;
+    int getcantAmbiente() const;
+    int getcantBanios() const;
+    int getcantDormitorios() const;
+    bool getgarage() const;
+    dtDireccion getdireccionProp() const;
+    float getmCuadradosEdificado() const;
+    float getmCuadradoTotales() const;
+    
 private:
-
+    string codigoProp;
+    int cantAmbiente;
+    int cantBanios;
+    int cantDormitorios;
+    bool garage;
+    dtDireccion direccionProp;
+    float mCuadradosEdificado;
+    float mCuadradosTotales;
 };
 
 #endif /* DTPROPIEDAD_H */

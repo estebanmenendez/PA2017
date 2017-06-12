@@ -49,6 +49,10 @@
       <itemPath>dtPropiedadApto.h</itemPath>
       <itemPath>dtPropiedadCasa.h</itemPath>
       <itemPath>dtPropiedadDisponible.h</itemPath>
+<<<<<<< HEAD
+=======
+      <itemPath>dtPropiedadDsiponible.h</itemPath>
+>>>>>>> 2bd599f7d2a2133354b059c60836a3c58b7679ba
       <itemPath>dtPropiedadInmobiliaria.h</itemPath>
       <itemPath>dtPropiedadMensaje.h</itemPath>
       <itemPath>dtReporteInmobiliaria.h</itemPath>
@@ -91,6 +95,10 @@
       <itemPath>Usuarios.cpp</itemPath>
       <itemPath>Venta.cpp</itemPath>
       <itemPath>Zona.cpp</itemPath>
+<<<<<<< HEAD
+=======
+      <itemPath>departamento.cpp</itemPath>
+>>>>>>> 2bd599f7d2a2133354b059c60836a3c58b7679ba
       <itemPath>dtAvisoPropiedad.cpp</itemPath>
       <itemPath>dtConversaInmobiliaria.cpp</itemPath>
       <itemPath>dtDepartamento.cpp</itemPath>
@@ -105,6 +113,10 @@
       <itemPath>dtPropiedadApto.cpp</itemPath>
       <itemPath>dtPropiedadCasa.cpp</itemPath>
       <itemPath>dtPropiedadDisponible.cpp</itemPath>
+<<<<<<< HEAD
+=======
+      <itemPath>dtPropiedadDsiponible.cpp</itemPath>
+>>>>>>> 2bd599f7d2a2133354b059c60836a3c58b7679ba
       <itemPath>dtPropiedadInmobiliaria.cpp</itemPath>
       <itemPath>dtPropiedadMensaje.cpp</itemPath>
       <itemPath>dtReporteInmobiliaria.cpp</itemPath>
@@ -124,9 +136,12 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+<<<<<<< HEAD
   <sourceRootList>
     <Elem>.</Elem>
   </sourceRootList>
+=======
+>>>>>>> 2bd599f7d2a2133354b059c60836a3c58b7679ba
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Debug" type="1">
@@ -257,6 +272,11 @@
       </item>
       <item path="Zona.h" ex="false" tool="3" flavor2="0">
       </item>
+<<<<<<< HEAD
+=======
+      <item path="departamento.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+>>>>>>> 2bd599f7d2a2133354b059c60836a3c58b7679ba
       <item path="dtAvisoPropiedad.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="dtAvisoPropiedad.h" ex="false" tool="3" flavor2="0">
@@ -313,6 +333,13 @@
       </item>
       <item path="dtPropiedadDisponible.h" ex="false" tool="3" flavor2="0">
       </item>
+<<<<<<< HEAD
+=======
+      <item path="dtPropiedadDsiponible.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="dtPropiedadDsiponible.h" ex="false" tool="3" flavor2="0">
+      </item>
+>>>>>>> 2bd599f7d2a2133354b059c60836a3c58b7679ba
       <item path="dtPropiedadInmobiliaria.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="dtPropiedadInmobiliaria.h" ex="false" tool="3" flavor2="0">
@@ -476,6 +503,11 @@
       </item>
       <item path="Zona.h" ex="false" tool="3" flavor2="0">
       </item>
+<<<<<<< HEAD
+=======
+      <item path="departamento.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+>>>>>>> 2bd599f7d2a2133354b059c60836a3c58b7679ba
       <item path="dtAvisoPropiedad.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="dtAvisoPropiedad.h" ex="false" tool="3" flavor2="0">
@@ -532,6 +564,13 @@
       </item>
       <item path="dtPropiedadDisponible.h" ex="false" tool="3" flavor2="0">
       </item>
+<<<<<<< HEAD
+=======
+      <item path="dtPropiedadDsiponible.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="dtPropiedadDsiponible.h" ex="false" tool="3" flavor2="0">
+      </item>
+>>>>>>> 2bd599f7d2a2133354b059c60836a3c58b7679ba
       <item path="dtPropiedadInmobiliaria.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="dtPropiedadInmobiliaria.h" ex="false" tool="3" flavor2="0">
