@@ -59,8 +59,10 @@ OBJECTFILES= \
 	${OBJECTDIR}/PropInmo.o \
 	${OBJECTDIR}/Propiedad.o \
 	${OBJECTDIR}/Usuarios.o \
+	${OBJECTDIR}/Venta.o \
 	${OBJECTDIR}/Zona.o \
 	${OBJECTDIR}/departamento.o \
+	${OBJECTDIR}/dtAvisoPropiedad.o \
 	${OBJECTDIR}/dtConversaInmobiliaria.o \
 	${OBJECTDIR}/dtDepartamento.o \
 	${OBJECTDIR}/dtDireccion.o \
@@ -76,8 +78,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/dtReporteInmobiliaria.o \
 	${OBJECTDIR}/dtZonas.o \
 	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/sistema.o \
-	${OBJECTDIR}/venta.o
+	${OBJECTDIR}/sistema.o
 
 
 # C Compiler Flags
@@ -224,6 +225,11 @@ ${OBJECTDIR}/Usuarios.o: Usuarios.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Usuarios.o Usuarios.cpp
 
+${OBJECTDIR}/Venta.o: Venta.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Venta.o Venta.cpp
+
 ${OBJECTDIR}/Zona.o: Zona.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -233,6 +239,11 @@ ${OBJECTDIR}/departamento.o: departamento.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/departamento.o departamento.cpp
+
+${OBJECTDIR}/dtAvisoPropiedad.o: dtAvisoPropiedad.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/dtAvisoPropiedad.o dtAvisoPropiedad.cpp
 
 ${OBJECTDIR}/dtConversaInmobiliaria.o: dtConversaInmobiliaria.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -313,11 +324,6 @@ ${OBJECTDIR}/sistema.o: sistema.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/sistema.o sistema.cpp
-
-${OBJECTDIR}/venta.o: venta.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/venta.o venta.cpp
 
 # Subprojects
 .build-subprojects:

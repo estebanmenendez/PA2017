@@ -14,46 +14,45 @@
 #include<string.h>
 #include <stdio.h>
 #include <iostream>
-
 #include "Chat.h"
 
-int chat::getCodChat(){
-	return chat::getCodChat();
+int Chat::getChat(){
+	return Chat::getChat();
 	
 }
 
-void chat::setCodChat(){
-	return chat::setCodChat(chat);
+void Chat::setChat(int){
+	return Chat::setChat(Chat);
 }
 
-chat::chat() {
+Chat::Chat() {
 	
 }
 
-chat::~chat() {
+Chat::~Chat() {
 	
 }
 
-void chat::eliminarLinksMensajes(){
+void Chat::eliminarLinksMensajes(){
 	
 }
 
-bool chat::esDelUsuario(Usuarios){
+bool Chat::esDelUsuario(Usuarios ){
 	
 }
 
-int chat::getCantidadMensaje(){
+int Chat::getCantidadMensaje(){
 	
 }
 
-bool chat::pertPropUsuario(Propiedad,Usuarios){
+bool Chat::pertPropUsuario(Propiedad ,Usuarios){
 	
 }
 
-dtMensajes chat::getUltimosCinco(){
+dtMensajes Chat::getUltimosCinco(){
 	
 }
 
-string chat::enviaMensaje(mensaje string){
+string Chat::enviaMensaje(string mensaje ){
 	
 }

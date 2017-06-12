@@ -18,8 +18,12 @@
 #include <stdio.h>
 #include <iostream>
 #include "Usuarios.h"
+#include "Propiedad.h"
+#include "Chat.h"
+#include "Aviso.h"
+#include "dtAvisoPropiedad.h"
 
-class propInmo {
+class PropInmo {
           
         
 public:
@@ -28,16 +32,17 @@ public:
 	void enviarMensaje(Propiedad, string);
 	void altaPropEnInmob(Propiedad, string);
 	void eliminarLinks();
-	void getAvisos();
+	dtAvisoPropiedad ** getAvisos();
     
-        propInmo();
-        propInmo(const propInmo& orig);
-        virtual ~propInmo();
+        PropInmo();
+        PropInmo(const PropInmo& orig);
+        virtual ~PropInmo();
         
 private:
-        //Aviso * aviPropInmo;
-        //Chat * chatPropInmo;
-        //Propiedad * prop;
+        //links
+        Aviso * aviPropInmo;
+        Chat * chatPropInmo;
+        Propiedad * prop;
 
 };
 

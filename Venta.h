@@ -17,23 +17,23 @@
 #include<string.h>
 #include <stdio.h>
 #include <iostream>
-#include "aviso.h"
 
-class venta:public aviso {
+
+class Venta : public Aviso {
 private:
 	int precioTotalVenta;
 public:
    
-    void venta();
-    void venta(const venta& orig);
-    virtual ~venta();
+    Venta();
+    Venta(const Venta & orig);
+    virtual ~Venta();
     
-    void altaVenta();
+    void altaVenta(float);
     bool esVenta();
     bool esAlquiler();
     
-    int getPrecioTotalVenta();
-    setPrecioTotalVenta(int precioAlquiler);
+    float getPrecioVenta();
+    void setPrecioVenta(int);
 
 };
 

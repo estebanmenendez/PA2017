@@ -32,8 +32,8 @@ public:
     Propiedad(const Propiedad& orig);
     virtual ~Propiedad();
     
-  void esCasa();
-  void esApto();
+  void esCasaP();
+  void esAptoP();
   bool perteneceInmobiliaria(Usuarios inmobiliaria);
   dtPropiedadMensaje** getPropiedad(Usuarios usu );
   dtMensajes** getUltimosCinco(Usuarios usu);

@@ -12,33 +12,34 @@
  */
 
 #include "PropInmo.h"
+
 using namespace std;
 
-propInmo::propInmo() {
+PropInmo::PropInmo() {
 }
 
-propInmo::propInmo(const propInmo& orig) {
+PropInmo::PropInmo(const PropInmo& orig) {
 }
 
-propInmo::~propInmo() {
+PropInmo::~PropInmo() {
 }
 
-int propInmo::getCantidadMensajes(Usuarios){
+int PropInmo::getCantidadMensajes(Usuarios){
 	
 }
 
-void propInmo::enviarMensaje(&Propiedad, &Usuarios, mensaje string){
+void PropInmo::enviarMensaje(&Propiedad, &Usuarios, Mensaje string){
 	
 }
 
-void propInmo::altaPropEnInmob(Propiedad, string){
+void PropInmo::altaPropEnInmob(Propiedad, string){
 	
 }
 
-void propInmo::eliminarLinks(){
+void PropInmo::eliminarLinks(){
 	
 }
 
-aviso propInmo::getAvisos(){
+Aviso PropInmo::getAvisos(){
 	
 }

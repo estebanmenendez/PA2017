@@ -19,26 +19,26 @@
 #include <stdio.h>
 #include <iostream>
 #include "PropInmo.h"
-
+#include "Usuarios.h"
 using namespace std;
 
-class chat {
+class Chat {
 public:
-    chat();
-    chat(const chat& orig);
-    virtual ~chat();
-    int getCodChat();
-    void setCodChat(chat);
+    Chat();
+    Chat(const Chat& orig);
+    virtual ~Chat();
+    int getChat();
+    void setChat(Chat);
     
     void eliminarLinksMensajes();
     bool esDelUsuario(Usuarios);
     int getCantidadMensaje();
     bool pertPropUsuario(Propiedad,Usuarios);
-    dtMensajes * getUltimosCinco();
+    dtMensajes ** getUltimosCinco();
     void enviaMensaje(string);
 
 private: 
-    mensaje * msje;
+    //Mensaje * msje;
 
 };
 

@@ -20,34 +20,34 @@
 
 using namespace std;
 
-string mensaje::getTextoMsj(){
-	return mensaje::getTextoMsj();
+string Mensaje::getTextoMsj(){
+	return Mensaje::getTextoMsj();
 }
-dtFecha mensaje::getfechaMsj(){
-	return mensaje::getfechaMsj();
+dtFecha Mensaje::getfechaMsj(){
+	return Mensaje::getFechaMsj();
 }
-dtHora mensaje::getHoraMsj(){
-	return mensaje::getHoraMsj();
-}
-
-void mensaje::setTextoMsj(string){
-	return mensaje::setTextoMsj();
-}
-void mensaje::fechaMsj(&fechaMsj){
-	return mensaje::fechaMsj();
-}
-void mensaje::getHoraMsj(&horaMsj){
-	return mensaje::getHoraMsj();
+dtHora Mensaje::getHoraMsj(){
+	return Mensaje::getHoraMsj();
 }
 
-mensaje::mensaje() {
+void Mensaje::setTextoMsj(string){
+	return Mensaje::setTextoMsj();
+}
+void Mensaje::setFechaMsj(string){
+	this->fechaMsj;
+}
+void Mensaje::getHoraMsj(&horaMsj){
+	return Mensaje::getHoraMsj();
+}
+
+Mensaje::Mensaje() {
 	
 }
 
-mensaje::~mensaje() {
+Mensaje::~Mensaje() {
 	
 }
 
-dtMensajes mensaje::getMensaje(){
+dtMensajes Mensaje::getMensaje(){
 	
 }

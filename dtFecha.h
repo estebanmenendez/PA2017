@@ -29,7 +29,7 @@ public:
     
     string getDias() const;
     string getMeses() const;
-    string getAños() const;
+    string getAnios() const;
     
 private:
     string dd;

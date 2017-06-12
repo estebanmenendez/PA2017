@@ -21,7 +21,7 @@
 
 using namespace std;
 
-class mensaje {
+class Mensaje {
 private:
 	string textMsj;
 	dtFecha * fechaMsj;
@@ -29,10 +29,10 @@ private:
 	
 
 public:
-	mensaje();
-	~mensaje();
+	Mensaje();
+	~Mensaje();
         string getTextoMsj();
-        dtFecha getfechaMsj();
+        dtFecha getFechaMsj();
         dtHora getHoraMsj();
         void setTextoMsj(string);
         dtMensajes** getMensaje();

@@ -15,29 +15,29 @@
 #include <stdio.h>
 #include <iostream>
 
-#include "venta.h"
+#include "Venta.h"
 
-venta::venta() {
+Venta::Venta() {
 }
 
-venta::venta(const venta& orig) {
+Venta::Venta(const Venta& orig) {
 }
 
-venta::~venta() {
+Venta::~Venta() {
 }
 
 
-float venta::getPrecioTotalVenta(){
-    return venta::getPrecioTotalVenta();
+float Venta::getPrecioTotalVenta(){
+    return Venta.getPrecioVenta();
 	
 }
 
-void venta::altaVenta(float precio){   
+void Venta::altaVenta(float precio){   
     this->precioTotalVenta = precio;
 }
-bool venta::esVenta(){
-    return venta.esVenta()==true;
+bool Venta::esVenta(){
+    return Venta.esVenta()==true;
 	
 }
-bool venta::esAlquiler(){
+bool Venta::esAlquiler(){
 }

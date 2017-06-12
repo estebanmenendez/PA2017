@@ -19,23 +19,21 @@
 #include <iostream>
 #include "Aviso.h"
 
-using namespace std;
-
-class alquiler : public aviso {
+class Alquiler : public Aviso{
 private:
 	 int precioALquiler;
 public:
     
-    alquiler();
-    alquiler(const alquiler & orig);
-    virtual ~alquiler();
+    Alquiler();
+    Alquiler(const Alquiler & orig);
+    virtual ~Alquiler();
     
     void altaAlquiler(float);
     bool esVenta();
     bool esAlquiler();
     
-    float getPrecioAlq();
-    void setPrecio(float);
+    float getPrecioAlquiler();
+    void setPrecioAlquiler(float);
 
     
 };

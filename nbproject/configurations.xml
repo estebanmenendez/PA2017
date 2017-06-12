@@ -31,14 +31,15 @@
       <itemPath>PropInmo.h</itemPath>
       <itemPath>Propiedad.h</itemPath>
       <itemPath>Usuarios.h</itemPath>
+      <itemPath>Venta.h</itemPath>
       <itemPath>Zona.h</itemPath>
+      <itemPath>dtAvisoPropiedad.h</itemPath>
       <itemPath>dtDepartamento.h</itemPath>
       <itemPath>dtDireccion.h</itemPath>
       <itemPath>dtEdificio.h</itemPath>
       <itemPath>dtPropiedad.h</itemPath>
       <itemPath>dtZonas.h</itemPath>
       <itemPath>sistema.h</itemPath>
-      <itemPath>venta.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -71,8 +72,10 @@
       <itemPath>PropInmo.cpp</itemPath>
       <itemPath>Propiedad.cpp</itemPath>
       <itemPath>Usuarios.cpp</itemPath>
+      <itemPath>Venta.cpp</itemPath>
       <itemPath>Zona.cpp</itemPath>
       <itemPath>departamento.cpp</itemPath>
+      <itemPath>dtAvisoPropiedad.cpp</itemPath>
       <itemPath>dtConversaInmobiliaria.cpp</itemPath>
       <itemPath>dtConversaInmobiliaria.h</itemPath>
       <itemPath>dtDepartamento.cpp</itemPath>
@@ -99,7 +102,6 @@
       <itemPath>dtZonas.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
       <itemPath>sistema.cpp</itemPath>
-      <itemPath>venta.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -228,11 +230,19 @@
       </item>
       <item path="Usuarios.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Venta.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Venta.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Zona.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Zona.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="departamento.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="dtAvisoPropiedad.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="dtAvisoPropiedad.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="dtConversaInmobiliaria.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -297,10 +307,6 @@
       <item path="sistema.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="sistema.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="venta.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="venta.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -425,11 +431,19 @@
       </item>
       <item path="Usuarios.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Venta.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Venta.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Zona.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Zona.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="departamento.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="dtAvisoPropiedad.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="dtAvisoPropiedad.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="dtConversaInmobiliaria.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -494,10 +508,6 @@
       <item path="sistema.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="sistema.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="venta.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="venta.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

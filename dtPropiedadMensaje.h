@@ -36,7 +36,7 @@ public:
 private:
     string codigoProp;
     dtDireccion direccionProp;
-    int cantMensajesEnviados;
+    int cantMjeEnv;
     
 
 };

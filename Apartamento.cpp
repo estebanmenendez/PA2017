@@ -11,12 +11,15 @@
  * Created on 9 de junio de 2017, 07:06 PM
  */
 
-#include "Apartamento.h"
+#include"Apartamento.h"
 
-Apartamento::Apartamento() {
+
+Apartamento:: Apartamento() {
+    
 }
 
-Apartamento::Apartamento(const apartamento& orig) {
+Apartamento::Apartamento(const Apartamento & orig) {
+    
 }
 
 Apartamento::~Apartamento() {

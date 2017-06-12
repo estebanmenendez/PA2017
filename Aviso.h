@@ -14,31 +14,31 @@
 #ifndef AVISO_H
 #define AVISO_H
 
+
 #include<string.h>
 #include <stdio.h>
 #include <iostream>
 #include "PropInmo.h"
+#include "Alquiler.h"
+#include "Venta.h"
 
-class aviso {
+class Aviso {
        
 public:
-    aviso();
-    aviso(const aviso& orig);
-    virtual ~aviso();
+    Aviso();
+    Aviso(const Aviso& orig);
+    virtual ~Aviso();
        
-    virtual void setAviso();
-    virtual aviso getAviso();
+    virtual Aviso getAviso();
     
     virtual void crearAvisoProp(Propiedad);
-    virtual void altaAlquiler();
+    virtual void altaAlquiler(float);
     virtual void altaVenta(float);
-  
 
 private:    
     Alquiler *propEnAlq;
-    Venta *propEnVenta;
-
-    
+    Venta * propEnVenta;
+  
 
 };
 

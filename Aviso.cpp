@@ -12,36 +12,31 @@
  */
 
 #include<string.h>
-#include <stdio.h>
-#include <iostream>
+#include<stdio.h>
+#include<iostream>
+#include"Aviso.h"
 
-#include "Aviso.h"
 
-
-aviso::aviso() {
+Aviso::Aviso() {
 }
 
-aviso::aviso(const aviso& orig) {
+Aviso::Aviso(const Aviso& orig) {
 }
 
-aviso::~aviso() {
+Aviso::~Aviso() {
 	
 }
 
-aviso aviso::getAviso(){
-	return aviso::getAviso();
+Aviso Aviso::getAviso(){
+	return Aviso::getAviso();
 }
 
-void aviso::setAviso(aviso &aviso ){
-    aviso::setAviso(aviso);
-
-void aviso::crearAvisoProp( propInmo &Propiedad){
-	
+void Aviso::crearAvisoProp(Propiedad pi){
 }
 
-void aviso::altaAlquiler(float){
+void Aviso::altaAlquiler(float precio ){
+
 }
 
-void aviso::altaVenta(float){
-    
+void Aviso::altaVenta(float precio){
 }
