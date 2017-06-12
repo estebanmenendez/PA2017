@@ -18,6 +18,7 @@
 #include"dtDireccion.h"
 #include"sistema.h"
 
+
 using namespace std;
 
 void menu();
@@ -41,6 +42,7 @@ int main(int argc, char** argv) {
                 break;
             case 2:
                 altaPropiedad();
+                
                 break;
         }
     }

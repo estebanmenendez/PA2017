@@ -22,7 +22,7 @@ int Chat::getChat(){
 }
 
 void Chat::setChat(int){
-	return Chat::setChat(Chat);
+	
 }
 
 Chat::Chat() {
@@ -49,10 +49,10 @@ bool Chat::pertPropUsuario(Propiedad ,Usuarios){
 	
 }
 
-dtMensajes Chat::getUltimosCinco(){
+dtMensajes** Chat::getUltimosCinco(){
 	
 }
 
-string Chat::enviaMensaje(string mensaje ){
+void Chat::enviaMensaje(string mensaje ){
 	
 }

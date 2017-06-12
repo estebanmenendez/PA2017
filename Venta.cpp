@@ -27,8 +27,8 @@ Venta::~Venta() {
 }
 
 
-float Venta::getPrecioTotalVenta(){
-    return Venta.getPrecioVenta();
+float Venta::getPrecioVenta(){
+    return this->precioTotalVenta ;
 	
 }
 
@@ -36,7 +36,7 @@ void Venta::altaVenta(float precio){
     this->precioTotalVenta = precio;
 }
 bool Venta::esVenta(){
-    return Venta.esVenta()==true;
+    return true;
 	
 }
 bool Venta::esAlquiler(){

@@ -16,8 +16,11 @@
 
 #include<string.h>
 #include <stdio.h>
-#include "Chat.h"
 #include <iostream>
+#include "dtFecha.h"
+#include "dtHora.h"
+#include "Chat.h"
+
 
 using namespace std;
 

@@ -11,16 +11,14 @@
  * Created on 11 de junio de 2017, 06:42 PM
  */
 
+#include"Propiedad.h"
+
+
 #ifndef AVISO_H
 #define AVISO_H
 
 
-#include<string.h>
-#include <stdio.h>
-#include <iostream>
-#include "PropInmo.h"
-#include "Alquiler.h"
-#include "Venta.h"
+using namespace std;
 
 class Aviso {
        
@@ -36,8 +34,8 @@ public:
     virtual void altaVenta(float);
 
 private:    
-    Alquiler *propEnAlq;
-    Venta * propEnVenta;
+    /*Alquiler *propEnAlq;
+    Venta * propEnVenta;*/
   
 
 };

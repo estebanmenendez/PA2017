@@ -15,6 +15,8 @@
 #ifndef APARTAMENTO_H
 #define APARTAMENTO_H
 
+using namespace std;
+
 class Apartamento: public Propiedad {
 public:
     Apartamento();

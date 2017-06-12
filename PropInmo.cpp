@@ -28,7 +28,7 @@ int PropInmo::getCantidadMensajes(Usuarios){
 	
 }
 
-void PropInmo::enviarMensaje(&Propiedad, &Usuarios, Mensaje string){
+void PropInmo::enviarMensaje(Propiedad propiedad, string mensaje){
 	
 }
 
@@ -40,6 +40,6 @@ void PropInmo::eliminarLinks(){
 	
 }
 
-Aviso PropInmo::getAvisos(){
+dtAvisoPropiedad** PropInmo::getAvisos(){
 	
 }

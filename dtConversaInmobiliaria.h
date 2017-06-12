@@ -10,6 +10,9 @@
  *
  * Created on 10 de junio de 2017, 12:36 AM
  */
+#include <string.h>
+#include <stdio.h>
+#include <iostream>
 #include"dtFecha.h"
 
 #ifndef DTCONVERSAINMOBILIARIA_H
@@ -19,8 +22,9 @@ class dtConversaInmobiliaria {
 public:
     dtConversaInmobiliaria();
     dtConversaInmobiliaria(const dtConversaInmobiliaria& orig);
-    virtual ~dtConversaInmobiliaria();
+    
     dtConversaInmobiliaria(string IdConversacion, dtFecha fechaUltimoMensaje);
+    virtual ~dtConversaInmobiliaria();
     
     string getIdConversacion() const;
     dtFecha getFechaUltimoMensaje() const;

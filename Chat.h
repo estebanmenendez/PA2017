@@ -18,8 +18,9 @@
 #include<string.h>
 #include <stdio.h>
 #include <iostream>
-#include "PropInmo.h"
+#include"Propiedad.h"
 #include "Usuarios.h"
+#include"dtMensajes.h"
 using namespace std;
 
 class Chat {
@@ -28,7 +29,7 @@ public:
     Chat(const Chat& orig);
     virtual ~Chat();
     int getChat();
-    void setChat(Chat);
+    void setChat(int);
     
     void eliminarLinksMensajes();
     bool esDelUsuario(Usuarios);

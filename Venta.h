@@ -11,13 +11,12 @@
  * Created on 9 de junio de 2017, 08:26 PM
  */
 
+#include"Aviso.h"
+
 #ifndef VENTA_H
 #define VENTA_H
 
-#include<string.h>
-#include <stdio.h>
-#include <iostream>
-
+using namespace std;
 
 class Venta : public Aviso {
 private:

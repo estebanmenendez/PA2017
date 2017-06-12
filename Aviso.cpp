@@ -11,9 +11,6 @@
  * Created on 11 de junio de 2017, 06:42 PM
  */
 
-#include<string.h>
-#include<stdio.h>
-#include<iostream>
 #include"Aviso.h"
 
 
