@@ -13,32 +13,39 @@
 
 #ifndef DTPROPIEDAD_H
 #define DTPROPIEDAD_H
+#include<string.h>
+#include <stdio.h>
+#include <iostream>
+#include"dtDireccion.h"
 
+using namespace std;
 class dtPropiedad {
+    private:
+    string codigoProp;
+    int cantAmbiente;
+    int cantBanios;
+    int cantDormitorios;
+    bool garage;
+    dtDireccion* direccionProp;
+    float mCuadradosEdificado;
+    float mCuadradosTotales;
 public:
     dtPropiedad();
     dtPropiedad(const dtPropiedad& orig);
+   
+    dtPropiedad(string codigoProp, int cantAmbiente, int cantBanios, int cantDormitorios, bool garage, dtDireccion* direccionProp, float mCuadradosEdificado, float mCuadradosTotales);
     virtual ~dtPropiedad();
-    dtPropiedad(string codigoProp, int cantAmbiente, int cantBanios, int cantDormitorios, bool garage, dtDireccion direccionProp, float mCuadradosEdificado, float mCuadradosTotales);
     
     string getcodigoProp() const;
     int getcantAmbiente() const;
     int getcantBanios() const;
     int getcantDormitorios() const;
     bool getgarage() const;
-    dtDireccion getdireccionProp() const;
+    dtDireccion* getdireccionProp() const;
     float getmCuadradosEdificado() const;
     float getmCuadradoTotales() const;
     
-private:
-    string codigoProp;
-    int cantAmbiente;
-    int cantBanios;
-    int cantDormitorios;
-    bool garage;
-    dtDireccion direccionProp;
-    float mCuadradosEdificado;
-    float mCuadradosTotales;
+
 };
 
 #endif /* DTPROPIEDAD_H */

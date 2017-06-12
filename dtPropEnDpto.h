@@ -11,24 +11,19 @@
  * Created on 11 de junio de 2017, 06:11 PM
  */
 
+
 #ifndef DTPROPENDPTO_H
 #define DTPROPENDPTO_H
+#include<string.h>
+#include <stdio.h>
+#include <iostream>
 
 class dtPropEnDpto {
 public:
     dtPropEnDpto();
     dtPropEnDpto(const dtPropEnDpto& orig);
     virtual ~dtPropEnDpto();
-    dtPropEnDpto(string codigoProp, string letraDepartamento);
-    
-    string getcodigoProp() const;
-    string getletraDepartamento() const;
-    
 private:
-    string codigoProp;
-    string letraDepartamento;
-
 };
-
 #endif /* DTPROPENDPTO_H */
 

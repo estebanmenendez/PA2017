@@ -13,7 +13,7 @@
 
 #include "dtPropiedad.h"
 
-dtPropiedad::dtPropiedad(string codigoProp, int cantAmbiente, int cantBanios, int cantDormitorios, bool garage, dtDireccion direccionProp, float mCuadradosEdificado, float mCuadradosTotales) {
+dtPropiedad::dtPropiedad(string codigoProp, int cantAmbiente, int cantBanios, int cantDormitorios, bool garage, dtDireccion* direccionProp, float mCuadradosEdificado, float mCuadradosTotales) {
     this->codigoProp = codigoProp;
     this->cantAmbiente = cantAmbiente;
     this->cantBanios = cantBanios;
@@ -33,19 +33,19 @@ dtPropiedad::dtPropiedad(const dtPropiedad& orig) {
 dtPropiedad::~dtPropiedad() {
 }
 
-dtPropiedad::getcodigoProp() const{
+string dtPropiedad::getcodigoProp() const{
     return this->codigoProp;
 }
 
-dtPropiedad::getcantAmbiente() const{
+int dtPropiedad::getcantAmbiente() const{
     return this->cantAmbiente;
 }
 
-dtPropiedad::getcantBanios() const{
+int dtPropiedad::getcantBanios() const{
     return this->cantBanios;
 }
 
-dtPropiedad::getcantDormitorios() const{
+int dtPropiedad::getcantDormitorios() const{
     return this->cantDormitorios;
 }
 
@@ -53,10 +53,10 @@ dtDireccion* dtPropiedad::getdireccionProp() const{
     return this->direccionProp;
 }
 
-dtPropiedad::getmCuadradosEdificado() const{
+float dtPropiedad::getmCuadradosEdificado() const{
     return this->mCuadradosEdificado;
 }
 
-dtPropiedad::getmCuadradosTotales() const{
+float dtPropiedad::getmCuadradoTotales() const{
     return this->mCuadradosTotales;
 }

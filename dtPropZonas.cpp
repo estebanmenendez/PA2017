@@ -13,11 +13,6 @@
 
 #include "dtPropZonas.h"
 
-dtPropZonas::dtPropZonas(string codigoProp, string codigoZona) {
-    this->codigoProp = codigoPorp;
-    this->codigoZona = codigoZona;
-}
-
 dtPropZonas::dtPropZonas() {
 }
 
@@ -27,10 +22,3 @@ dtPropZonas::dtPropZonas(const dtPropZonas& orig) {
 dtPropZonas::~dtPropZonas() {
 }
 
-dtPropZonas::getcodigoProp() const{
-    return this->codigoProp;
-}
-
-dtPropZonas::getcodigoZona() const{
-    return this->codigoZona;
-}

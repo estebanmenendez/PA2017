@@ -13,10 +13,7 @@
 
 #include "dtPropEnDpto.h"
 
-dtPropEnDpto::dtPropEnDpto(string codigoProp, string letraDepartamento){
-    this->codigoProp = codigoProp;
-    this->letraDepartamento = letraDepartamento;
-}
+
 
 dtPropEnDpto::dtPropEnDpto() {
 }
@@ -27,10 +24,3 @@ dtPropEnDpto::dtPropEnDpto(const dtPropEnDpto& orig) {
 dtPropEnDpto::~dtPropEnDpto() {
 }
 
-dtPropEnDpto::getcodigoProp() const{
-    return this->codigoProp;
-}
-
-dtPropEnDpto::getletraDepartamento() const{
-    return this->letraDepartamento;
-}
