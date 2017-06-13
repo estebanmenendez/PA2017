@@ -21,4 +21,25 @@ ContProp::ContProp(const ContProp& orig) {
 
 ContProp::~ContProp() {
 }
-
+ dtDepartamento** ContProp::listaDepartamentos(){}
+void ContProp::seleccionarDepartamentos(string){}
+dtZonas ** ContProp::listaZonasDepartamentos(string){}
+void ContProp::seleccionaZona(string){}
+dtPropiedadMensaje ** ContProp::listaPropiedades(string){}
+dtPropiedadMensaje ** ContProp::seleccionaPropiedad(string,int){}
+void ContProp::enviarMensaje(string){}
+string ContProp::ingesrarCodProp(string){}
+void ContProp::modifPropCasa(dtPropiedadCasa){}
+void ContProp::modifPropApto(dtPropiedadApto){}
+dtConversaInmobiliaria ** ContProp::listaConversacionesInmobiliarias(){}
+void ContProp::seleccionaConversacion(string){}
+dtMensajes ** ContProp::listaUltimosCincoMensajes(){}
+void ContProp::seleccionaMensaje(string){}
+void ContProp::agregaMensaje(string,string){}
+dtPropiedadDisponible ** ContProp::listaPropiedadesDisponibles(){}
+dtPropiedadInmobiliaria ** ContProp::seleccionaPropiedadDisponible(string){}
+void ContProp::altaInteresado (string,string,int,string){}
+void ContProp::altaEdificio(string,int,int){}
+dtReporteInmobiliaria** ContProp::iniciarReporte(Inmobiliaria){}
+void ContProp::altaPropiedadCasa (dtPropiedadCasa){}
+void ContProp::altaPropiedadApto(dtPropiedadApto){}

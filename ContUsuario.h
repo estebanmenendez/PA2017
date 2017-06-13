@@ -13,9 +13,7 @@
 
 #ifndef CONTUSUARIO_H
 #define CONTUSUARIO_H
-#include"dtDireccion.h"
-#include"dtReporteInmobiliaria.h"
-#include"Usuarios.h"
+
 #include"IContUsuario.h"
 
 using namespace std;

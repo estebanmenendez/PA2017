@@ -13,13 +13,15 @@
 
 #ifndef ICONTUSUARIO_H
 #define ICONTUSUARIO_H
+#include"dtDireccion.h"
+#include"dtReporteInmobiliaria.h"
+#include"Usuarios.h"
 
 using namespace std;
 
 class IContUsuario {
 public:
-    IContUsuario();
-    IContUsuario(const IContUsuario& orig);
+
     virtual ~IContUsuario();
     
     virtual void altaInmobiliaria(string, dtDireccion *, string)= 0;

@@ -10,24 +10,16 @@
  *
  * Created on 9 de junio de 2017, 08:17 PM
  */
-#include"dtPropiedadMensaje.h"
-#include"dtPropiedadDisponible.h"
-#include"dtPropiedadCasa.h"
-#include"dtPropiedadApto.h"
-#include"dtDepartamento.h"
-#include"dtConversaInmobiliaria.h"
-#include"dtReporteInmobiliaria.h"
-#include"dtMensajes.h"
-#include"dtPropiedadInmobiliaria.h"
-#include"dtZonas.h"
-#include"Inmobiliaria.h"
+
+#include"IContPorp.h"
 #include <iostream>
 
 #ifndef CONTPROP_H
 #define CONTPROP_H
 
+using namespace std;
 
- class ContProp {
+ class ContProp : public IContProp {
     private: 
     
      

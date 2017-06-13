@@ -15,46 +15,32 @@
 
 using namespace std;
 
-    IContUsuario::IContUsuario() {
+    ContUsuario::ContUsuario() {
     }
 
-    IContUsuario::IContUsuario(const IContUsuario& orig) {
+    ContUsuario::ContUsuario(const ContUsuario& orig) {
     }
 
-    IContUsuario::~IContUsuario() {
+    ContUsuario::~ContUsuario() {
     }
 
-      void IContUsuario::altaInteresado(){
+      void ContUsuario::altaInteresado(){
     }
-      void IContUsuario::altaSesion(){
-
-    }
-      void IContUsuario::cancelarAccion(){
+      void ContUsuario::altaSesion(){
 
     }
-    dtReporteInmobiliaria ** IContUsuario::obtenerReporteInmobiliarias (){
+      void ContUsuario::cancelarAccion(){
 
     }
+    dtReporteInmobiliaria ** ContUsuario::obtenerReporteInmobiliarias (){}
 
-      Usuarios ** IContUsuario::usuarioLogueado(){
+Usuarios ** ContUsuario::usuarioLogueado(){}
+  void ContUsuario::altaInmobiliaria( string nombre, dtDireccion * direccion, string email){}
 
-    }
-        void IContUsuario::altaInmobiliaria( string nombre, dtDireccion * direccion, string email){
-    }
-
-        void IContUsuario::iniciarSesion(string tipoUsuario , string email){
-
-}
-        bool IContUsuario::verificarContrasena(string pwd , string pwdConfirmacion ){
-}
-        void IContUsuario::activarUsuario(string tipoUsuario ,string email ){
-
-        }
-        void IContUsuario::validarPwd( string contrasena ){
-
-        }
+  void ContUsuario::iniciarSesion(string tipoUsuario , string email){}
+  bool ContUsuario::verificarContrasena(string pwd , string pwdConfirmacion ){}
+  void ContUsuario::activarUsuario(string tipoUsuario ,string email ){ }
+  void ContUsuario::validarPwd( string contrasena ){ }
 
 
-        void IContUsuario::CerrarSesion( int idSesion ){
-
-        }
+  void ContUsuario::CerrarSesion( int idSesion ){ }

@@ -45,7 +45,10 @@ OBJECTFILES= \
 	${OBJECTDIR}/ContUsuario.o \
 	${OBJECTDIR}/Departamento.o \
 	${OBJECTDIR}/Edificio.o \
+	${OBJECTDIR}/Fabrica.o \
 	${OBJECTDIR}/ICollectible.o \
+	${OBJECTDIR}/IContProp.o \
+	${OBJECTDIR}/IContUsuario.o \
 	${OBJECTDIR}/IDictionary.o \
 	${OBJECTDIR}/IKey.o \
 	${OBJECTDIR}/Inmobiliaria.o \
@@ -161,10 +164,25 @@ ${OBJECTDIR}/Edificio.o: Edificio.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Edificio.o Edificio.cpp
 
+${OBJECTDIR}/Fabrica.o: Fabrica.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Fabrica.o Fabrica.cpp
+
 ${OBJECTDIR}/ICollectible.o: ICollectible.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ICollectible.o ICollectible.cpp
+
+${OBJECTDIR}/IContProp.o: IContProp.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/IContProp.o IContProp.cpp
+
+${OBJECTDIR}/IContUsuario.o: IContUsuario.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/IContUsuario.o IContUsuario.cpp
 
 ${OBJECTDIR}/IDictionary.o: IDictionary.cpp
 	${MKDIR} -p ${OBJECTDIR}
