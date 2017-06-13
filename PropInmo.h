@@ -43,6 +43,7 @@ private:
         Aviso * aviPropInmo;
         Chat * chatPropInmo;
         Propiedad * prop;
+        Usuarios * inmo;
 
 };
 
