@@ -19,19 +19,28 @@
 #include"sistema.h"
 
 
-using namespace std;
 
-void menu();
+
+//void menu();
+void opcionesGenerales(); // MENU GENERAL DE OPCIONES ADMIN/INTER/INMO/CARGAR PRUEBA
+void cargaDatosPrueba();
+void administradorOpciones();
+void inmobiliariaOpciones();
+void interesadoOpciones();
+void iniciarSesion();
+
+/////////////////////////////////////////
 void altaInmobiliaria();
 void altaPropiedad();
 
 
+using namespace std;
 
 
 
 int main(int argc, char** argv) {
 
-    int option = -1;
+   /* int option = -1;
     
     while(option != 0){
         menu();
@@ -45,10 +54,74 @@ int main(int argc, char** argv) {
                 
                 break;
         }
-    }
+    }*/
     
+    cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<endl<<endl;
+	int opcion=1;
+
+	while (opcion !=  0){
+		opcionesGenerales();
+		cin >> opcion;
+		switch (opcion){
+			case 1 : iniciarSesion();break;
+                }
+
+	}
+	
     return 0;
 }
+
+///////////////////// NUEVO /////////////////////
+
+void opcionesGenerales(){
+	cout << "1 - Iniciar Sesion" << endl;
+	cout << "0 - Salir" << endl; 
+	
+}
+
+void administradorOpciones(){
+    cout << "1 - Alta inmobiliaria" << endl;
+    cout << "2 - Alta interesado" << endl;
+    cout << "3 - Obtener reporte inmobiliaria" << endl;
+    cout << "4 - Cerrar sesion" << endl; 
+}
+
+void inmobiliariaOpciones(){
+    cout << "1 - Alta propiedad" << endl;
+    cout << "2 - Modificar propiedad" << endl; 
+    cout << "3 - Eliminar propiedad" << endl;
+    cout << "4 - Consultar propiedad" << endl; 
+    cout << "5 - Alta edificio" << endl;
+    cout << "6 - Enviar mensaje inmobiliaria" << endl;
+    cout << "7 - Cerrar sesion" << endl; 
+}
+
+void interesadoOpciones(){
+    cout << "1 - Consultar propiedad" << endl;
+    cout << "2 - Enviar mensaje interesado" << endl; 
+    cout << "3 - Cerrar sesion" << endl; 
+    
+}
+
+void iniciarSesion(){
+    int opUsr=1;
+        
+    while (opUsr !=  0){
+                cin >> opUsr;
+        switch (opUsr){
+                case 1 : administradorOpciones(); break;
+                case 2 : inmobiliariaOpciones(); break;
+                case 3 : interesadoOpciones(); break;
+           }
+        }
+    
+}
+
+void cargaDatosPrueba(){
+    
+}
+//////////////////////////////////////////
+
 
 
 void altaPropiedad(){
@@ -162,9 +235,12 @@ void altaInmobiliaria(){
     
 }
    
-void menu(){
+/*void menu(){
     system ("clear");
     cout<<"\n1 - Alta inmobiliaria"<<endl;
     cout<<"2 - Alta propiedad"<<endl; 
     cout<<"0 - Salir"<<endl;
 }
+*/
+
+	
