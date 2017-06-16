@@ -16,6 +16,9 @@
 #include"dtEdificio.h"
 #include"dtDepartamento.h"
 #include"dtDireccion.h"
+#include"dtReporteInmobiliaria.h"
+#include"Propiedad.h"
+#include"dtPropiedad.h"
 #include"sistema.h"
 
 
@@ -29,6 +32,25 @@ void inmobiliariaOpciones();
 void interesadoOpciones();
 void iniciarSesion();
 
+void adminOpciones();
+void inmoOpciones();
+void interOpciones();
+
+void altaInteresado();
+dtReporteInmobiliaria obtenerReporteInmo();
+void cerrarSesion(int idSesion);
+void modificarPropiedad(dtPropiedad propiedad);
+void eliminarPropiedad(dtPropiedad prop);
+
+dtPropiedad consultarPropiedad(string propiedad);
+void altaEdificio(string nombre, int pisos, int gastosComunes);
+void enviarMsjInmobiliaria(string msjInmo);
+void enviarMsjInteresado(string msjInter);
+
+
+//usuarios
+Usuarios * recorrerUsuarios(string, string);
+
 /////////////////////////////////////////
 void altaInmobiliaria();
 void altaPropiedad();
@@ -36,6 +58,7 @@ void altaPropiedad();
 
 using namespace std;
 
+int idSesion=0;
 
 
 int main(int argc, char** argv) {
@@ -75,8 +98,8 @@ int main(int argc, char** argv) {
 
 void opcionesGenerales(){
 	cout << "1 - Iniciar Sesion" << endl;
+        cout << "2 - Iniciar Sesion - con datos precargados" << endl;
 	cout << "0 - Salir" << endl; 
-	
 }
 
 void administradorOpciones(){
@@ -104,6 +127,18 @@ void interesadoOpciones(){
 }
 
 void iniciarSesion(){
+    string us, pwd;
+    Usuarios * usu;
+    
+    cout<<"Ingrese email: ";
+    cin>>us;
+    
+    cout<<"\nIngrese contrasenia: ";
+    cin>>pwd;
+    
+    // usu = recorrerUsuarios(us, pwd); Recorrer colección de usuarios
+    
+        
     int opUsr=1;
         
     while (opUsr !=  0){
@@ -117,7 +152,101 @@ void iniciarSesion(){
     
 }
 
+void adminOpciones(){
+    
+     int opAdmin=1;
+     //int idSesion;
+        
+    while (opAdmin !=  0){
+                cin >> opAdmin;
+        switch (opAdmin){
+                case 1 : altaInmobiliaria(); break;
+                case 2 : altaInteresado(); break;
+                case 3 : obtenerReporteInmo(); break;
+                case 4 : cerrarSesion(idSesion); break;
+           }
+        }
+}
+
+void inmoOpciones(){
+    
+     int opInmo=1;
+     dtPropiedad propiedad;
+     string prop;
+     string nombre;
+     int pisos;
+     int gastosComunes;
+     string msjInmo;
+        
+    while (opInmo !=  0){
+                cin >> opInmo;
+        switch (opInmo){
+                case 1 : altaPropiedad(); break;
+                case 2 : modificarPropiedad(propiedad); break;
+                case 3 : eliminarPropiedad(propiedad); break;
+                case 4 : consultarPropiedad(prop); break;
+                case 5 : altaEdificio(nombre, pisos, gastosComunes); break;
+                case 6 : enviarMsjInmobiliaria(msjInmo); break;
+                case 7 : cerrarSesion(idSesion); break;
+           }
+        }
+}
+
+void interOpciones(){
+    
+     int opAdmin=1;
+     string propiedad;
+     string msjInter;
+        
+    while (opAdmin !=  0){
+                cin >> opAdmin;
+        switch (opAdmin){
+                case 1 : consultarPropiedad(propiedad); break;
+                case 2 : enviarMsjInteresado(msjInter); break;
+                case 3 : cerrarSesion(idSesion); break;
+           }
+        }
+}
+
+
+
 void cargaDatosPrueba(){
+    
+}
+
+void altaInteresado(){
+    
+}
+
+dtReporteInmobiliaria obtenerReporteInmo(){
+    
+}
+
+void cerrarSesion(int idSesion){
+    
+}
+
+void modificarPropiedad(dtPropiedad propiedad){
+    
+}
+
+void eliminarPropiedad(dtPropiedad prop){
+    
+}
+
+dtPropiedad consultarPropiedad(string propiedad){
+    
+}
+
+void altaEdificio(string nombre, int pisos, int gastosComunes){
+    
+}
+
+void enviarMsjInmobiliaria(string msjInmo){
+    
+}
+
+void enviarMsjInteresado(string msjInter){
     
 }
 //////////////////////////////////////////
