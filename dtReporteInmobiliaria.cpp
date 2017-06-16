@@ -18,9 +18,23 @@ dtReporteInmobiliaria::dtReporteInmobiliaria (string nombreInm, dtDireccion* ubi
 }
 
 dtReporteInmobiliaria::dtReporteInmobiliaria(){
+       this->nombreInm = "Inmobiliaria";
+    this->ubicacionInm = "N/A";
+    this->email = "N/A";
+    this->nombreDepto = "N/A";
+    this->nombreZona = "quie zona";
+    this->CantCasa = 10;
+    this->CantDeptos = 10;
 }
 
 dtReporteInmobiliaria::dtReporteInmobiliaria(const dtReporteInmobiliaria& orig){
+       this->nombreInm =dtReporteInmobiliaria().nombreInm;
+    this->ubicacionInm = dtReporteInmobiliaria().ubicacionInm;
+    this->email = dtReporteInmobiliaria().email;
+    this->nombreDepto = dtReporteInmobiliaria().nombreDepto;
+    this->nombreZona = dtReporteInmobiliaria().nombreZona;
+    this->CantCasa = dtReporteInmobiliaria().CantCasa;
+    this->CantDeptos = dtReporteInmobiliaria().CantDeptos;
 }
 
 dtReporteInmobiliaria::~dtReporteInmobiliaria(){

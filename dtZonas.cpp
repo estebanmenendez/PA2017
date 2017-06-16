@@ -14,11 +14,17 @@
 #include "dtZonas.h"
 
 dtZonas::dtZonas() {
-}
+    this->codigoZona=1;
+    this->nombreZona="quie zona";
+    }
 
 dtZonas::dtZonas(const dtZonas& orig) {
+    this->codigoZona=dtZonas.codigoZona;
+    this->nombreZona=dtZonas.nombreZona;
 }
 dtZonas::dtZonas(string codigoZona, string nombreZona){
+    this->codigoZona=codigoZona;
+    this->nombreZona=nombreZona;
     
 }
 dtZonas::~dtZonas() {

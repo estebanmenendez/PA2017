@@ -35,7 +35,9 @@ using namespace std;
     dtReporteInmobiliaria ** ContUsuario::obtenerReporteInmobiliarias (){}
 
 Usuarios ** ContUsuario::usuarioLogueado(){}
-  void ContUsuario::altaInmobiliaria( string nombre, dtDireccion * direccion, string email){}
+  void ContUsuario::altaInmobiliaria( string nombre, dtDireccion * direccion, string email){
+      
+  }
 
   void ContUsuario::iniciarSesion(string tipoUsuario , string email){}
   bool ContUsuario::verificarContrasena(string pwd , string pwdConfirmacion ){}

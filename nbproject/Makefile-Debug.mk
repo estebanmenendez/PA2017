@@ -15,8 +15,8 @@ NM=nm
 CCADMIN=CCadmin
 RANLIB=ranlib
 CC=gcc
-CCC=g++
-CXX=g++
+CCC=g++-4.9
+CXX=g++-4.9
 FC=gfortran
 AS=as
 
@@ -47,6 +47,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Edificio.o \
 	${OBJECTDIR}/Fabrica.o \
 	${OBJECTDIR}/ICollectible.o \
+	${OBJECTDIR}/ICollection.o \
 	${OBJECTDIR}/IContProp.o \
 	${OBJECTDIR}/IContUsuario.o \
 	${OBJECTDIR}/IDictionary.o \
@@ -173,6 +174,11 @@ ${OBJECTDIR}/ICollectible.o: ICollectible.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ICollectible.o ICollectible.cpp
+
+${OBJECTDIR}/ICollection.o: ICollection.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ICollection.o ICollection.cpp
 
 ${OBJECTDIR}/IContProp.o: IContProp.cpp
 	${MKDIR} -p ${OBJECTDIR}
