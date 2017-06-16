@@ -87,6 +87,8 @@ int main(int argc, char** argv) {
 		cin >> opcion;
 		switch (opcion){
 			case 1 : iniciarSesion();break;
+                        case 2 : iniciarSesion();break;
+                        case 0 : break;
                 }
 
 	}
@@ -130,14 +132,30 @@ void iniciarSesion(){
     string us, pwd;
     Usuarios * usu;
     
-    cout<<"Ingrese email: ";
+    string datos = "n";
+    cout<<"Desea precargar datos? ";
+    cin>>datos;
+    
+    int admin=0;
+    int inter=0;
+    int inmo=0;
+    
+    if (datos=="s"){
+        cout<<"precargarDatos();";
+    }
+    
+    cout<<"\nIngrese email: ";
     cin>>us;
     
     cout<<"\nIngrese contrasenia: ";
     cin>>pwd;
     
     // usu = recorrerUsuarios(us, pwd); Recorrer colección de usuarios
-    
+    // ESTO ES SOLO PARA PROBAR EL MENU
+    cout<<"\nSeleccione tipo de usuario: ";
+    cout<<"\n1 - Administrador"<<endl;
+    cout<<"2 - Inmobiliaria"<<endl;
+    cout<<"3 - Interesado"<<endl;
         
     int opUsr=1;
         
