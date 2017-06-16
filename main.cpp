@@ -25,6 +25,14 @@ void menu();
 void altaInmobiliaria();
 void altaPropiedad();
 
+//PropInmo
+int getCantidadMensajes(Usuarios);
+void enviaMensaje(Propiedad, Usuarios, string);
+void altaPropEnInmob(Propiedad,Usuarios);
+void eliminarLinks();
+ Aviso getAvisos();
+
+
 
 
 
