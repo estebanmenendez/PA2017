@@ -23,7 +23,7 @@
 
 
 
-
+using namespace std;
 //void menu();
 void opcionesGenerales(); // MENU GENERAL DE OPCIONES ADMIN/INTER/INMO/CARGAR PRUEBA
 void cargaDatosPrueba();
@@ -33,7 +33,7 @@ void interesadoOpciones();
 void iniciarSesion();
 
 void adminOpciones();
-void inmoOpciones();
+void inmoOpciones(int opInmo);
 void interOpciones();
 
 void altaInteresado();
@@ -56,7 +56,7 @@ void altaInmobiliaria();
 void altaPropiedad();
 
 
-using namespace std;
+
 
 int idSesion=0;
 
@@ -112,13 +112,17 @@ void administradorOpciones(){
 }
 
 void inmobiliariaOpciones(){
+    int opInmo=0;
     cout << "1 - Alta propiedad" << endl;
     cout << "2 - Modificar propiedad" << endl; 
     cout << "3 - Eliminar propiedad" << endl;
     cout << "4 - Consultar propiedad" << endl; 
     cout << "5 - Alta edificio" << endl;
     cout << "6 - Enviar mensaje inmobiliaria" << endl;
-    cout << "7 - Cerrar sesion" << endl; 
+    cout << "7 - Cerrar sesion" << endl;
+    cin>>opInmo;
+    inmoOpciones(opInmo);
+    
 }
 
 void interesadoOpciones(){
@@ -186,9 +190,9 @@ void adminOpciones(){
         }
 }
 
-void inmoOpciones(){
+void inmoOpciones(int opInmo){
     
-     int opInmo=1;
+     //int opInmo=1;
      dtPropiedad propiedad;
      string prop;
      string nombre;
@@ -197,7 +201,7 @@ void inmoOpciones(){
      string msjInmo;
         
     while (opInmo !=  0){
-                cin >> opInmo;
+                //cin >> opInmo;
         switch (opInmo){
                 case 1 : altaPropiedad(); break;
                 case 2 : modificarPropiedad(propiedad); break;
