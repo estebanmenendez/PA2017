@@ -1,3 +1,4 @@
+
 /* 
  * File:   main.cpp
  * Author: lucia
@@ -58,14 +59,6 @@ Usuarios * recorrerUsuarios(string, string);
 void altaInmobiliaria();
 void altaPropiedad();
 
-//PropInmo
-int getCantidadMensajes(Usuarios);
-void enviarMensaje(Propiedad, Usuarios, string);
-void altaPropEnInmob(Propiedad,Usuarios);
-void eliminarLinks();
-void getAvisos();
-
-void altaPropiedadC(dtPropiedadCasa);
 
 using namespace std;
 
