@@ -27,7 +27,9 @@ class dtPropiedadApto{
         dtPropiedadApto();
         dtPropiedadApto(const dtPropiedadApto& orig);
         virtual ~dtPropiedadApto();
-        dtPropiedadApto(int cantAmbiente, int cantBanios, int cantDormitorios, bool garage, dtDireccion* direccionProp, float mCuadradosEdificado, string nombreEdificio);
+        dtPropiedadApto(int cantAmbiente, int cantBanios, int cantDormitorios,
+        bool garage, dtDireccion* direccionProp, float mCuadradosEdificado,
+        string nombreEdificio, float valor, bool ventAlq);
         
         int getcantAmbiente() const;
         int getcantBanios() const;
@@ -36,6 +38,8 @@ class dtPropiedadApto{
         dtDireccion* getdireccionProp() const;
         float getmCuadradosEdificado() const;
         string getnombreEdificio() const;
+        float getValor() const;
+        bool getVentaAlq() const;
         
     private:
         int cantAmbiente;
@@ -45,7 +49,8 @@ class dtPropiedadApto{
         dtDireccion* direccionProp;
         float mCuadradosEdificado;
         string nombreEdificio;
-        
+        float valor;
+        bool ventAlq;
 };
 
 

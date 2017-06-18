@@ -1,3 +1,4 @@
+
 /* 
  * File:   main.cpp
  * Author: lucia
@@ -20,6 +21,9 @@
 #include"Propiedad.h"
 #include"dtPropiedad.h"
 #include"sistema.h"
+#include"PropInmo.h"
+#include "dtPropiedadApto.h"
+#include "dtPropiedadCasa.h"
 
 
 
@@ -277,12 +281,14 @@ void altaPropiedad(){
     
     dtZonas** listaZona;
     dtEdificio edif;
-    string letraDep, codigoZona,ciudad, calle, numero,nEdif,ventaAlq;
+    string letraDep, codigoZona,ciudad, calle, numero,nEdif;
     int cAmb,cBanios,cDorm;
     float mEdif,mVerdes,valor;
     char opt,garage;
+    dtPropiedadCasa * dtPropC;
+    dtPropiedadApto * dtPropA;
     dtDireccion* dir;
-    bool lgarage;
+    bool lgarage,ventAlq;
     
     
     listaDep = s->listaDepartamentos();
@@ -318,11 +324,12 @@ void altaPropiedad(){
     cout<<"Ingrese Metros Verdes: \n";
     cin>>mVerdes;
     cout<<"Indique si  Venta o Alquiler : A/V \n";
-    cin>>ventaAlq; 
+    cin>>ventAlq; 
     cout<<"Ingrese Valor de Venta/ Alquiler \n";
     cin>>valor; 
-    s->altaPropiedadCasa(cAmb,cBanios,cDorm,lgarage,dir,mEdif,mVerdes,valor,ventaAlq);
-    
+    dtPropC = new dtPropiedadCasa(cAmb,cBanios,cDorm,lgarage,dir,mEdif,mVerdes,valor,ventAlq);
+    s->altaPropiedadCasa(*dtPropC);
+   
     }else{
         s->listarEdificioZona(codigoZona);
         cout<<"Ingrese Un Edificio: S/N \n";
@@ -340,8 +347,12 @@ void altaPropiedad(){
     cin>>cBanios;
     cout<<"Ingrese Cantidad Dormitorios: \n";
     cin>>cDorm;
-    cout<<"Ingrese Garage : S/N \n";
+    cout<<"Tiene Garage : S/N \n";
     cin>>garage; 
+    if(garage =='S')
+        lgarage = true;
+    else
+        lgarage = false;
     cout<<"Ingrese Ciudad: ";
     cin>>ciudad;
     cout<<"Ingrese Calle: ";
@@ -352,10 +363,11 @@ void altaPropiedad(){
     cout<<"Ingrese Metros Cuadrados Edif: \n";
     cin>>mEdif;
     cout<<"Indique si  Venta o Alquiler : A/V \n";
-    cin>>ventaAlq; 
+    cin>>ventAlq; 
     cout<<"Ingrese Valor de Venta/ Alquiler \n";
     cin>>valor; 
-     s->altaPropiedadApto(cAmb,cBanios,cDorm,lgarage,dir,mEdif,nEdif,valor,ventaAlq);
+    dtPropA = new dtPropiedadApto(cAmb,cBanios,cDorm,lgarage,dir,mEdif,nEdif,valor,ventAlq);
+    s->altaPropiedadApto(*dtPropA);
     }
 }
 

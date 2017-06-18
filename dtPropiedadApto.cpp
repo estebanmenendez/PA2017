@@ -7,7 +7,9 @@
 
 #include "dtPropiedadApto.h"
 
-dtPropiedadApto::dtPropiedadApto(int cantAmbiente, int cantBanios, int cantDormitorios, bool garage, dtDireccion* direccionProp, float mCuadradosEdificado, string nombreEdificio){
+dtPropiedadApto::dtPropiedadApto(int cantAmbiente, int cantBanios, int cantDormitorios,
+        bool garage, dtDireccion* direccionProp, float mCuadradosEdificado, string nombreEdificio,
+        float valor, bool ventAlq){
     this->cantAmbiente = cantAmbiente;
     this->cantBanios = cantBanios;
     this->cantDormitorios = cantDormitorios;
@@ -15,6 +17,9 @@ dtPropiedadApto::dtPropiedadApto(int cantAmbiente, int cantBanios, int cantDormi
     this->garage = garage;
     this->mCuadradosEdificado = mCuadradosEdificado;
     this->nombreEdificio = nombreEdificio;
+    this->valor = valor;
+    this->ventAlq = ventAlq;
+    
 }
 
 dtPropiedadApto::dtPropiedadApto(const dtPropiedadApto& orig){
@@ -52,4 +57,11 @@ float dtPropiedadApto::getmCuadradosEdificado() const{
 
 string dtPropiedadApto::getnombreEdificio() const{
     return this->nombreEdificio;
+}
+float dtPropiedadApto::getValor() const{
+    return this->valor;
+}
+
+bool dtPropiedadApto::getVentaAlq() const{
+    return this->ventAlq;
 }

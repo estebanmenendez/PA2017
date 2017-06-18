@@ -35,6 +35,7 @@ using namespace std;
     dtReporteInmobiliaria ** ContUsuario::obtenerReporteInmobiliarias (){}
 
 Usuarios ** ContUsuario::usuarioLogueado(){}
+<<<<<<< HEAD
   void ContUsuario::altaInmobiliaria( string nombre, dtDireccion * direccion, string email){
       
   }
@@ -46,3 +47,11 @@ Usuarios ** ContUsuario::usuarioLogueado(){}
 
 
   void ContUsuario::CerrarSesion( int idSesion ){ }
+=======
+void ContUsuario::altaInmobiliaria( string nombre, dtDireccion * direccion, string email){}
+void ContUsuario::iniciarSesion(string tipoUsuario , string email){}
+bool ContUsuario::verificarContrasena(string pwd , string pwdConfirmacion ){}
+void ContUsuario::activarUsuario(string tipoUsuario ,string email ){ }
+void ContUsuario::validarPwd( string contrasena ){ }
+void ContUsuario::CerrarSesion( int idSesion ){ }
+>>>>>>> b5626865bf8b4d60c199211c7c91f08abc7f1212
