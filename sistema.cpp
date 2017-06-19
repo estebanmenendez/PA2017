@@ -45,7 +45,9 @@ dtZonas** sistema::listaZonaDepartamento(string letraDepartamento){
 }
 void sistema::seleccionaZona(string codigoZona){
 }
-void sistema::altaPropiedadCasa (dtPropiedadCasa){
+void sistema::altaPropiedadCasa (int cantAmbiente, int cantBanios, int cantDormitorios,
+        bool garage, dtDireccion* direccionProp, float mCuadradosEdificado, 
+        float metrosVerdes, float valor, string alquierOVenta){
 
 }
 dtEdificio** sistema::listarEdificioZona(string codigoZona){
@@ -61,7 +63,9 @@ void sistema::altaEdificio(dtEdificio edificio){
 string sistema::seleccionarEdificio(){
     return "se selecciono el Edificio";
 }    
-void sistema::altaPropiedadApto(dtPropiedadApto){
+void sistema::altaPropiedadApto(int cantAmbiente, int cantBanios,int cantDormitorios, 
+        bool garage, dtDireccion* direccionProp, float mCuadradosEdificado,
+        string nombreEdificio, float valor, string alquierOVenta){
 
 }
     

@@ -78,7 +78,6 @@
       <itemPath>Edificio.cpp</itemPath>
       <itemPath>Fabrica.cpp</itemPath>
       <itemPath>ICollectible.cpp</itemPath>
-      <itemPath>ICollection.cpp</itemPath>
       <itemPath>IContProp.cpp</itemPath>
       <itemPath>IContUsuario.cpp</itemPath>
       <itemPath>IDictionary.cpp</itemPath>
@@ -193,8 +192,6 @@
       <item path="ICollectible.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ICollectible.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="ICollection.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ICollection.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -430,8 +427,6 @@
       <item path="ICollectible.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ICollectible.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="ICollection.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ICollection.h" ex="false" tool="3" flavor2="0">
       </item>

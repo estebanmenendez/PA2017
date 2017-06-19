@@ -25,17 +25,14 @@ PropInmo::~PropInmo() {
 }
 
 int PropInmo::getCantidadMensajes(Usuarios){
-    
 	
 }
 
 void PropInmo::enviarMensaje(Propiedad propiedad, string mensaje){
-    
 	
 }
 
 void PropInmo::altaPropEnInmob(Propiedad, string){
-    
 	
 }
 
@@ -44,6 +41,5 @@ void PropInmo::eliminarLinks(){
 }
 
 dtAvisoPropiedad** PropInmo::getAvisos(){
-    
 	
 }

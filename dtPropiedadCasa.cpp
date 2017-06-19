@@ -6,9 +6,7 @@
 
 #include "dtPropiedadCasa.h"
 
-dtPropiedadCasa::dtPropiedadCasa(int cantAmbiente, int cantBanios, int cantDormitorios,
-        bool garage, dtDireccion* direccionProp, float mCuadradosEdificado, float metrosVerdes,
-        float valor, bool ventAlq){
+dtPropiedadCasa::dtPropiedadCasa(int cantAmbiente, int cantBanios, int cantDormitorios, bool garage, dtDireccion* direccionProp, float mCuadradosEdificado, float metrosVerdes){
     this->cantAmbiente = cantAmbiente;
     this->cantBanios = cantBanios;
     this->cantDormitorios = cantDormitorios;
@@ -16,8 +14,6 @@ dtPropiedadCasa::dtPropiedadCasa(int cantAmbiente, int cantBanios, int cantDormi
     this->garage = garage;
     this->mCuadradosEdificado = mCuadradosEdificado;
     this->metrosVerdes = metrosVerdes;
-    this->valor = valor;
-    this->ventAlq = ventAlq;
 }
 
 dtPropiedadCasa::dtPropiedadCasa(){
@@ -55,12 +51,4 @@ float dtPropiedadCasa::getmCuadradosEdificado() const{
 
 float dtPropiedadCasa::getmetrosVerdes() const{
     return this->metrosVerdes;
-}
-
-float dtPropiedadCasa::getValor() const{
-    return this->valor;
-}
-
-bool dtPropiedadCasa::getVentaAlq() const{
-    return this->ventAlq;
 }
