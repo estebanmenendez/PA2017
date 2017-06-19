@@ -19,6 +19,7 @@
 #include"dtReporteInmobiliaria.h"
 #include"Propiedad.h"
 #include"dtPropiedad.h"
+#include"Fabrica.h"
 #include"sistema.h"
 
 
@@ -101,8 +102,7 @@ int main(int argc, char** argv) {
 void opcionesGenerales(){
         cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<endl<<endl;
 	cout << "1 - Iniciar Sesion" << endl;
-        cout << "2 - Iniciar Sesion - con datos precargados" << endl;
-	cout << "0 - Salir" << endl; 
+     	cout << "0 - Salir" << endl; 
 }
 
 void administradorOpciones(){
@@ -247,6 +247,8 @@ void cargaDatosPrueba(){
 void altaInteresado(){
     cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
     cout<<"Desarrollo Alta Interesado";
+    
+    
 }
 
 dtReporteInmobiliaria obtenerReporteInmo(){
@@ -385,7 +387,8 @@ void altaPropiedad(){
 
 void altaInmobiliaria(){
     string nombre, ciudad, calle, numero;
-    sistema* s= new sistema();
+    //sistema* s= new sistema();
+    Fabrica* f = Fabrica::getInstance();
     dtDireccion* dir;
     
     system ("clear");
@@ -400,7 +403,7 @@ void altaInmobiliaria(){
     cout<<"Ingrese Número: ";
     cin>>numero;
     dir = new dtDireccion(ciudad,numero,calle);
-    s->altaInmobiliaria(nombre,dir);
+    //s->altaInmobiliaria(nombre,dir);
     cout<<"Inmobiliaria dada de Alta ";
     
     
