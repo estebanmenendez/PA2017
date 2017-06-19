@@ -10,6 +10,7 @@
       <itemPath>Aviso.h</itemPath>
       <itemPath>Casa.h</itemPath>
       <itemPath>Chat.h</itemPath>
+      <itemPath>ColGenerica.h</itemPath>
       <itemPath>ContProp.h</itemPath>
       <itemPath>ContUsuario.h</itemPath>
       <itemPath>Departamento.h</itemPath>
@@ -36,6 +37,8 @@
       <itemPath>Par.h</itemPath>
       <itemPath>PropInmo.h</itemPath>
       <itemPath>Propiedad.h</itemPath>
+      <itemPath>String.h</itemPath>
+      <itemPath>StringKey.h</itemPath>
       <itemPath>Usuarios.h</itemPath>
       <itemPath>Venta.h</itemPath>
       <itemPath>Zona.h</itemPath>
@@ -72,12 +75,14 @@
       <itemPath>Aviso.cpp</itemPath>
       <itemPath>Casa.cpp</itemPath>
       <itemPath>Chat.cpp</itemPath>
+      <itemPath>ColGenerica.cpp</itemPath>
       <itemPath>ContProp.cpp</itemPath>
       <itemPath>ContUsuario.cpp</itemPath>
       <itemPath>Departamento.cpp</itemPath>
       <itemPath>Edificio.cpp</itemPath>
       <itemPath>Fabrica.cpp</itemPath>
       <itemPath>ICollectible.cpp</itemPath>
+      <itemPath>ICollection.cpp</itemPath>
       <itemPath>IContProp.cpp</itemPath>
       <itemPath>IContUsuario.cpp</itemPath>
       <itemPath>IDictionary.cpp</itemPath>
@@ -96,6 +101,8 @@
       <itemPath>Par.cpp</itemPath>
       <itemPath>PropInmo.cpp</itemPath>
       <itemPath>Propiedad.cpp</itemPath>
+      <itemPath>String.cpp</itemPath>
+      <itemPath>StringKey.cpp</itemPath>
       <itemPath>Usuarios.cpp</itemPath>
       <itemPath>Venta.cpp</itemPath>
       <itemPath>Zona.cpp</itemPath>
@@ -131,8 +138,20 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
   </logicalFolder>
   <sourceRootList>
+    <Elem>.</Elem>
     <Elem>.</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
@@ -169,6 +188,10 @@
       </item>
       <item path="Chat.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="ColGenerica.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ColGenerica.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="ContProp.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ContProp.h" ex="false" tool="3" flavor2="0">
@@ -192,6 +215,8 @@
       <item path="ICollectible.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ICollectible.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ICollection.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ICollection.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -268,6 +293,14 @@
       <item path="Propiedad.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Propiedad.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="String.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="String.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="StringKey.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="StringKey.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Usuarios.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -404,6 +437,10 @@
       </item>
       <item path="Chat.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="ColGenerica.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ColGenerica.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="ContProp.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ContProp.h" ex="false" tool="3" flavor2="0">
@@ -427,6 +464,8 @@
       <item path="ICollectible.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ICollectible.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ICollection.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ICollection.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -503,6 +542,14 @@
       <item path="Propiedad.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Propiedad.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="String.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="String.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="StringKey.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="StringKey.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Usuarios.cpp" ex="false" tool="1" flavor2="0">
       </item>

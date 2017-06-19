@@ -23,6 +23,7 @@ Propiedad::~Propiedad() {
 }
 
  void Propiedad::esCasaP(){
+    
  }
  void Propiedad::esAptoP(){
      

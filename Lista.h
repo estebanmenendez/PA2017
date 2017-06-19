@@ -8,9 +8,13 @@
 #ifndef LISTA_H_
 #define LISTA_H_
 
-#include "ICollection.h"
-#include "Nodo.h"
-#include "ListaIterator.h"
+#include "NodoDicc.h"
+#include "IIterator.h"
+#include "ICollectible.h"
+#include "IDictionary.h"
+#include "ListDiccIterator.h"
+#include "ListDiccIteratorObj.h"
+#include "ListDiccIteratorKey.h"
 
 class Lista: public ICollection {
 private:
@@ -24,6 +28,15 @@ public:
   void remove(ICollectible *);
   bool member(ICollectible *);
   IIterator *iterator();
+  
+    void add(ICollectible* elem,IKey* key);
+    bool member(IKey* key);
+    ICollectible* removeKey(IKey* key);
+    ICollectible* removeObj(ICollectible* obj);
+    ICollectible* find(IKey* key);
+    ListDiccIteratorObj* getIteratorObj();
+    ListDiccIteratorKey* getIteratorKey();
+    unsigned int size();
 
   bool isEmpty();
 };
