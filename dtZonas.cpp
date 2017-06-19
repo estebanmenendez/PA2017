@@ -38,4 +38,22 @@ string dtZonas::getnombreZona() const {
     return this->nombreZona;
 }
 
+void dtZonas::setNombreZona(string nombreZona) {
+    this->nombreZona = nombreZona;
+}
+
+string dtZonas::getNombreZona() const {
+    return nombreZona;
+}
+
+void dtZonas::setCodigoZona(string codigoZona) {
+    this->codigoZona = codigoZona;
+}
+
+string dtZonas::getCodigoZona() const {
+    return codigoZona;
+}
+
+
+
 

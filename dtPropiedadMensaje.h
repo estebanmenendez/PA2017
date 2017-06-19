@@ -22,6 +22,11 @@
 using namespace std;
 
 class dtPropiedadMensaje {
+void setCantMensajesEnviados(int cantMensajesEnviados);
+void setDireccionProp(dtDireccion* direccionProp);
+dtDireccion* getDireccionProp() const;
+void setCodigoProp(string codigoProp);
+string getCodigoProp() const;
 private:
     string codigoProp;
     dtDireccion* direccionProp;

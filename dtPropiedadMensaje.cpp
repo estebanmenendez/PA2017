@@ -19,6 +19,26 @@ dtPropiedadMensaje::dtPropiedadMensaje(string codigoProp, dtDireccion* direccion
     this->direccionProp = direccionProp;
 }
 
+void dtPropiedadMensaje::setCantMensajesEnviados(int cantMensajesEnviados) {
+    this->cantMensajesEnviados = cantMensajesEnviados;
+}
+
+void dtPropiedadMensaje::setDireccionProp(dtDireccion* direccionProp) {
+    this->direccionProp = direccionProp;
+}
+
+dtDireccion* dtPropiedadMensaje::getDireccionProp() const {
+    return direccionProp;
+}
+
+void dtPropiedadMensaje::setCodigoProp(string codigoProp) {
+    this->codigoProp = codigoProp;
+}
+
+string dtPropiedadMensaje::getCodigoProp() const {
+    return codigoProp;
+}
+
 dtPropiedadMensaje::dtPropiedadMensaje() {
 }
 

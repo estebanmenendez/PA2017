@@ -7,29 +7,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/home/juan/Documentos/ProgAvanzada2017/Inmobiliaria.h</file>
-            <file>file:/home/juan/Documentos/ProgAvanzada2017/Venta.cpp</file>
-            <file>file:/home/juan/Documentos/ProgAvanzada2017/Propiedad.cpp</file>
-            <file>file:/home/juan/Documentos/ProgAvanzada2017/ContUsuario.h</file>
+            <file>file:/home/juan/Documentos/ProgAvanzada2017/main.cpp</file>
             <file>file:/home/juan/Documentos/ProgAvanzada2017/ContUsuario.cpp</file>
-            <file>file:/home/juan/Documentos/ProgAvanzada2017/Inmobiliaria.cpp</file>
-            <file>file:/home/juan/Documentos/ProgAvanzada2017/IContProp.cpp</file>
-=======
-            <file>file:/home/esteban/Escritorio/PA07/ProgAvanzada2017/Departamento.h</file>
-            <file>file:/home/esteban/Escritorio/PA07/ProgAvanzada2017/Usuarios.cpp</file>
-            <file>file:/home/esteban/Escritorio/PA07/ProgAvanzada2017/ICollection.h</file>
-            <file>file:/home/esteban/Escritorio/PA07/ProgAvanzada2017/main.cpp</file>
-            <file>file:/home/esteban/Escritorio/PA07/ProgAvanzada2017/PropInmo.h</file>
-            <file>file:/home/esteban/Escritorio/PA07/ProgAvanzada2017/PropInmo.cpp</file>
-            <file>file:/home/esteban/Escritorio/PA07/ProgAvanzada2017/Mensaje.cpp</file>
-            <file>file:/home/esteban/Escritorio/PA07/ProgAvanzada2017/Usuarios.h</file>
-            <file>file:/home/esteban/Escritorio/PA07/ProgAvanzada2017/IContUsuario.h</file>
-            <file>file:/home/esteban/Escritorio/PA07/ProgAvanzada2017/Fabrica.h</file>
-            <file>file:/home/esteban/Escritorio/PA07/ProgAvanzada2017/ICollectible.h</file>
-            <file>file:/home/esteban/Escritorio/PA07/ProgAvanzada2017/IContPorp.h</file>
-            <file>file:/home/esteban/Escritorio/PA07/ProgAvanzada2017/Propiedad.h</file>
->>>>>>> b5626865bf8b4d60c199211c7c91f08abc7f1212
         </group>
     </open-files>
 </project-private>

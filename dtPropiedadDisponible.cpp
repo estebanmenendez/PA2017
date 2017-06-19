@@ -31,3 +31,27 @@ dtDireccion* dtPropiedadDisponible::getdireccionProp() const{
 string dtPropiedadDisponible::getalquilerOVenta() const{
     return this->alquilerOVenta;
 }
+
+void dtPropiedadDisponible::setAlquilerOVenta(string alquilerOVenta) {
+    this->alquilerOVenta = alquilerOVenta;
+}
+
+string dtPropiedadDisponible::getAlquilerOVenta() const {
+    return alquilerOVenta;
+}
+
+void dtPropiedadDisponible::setDireccionProp(dtDireccion* direccionProp) {
+    this->direccionProp = direccionProp;
+}
+
+dtDireccion* dtPropiedadDisponible::getDireccionProp() const {
+    return direccionProp;
+}
+
+void dtPropiedadDisponible::setCodigoProp(string codigoProp) {
+    this->codigoProp = codigoProp;
+}
+
+string dtPropiedadDisponible::getCodigoProp() const {
+    return codigoProp;
+}

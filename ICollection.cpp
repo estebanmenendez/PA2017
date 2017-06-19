@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 #include "ICollection.h"
+#include "IDictionary.h"
 
 ICollection::ICollection(){
     this->= new ListDicc();
@@ -11,6 +12,7 @@ ICollection::ICollection(){
 
 ICollection::ICollection(IDictionary* dicc){
 	this->dicc=dicc;
+        
 }
 
 //operaciones

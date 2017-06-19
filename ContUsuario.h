@@ -22,6 +22,7 @@ class ContUsuario : public IContUsuario {
 public:
     ContUsuario();
     ContUsuario(const ContUsuario& orig);
+    
     virtual ~ContUsuario();
     
     void altaInmobiliaria(string, dtDireccion*, string);
