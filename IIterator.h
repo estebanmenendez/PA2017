@@ -12,10 +12,15 @@
 
 class IIterator {
 public:
-  virtual bool hasNext() = 0;
-  virtual ICollectible *next() = 0;
-  virtual ICollectible *getCurrent() = 0;
-  virtual void remove() = 0;
+//  virtual bool hasNext() = 0;
+//  virtual ICollectible *next() = 0;
+//  virtual ICollectible *getCurrent() = 0;
+//  virtual void remove() = 0;
+
+    virtual ICollectible* getCurrent()=0;
+    virtual bool hasCurrent()=0;
+    virtual void next()=0;
+    virtual ~IIterator();
 };
 
 #endif /* IIterator_H_ */

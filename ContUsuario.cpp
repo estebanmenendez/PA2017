@@ -73,4 +73,7 @@ bool ContUsuario::verificarContrasena(string pwd , string pwdConfirmacion ){}
 void ContUsuario::activarUsuario(string tipoUsuario ,string email ){ }
 void ContUsuario::validarPwd( string contrasena ){ }
 void ContUsuario::CerrarSesion( int idSesion ){ }
+<<<<<<< HEAD
+=======
 >>>>>>> d06a6c7f2c63bb0a5e719fcdbb4219c84f244f96
+>>>>>>> origin/master

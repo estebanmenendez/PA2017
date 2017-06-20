@@ -12,6 +12,7 @@
  */
 
 #include "Casa.h"
+#include "dtPropiedadCasa.h"
 
 Casa::Casa() {
 }
