@@ -1,0 +1,145 @@
+
+Merge branch 'master' of https://github.com/ernestomello/ProgAvanzada2017
+
+Conflicts:
+	ContUsuario.cpp
+	ICollection.cpp
+	main.cpp
+	nbproject/private/private.xml
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 1 and 5 different commits each, respectively.
+#   (use "git pull" to merge the remote branch into yours)
+#
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+#	modified:   .dep.inc
+#	modified:   .gitignore
+#	modified:   Administrador.cpp
+#	modified:   Administrador.h
+#	modified:   Alquiler.cpp
+#	modified:   Alquiler.h
+#	modified:   Apartamento.cpp
+#	modified:   Apartamento.h
+#	modified:   Aviso.cpp
+#	modified:   Aviso.h
+#	modified:   Casa.cpp
+#	modified:   Casa.h
+#	modified:   Chat.cpp
+#	modified:   Chat.h
+#	modified:   ContProp.cpp
+#	modified:   ContProp.h
+#	modified:   ContUsuario.cpp
+#	modified:   ContUsuario.h
+#	modified:   Departamento.cpp
+#	modified:   Departamento.h
+#	modified:   Edificio.cpp
+#	modified:   Edificio.h
+#	modified:   Fabrica.cpp
+#	modified:   Fabrica.h
+#	modified:   ICollectible.cpp
+#	modified:   ICollectible.h
+#	modified:   ICollection.h
+#	modified:   IContPorp.h
+#	modified:   IContProp.cpp
+#	modified:   IContUsuario.cpp
+#	modified:   IContUsuario.h
+#	modified:   IDictionary.cpp
+#	modified:   IDictionary.h
+#	modified:   IIterator.h
+#	modified:   IKey.cpp
+#	modified:   IKey.h
+#	modified:   Inmobiliaria.cpp
+#	modified:   Inmobiliaria.h
+#	modified:   Interesado.cpp
+#	modified:   Interesado.h
+#	modified:   ListDiccIterator.cpp
+#	modified:   ListDiccIterator.h
+#	modified:   ListDiccIteratorKey.cpp
+#	modified:   ListDiccIteratorKey.h
+#	modified:   ListDiccIteratorObj.cpp
+#	modified:   ListDiccIteratorObj.h
+#	modified:   Lista.cpp
+#	modified:   Lista.h
+#	modified:   ListaDicc.cpp
+#	modified:   ListaDicc.h
+#	modified:   ListaIterator.cpp
+#	modified:   ListaIterator.h
+#	modified:   Makefile
+#	modified:   Mensaje.cpp
+#	modified:   Mensaje.h
+#	modified:   Nodo.cpp
+#	modified:   Nodo.h
+#	modified:   NodoDicc.cpp
+#	modified:   NodoDicc.h
+#	modified:   Par.cpp
+#	modified:   Par.h
+#	modified:   PropInmo.cpp
+#	modified:   PropInmo.h
+#	modified:   Propiedad.cpp
+#	modified:   Propiedad.h
+#	modified:   README.md
+#	modified:   Usuarios.cpp
+#	modified:   Usuarios.h
+#	modified:   Venta.cpp
+#	modified:   Venta.h
+#	modified:   Zona.cpp
+#	modified:   Zona.h
+#	modified:   dist/Debug/GNU-Linux/progavanzada2017
+#	modified:   dtAvisoPropiedad.cpp
+#	modified:   dtAvisoPropiedad.h
+#	modified:   dtConversaInmobiliaria.cpp
+#	modified:   dtConversaInmobiliaria.h
+#	modified:   dtFecha.cpp
+#	modified:   dtFecha.h
+#	modified:   dtHora.cpp
+#	modified:   dtHora.h
+#	modified:   dtMensajes.cpp
+#	modified:   dtMensajes.h
+#	modified:   dtPropEnDpto.cpp
+#	modified:   dtPropEnDpto.h
+#	modified:   dtPropZonas.cpp
+#	modified:   dtPropZonas.h
+#	modified:   dtPropiedad.cpp
+#	modified:   dtPropiedad.h
+#	modified:   dtPropiedadApto.cpp
+#	modified:   dtPropiedadApto.h
+#	modified:   dtPropiedadCasa.cpp
+#	modified:   dtPropiedadCasa.h
+#	modified:   dtPropiedadDisponible.cpp
+#	modified:   dtPropiedadDisponible.h
+#	modified:   dtPropiedadInmobiliaria.cpp
+#	modified:   dtPropiedadInmobiliaria.h
+#	modified:   dtPropiedadMensaje.cpp
+#	modified:   dtPropiedadMensaje.h
+#	modified:   dtReporteInmobiliaria.cpp
+#	modified:   dtReporteInmobiliaria.h
+#	modified:   dtZonas.cpp
+#	modified:   main.cpp
+#	modified:   nbproject/Makefile-Debug.mk
+#	modified:   nbproject/Makefile-Release.mk
+#	modified:   nbproject/Makefile-impl.mk
+#	modified:   nbproject/Makefile-variables.mk
+#	modified:   nbproject/Package-Debug.bash
+#	modified:   nbproject/Package-Release.bash
+#	modified:   nbproject/configurations.xml
+#	modified:   nbproject/private/Makefile-variables.mk
+#	modified:   nbproject/private/c_standard_headers_indexer.c
+#	modified:   nbproject/private/configurations.xml
+#	modified:   nbproject/private/cpp_standard_headers_indexer.cpp
+#	modified:   nbproject/private/launcher.properties
+#	modified:   nbproject/private/private.xml
+#	modified:   nbproject/project.xml
+#	modified:   sistema.cpp
+#	modified:   sistema.h
+#

@@ -25,15 +25,11 @@
 #include"PropInmo.h"
 #include "dtPropiedadApto.h"
 #include "dtPropiedadCasa.h"
-<<<<<<< HEAD
 #include "ICollection.h"
 #include "Inmobiliaria.h"
 #include "Interesado.h"
 #include "ListaDicc.h"
-=======
 #include"Usuarios.h"
->>>>>>> d06a6c7f2c63bb0a5e719fcdbb4219c84f244f96
-
 
 
 using namespace std;
@@ -315,28 +311,27 @@ void eliminarPropiedad(dtPropiedad prop){
 }
 
 dtPropiedad consultarPropiedad(string propiedad){
-<<<<<<< HEAD
+
     dtPropiedad *dtprop = new dtPropiedad;
     if(sistema * s =dynamic_cast <s*> Inmobiliaria){
         ListDicc *lst = new ListDicc;
         IDictionary *key =new IDictionary;
         while(!s->listaDepartamentos()){
         IKey key = s->listaDepartamentos()->getletraDepartamento();
-        key->member(Lkey);
         string nombreDepto=s->listaDepartamentos()->getnombreDepartamento();
         
         }}
     else{if(sistema * s2 =dynamic_cast <s2*> Interesado){}}
     
-=======
+
     cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
     cout<<"Desarrollo Consultar Propiedad";
->>>>>>> d06a6c7f2c63bb0a5e719fcdbb4219c84f244f96
+ 
     
 }
 
 void altaEdificio(string nombre, int pisos, int gastosComunes){
-<<<<<<< HEAD
+ 
     try {
          if (sistema * s = dynamic_cast <s*> Inmobiliaria){
          cout<<"Ingrese nombre del edificio: "<<endl;
@@ -360,10 +355,10 @@ void altaEdificio(string nombre, int pisos, int gastosComunes){
     
     
         
-=======
+
     cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
     cout<<"Desarrollo Alta Edificio";
->>>>>>> d06a6c7f2c63bb0a5e719fcdbb4219c84f244f96
+ 
 }
 
 void enviarMsjInmobiliaria(string msjInmo){
