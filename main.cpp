@@ -51,7 +51,7 @@ void cerrarSesion(int idSesion);
 void modificarPropiedad();
 void eliminarPropiedad();
 
-dtPropiedad consultarPropiedad(string propiedad);
+dtPropiedad consultarPropiedad();
 void altaEdificio();
 void enviarMsjInmobiliaria(string msjInmo);
 void enviarMsjInteresado(string msjInter);
@@ -223,7 +223,7 @@ void inmoOpciones(int opInmo){
                 case 1 : altaPropiedad(); break;
                 case 2 : modificarPropiedad(); break;
                 case 3 : eliminarPropiedad(); break;
-                case 4 : consultarPropiedad(prop); break;
+                case 4 : consultarPropiedad(); break;
                 case 5 : altaEdificio(); break;
                 case 6 : enviarMsjInmobiliaria(msjInmo); break;
                 case 7 : cerrarSesion(idSesion); break;
@@ -240,7 +240,7 @@ void interOpciones(int opInter){
     while (opInter !=  0){
                 //cin >> opAdmin;
         switch (opInter){
-                case 1 : consultarPropiedad(propiedad); break;
+                case 1 : consultarPropiedad(); break;
                 case 2 : enviarMsjInteresado(msjInter); break;
                 case 3 : cerrarSesion(idSesion); break;
            }
@@ -291,20 +291,33 @@ void altaInteresado(){
 
 dtReporteInmobiliaria obtenerReporteInmo(){
     cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
-    cout<<"Desarrollo Obtener Reporte Inmo";
+    cout<<"\n - Obtener Reporte Inmobiliaria";
+   
+    
     
 }
 
-void cerrarSesion(int idSesion){
-    cout<<"Desarrollo Cerrar Sesion";
+void cerrarSesion(){
+    string opCerrar="n";
+    cout<<"Cerrar Sesion";
+    
+    cout<<"\nDesea cerrar sesion?";
+    cin>>opCerrar;
+    if (!opCerrar){
+        //recorrerSesiones(idSesion); // idSesion es una variable global
+        // Destruir todo
+    }
 }
 
 void modificarPropiedad(){
     cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
-    cout<<"Desarrollo Modificar Propiedad";
+    cout<<"\n Modificar Propiedad";
     string codigoProp;
     
-    
+    cout<<"\nIngrese codigo propiedad: ";
+    cin>>codigoProp;
+    // recorrerPropiedades(codigoProp);
+    //     
 }
 
 void eliminarPropiedad(){
@@ -312,16 +325,16 @@ void eliminarPropiedad(){
     cout<<"Desarrollo Eliminar Propiedad";
 }
 
-dtPropiedad consultarPropiedad(string propiedad){
+
+dtPropiedad consultarPropiedad(){
     cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
-    cout<<"Desarrollo Eliminar Propiedad";
+    cout<<"\n - Consultar propiedad";
     dtPropiedad *dtprop = new dtPropiedad;
     if(sistema * s =dynamic_cast <s*> Inmobiliaria){
         ListDicc *lst = new ListDicc;
         IDictionary *key =new IDictionary;
         while(!s->listaDepartamentos()){
         IKey key = s->listaDepartamentos()->getletraDepartamento();
-        key->member(Lkey);
         string nombreDepto=s->listaDepartamentos()->getnombreDepartamento();
         
         }}
@@ -333,7 +346,7 @@ dtPropiedad consultarPropiedad(string propiedad){
 void altaEdificio(){
     
     cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
-    cout<<"Desarrollo Eliminar Propiedad";    
+    cout<<"\n - Alta edificio";    
     string nombre;
     int pisos, gastosComunes;
     try {
@@ -356,10 +369,6 @@ void altaEdificio(){
     catch(invalid_argument& excepcion){
 				cout<<excepcion.what();
 			}
-    
-    
-        
-    cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
-    cout<<"Desarrollo Alta Edificio";
+}
     
     
