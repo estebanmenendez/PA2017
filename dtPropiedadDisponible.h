@@ -31,6 +31,12 @@ class dtPropiedadDisponible{
         string getcodigoProp() const;
         dtDireccion* getdireccionProp() const;
         string getalquilerOVenta() const;
+        void setAlquilerOVenta(string alquilerOVenta);
+        string getAlquilerOVenta() const;
+        void setDireccionProp(dtDireccion* direccionProp);
+        dtDireccion* getDireccionProp() const;
+        void setCodigoProp(string codigoProp);
+        string getCodigoProp() const;
         
     private:
         string codigoProp;

@@ -12,7 +12,9 @@
  */
 
 #include "ContUsuario.h"
-
+#include <iostream>
+#include<string.h>
+#include <stdexcept>
 using namespace std;
 
     ContUsuario::ContUsuario() {
@@ -34,6 +36,36 @@ using namespace std;
     }
     dtReporteInmobiliaria ** ContUsuario::obtenerReporteInmobiliarias (){}
 
+<<<<<<< HEAD
+Usuarios ** ContUsuario::usuarioLogueado(){
+}
+
+
+  void ContUsuario::altaInmobiliaria( string nombre, dtDireccion * direccion, string email){
+      
+  }
+
+  void ContUsuario::iniciarSesion(string tipoUsuario , string email){}
+  bool ContUsuario::verificarContrasena(string pwd , string pwdConfirmacion ){}
+  void ContUsuario::activarUsuario(string tipoUsuario ,string email ){ }
+  void ContUsuario::validarPwd( string contrasena ){ }
+
+
+  void ContUsuario::CerrarSesion( int idSesion ){ }
+
+void ContUsuario::altaInmobiliaria( string nombre, dtDireccion * direccion, string email){}
+void ContUsuario::iniciarSesion(string tipoUsuario , string email){}
+bool ContUsuario::verificarContrasena(string pwd , string pwdConfirmacion ){
+    if(strcmp(pwd,pwdConfirmacion)==0) return true;
+    
+    throw invalid_argument("Las contraseñas no coinciden...");
+    //si son iguales retorna true sino lanza la excepcion.
+}
+void ContUsuario::activarUsuario(string tipoUsuario ,string email){ }
+void ContUsuario::validarPwd( string contrasena){ }
+void ContUsuario::CerrarSesion( int idSesion ){ }
+
+=======
 Usuarios ** ContUsuario::usuarioLogueado(){}
 void ContUsuario::altaInmobiliaria( string nombre, dtDireccion * direccion, string email){}
 void ContUsuario::iniciarSesion(string tipoUsuario , string email){}
@@ -41,3 +73,7 @@ bool ContUsuario::verificarContrasena(string pwd , string pwdConfirmacion ){}
 void ContUsuario::activarUsuario(string tipoUsuario ,string email ){ }
 void ContUsuario::validarPwd( string contrasena ){ }
 void ContUsuario::CerrarSesion( int idSesion ){ }
+<<<<<<< HEAD
+=======
+>>>>>>> d06a6c7f2c63bb0a5e719fcdbb4219c84f244f96
+>>>>>>> origin/master
