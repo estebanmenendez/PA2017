@@ -45,11 +45,11 @@ void interOpciones(int opInter);
 void altaInteresado();
 dtReporteInmobiliaria obtenerReporteInmo();
 void cerrarSesion(int idSesion);
-void modificarPropiedad(dtPropiedad propiedad);
-void eliminarPropiedad(dtPropiedad prop);
+void modificarPropiedad();
+void eliminarPropiedad();
 
 dtPropiedad consultarPropiedad(string propiedad);
-void altaEdificio(string nombre, int pisos, int gastosComunes);
+void altaEdificio();
 void enviarMsjInmobiliaria(string msjInmo);
 void enviarMsjInteresado(string msjInter);
 
@@ -218,10 +218,10 @@ void inmoOpciones(int opInmo){
                 //cin >> opInmo;
         switch (opInmo){
                 case 1 : altaPropiedad(); break;
-                case 2 : modificarPropiedad(propiedad); break;
-                case 3 : eliminarPropiedad(propiedad); break;
+                case 2 : modificarPropiedad(); break;
+                case 3 : eliminarPropiedad(); break;
                 case 4 : consultarPropiedad(prop); break;
-                case 5 : altaEdificio(nombre, pisos, gastosComunes); break;
+                case 5 : altaEdificio(); break;
                 case 6 : enviarMsjInmobiliaria(msjInmo); break;
                 case 7 : cerrarSesion(idSesion); break;
            }
@@ -296,13 +296,15 @@ void cerrarSesion(int idSesion){
     cout<<"Desarrollo Cerrar Sesion";
 }
 
-void modificarPropiedad(dtPropiedad propiedad){
+void modificarPropiedad(){
     cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
     cout<<"Desarrollo Modificar Propiedad";
+    string codigoProp;
+    
     
 }
 
-void eliminarPropiedad(dtPropiedad prop){
+void eliminarPropiedad(){
     cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
     cout<<"Desarrollo Eliminar Propiedad";
 }
@@ -313,9 +315,11 @@ dtPropiedad consultarPropiedad(string propiedad){
     
 }
 
-void altaEdificio(string nombre, int pisos, int gastosComunes){
+void altaEdificio(){
     cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
     cout<<"Desarrollo Alta Edificio";
+    
+    
 }
 
 void enviarMsjInmobiliaria(string msjInmo){
