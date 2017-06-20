@@ -30,6 +30,8 @@
 #include "Interesado.h"
 #include "ListaDicc.h"
 #include"Usuarios.h"
+#include "ColGenerica.h"
+#include "ListaIterator.h"
 
 
 using namespace std;
@@ -313,24 +315,23 @@ void eliminarPropiedad(dtPropiedad prop){
 dtPropiedad consultarPropiedad(string propiedad){
 
     dtPropiedad *dtprop = new dtPropiedad;
+    ColGenerica *col =new ColGenerica;
     if(sistema * s =dynamic_cast <s*> Inmobiliaria){
-        ListDicc *lst = new ListDicc;
-        IDictionary *key =new IDictionary;
-        while(!s->listaDepartamentos()){
-        IKey key = s->listaDepartamentos()->getletraDepartamento();
-        string nombreDepto=s->listaDepartamentos()->getnombreDepartamento();
+        col->find()
         
         }}
     else{if(sistema * s2 =dynamic_cast <s2*> Interesado){}}
     
 
-    cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
-    cout<<"Desarrollo Consultar Propiedad";
+    
  
     
 }
 
-void altaEdificio(string nombre, int pisos, int gastosComunes){
+void altaEdificio(){
+ string nombre;
+ int pisos;
+ float gastosComunes;
  
     try {
          if (sistema * s = dynamic_cast <s*> Inmobiliaria){

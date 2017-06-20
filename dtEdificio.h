@@ -30,12 +30,20 @@ public:
     dtEdificio** listarEdificioZona();
     void altaEdificio(string nombreEdificio);
     
-    string getnombreEdificio() const;    
+    string getnombreEdificio() const;
+    void setGastosComunesEdificio(float gastosComunesEdificio);
+    float getGastosComunesEdificio() const;
+    void setCantPisosEdificio(int cantPisosEdificio);
+    int getCantPisosEdificio() const;
+    void setNombreEdificio(string nombreEdificio);
+    string getNombreEdificio() const;    
     
     
     
 private:
     string nombreEdificio;
+    int cantPisosEdificio;
+    float gastosComunesEdificio;
 
 };
 

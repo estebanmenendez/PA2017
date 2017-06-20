@@ -35,6 +35,7 @@ public:
         Propiedad* removeKey(StringKey* key);
         Propiedad* removeObj(StringKey* obj);
         Propiedad* find(StringKey* key);
+        Propiedad* find(string *nombre);
         ListDiccIteratorObj* getIteratorObj();
         ListDiccIteratorKey* getIteratorKey();
         unsigned int size();
@@ -42,7 +43,7 @@ public:
 
 private:
  IDictionary * dicc;   
-
+ColGenerica* colgen;
 };
 
 #endif /* COLGENERICA_H */
