@@ -14,7 +14,6 @@
 
 #include "IIterator.h"
 #include "ICollectible.h"
-using namespace std;
 
 class ICollection {
 public:
@@ -23,6 +22,7 @@ public:
   virtual bool member(ICollectible *o) = 0;
   virtual IIterator *iterator() = 0;
   virtual bool isEmpty() = 0;
+  virtual ~ICollection();
 };
 
 #endif

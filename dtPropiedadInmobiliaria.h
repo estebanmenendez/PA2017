@@ -36,6 +36,22 @@ public:
     float getmCuadradosEdificado() const;
     float getmCuadradosTotales() const;
     string getnombreInm() const;
+    void setNombreInm(string nombreInm);
+    string getNombreInm() const;
+    void setMCuadradosTotales(float mCuadradosTotales);
+    float getMCuadradosTotales() const;
+    void setMCuadradosEdificado(float mCuadradosEdificado);
+    float getMCuadradosEdificado() const;
+    void setDireccionProp(dtDireccion* direccionProp);
+    dtDireccion* getDireccionProp() const;
+    void setGarage(bool garage);
+    bool isGarage() const;
+    void setCantDormitorios(int cantDormitorios);
+    int getCantDormitorios() const;
+    void setCantBanios(int cantBanios);
+    int getCantBanios() const;
+    void setCantAmbiente(int cantAmbiente);
+    int getCantAmbiente() const;
     
 private:
     int cantAmbiente;

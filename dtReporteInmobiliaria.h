@@ -35,6 +35,18 @@ class dtReporteInmobiliaria{
         string getnombreZona() const;
         int getCantCasa() const;
         int getCantDeptos() const;
+        void setCantDeptos(int CantDeptos);
+        void setCantCasa(int CantCasa);
+        void setNombreZona(string nombreZona);
+        string getNombreZona() const;
+        void setNombreDepto(string nombreDepto);
+        string getNombreDepto() const;
+        void setEmail(string email);
+        string getEmail() const;
+        void setUbicacionInm(dtDireccion* ubicacionInm);
+        dtDireccion* getUbicacionInm() const;
+        void setNombreInm(string nombreInm);
+        string getNombreInm() const;
         
     private:
         string nombreInm;

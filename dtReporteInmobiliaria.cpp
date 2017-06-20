@@ -53,3 +53,51 @@ int dtReporteInmobiliaria::getCantCasa() const{
 int dtReporteInmobiliaria::getCantDeptos() const{
     return this->CantDeptos;
 }
+
+void dtReporteInmobiliaria::setCantDeptos(int CantDeptos) {
+    this->CantDeptos = CantDeptos;
+}
+
+void dtReporteInmobiliaria::setCantCasa(int CantCasa) {
+    this->CantCasa = CantCasa;
+}
+
+void dtReporteInmobiliaria::setNombreZona(string nombreZona) {
+    this->nombreZona = nombreZona;
+}
+
+string dtReporteInmobiliaria::getNombreZona() const {
+    return nombreZona;
+}
+
+void dtReporteInmobiliaria::setNombreDepto(string nombreDepto) {
+    this->nombreDepto = nombreDepto;
+}
+
+string dtReporteInmobiliaria::getNombreDepto() const {
+    return nombreDepto;
+}
+
+void dtReporteInmobiliaria::setEmail(string email) {
+    this->email = email;
+}
+
+string dtReporteInmobiliaria::getEmail() const {
+    return email;
+}
+
+void dtReporteInmobiliaria::setUbicacionInm(dtDireccion* ubicacionInm) {
+    this->ubicacionInm = ubicacionInm;
+}
+
+dtDireccion* dtReporteInmobiliaria::getUbicacionInm() const {
+    return ubicacionInm;
+}
+
+void dtReporteInmobiliaria::setNombreInm(string nombreInm) {
+    this->nombreInm = nombreInm;
+}
+
+string dtReporteInmobiliaria::getNombreInm() const {
+    return nombreInm;
+}

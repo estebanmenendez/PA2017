@@ -41,5 +41,5 @@ dtPropiedadInmobiliaria ** ContProp::seleccionaPropiedadDisponible(string){}
 void ContProp::altaInteresado (string,string,int,string){}
 void ContProp::altaEdificio(string,int,int){}
 dtReporteInmobiliaria** ContProp::iniciarReporte(Inmobiliaria){}
-void ContProp::altaPropiedadCasa (dtPropiedadCasa){}
+void ContProp::altaPropiedadCasa(dtPropiedadCasa){}
 void ContProp::altaPropiedadApto(dtPropiedadApto){}

@@ -64,3 +64,67 @@ float dtPropiedadInmobiliaria::getmCuadradosTotales() const{
 string dtPropiedadInmobiliaria::getnombreInm() const{
     return this->nombreInm;
 }
+
+void dtPropiedadInmobiliaria::setNombreInm(string nombreInm) {
+    this->nombreInm = nombreInm;
+}
+
+string dtPropiedadInmobiliaria::getNombreInm() const {
+    return nombreInm;
+}
+
+void dtPropiedadInmobiliaria::setMCuadradosTotales(float mCuadradosTotales) {
+    this->mCuadradosTotales = mCuadradosTotales;
+}
+
+float dtPropiedadInmobiliaria::getMCuadradosTotales() const {
+    return mCuadradosTotales;
+}
+
+void dtPropiedadInmobiliaria::setMCuadradosEdificado(float mCuadradosEdificado) {
+    this->mCuadradosEdificado = mCuadradosEdificado;
+}
+
+float dtPropiedadInmobiliaria::getMCuadradosEdificado() const {
+    return mCuadradosEdificado;
+}
+
+void dtPropiedadInmobiliaria::setDireccionProp(dtDireccion* direccionProp) {
+    this->direccionProp = direccionProp;
+}
+
+dtDireccion* dtPropiedadInmobiliaria::getDireccionProp() const {
+    return direccionProp;
+}
+
+void dtPropiedadInmobiliaria::setGarage(bool garage) {
+    this->garage = garage;
+}
+
+bool dtPropiedadInmobiliaria::isGarage() const {
+    return garage;
+}
+
+void dtPropiedadInmobiliaria::setCantDormitorios(int cantDormitorios) {
+    this->cantDormitorios = cantDormitorios;
+}
+
+int dtPropiedadInmobiliaria::getCantDormitorios() const {
+    return cantDormitorios;
+}
+
+void dtPropiedadInmobiliaria::setCantBanios(int cantBanios) {
+    this->cantBanios = cantBanios;
+}
+
+int dtPropiedadInmobiliaria::getCantBanios() const {
+    return cantBanios;
+}
+
+void dtPropiedadInmobiliaria::setCantAmbiente(int cantAmbiente) {
+    this->cantAmbiente = cantAmbiente;
+}
+
+int dtPropiedadInmobiliaria::getCantAmbiente() const {
+    return cantAmbiente;
+}

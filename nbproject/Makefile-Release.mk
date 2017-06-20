@@ -41,6 +41,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Aviso.o \
 	${OBJECTDIR}/Casa.o \
 	${OBJECTDIR}/Chat.o \
+	${OBJECTDIR}/ColGenerica.o \
 	${OBJECTDIR}/ContProp.o \
 	${OBJECTDIR}/ContUsuario.o \
 	${OBJECTDIR}/Departamento.o \
@@ -65,6 +66,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/Par.o \
 	${OBJECTDIR}/PropInmo.o \
 	${OBJECTDIR}/Propiedad.o \
+	${OBJECTDIR}/String.o \
+	${OBJECTDIR}/StringKey.o \
 	${OBJECTDIR}/Usuarios.o \
 	${OBJECTDIR}/Venta.o \
 	${OBJECTDIR}/Zona.o \
@@ -143,6 +146,11 @@ ${OBJECTDIR}/Chat.o: Chat.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Chat.o Chat.cpp
+
+${OBJECTDIR}/ColGenerica.o: ColGenerica.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ColGenerica.o ColGenerica.cpp
 
 ${OBJECTDIR}/ContProp.o: ContProp.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -263,6 +271,16 @@ ${OBJECTDIR}/Propiedad.o: Propiedad.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Propiedad.o Propiedad.cpp
+
+${OBJECTDIR}/String.o: String.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/String.o String.cpp
+
+${OBJECTDIR}/StringKey.o: StringKey.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/StringKey.o StringKey.cpp
 
 ${OBJECTDIR}/Usuarios.o: Usuarios.cpp
 	${MKDIR} -p ${OBJECTDIR}

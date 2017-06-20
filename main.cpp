@@ -25,7 +25,10 @@
 #include"PropInmo.h"
 #include "dtPropiedadApto.h"
 #include "dtPropiedadCasa.h"
-#include"Usuarios.h"
+#include "ICollection.h"
+#include "Inmobiliaria.h"
+#include "Interesado.h"
+#include "ListaDicc.h"
 
 
 
@@ -311,161 +314,52 @@ void eliminarPropiedad(){
 
 dtPropiedad consultarPropiedad(string propiedad){
     cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
-    cout<<"Desarrollo Consultar Propiedad";
+    cout<<"Desarrollo Eliminar Propiedad";
+    dtPropiedad *dtprop = new dtPropiedad;
+    if(sistema * s =dynamic_cast <s*> Inmobiliaria){
+        ListDicc *lst = new ListDicc;
+        IDictionary *key =new IDictionary;
+        while(!s->listaDepartamentos()){
+        IKey key = s->listaDepartamentos()->getletraDepartamento();
+        key->member(Lkey);
+        string nombreDepto=s->listaDepartamentos()->getnombreDepartamento();
+        
+        }}
+    else{if(sistema * s2 =dynamic_cast <s2*> Interesado){}}
+    
     
 }
 
 void altaEdificio(){
+    
+    cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
+    cout<<"Desarrollo Eliminar Propiedad";    
+    string nombre;
+    int pisos, gastosComunes;
+    try {
+         if (sistema * s = dynamic_cast <s*> Inmobiliaria){
+         cout<<"Ingrese nombre del edificio: "<<endl;
+         cin>>nombre;
+         ICollection * coso= new ICollection;
+         if(coso->member(nombre)!=false){
+         cout<<"Ingrese la cantidad de pisos: "<<endl;
+         cin<<pisos;
+         cout<<"Ingrese el valor de los gastos comunes: "<<endl;}
+         else invalid_argument("Nombre repetido");
+         cin<<gastosComunes;
+         dtEdificio dtedi = new dtEdificio(nombre,pisos,gastosComunes);
+         coso->add(dtedi);
+    }
+    else {invalid_argument("Solo puede el user Inmobiliaria");}
+      
+    }
+    catch(invalid_argument& excepcion){
+				cout<<excepcion.what();
+			}
+    
+    
+        
     cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
     cout<<"Desarrollo Alta Edificio";
     
     
-}
-
-void enviarMsjInmobiliaria(string msjInmo){
-    cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
-    cout<<"Desarrollo Enviar Msj Inmobiliaria";
-}
-
-void enviarMsjInteresado(string msjInter){
-    cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
-    cout<<"Desarrollo Enviar Msj Interesado";
-}
-//////////////////////////////////////////
-
-
-
-void altaPropiedad(){
-    sistema* s= new sistema();
-    dtDepartamento** listaDep;
-    
-    dtZonas** listaZona;
-    dtEdificio edif;
-    string letraDep, codigoZona,ciudad, calle, numero,nEdif;
-    int cAmb,cBanios,cDorm;
-    float mEdif,mVerdes,valor;
-    char opt,garage;
-    dtPropiedadCasa * dtPropC;
-    dtPropiedadApto * dtPropA;
-    dtDireccion* dir;
-    bool lgarage,ventAlq;
-    
-    
-    listaDep = s->listaDepartamentos();
-    s->seleccionaDepartamento(letraDep);
-    listaZona = s->listaZonaDepartamento(letraDep);
-    s->seleccionaZona(codigoZona);
-    system ("clear");
-    cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
-    cout<<"\n1 - Alta propiedad\n";
-    cout<<"Ingresa Una Casa o Un Apto? C / A \n";
-    cin>>opt;
-    if (opt == 'C'){
-    cout<<"\nDatos Casa\n";
-    cout<<"Ingrese Cantidad Ambientes: \n";
-    cin>>cAmb;
-    cout<<"Ingrese Cantidad Baños: \n";
-    cin>>cBanios;
-    cout<<"Ingrese Cantidad Dormitorios: \n";
-    cin>>cDorm;
-    cout<<"Tiene Garage : S/N \n";
-    cin>>garage; 
-    if(garage =='S')
-        lgarage = true;
-    else
-        lgarage = false;
-    
-    cout<<"Ingrese Ciudad: ";
-    cin>>ciudad;
-    cout<<"Ingrese Calle: ";
-    cin>>calle;
-    cout<<"Ingrese Número: ";
-    cin>>numero;
-    dir = new dtDireccion(ciudad,numero,calle);
-    cout<<"Ingrese Metros Cuadrados Edif: \n";
-    cin>>mEdif;
-    cout<<"Ingrese Metros Verdes: \n";
-    cin>>mVerdes;
-    cout<<"Indique si  Venta o Alquiler : A/V \n";
-    cin>>ventAlq; 
-    cout<<"Ingrese Valor de Venta/ Alquiler \n";
-    cin>>valor; 
-    dtPropC = new dtPropiedadCasa(cAmb,cBanios,cDorm,lgarage,dir,mEdif,mVerdes,valor,ventAlq);
-    s->altaPropiedadCasa(*dtPropC);
-   
-    }else{
-        s->listarEdificioZona(codigoZona);
-        cout<<"Ingrese Un Edificio: S/N \n";
-        cin>>opt;
-        if (opt =='S'){
-            s->altaEdificio(edif);
-            s->listarEdificioZona(codigoZona);
-        }
-        nEdif = s->seleccionarEdificio();
-     
-    cout<<"\nDatos Apartamentos\n";
-    cout<<"Ingrese Cantidad Ambientes: \n";
-    cin>>cAmb;
-    cout<<"Ingrese Cantidad Baños: \n";
-    cin>>cBanios;
-    cout<<"Ingrese Cantidad Dormitorios: \n";
-    cin>>cDorm;
-    cout<<"Tiene Garage : S/N \n";
-    cin>>garage; 
-    if(garage =='S')
-        lgarage = true;
-    else
-        lgarage = false;
-    cout<<"Ingrese Ciudad: ";
-    cin>>ciudad;
-    cout<<"Ingrese Calle: ";
-    cin>>calle;
-    cout<<"Ingrese Número: ";
-    cin>>numero;
-    dir = new dtDireccion(ciudad,numero,calle);
-    cout<<"Ingrese Metros Cuadrados Edif: \n";
-    cin>>mEdif;
-    cout<<"Indique si  Venta o Alquiler : A/V \n";
-    cin>>ventAlq; 
-    cout<<"Ingrese Valor de Venta/ Alquiler \n";
-    cin>>valor; 
-    dtPropA = new dtPropiedadApto(cAmb,cBanios,cDorm,lgarage,dir,mEdif,nEdif,valor,ventAlq);
-    s->altaPropiedadApto(*dtPropA);
-    }
-}
-
-void altaInmobiliaria(){
-    string nombre, ciudad, calle, numero;
-    sistema* s= new sistema();
-    //Fabrica* f = Fabrica::getInstance();
-   // IC_CliIt * iC = f->getC_CliIt();  EJEMPLO
-    dtDireccion* dir;
-    
-    system ("clear");
-    cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
-    cout<<"\n1 - Alta inmobiliaria\n";
-    cout<<"Ingrese Nombre: ";
-    cin>>nombre;
-    cout<<"Ingrese Ciudad: ";
-    cin>>ciudad;
-    cout<<"Ingrese Calle: ";
-    cin>>calle;
-    cout<<"Ingrese Número: ";
-    cin>>numero;
-    dir = new dtDireccion(ciudad,numero,calle);
-    s->altaInmobiliaria(nombre,dir);
-    cout<<"Inmobiliaria dada de Alta ";
-    
-    
-    
-}
-   
-/*void menu(){
-    system ("clear");
-    cout<<"\n1 - Alta inmobiliaria"<<endl;
-    cout<<"2 - Alta propiedad"<<endl; 
-    cout<<"0 - Salir"<<endl;
-}
-*/
-
-	

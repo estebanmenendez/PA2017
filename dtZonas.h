@@ -29,8 +29,10 @@ public:
     dtZonas** listaZonaDepartamento();
     
     
-     string getcodigoZona() const;
-     string getnombreZona() const; 
+     void setNombreZona(string nombreZona);
+     string getNombreZona() const;
+     void setCodigoZona(string codigoZona);
+     string getCodigoZona() const; 
     
 private:
     
