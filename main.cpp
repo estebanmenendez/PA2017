@@ -28,8 +28,17 @@
 #include "Inmobiliaria.h"
 #include "Interesado.h"
 #include "ListaDicc.h"
+<<<<<<< HEAD
 #include "Fabrica.h"
+=======
+<<<<<<< HEAD
+#include"Usuarios.h"
+#include "ColGenerica.h"
+#include "ListaIterator.h"
+=======
+>>>>>>> origin/master
 
+>>>>>>> 98f573d409f28fb8f6515f7030a55a23e0e27d41
 
 
 using namespace std;
@@ -313,25 +322,35 @@ dtPropiedad consultarPropiedad(){
     cout<<"\n - Consultar propiedad";
     
     dtPropiedad *dtprop = new dtPropiedad;
+    ColGenerica *col =new ColGenerica;
     if(sistema * s =dynamic_cast <s*> Inmobiliaria){
-        ListDicc *lst = new ListDicc;
-        IDictionary *key =new IDictionary;
-        while(!s->listaDepartamentos()){
-        IKey key = s->listaDepartamentos()->getletraDepartamento();
-        string nombreDepto=s->listaDepartamentos()->getnombreDepartamento();
+        col->find()
         
         }}
     else{if(sistema * s2 =dynamic_cast <s2*> Interesado){}}
     
+<<<<<<< HEAD
+
+    
+ 
+=======
+>>>>>>> 98f573d409f28fb8f6515f7030a55a23e0e27d41
     
 }
 
 void altaEdificio(){
+<<<<<<< HEAD
+ string nombre;
+ int pisos;
+ float gastosComunes;
+ 
+=======
     
     cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
     cout<<"\n - Alta edificio";    
     string nombre;
     int pisos, gastosComunes;
+>>>>>>> 98f573d409f28fb8f6515f7030a55a23e0e27d41
     try {
          if (sistema * s = dynamic_cast <s*> Inmobiliaria){
          cout<<"Ingrese nombre del edificio: "<<endl;

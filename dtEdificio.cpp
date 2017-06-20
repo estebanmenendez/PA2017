@@ -18,13 +18,39 @@ dtEdificio::dtEdificio() {
 
 dtEdificio::dtEdificio(const dtEdificio& orig) {
 }
-dtEdificio:: dtEdificio (string nombreEdificio){
-    
+dtEdificio:: dtEdificio (string nombre, int pisos, float gastosComunes){
+    this->nombreEdificio=nombre;
+    this->cantPisosEdificio=pisos;
+    this->gastosComunesEdificio=gastosComunes;
 }
 dtEdificio::~dtEdificio() {
 }
 string dtEdificio::getnombreEdificio() const {
     return this->nombreEdificio;
+}
+
+void dtEdificio::setGastosComunesEdificio(float gastosComunesEdificio) {
+    this->gastosComunesEdificio = gastosComunesEdificio;
+}
+
+float dtEdificio::getGastosComunesEdificio() const {
+    return gastosComunesEdificio;
+}
+
+void dtEdificio::setCantPisosEdificio(int cantPisosEdificio) {
+    this->cantPisosEdificio = cantPisosEdificio;
+}
+
+int dtEdificio::getCantPisosEdificio() const {
+    return cantPisosEdificio;
+}
+
+void dtEdificio::setNombreEdificio(string nombreEdificio) {
+    this->nombreEdificio = nombreEdificio;
+}
+
+string dtEdificio::getNombreEdificio() const {
+    return nombreEdificio;
 }
 
 

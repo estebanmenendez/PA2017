@@ -10,7 +10,7 @@
  * 
  * Created on 19 de junio de 2017, 05:40 PM
  */
-#include "String.hh"
+#include "String.h"
 
 
 int String::largoCadena(const char*cc) const{
@@ -266,7 +266,8 @@ int String::largoCadena(const char*cc) const{
 	if ((largoCadena(cc)==0) && (this->largo==0))
 		return false;
 	else{
-	    if ((cc!=NULL) && (this->arreglo!=NULL))
+	    if ((cc!=NULL) && (this->arreglo!=NULL))cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
+    cout<<"Desarrollo Consultar Propiedad";
                        return (strcmp(this->arreglo,cc)!=0);
                else
 			if(( cc!=NULL) || (this->arreglo!=NULL))

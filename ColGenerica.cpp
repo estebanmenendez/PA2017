@@ -12,7 +12,8 @@
  */
 
 #include "ColGenerica.h"
-
+#include "ListaIterator.h"
+#include "String.h"
 ColGenerica::ColGenerica() {
 //    this->dicc= new ListaDicc();
 }
@@ -42,4 +43,18 @@ Propiedad* ColGenerica::find(StringKey* key){
 (invalid_argument("Error: la Propiedad buscada no existe en el sistema \n"));
 	}else
     	return(a);    
+}
+Propiedad* ColGenerica::find(ColGenerica * prop){
+    ListaIterator * iter=(ListaIterator*)this->colgen->getIteratorObj();
+    bool encontre=false;
+    while((iter->hasCurrent())&&(!encontre)){
+		ColGenerica* col=(ColGenerica()*)iter->getCurrent();
+		if((col->get)==(c.getCodAs())) 
+			encontre=true;
+		else
+			iter->next();
+	}
+	delete iter;
+	return encontre;
+    
 }
