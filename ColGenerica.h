@@ -19,6 +19,7 @@
 #include "ListDiccIteratorKey.h"
 #include "StringKey.h"
 #include "Propiedad.h"
+#include "Zona.h"
 #include "ListaDicc.h"
 
 

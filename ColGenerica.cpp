@@ -39,37 +39,7 @@ Propiedad* ColGenerica::find(StringKey* key){
 	Propiedad* a=(Propiedad*)this->dicc->find(key);
 	if (a==NULL){
 		delete(key);
-		throw(invalid_argument("Error: la Propiedad buscada no existe en el sistema \n"));
+(invalid_argument("Error: la Propiedad buscada no existe en el sistema \n"));
 	}else
-    	return(a);
-        
-        
-        
-}
-//Zonas
-ColGenerica::ColGenerica(IDictionary* dicc){
-    this->dicc= dicc;
-}
-void ColGenerica::addZ(Zona* prop, StringKey* key){
-    this->dicc->add(zona,key);
-}
-bool ColGenerica::member(StringKey* key){
-    return(this->dicc->member(key));
-}
-Propiedad* ColGenerica::removeKey(StringKey* key){
-    return((Zona*)this->dicc->removeKey(key));
-}
-Propiedad* ColGenerica::removeObj(StringKey* obj){
-    return((Zona*)this->dicc->removeObj(obj));
-}
-Propiedad* ColGenerica::find(StringKey* key){
-	Zona* a=(Zona*)this->dicc->find(key);
-	if (a==NULL){
-		delete(key);
-		throw(invalid_argument("Error: la Propiedad buscada no existe en el sistema \n"));
-	}else
-    	return(a);
-        
-        
-        
+    	return(a);    
 }

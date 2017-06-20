@@ -6,7 +6,8 @@
  */
 
 #include "Lista.h"
-#include <stringh>
+
+#include <string>
 
 Lista::Lista() {
   //first = NULL;
