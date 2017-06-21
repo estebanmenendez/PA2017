@@ -1,12 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
  * File:   dtPropiedadCasa.h
- * Author: Boris
+ * Author: Esteban
  *
  * Created on 9 de junio de 2017, 05:06 PM
  */
@@ -26,7 +20,9 @@ class dtPropiedadCasa{
         dtPropiedadCasa();
         dtPropiedadCasa(const dtPropiedadCasa& orig);
         virtual ~dtPropiedadCasa();
-        dtPropiedadCasa(int cantAmbiente, int cantBanios, int cantDormitorios, bool garage, dtDireccion* direccionProp, float mCuadradosEdificado, float metrosVerdes);
+        dtPropiedadCasa(int cantAmbiente, int cantBanios, int cantDormitorios,
+        bool garage, dtDireccion* direccionProp, float mCuadradosEdificado,
+        float metrosVerdes,float valor, bool ventaAlq);
         
         int getcantAmbiente() const;
         int getcantBanios() const;
@@ -35,6 +31,8 @@ class dtPropiedadCasa{
         dtDireccion* getdireccionProp() const;
         float getmCuadradosEdificado() const;
         float getmetrosVerdes() const;
+        float getValor() const;
+        bool getVentaAlq() const;
         
     private:
         int cantAmbiente;
@@ -44,9 +42,9 @@ class dtPropiedadCasa{
         dtDireccion* direccionProp;
         float mCuadradosEdificado;
         float metrosVerdes;
-        
+        float valor;
+        bool ventAlq;
 };
 
 
 #endif /* DTPROPIEDADCASA_H */
-

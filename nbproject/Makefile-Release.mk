@@ -51,6 +51,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/IContProp.o \
 	${OBJECTDIR}/IContUsuario.o \
 	${OBJECTDIR}/IDictionary.o \
+	${OBJECTDIR}/IIterator.o \
 	${OBJECTDIR}/IKey.o \
 	${OBJECTDIR}/Inmobiliaria.o \
 	${OBJECTDIR}/Interesado.o \
@@ -61,8 +62,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/ListaDicc.o \
 	${OBJECTDIR}/ListaIterator.o \
 	${OBJECTDIR}/Mensaje.o \
-	${OBJECTDIR}/Nodo.o \
 	${OBJECTDIR}/NodoDicc.o \
+	${OBJECTDIR}/NodoLista.o \
 	${OBJECTDIR}/Par.o \
 	${OBJECTDIR}/PropInmo.o \
 	${OBJECTDIR}/Propiedad.o \
@@ -197,6 +198,11 @@ ${OBJECTDIR}/IDictionary.o: IDictionary.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/IDictionary.o IDictionary.cpp
 
+${OBJECTDIR}/IIterator.o: IIterator.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/IIterator.o IIterator.cpp
+
 ${OBJECTDIR}/IKey.o: IKey.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -247,15 +253,15 @@ ${OBJECTDIR}/Mensaje.o: Mensaje.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Mensaje.o Mensaje.cpp
 
-${OBJECTDIR}/Nodo.o: Nodo.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Nodo.o Nodo.cpp
-
 ${OBJECTDIR}/NodoDicc.o: NodoDicc.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/NodoDicc.o NodoDicc.cpp
+
+${OBJECTDIR}/NodoLista.o: NodoLista.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/NodoLista.o NodoLista.cpp
 
 ${OBJECTDIR}/Par.o: Par.cpp
 	${MKDIR} -p ${OBJECTDIR}

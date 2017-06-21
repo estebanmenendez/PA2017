@@ -11,7 +11,7 @@
  * Created on 19 de junio de 2017, 05:38 PM
  */
 
-#include "StringKey.hh"
+#include "StringKey.h"
 
 StringKey::StringKey(){}
 

@@ -1,12 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /* 
  * File:   dtPropiedadApto.h
- * Author: Boris
+ * Author: Esteban
  *
  * Created on 9 de junio de 2017, 07:36 PM
  */
@@ -27,7 +22,9 @@ class dtPropiedadApto{
         dtPropiedadApto();
         dtPropiedadApto(const dtPropiedadApto& orig);
         virtual ~dtPropiedadApto();
-        dtPropiedadApto(int cantAmbiente, int cantBanios, int cantDormitorios, bool garage, dtDireccion* direccionProp, float mCuadradosEdificado, string nombreEdificio);
+        dtPropiedadApto(int cantAmbiente, int cantBanios, int cantDormitorios,
+        bool garage, dtDireccion* direccionProp, float mCuadradosEdificado,
+        string nombreEdificio, float valor, bool ventAlq);
         
         int getcantAmbiente() const;
         int getcantBanios() const;
@@ -36,6 +33,8 @@ class dtPropiedadApto{
         dtDireccion* getdireccionProp() const;
         float getmCuadradosEdificado() const;
         string getnombreEdificio() const;
+        float getValor() const;
+        bool getVentaAlq() const;
         
     private:
         int cantAmbiente;
@@ -45,9 +44,9 @@ class dtPropiedadApto{
         dtDireccion* direccionProp;
         float mCuadradosEdificado;
         string nombreEdificio;
-        
+        float valor;
+        bool ventAlq;
 };
 
 
 #endif /* DTPROPIEDADAPTO_H */
-

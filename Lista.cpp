@@ -1,68 +1,68 @@
-/*
- * Lista.cpp
- *
- *  Created on: 8 de jun. de 2016
- *      Author: apias
- */
-
 #include "Lista.h"
+#include "ICollectible.h"
+#include "ICollection.h"
+#include "NodoLista.h"
 
-#include <string>
+using namespace std;
 
-Lista::Lista() {
-  //first = NULL;
-  first = new Nodo();
+Lista::Lista(){
+	this->pri=new NodoLista();
+	this->tam=0;
+	this->ult=this->pri;
 }
 
-Lista::~Lista() {
-	//if (first!=NULL) delete first;
-	delete first;
+void Lista::add(ICollectible* elem){
+	NodoLista* n=new NodoLista(NULL,elem);
+	this->ult->setNext(n);
+	this->tam++;
+	this->ult=this->ult->getNext();
 }
 
-void Lista::add(ICollectible *o) {
-  Nodo *nuevo = new Nodo(first->getNext(), o);
-  first->setNext(nuevo);
+bool Lista::member(ICollectible* elem){
+	NodoLista* iter=this->pri;
+	while ((iter->hasNext()) && (iter->getNext()->getElem()!=elem)){
+		iter=iter->getNext();
+	}
+	if (iter->hasNext())
+		return(true);
+	else
+		return(false);
 }
 
-void Lista::remove(ICollectible *o) {
-  IIterator *iter = iterator();
-  bool fin = false;
-  while (iter->hasNext() && !fin) {
-    if (o == iter->getCurrent()) {
-      iter->remove();
-      fin = true;
-    }
-    else {
-      iter->next();
-    }
-  }
-  delete iter;
+bool Lista::remove(ICollectible* elem){
+	NodoLista* iter=this->pri;
+	while ((iter->hasNext()) && (iter->getNext()->getElem()!=elem)){
+		iter=iter->getNext();
+	}
+	if (iter->hasNext()){
+		NodoLista* aux= iter->getNext();
+		iter->setNext(iter->getNext()->getNext());
+		this->tam--;
+		aux->setNext(NULL);
+		delete(aux);
+		return(true);
+	}
+	else
+		return(false);
 }
 
-bool Lista::member(ICollectible *o) {
-  IIterator *iter = iterator();
-  bool encontre = false;
+//unsigned int Lista::size(){
+//	return(this->tam);
+//}
 
-  while (iter->hasNext() && !encontre) {
-    if (o == iter->next()) {
-      encontre = true;
-    }
-  }
-
-  delete iter;
-  return encontre;
+ListaIterator* Lista:: getIterator(){
+	return(new ListaIterator(this->pri));
 }
 
-
-IIterator *Lista::iterator() {
-  return new ListaIterator(first);
+ICollectible* Lista::first(){
+	return(this->pri->getNext()->getElem());
 }
 
-bool Lista::isEmpty() {
-  return !first->hasNext();
+ICollectible* Lista::last(){
+	return(this->ult->getElem());
 }
 
-
-
-
-
+Lista::~Lista(){
+	this->ult=NULL;
+	delete(this->pri);
+}

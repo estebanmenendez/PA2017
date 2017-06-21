@@ -1,16 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   String.cpp
- * Author: esteban
- * 
- * Created on 19 de junio de 2017, 05:40 PM
- */
-#include "String.hh"
+#include "String.h"
 
 
 int String::largoCadena(const char*cc) const{
@@ -502,8 +490,8 @@ int String::largoCadena(const char*cc) const{
 				if ((this->arreglo[i]>='a')&&(this->arreglo[i]<='z'))
 					s.arreglo[i]=this->arreglo[i]-( 'a' -'A');
 				else{
-					if(this->arreglo[i]=='ñ')
-						s.arreglo[i]='Ñ';
+					if(this->arreglo[i]=='h')
+						s.arreglo[i]='H';
 					else 
 						s.arreglo[i]=this->arreglo[i];
 				}
@@ -532,8 +520,8 @@ String String::toLowerCase() const{
 			if ((this->arreglo[i]>='A')&&(this->arreglo[i]<='Z'))
 					s.arreglo[i]=this->arreglo[i]+('a' -'A');
 			else{
-				if(this->arreglo[i]=='Ñ')
-					s.arreglo[i]='ñ';
+				if(this->arreglo[i]=='H')
+					s.arreglo[i]='h';
 				else 
 					s.arreglo[i]=this->arreglo[i];
 			}

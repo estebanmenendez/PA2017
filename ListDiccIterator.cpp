@@ -6,7 +6,7 @@
  */
 
 #include "ListDiccIterator.h"
-#include "stdio.h"
+
 
 //constructores
 ListDiccIterator::ListDiccIterator(){}
@@ -14,33 +14,19 @@ ListDiccIterator::ListDiccIterator(NodoDicc* current){
     this->current=current;
 }
 //operaciones
-ICollectible* ListDiccIterator::getCurrent(){
+ICollectible* ListDiccIterator:: getCurrent(){
 	return(this->current->getNext()->getPar());
 }
-
-bool ListDiccIterator::hasNext(){
+    		
+bool ListDiccIterator::hasCurrent(){
    return(this->current->hasNext());
 }
 
-ICollectible *ListDiccIterator::next(){
-	ICollectible *res = this->getCurrent() ;
-	current = current->getNext();
-	return res;
+void ListDiccIterator::next(){
+    this->current=this->current->getNext();
 }
 
 //destructor
 ListDiccIterator::~ListDiccIterator(){
-	this->current=NULL;
-}
-
-void ListDiccIterator::remove() {
-  NodoDicc *temp = current->getNext();
-  if (temp->hasNext()) {
-	  current->setNext(temp->getNext());
-  }
-  else {
-	  current->setNext(NULL);
-  }
-  temp->setNext(NULL);
-  delete temp;
+	//this->current= NULL;
 }

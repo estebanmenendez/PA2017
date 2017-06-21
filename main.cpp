@@ -20,23 +20,23 @@
 #include"dtReporteInmobiliaria.h"
 #include"Propiedad.h"
 #include"dtPropiedad.h"
-//#include"Fabrica.h"
+#include"Fabrica.h"
 #include"sistema.h"
 #include"PropInmo.h"
 #include "dtPropiedadApto.h"
 #include "dtPropiedadCasa.h"
-<<<<<<< HEAD
+
 #include "ICollection.h"
 #include "Inmobiliaria.h"
 #include "Interesado.h"
 #include "ListaDicc.h"
-=======
+
 #include"Usuarios.h"
->>>>>>> d06a6c7f2c63bb0a5e719fcdbb4219c84f244f96
 
 
 
 using namespace std;
+
 //void menu();
 void opcionesGenerales(); // MENU GENERAL DE OPCIONES ADMIN/INTER/INMO/CARGAR PRUEBA
 void cargaDatosPrueba();
@@ -269,28 +269,28 @@ void altaInteresado(){
     string seguir="s";
     
     //if(buscarUsr(email)!= NULL){
-    while(!seguir){
-        try{
-            cout<<"Ingrese nombre: ";
-            cin>>nombre;
-            cout<<"Ingrese apellido: ";
-            cin>>apellido;
-            cout<<"Ingrese edad: ";
-            cin>>edad;
-            cout<<"Ingrese email: ";
-            cin>>email;            
-            
-            // i->ingresarDatosInter(nombre, apellido, edad, email);
-            //cout<<"Usuario inmobiliaria creado correctamente ";
-        }catch(invalid_argument & e){
-            cout<<e.what();
-        }
-        }
-    //}
-    cout<<"\nDesea ingresar otro? ";
-    cin>>seguir;
-        
-    
+//    while(seguir){
+//        try{
+//            cout<<"Ingrese nombre: ";
+//            cin>>nombre;
+//            cout<<"Ingrese apellido: ";
+//            cin>>apellido;
+//            cout<<"Ingrese edad: ";
+//            cin>>edad;
+//            cout<<"Ingrese email: ";
+//            cin>>email;            
+//            
+//            // i->ingresarDatosInter(nombre, apellido, edad, email);
+//            //cout<<"Usuario inmobiliaria creado correctamente ";
+//        }catch(invalid_argument & e){
+//            cout<<e.what();
+//        }
+//        }
+//    //}
+//    cout<<"\nDesea ingresar otro? ";
+//    cin>>seguir;
+//        
+//    
 }
 
 dtReporteInmobiliaria obtenerReporteInmo(){
@@ -315,55 +315,51 @@ void eliminarPropiedad(dtPropiedad prop){
 }
 
 dtPropiedad consultarPropiedad(string propiedad){
-<<<<<<< HEAD
-    dtPropiedad *dtprop = new dtPropiedad;
-    if(sistema * s =dynamic_cast <s*> Inmobiliaria){
-        ListDicc *lst = new ListDicc;
-        IDictionary *key =new IDictionary;
-        while(!s->listaDepartamentos()){
-        IKey key = s->listaDepartamentos()->getletraDepartamento();
-        key->member(Lkey);
-        string nombreDepto=s->listaDepartamentos()->getnombreDepartamento();
-        
-        }}
-    else{if(sistema * s2 =dynamic_cast <s2*> Interesado){}}
-    
-=======
-    cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
-    cout<<"Desarrollo Consultar Propiedad";
->>>>>>> d06a6c7f2c63bb0a5e719fcdbb4219c84f244f96
-    
+//
+//    dtPropiedad *dtprop = new dtPropiedad;
+//    if(sistema * s =dynamic_cast <s*> Inmobiliaria){
+//        ListDicc *lst = new ListDicc;
+//        IDictionary *key =new IDictionary;
+//        while(!s->listaDepartamentos()){
+//        IKey key = s->listaDepartamentos()->getletraDepartamento();
+//        key->member(Lkey);
+//        string nombreDepto=s->listaDepartamentos()->getnombreDepartamento();
+//        
+//        }}
+//    else{if(sistema * s2 =dynamic_cast <s2*> Interesado){}}
+//
+//    cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
+//    cout<<"Desarrollo Consultar Propiedad";
+
 }
 
 void altaEdificio(string nombre, int pisos, int gastosComunes){
-<<<<<<< HEAD
-    try {
-         if (sistema * s = dynamic_cast <s*> Inmobiliaria){
-         cout<<"Ingrese nombre del edificio: "<<endl;
-         cin>>nombre;
-         ICollection * coso= new ICollection;
-         if(coso->member(nombre)!=false){
-         cout<<"Ingrese la cantidad de pisos: "<<endl;
-         cin<<pisos;
-         cout<<"Ingrese el valor de los gastos comunes: "<<endl;}
-         else invalid_argument("Nombre repetido");
-         cin<<gastosComunes;
-         dtEdificio dtedi = new dtEdificio(nombre,pisos,gastosComunes);
-         coso->add(dtedi);
-    }
-    else {invalid_argument("Solo puede el user Inmobiliaria");}
-      
-    }
-    catch(invalid_argument& excepcion){
-				cout<<excepcion.what();
-			}
-    
-    
-        
-=======
-    cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
-    cout<<"Desarrollo Alta Edificio";
->>>>>>> d06a6c7f2c63bb0a5e719fcdbb4219c84f244f96
+
+//    try {
+//         if (sistema * s = dynamic_cast <s*> Inmobiliaria){
+//         cout<<"Ingrese nombre del edificio: "<<endl;
+//         cin>>nombre;
+//         ICollection * coso= new ICollection;
+//         if(coso->member(nombre)!=false){
+//         cout<<"Ingrese la cantidad de pisos: "<<endl;
+//         cin<<pisos;
+//         cout<<"Ingrese el valor de los gastos comunes: "<<endl;}
+//         else invalid_argument("Nombre repetido");
+//         cin<<gastosComunes;
+//         dtEdificio dtedi = new dtEdificio(nombre,pisos,gastosComunes);
+//         coso->add(dtedi);
+//    }
+//    else {invalid_argument("Solo puede el user Inmobiliaria");}
+//      
+//    }
+//    catch(invalid_argument& excepcion){
+//				cout<<excepcion.what();}
+//    
+//    
+//
+//    cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
+//    cout<<"Desarrollo Alta Edificio";
+
 }
 
 void enviarMsjInmobiliaria(string msjInmo){

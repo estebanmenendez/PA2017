@@ -24,11 +24,11 @@ dtZonas::dtZonas(string codigoZona, string nombreZona){
 dtZonas::~dtZonas() {
 }
 
-string dtZonas::getcodigoZona() const {
+string dtZonas::getCodigoZona() const {
     return this->codigoZona;
 }
 
-string dtZonas::getnombreZona() const {
+string dtZonas::getNombreZona() const {
     return this->nombreZona;
 }
 
@@ -36,18 +36,10 @@ void dtZonas::setNombreZona(string nombreZona) {
     this->nombreZona = nombreZona;
 }
 
-string dtZonas::getNombreZona() const {
-    return nombreZona;
-}
 
 void dtZonas::setCodigoZona(string codigoZona) {
     this->codigoZona = codigoZona;
 }
-
-string dtZonas::getCodigoZona() const {
-    return codigoZona;
-}
-
 
 
 

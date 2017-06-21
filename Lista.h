@@ -8,37 +8,30 @@
 #ifndef LISTA_H_
 #define LISTA_H_
 
-#include "NodoDicc.h"
-#include "IIterator.h"
+
+#include "NodoLista.h"
+#include "ICollection.h"
 #include "ICollectible.h"
-#include "IDictionary.h"
-#include "ListDiccIterator.h"
-#include "ListDiccIteratorObj.h"
-#include "ListDiccIteratorKey.h"
+#include "IIterator.h"
+#include "ListaIterator.h"
 
-class Lista: public ICollection {
-private:
-  Nodo *first;
+//inserto al final asi puede estar ordenada si me insertan en orden
 
-public:
-  Lista();
-  ~Lista();
-
-  void add(ICollectible *);
-  void remove(ICollectible *);
-  bool member(ICollectible *);
-  IIterator *iterator();
-  
-    void add(ICollectible* elem,IKey* key);
-    bool member(IKey* key);
-    ICollectible* removeKey(IKey* key);
-    ICollectible* removeObj(ICollectible* obj);
-    ICollectible* find(IKey* key);
-    ListDiccIteratorObj* getIteratorObj();
-    ListDiccIteratorKey* getIteratorKey();
-    unsigned int size();
-
-  bool isEmpty();
+class Lista:public ICollection{
+	protected:
+		NodoLista* pri; //es dummy
+		NodoLista* ult;
+		unsigned int tam;
+	public:
+		Lista();
+		void add(ICollectible* elem);
+		virtual bool member(ICollectible* elem);
+		virtual bool remove(ICollectible* elem);
+//		unsigned int size();
+		ICollectible* first();
+		ICollectible* last();
+		ListaIterator* getIterator();
+		virtual ~Lista();
 };
 
 #endif /* LISTA_H_ */

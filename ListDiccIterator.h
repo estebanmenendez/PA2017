@@ -13,6 +13,7 @@
 #include "IIterator.h"
 
 
+
 class ListDiccIterator: public IIterator{
     private:
         NodoDicc* current;
@@ -22,13 +23,12 @@ class ListDiccIterator: public IIterator{
         ListDiccIterator(NodoDicc* current);
 
         //operaciones
-        ICollectible *getCurrent();
-		bool hasNext();
-		ICollectible *next();
-		void remove();
+        virtual ICollectible* getCurrent();
+        bool hasCurrent();
+        void next();
 
-		//destructor
-		virtual ~ListDiccIterator();
+        //destructor
+        virtual ~ListDiccIterator();
 };
 
 #endif /* LISTDICCITERATOR_H_ */

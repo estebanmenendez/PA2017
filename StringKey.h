@@ -28,6 +28,4 @@ class StringKey: public IKey{
 		virtual ~StringKey();
 
 };
-
-#endif /* STRINGKEY_H */
-
+#endif

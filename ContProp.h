@@ -12,6 +12,7 @@
  */
 
 #include"IContPorp.h"
+#include"IDictionary.h"
 #include <iostream>
 
 #ifndef CONTPROP_H
@@ -21,6 +22,10 @@ using namespace std;
 
  class ContProp : public IContProp {
     private: 
+        IDictionary * Departamento;
+        IDictionary * Edificio;
+        IDictionary * PropInmo;
+        IDictionary * ContUsuario;
     
      
     public:
@@ -47,7 +52,7 @@ using namespace std;
         void altaInteresado (string,string,int,string);
         void altaEdificio(string,int,int);
         dtReporteInmobiliaria** iniciarReporte(Inmobiliaria);
-        void altaPropiedadCasa (dtPropiedadCasa);
+        void altaPropiedadCasa(dtPropiedadCasa);
         void altaPropiedadApto(dtPropiedadApto);
     };
 

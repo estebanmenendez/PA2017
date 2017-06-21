@@ -7,20 +7,21 @@
 #ifndef _ListaIterator_H_
 #define _ListaIterator_H_
 
+
+#include "NodoLista.h"
+#include "ICollectible.h"
 #include "IIterator.h"
-#include "Nodo.h"
 
-class ListaIterator: public IIterator {
-private:
-  Nodo *actual;
-
-public:
-  ListaIterator(Nodo *);
-
-  bool hasNext();
-  ICollectible *next();
-  ICollectible *getCurrent();
-  void remove();
+class ListaIterator: public IIterator{
+		private:
+			NodoLista* current;
+		public:
+			ListaIterator();
+			ListaIterator(NodoLista* curr);
+			ICollectible* getCurrent();
+			bool hasCurrent();
+			void next();
+			~ListaIterator();
 };
 
 #endif /* LISTAITERATOR_H_ */

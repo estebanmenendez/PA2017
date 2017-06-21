@@ -15,8 +15,6 @@
 #define ICONTPORP_H
 #include"dtPropiedadMensaje.h"
 #include"dtPropiedadDisponible.h"
-#include"dtPropiedadCasa.h"
-#include"dtPropiedadApto.h"
 #include"dtDepartamento.h"
 #include"dtConversaInmobiliaria.h"
 #include"dtReporteInmobiliaria.h"
@@ -24,6 +22,9 @@
 #include"dtPropiedadInmobiliaria.h"
 #include"dtZonas.h"
 #include"Inmobiliaria.h"
+#include"dtPropiedadCasa.h"
+#include"dtPropiedadApto.h"
+
 
 
 using namespace std;
@@ -56,7 +57,7 @@ using namespace std;
         virtual void altaInteresado (string,string,int,string) = 0;
         virtual void altaEdificio(string,int,int) = 0;
         virtual dtReporteInmobiliaria** iniciarReporte(Inmobiliaria) = 0;
-        virtual void altaPropiedadCasa (dtPropiedadCasa) = 0;
+        virtual void altaPropiedadCasa(dtPropiedadCasa) = 0;
         virtual void altaPropiedadApto(dtPropiedadApto) = 0;
     };
 

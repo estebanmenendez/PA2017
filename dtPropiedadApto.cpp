@@ -1,13 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* 
+ * File:   dtPropiedadApto.cpp
+ * Author: Esteban
+ *
+ * Created on 9 de junio de 2017, 05:06 PM
  */
-
 
 #include "dtPropiedadApto.h"
 
-dtPropiedadApto::dtPropiedadApto(int cantAmbiente, int cantBanios, int cantDormitorios, bool garage, dtDireccion* direccionProp, float mCuadradosEdificado, string nombreEdificio){
+dtPropiedadApto::dtPropiedadApto(int cantAmbiente, int cantBanios, int cantDormitorios,
+        bool garage, dtDireccion* direccionProp, float mCuadradosEdificado, string nombreEdificio,
+        float valor, bool ventAlq){
     this->cantAmbiente = cantAmbiente;
     this->cantBanios = cantBanios;
     this->cantDormitorios = cantDormitorios;
@@ -15,6 +17,9 @@ dtPropiedadApto::dtPropiedadApto(int cantAmbiente, int cantBanios, int cantDormi
     this->garage = garage;
     this->mCuadradosEdificado = mCuadradosEdificado;
     this->nombreEdificio = nombreEdificio;
+    this->valor = valor;
+    this->ventAlq = ventAlq;
+    
 }
 
 dtPropiedadApto::dtPropiedadApto(const dtPropiedadApto& orig){
@@ -52,4 +57,11 @@ float dtPropiedadApto::getmCuadradosEdificado() const{
 
 string dtPropiedadApto::getnombreEdificio() const{
     return this->nombreEdificio;
+}
+float dtPropiedadApto::getValor() const{
+    return this->valor;
+}
+
+bool dtPropiedadApto::getVentaAlq() const{
+    return this->ventAlq;
 }

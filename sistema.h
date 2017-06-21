@@ -17,6 +17,9 @@
 #include"dtDepartamento.h"
 #include"dtZonas.h"
 #include"dtEdificio.h"
+#include"dtPropiedadCasa.h"
+#include"dtPropiedadApto.h"
+
 
 
 
@@ -38,11 +41,11 @@ public:
     
     dtZonas** listaZonaDepartamento(string letraDepartamento);
     void seleccionaZona(string codigoZona);
-    void altaPropiedadCasa (int cantAmbiente, int cantBanios, int cantDormitorios, bool garage, dtDireccion* direccionProp, float mCuadradosEdificado, float metrosVerdes, float valor, string alquierOVenta);
+    void altaPropiedadCasa(dtPropiedadCasa);
     dtEdificio** listarEdificioZona(string codigoZona);
     void altaEdificio(dtEdificio edificio);
     string seleccionarEdificio();    
-    void altaPropiedadApto(int cantAmbiente, int cantBanios,int cantDormitorios, bool garage, dtDireccion* direccionProp, float mCuadradosEdificado, string nombreEdificio, float valor, string alquierOVenta);
+    void altaPropiedadApto(dtPropiedadApto);
        
     
 private:
