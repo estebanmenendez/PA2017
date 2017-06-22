@@ -30,3 +30,7 @@ Propiedad::~Propiedad() {
  void Propiedad::eliminarLinksPropInmo(){
      
  }
+
+ void Propiedad::eliminarProp(dtPropiedad){
+     
+ }

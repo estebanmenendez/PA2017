@@ -19,7 +19,7 @@
 #include"Usuarios.h"
 #include"dtPropiedadMensaje.h"
 #include"dtMensajes.h"
-//#include"dtPropiedad.h"
+#include"dtPropiedad.h"
 
 #ifndef PROPIEDAD_H
 #define PROPIEDAD_H
@@ -38,6 +38,7 @@ public:
   dtPropiedadMensaje** getPropiedad(Usuarios usu );
   dtMensajes** getUltimosCinco(Usuarios usu);
   void eliminarLinksPropInmo();
+  void eliminarProp(dtPropiedad);
   //dtPropiedad** getPropiedad();
     
 private:

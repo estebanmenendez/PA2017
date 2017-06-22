@@ -12,6 +12,7 @@
  */
 
 #include "Alquiler.h"
+#include"dtPropiedad.h"
 
 using namespace std;
 

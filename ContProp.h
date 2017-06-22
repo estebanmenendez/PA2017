@@ -54,7 +54,12 @@ using namespace std;
         dtReporteInmobiliaria** iniciarReporte(Inmobiliaria);
         void altaPropiedadCasa(dtPropiedadCasa);
         void altaPropiedadApto(dtPropiedadApto);
+        void eliminarProp(dtPropiedad);
+        
+        
     };
 
 #endif /* CONTPROP_H */
+
+
 

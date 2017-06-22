@@ -28,14 +28,12 @@
 #include"Interesado.h"
 #include"ListaDicc.h"
 #include"Usuarios.h"
+#include"ContProp.h"
 
 #include"ListaIterator.h"
 #include"string.h"
 
-<<<<<<< HEAD
 using namespace std;
-=======
->>>>>>> 0b30a0a9f14769b3e2c51a311a929e752b4c345d
 
 //void menu();
 void opcionesGenerales(); // MENU GENERAL DE OPCIONES ADMIN/INTER/INMO/CARGAR PRUEBA
@@ -60,6 +58,11 @@ void altaEdificio();
 void enviarMsjInmobiliaria();
 void enviarMsjInteresado();
 
+// Operaciones de eliminar Propiedad
+
+void eliminarProp(dtPropiedad);
+
+/////////////////////////////////////////////////
 
 //Usuarios
 Usuarios * recorrerUsuarios(string, string);
@@ -302,10 +305,18 @@ void modificarPropiedad(){}
 //    //     
 //}
 //
-void eliminarPropiedad(){}
-//    cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
-//    cout<<"Desarrollo Eliminar Propiedad";
-
+void eliminarPropiedad(){
+    cout<<endl<< "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
+    cout<<"Desarrollo Eliminar Propiedad";
+    string codigoProp;
+    
+    cout<<endl<<"Ingrese el codigo de la propiedad que desee eliminar: ";
+    cin>>codigoProp;
+    dtPropiedad
+    
+//    eliminarProp(codigoProp);
+    
+}
 
 dtPropiedad consultarPropiedad(){}
 //
