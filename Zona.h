@@ -31,8 +31,8 @@ public:
     Zona(const Zona& orig);
     virtual ~Zona();
     
-    dtZonas** getZona();
-    dtPropZonas** getPropZonaDpto(Usuarios inmobiliaria);
+     dtZonas getZona();
+     dtPropZonas getPropZonaDpto(Usuarios);
     Propiedad getPropiedad();
 private:
     string codigoZona;

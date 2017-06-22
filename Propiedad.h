@@ -35,7 +35,7 @@ public:
   void esCasaP();
   void esAptoP();
   bool perteneceInmobiliaria(Usuarios inmobiliaria);
-  dtPropiedadMensaje** getPropiedad(Usuarios usu );
+  dtPropiedadMensaje ** getPropiedad(Usuarios usu );
   dtMensajes** getUltimosCinco(Usuarios usu);
   void eliminarLinksPropInmo();
   //dtPropiedad** getPropiedad();
@@ -49,6 +49,7 @@ private:
     dtDireccion direccionProp;
     float mCuadradosEdificado;
     float mCuadradosTotales;
+
 
 };
 

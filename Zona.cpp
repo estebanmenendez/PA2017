@@ -13,12 +13,14 @@
 
 #include "Zona.h"
 
-Zona::Zona() {
-}
+Zona::Zona() {}
 
-Zona::Zona(const Zona& orig) {
-}
+Zona::Zona(const Zona& orig) {}
 
-Zona::~Zona() {
-}
+Zona::~Zona() {}
 
+dtZonas getZona(){}
+
+dtPropZonas getPropZonaDpto(Usuarios){}
+
+Propiedad getPropiedad(){}

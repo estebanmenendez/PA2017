@@ -31,7 +31,7 @@ using namespace std;
 
  class IContProp {
     private: 
-    
+ 
      
     public:
        
