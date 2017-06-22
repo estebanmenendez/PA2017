@@ -26,6 +26,7 @@
 
 
 
+
 //void menu();
 void opcionesGenerales(); // MENU GENERAL DE OPCIONES ADMIN/INTER/INMO/CARGAR PRUEBA
 void cargaDatosPrueba();
