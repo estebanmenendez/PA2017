@@ -32,7 +32,10 @@
 #include"ListaIterator.h"
 #include"string.h"
 
+<<<<<<< HEAD
 using namespace std;
+=======
+>>>>>>> 0b30a0a9f14769b3e2c51a311a929e752b4c345d
 
 //void menu();
 void opcionesGenerales(); // MENU GENERAL DE OPCIONES ADMIN/INTER/INMO/CARGAR PRUEBA
