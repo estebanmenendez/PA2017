@@ -12,6 +12,7 @@
  */
 
 #include "ContProp.h"
+#include "Propiedad.h"
 
 ContProp::ContProp() {
 }
@@ -41,9 +42,21 @@ dtPropiedadInmobiliaria ** ContProp::seleccionaPropiedadDisponible(string){}
 void ContProp::altaInteresado (string,string,int,string){}
 void ContProp::altaEdificio(string,int,int){}
 dtReporteInmobiliaria** ContProp::iniciarReporte(Inmobiliaria){}
-void ContProp::altaPropiedadCasa(dtPropiedadCasa){}
-void ContProp::altaPropiedadApto(dtPropiedadApto){}
-void ContProp::eliminarProp(string codigoProp){
-    //StringKey* claveP = new StringKey (codigoProp);
+void ContProp::altaPropiedadCasa(dtPropiedadCasa){
+   
+//    Lista* l = new Lista();
+//    Propiedad* p = new Propiedad(dtPropiedadCasa);
+//    if (dtPropiedadCasa* empr = dynamic_cast <Casa *>(emp[i]))
+//    cout<<empr;
+//
+//    else
+//    break;
+//
+//    Propiedad* p = new Propiedad(dtPropiedadCasa);
+}
+
+void ContProp::altaPropiedadApto(dtPropiedadApto){
     
+ // if (dtPropiedadApto* empr = dynamic_cast <Apartamento *>(emp[i]))
+                
 }

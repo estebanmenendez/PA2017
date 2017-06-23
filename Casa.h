@@ -11,6 +11,7 @@
  * Created on 9 de junio de 2017, 07:06 PM
  */
 #include "Propiedad.h"
+#include "dtPropiedadCasa.h"
 
 #ifndef CASA_H
 #define CASA_H
@@ -18,6 +19,7 @@
 class Casa: public Propiedad  {
 public:
     Casa();
+   // Casa(dtPropiedadCasa);
     Casa(const Casa& orig);
     virtual ~Casa();
     void esCasa();

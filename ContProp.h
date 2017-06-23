@@ -13,6 +13,9 @@
 
 #include"IContPorp.h"
 #include"IDictionary.h"
+#include"Edificio.h"
+#include"ICollection.h"
+#include"Lista.h"
 #include"ICollection.h"
 #include <iostream>
 
