@@ -11,25 +11,37 @@
  * Created on 9 de junio de 2017, 08:17 PM
  */
 
+#ifndef CONTPROP_H
+#define CONTPROP_H
+
 #include"IContPorp.h"
 #include"IDictionary.h"
+
+#include "dtEdificio.h"
+#include "ICollection.h"
+
 #include"Edificio.h"
-#include"ICollection.h"
 #include"Lista.h"
 #include"ICollection.h"
 #include <iostream>
 
-#ifndef CONTPROP_H
-#define CONTPROP_H
+
 
 using namespace std;
 
  class ContProp : public IContProp {
     private: 
         IDictionary * Diccionario;
-        ICollection * Coleccion;
-       // IDictionary * PropInmo;
-       // IDictionary * ContUsuario;
+        ICollection * cosocoleccion;
+        
+        
+//        IDictionary * Departamento;
+//        IDictionary * Edificio;
+//        IDictionary * PropInmo;
+//        IDictionary * ContUsuario;
+          
+         // IDictionary * Diccionario;
+        //  IDictionary * ICollection;
     
      
     public:
@@ -54,16 +66,17 @@ using namespace std;
         dtPropiedadDisponible ** listaPropiedadesDisponibles();
         dtPropiedadInmobiliaria ** seleccionaPropiedadDisponible(string);
         void altaInteresado (string,string,int,string);
-        void altaEdificio(string,int,int);
+        void altaEdificio();
+        void altaEdi(dtEdificio);
         dtReporteInmobiliaria** iniciarReporte(Inmobiliaria);
         void altaPropiedadCasa(dtPropiedadCasa);
         void altaPropiedadApto(dtPropiedadApto);
         void eliminarProp(string);
         
-        
     };
 
 #endif /* CONTPROP_H */
+
 
 
 

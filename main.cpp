@@ -12,6 +12,7 @@
 #include<stdlib.h>
 #include<typeinfo>
 #include<iostream>
+#include <stdexcept>
 #include"dtEdificio.h"
 #include"dtDepartamento.h"
 #include"dtDireccion.h"
@@ -95,7 +96,7 @@ void opcionesGenerales(){
 
 void administradorOpciones(){
     int opAdmin=0;
-    system ("clear");
+    system("clear");
     cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
     cout << "\nMENU - USUARIO ADMINISTRADOR" << endl;
     cout << "1 - Alta inmobiliaria" << endl;
@@ -376,6 +377,7 @@ void altaInteresado(){
             cin>>email;              
             i->altaInteresado(nombre, apellido, edad, email);
             cout<<"Usuario inmobiliaria creado correctamente ";
+            invalid_argument("COSO");
         }catch(invalid_argument & e){
             cout<<e.what();
         }
@@ -447,6 +449,22 @@ dtPropiedad consultarPropiedad(){}
 //    cout<<"Desarrollo Consultar Propiedad";
 ////
 void altaEdificio(){
+    string nombre;
+    int pisos;
+    float gastosComunes;
+    Fabrica* f = Fabrica::getInstance();
+    IContProp *i=f->getContProp();
+         cout<<"Ingrese nombre del edificio: "<<endl;
+         cin>>nombre;
+         cout<<"Ingrese la cantidad de pisos: "<<endl;
+         cin<<pisos;
+         cout<<"Ingrese el valor de los gastos comunes: "<<endl;
+         cin<<gastosComunes;
+         dtEdificio *dtedi = new dtEdificio(nombre,pisos,gastosComunes);
+       i->altaEdi(dtedi);
+       
+      cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
+}
 }
 //    try {
 //         if (sistema * s = dynamic_cast <s*> Inmobiliaria){

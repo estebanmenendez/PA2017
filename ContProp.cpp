@@ -12,6 +12,9 @@
  */
 
 #include "ContProp.h"
+#include "ICollection.h"
+#include "Edificio.h"
+#include "Lista.h"
 #include "Propiedad.h"
 
 ContProp::ContProp() {
@@ -40,7 +43,11 @@ void ContProp::agregaMensaje(string,string){}
 dtPropiedadDisponible ** ContProp::listaPropiedadesDisponibles(){}
 dtPropiedadInmobiliaria ** ContProp::seleccionaPropiedadDisponible(string){}
 void ContProp::altaInteresado (string,string,int,string){}
-void ContProp::altaEdificio(string,int,int){}
+void ContProp::altaEdificio(){}
+void ContProp::altaEdi(dtEdificio){
+ cout<<"co";}
+
+
 dtReporteInmobiliaria** ContProp::iniciarReporte(Inmobiliaria){}
 void ContProp::altaPropiedadCasa(dtPropiedadCasa){
    
@@ -62,8 +69,9 @@ void ContProp::altaPropiedadApto(dtPropiedadApto){
 }
 
 void ContProp::eliminarProp(string codigo){
-    StringKey * claveP = new StringKey(codigo);
+    StringKey* claveP = new StringKey(codigo);
     //bool estaProp = Diccionario->member(claveP);
     Propiedad* p = dynamic_cast<Propiedad*>(this->Diccionario->find(claveP));
-    p->
+    
+   
 }

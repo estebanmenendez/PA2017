@@ -17,12 +17,9 @@
 Casa::Casa() {
 }
 
-Casa::Casa(const Casa& orig) {
+Casa::Casa(const Casa& orig) {  
 }
 
 Casa::~Casa() {
-}
 
-//Casa::Casa(dtPropiedadCasa){
-    
-//}
+}

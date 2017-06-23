@@ -65,6 +65,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/Par.o \
 	${OBJECTDIR}/PropInmo.o \
 	${OBJECTDIR}/Propiedad.o \
+	${OBJECTDIR}/String.o \
+	${OBJECTDIR}/StringKey.o \
 	${OBJECTDIR}/Usuarios.o \
 	${OBJECTDIR}/Venta.o \
 	${OBJECTDIR}/Zona.o \
@@ -263,6 +265,16 @@ ${OBJECTDIR}/Propiedad.o: Propiedad.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Propiedad.o Propiedad.cpp
+
+${OBJECTDIR}/String.o: String.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/String.o String.cpp
+
+${OBJECTDIR}/StringKey.o: StringKey.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/StringKey.o StringKey.cpp
 
 ${OBJECTDIR}/Usuarios.o: Usuarios.cpp
 	${MKDIR} -p ${OBJECTDIR}
