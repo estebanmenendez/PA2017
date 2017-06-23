@@ -60,6 +60,7 @@ using namespace std;
         virtual dtReporteInmobiliaria** iniciarReporte(Inmobiliaria) = 0;
         virtual void altaPropiedadCasa(dtPropiedadCasa) = 0;
         virtual void altaPropiedadApto(dtPropiedadApto) = 0;
+        virtual void eliminarProp(string) = 0;
     };
 
 

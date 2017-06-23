@@ -46,6 +46,7 @@ public:
     void altaEdificio(dtEdificio edificio);
     string seleccionarEdificio();    
     void altaPropiedadApto(dtPropiedadApto);
+    void eliminarProp(string);
        
     
 private:

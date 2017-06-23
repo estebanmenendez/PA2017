@@ -22,6 +22,7 @@
 
 #include"Edificio.h"
 #include"Lista.h"
+#include"ICollection.h"
 #include <iostream>
 
 
@@ -30,7 +31,7 @@ using namespace std;
 
  class ContProp : public IContProp {
     private: 
-        IDictionary * cosodiccionario;
+        IDictionary * Diccionario;
         ICollection * cosocoleccion;
         
         
@@ -69,6 +70,7 @@ using namespace std;
         dtReporteInmobiliaria** iniciarReporte(Inmobiliaria);
         void altaPropiedadCasa(dtPropiedadCasa);
         void altaPropiedadApto(dtPropiedadApto);
+        void eliminarProp(string);
         
     };
 

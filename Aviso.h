@@ -12,6 +12,7 @@
  */
 
 #include"Propiedad.h"
+#include"dtPropiedad.h"
 
 
 #ifndef AVISO_H

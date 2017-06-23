@@ -67,3 +67,6 @@ void sistema::altaPropiedadApto(dtPropiedadApto){
 
 }
     
+void sistema::eliminarProp(string ){
+    
+}
