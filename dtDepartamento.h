@@ -14,18 +14,20 @@
 #include <stdio.h>
 #include <iostream>
 
+#include "ICollection.h"
+
 #ifndef DTDEPARTAMENTO_H
 #define DTDEPARTAMENTO_H
 
 using namespace std;
 
-class dtDepartamento {
+class dtDepartamento:public ICollectible {
 public:
     dtDepartamento();
     dtDepartamento(const dtDepartamento& orig);
     virtual ~dtDepartamento();
     dtDepartamento(string letraDepartamento, string nombreDepartamento);
-    dtDepartamento seleccionaDepartamento(string letraDepartamento);
+  //  dtDepartamento seleccionaDepartamento(string letraDepartamento);
     dtDepartamento** listarDepartamento();
     
     string getletraDepartamento() const;

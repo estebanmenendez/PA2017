@@ -20,6 +20,7 @@
 #include "Propiedad.h"
 #include "ListaDicc.h"
 #include "StringKey.h"
+#include "Departamento.h"
 
 ContProp::ContProp() {
 }
@@ -29,7 +30,20 @@ ContProp::ContProp(const ContProp& orig) {
 
 ContProp::~ContProp() {
 }
-//ContProp::listaDepartamentos(){}
+ListDicc * ContProp::listaDepartamentos(){
+    IIterator *it =IDepartamento->getIteratorObj();
+    ListDicc *resul=new ListDicc();
+    while (it->hasNext()) {
+        Departamento* c= dynamic_cast <Departamento*> (it->getCurrent());
+        StringKey *sk=new StringKey(c->getDatos()->getletraDepartamento());
+        resul->add(c->getDatos(),sk);
+        it->next();
+    }
+    delete it;
+    return resul;
+
+}
+
 void ContProp::seleccionarDepartamentos(string){}
 dtZonas ** ContProp::listaZonasDepartamentos(string){}
 void ContProp::seleccionaZona(string){}
@@ -51,10 +65,10 @@ void ContProp::altaInteresado (string,string,int,string){
 
 void ContProp::altaEdificio(string nombre, int pisos, float gastosComunes){
     
-    Edificio *e=new Edificio(nombre, pisos, gastosComunes);//creo el objeto edificio
+    Edificio* e=new Edificio(nombre, pisos, gastosComunes);//creo el objeto edificio
     StringKey *sk=new StringKey(nombre);//creo la clave de edificio que es el nombre
-   if(cosodiccionario->member(sk)!=true)//pregunto si ya existe
-    cosodiccionario->add(e,sk);//agrego el objeto mas la clave a la coleccion dicionario
+   if(IDepartamento->member(sk)!=true)//pregunto si ya existe
+    IDepartamento->add(e,sk);//agrego el objeto mas la clave a la coleccion dicionario
    else throw new invalid_argument("Edificio ya existente");
 }
 
@@ -81,7 +95,7 @@ void ContProp::altaPropiedadApto(dtPropiedadApto){
 void ContProp::eliminarProp(string codigo){
     StringKey* claveP = new StringKey(codigo);
     //bool estaProp = Diccionario->member(claveP);
-    Propiedad* p = dynamic_cast<Propiedad*>(this->Diccionario->find(claveP));
+//    Propiedad* p = dynamic_cast<Propiedad*>(this->Diccionario->find(claveP));
     
    
 }

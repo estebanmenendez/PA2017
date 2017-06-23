@@ -33,7 +33,7 @@ public:
     
     dtZonas getZonas(Departamento);
     Zona getZona(string);
-    dtDepartamento getDatos();
+    dtDepartamento *getDatos();
     dtPropEnDpto** getpropEnDepto(Usuarios inmobiliaria);
     Zona * getZona();
     

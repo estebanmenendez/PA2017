@@ -22,3 +22,4 @@ Departamento::Departamento(const Departamento& orig) {
 Departamento::~Departamento() {
 }
 
+dtDepartamento *Departamento::getDatos(){}
