@@ -432,60 +432,19 @@ dtPropiedad consultarPropiedad(){}
 //    cout<<"Desarrollo Consultar Propiedad";
 ////
 void altaEdificio(){
+    string nombre;
+    int pisos;
+    float gastosComunes;
+    Fabrica *fabri =new Fabrica;
+    IContProp *i=fabri->getContProp();
+         cout<<"Ingrese nombre del edificio: "<<endl;
+         cin>>nombre;
+         cout<<"Ingrese la cantidad de pisos: "<<endl;
+         cin<<pisos;
+         cout<<"Ingrese el valor de los gastos comunes: "<<endl;
+         cin<<gastosComunes;
+         dtEdificio *dtedi = new dtEdificio(nombre,pisos,gastosComunes);
+       i->altaEdi(dtedi);
+       
+      cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
 }
-//    try {
-//         if (sistema * s = dynamic_cast <s*> Inmobiliaria){
-//         cout<<"Ingrese nombre del edificio: "<<endl;
-//         cin>>nombre;
-//         ICollection * coso= new ICollection;
-//         if(coso->member(nombre)!=false){
-//         cout<<"Ingrese la cantidad de pisos: "<<endl;
-//         cin<<pisos;
-//         cout<<"Ingrese el valor de los gastos comunes: "<<endl;}
-//         else invalid_argument("Nombre repetido");
-//         cin<<gastosComunes;
-//         dtEdificio dtedi = new dtEdificio(nombre,pisos,gastosComunes);
-//         coso->add(dtedi);
-//    }
-//    else {invalid_argument("Solo puede el user Inmobiliaria");}
-//      
-//    }
-//    catch(invalid_argument& excepcion){
-//				cout<<excepcion.what();}
-//    
-//    
-//
-//    cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
-//    cout<<"Desarrollo Alta Edificio";
-//
-//void altaEdificio(){
-// string nombre;
-// int pisos;
-// float gastosComunes;
-//
-//    cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
-//    cout<<"\n - Alta edificio";    
-//    string nombre;
-//    int pisos, gastosComunes;
-//    try {
-//         if (sistema * s = dynamic_cast <s*> Inmobiliaria){
-//         cout<<"Ingrese nombre del edificio: "<<endl;
-//         cin>>nombre;
-//         ICollection * coso= new ICollection;
-//         if(coso->member(nombre)!=false){
-//         cout<<"Ingrese la cantidad de pisos: "<<endl;
-//         cin<<pisos;
-//         cout<<"Ingrese el valor de los gastos comunes: "<<endl;}
-//         else invalid_argument("Nombre repetido");
-//         cin<<gastosComunes;
-//         dtEdificio dtedi = new dtEdificio(nombre,pisos,gastosComunes);
-//         coso->add(dtedi);
-//    }
-//    else {invalid_argument("Solo puede el user Inmobiliaria");}
-//      
-//    }
-//    catch(invalid_argument& excepcion){
-//				cout<<excepcion.what();
-//			}
-//}
-//}

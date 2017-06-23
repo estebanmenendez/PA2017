@@ -12,6 +12,9 @@
  */
 
 #include "ContProp.h"
+#include "ICollection.h"
+#include "Edificio.h"
+#include "Lista.h"
 
 ContProp::ContProp() {
 }
@@ -39,7 +42,13 @@ void ContProp::agregaMensaje(string,string){}
 dtPropiedadDisponible ** ContProp::listaPropiedadesDisponibles(){}
 dtPropiedadInmobiliaria ** ContProp::seleccionaPropiedadDisponible(string){}
 void ContProp::altaInteresado (string,string,int,string){}
-void ContProp::altaEdificio(string,int,int){}
+void ContProp::altaEdificio(){}
+void ContProp::altaEdi(dtEdificio *dtedi){
+    
+    cosodiccionario->
+
+}
+
 dtReporteInmobiliaria** ContProp::iniciarReporte(Inmobiliaria){}
 void ContProp::altaPropiedadCasa(dtPropiedadCasa){}
 void ContProp::altaPropiedadApto(dtPropiedadApto){}

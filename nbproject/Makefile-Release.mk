@@ -15,8 +15,8 @@ NM=nm
 CCADMIN=CCadmin
 RANLIB=ranlib
 CC=gcc
-CCC=g++
-CXX=g++
+CCC=g++-4.9
+CXX=g++-4.9
 FC=gfortran
 AS=as
 
@@ -65,6 +65,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/Par.o \
 	${OBJECTDIR}/PropInmo.o \
 	${OBJECTDIR}/Propiedad.o \
+	${OBJECTDIR}/String.o \
+	${OBJECTDIR}/StringKey.o \
 	${OBJECTDIR}/Usuarios.o \
 	${OBJECTDIR}/Venta.o \
 	${OBJECTDIR}/Zona.o \
@@ -108,11 +110,11 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/progavanzada2017
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/pa2017
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/progavanzada2017: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/pa2017: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/progavanzada2017 ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/pa2017 ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/Administrador.o: Administrador.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -263,6 +265,16 @@ ${OBJECTDIR}/Propiedad.o: Propiedad.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Propiedad.o Propiedad.cpp
+
+${OBJECTDIR}/String.o: String.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/String.o String.cpp
+
+${OBJECTDIR}/StringKey.o: StringKey.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/StringKey.o StringKey.cpp
 
 ${OBJECTDIR}/Usuarios.o: Usuarios.cpp
 	${MKDIR} -p ${OBJECTDIR}

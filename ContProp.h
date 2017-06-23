@@ -13,6 +13,8 @@
 
 #include"IContPorp.h"
 #include"IDictionary.h"
+#include "dtEdificio.h"
+#include "ICollection.h"
 #include <iostream>
 
 #ifndef CONTPROP_H
@@ -22,11 +24,9 @@ using namespace std;
 
  class ContProp : public IContProp {
     private: 
-        IDictionary * Departamento;
-        IDictionary * Edificio;
-        IDictionary * PropInmo;
-        IDictionary * ContUsuario;
-    
+        IDictionary * cosodiccionario;
+        ICollection * cosocoleccion;
+        
      
     public:
         ContProp();
@@ -50,10 +50,12 @@ using namespace std;
         dtPropiedadDisponible ** listaPropiedadesDisponibles();
         dtPropiedadInmobiliaria ** seleccionaPropiedadDisponible(string);
         void altaInteresado (string,string,int,string);
-        void altaEdificio(string,int,int);
+        void altaEdificio();
+        void altaEdi(dtEdificio);
         dtReporteInmobiliaria** iniciarReporte(Inmobiliaria);
         void altaPropiedadCasa(dtPropiedadCasa);
         void altaPropiedadApto(dtPropiedadApto);
+        
     };
 
 #endif /* CONTPROP_H */
