@@ -12,9 +12,13 @@
  */
 
 #include "ContProp.h"
+<<<<<<< HEAD
 #include "ICollection.h"
 #include "Edificio.h"
 #include "Lista.h"
+=======
+#include "Propiedad.h"
+>>>>>>> 5724056674296bc40ea0fdc49297da178497408f
 
 ContProp::ContProp() {
 }
@@ -50,5 +54,21 @@ void ContProp::altaEdi(dtEdificio *dtedi){
 }
 
 dtReporteInmobiliaria** ContProp::iniciarReporte(Inmobiliaria){}
-void ContProp::altaPropiedadCasa(dtPropiedadCasa){}
-void ContProp::altaPropiedadApto(dtPropiedadApto){}
+void ContProp::altaPropiedadCasa(dtPropiedadCasa){
+   
+//    Lista* l = new Lista();
+//    Propiedad* p = new Propiedad(dtPropiedadCasa);
+//    if (dtPropiedadCasa* empr = dynamic_cast <Casa *>(emp[i]))
+//    cout<<empr;
+//
+//    else
+//    break;
+//
+//    Propiedad* p = new Propiedad(dtPropiedadCasa);
+}
+
+void ContProp::altaPropiedadApto(dtPropiedadApto){
+    
+ // if (dtPropiedadApto* empr = dynamic_cast <Apartamento *>(emp[i]))
+                
+}

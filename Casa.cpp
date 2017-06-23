@@ -12,7 +12,7 @@
  */
 
 #include "Casa.h"
-#include "dtPropiedadCasa.h"
+
 
 Casa::Casa() {
 }
@@ -23,3 +23,6 @@ Casa::Casa(const Casa& orig) {
 Casa::~Casa() {
 }
 
+//Casa::Casa(dtPropiedadCasa){
+    
+//}

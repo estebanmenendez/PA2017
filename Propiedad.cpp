@@ -22,11 +22,11 @@ Propiedad::Propiedad(const Propiedad& orig) {
 Propiedad::~Propiedad() {
 }
 
- void Propiedad::esCasaP(){
- }
- void Propiedad::esAptoP(){
-     
- }
- void Propiedad::eliminarLinksPropInmo(){
-     
- }
+void Propiedad::esCasaP(){
+}
+
+void Propiedad::esAptoP(){
+}
+
+void Propiedad::eliminarLinksPropInmo(){
+}

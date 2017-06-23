@@ -249,10 +249,12 @@ void altaInmobiliaria (){
 }
 
 void altaPropiedad(){
-    sistema* s= new sistema();
-    dtDepartamento ** listaDep;
+    Fabrica* f = Fabrica::getInstance();
+    IContProp * i = f->getContProp();  //EJEMPLO
     
+    dtDepartamento ** listaDep;
     dtZonas** listaZona;
+    
     dtEdificio edif;
     string letraDep, codigoZona,ciudad, calle, numero,nEdif;
     int cAmb,cBanios,cDorm;
@@ -262,13 +264,15 @@ void altaPropiedad(){
     dtPropiedadApto * dtPropA;
     dtDireccion* dir;
     bool lgarage,ventAlq;
-    
-    
-    listaDep = s->listarDepartamento();
-    s->seleccionaDepartamento(letraDep);
-    listaZona = s->listaZonaDepartamento(letraDep);
-    s->seleccionaZona(codigoZona);
-    cout<<"Ingresa Una Casa o Un Apto? C / A \n";
+        
+    listaDep = i->listaDepartamentos();
+    cout<<"Ingrese la letra del Departamento: ";
+    cin>>letraDep;
+    i->seleccionarDepartamentos(letraDep);
+    listaZona = i->listaZonasDepartamentos(letraDep);
+    cout<<"Seleccione la Zona: ";
+    i->seleccionaZona(codigoZona);
+    cout<<"\n Ingresa Una Casa o Un Apto? C / A \n";
     cin>>opt;
     if (opt == 'C'){
     cout<<"\nDatos Casa\n";
@@ -301,17 +305,17 @@ void altaPropiedad(){
     cout<<"Ingrese Valor de Venta/ Alquiler \n";
     cin>>valor; 
     dtPropC = new dtPropiedadCasa(cAmb,cBanios,cDorm,lgarage,dir,mEdif,mVerdes,valor,ventAlq);
-    s->altaPropiedadCasa(*dtPropC);
+    i->altaPropiedadCasa(*dtPropC);
    
     }else{
-        s->listarEdificioZona(codigoZona);
-        cout<<"Ingrese Un Edificio: S/N \n";
-        cin>>opt;
-        if (opt =='S'){
-            s->altaEdificio(edif);
-            s->listarEdificioZona(codigoZona);
-        }
-        nEdif = s->seleccionarEdificio();
+//        i->
+//        cout<<"Ingrese Un Edificio: S/N \n";
+//        cin>>opt;
+//        if (opt =='S'){
+//            i->altaEdificio(edif);
+//            i->listarEdificioZona(codigoZona);
+//        }
+//        nEdif = i->seleccionarEdificio();
      
     cout<<"\nDatos Apartamentos\n";
     cout<<"Ingrese Cantidad Ambientes: \n";
@@ -340,7 +344,7 @@ void altaPropiedad(){
     cout<<"Ingrese Valor de Venta/ Alquiler \n";
     cin>>valor; 
     dtPropA = new dtPropiedadApto(cAmb,cBanios,cDorm,lgarage,dir,mEdif,nEdif,valor,ventAlq);
-    s->altaPropiedadApto(*dtPropA);
+    i->altaPropiedadApto(*dtPropA);
     }
 }
 
