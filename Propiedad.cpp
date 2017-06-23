@@ -31,6 +31,3 @@ Propiedad::~Propiedad() {
      
  }
 
- void Propiedad::eliminarProp(dtPropiedad){
-     
- }

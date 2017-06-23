@@ -43,5 +43,7 @@ void ContProp::altaEdificio(string,int,int){}
 dtReporteInmobiliaria** ContProp::iniciarReporte(Inmobiliaria){}
 void ContProp::altaPropiedadCasa(dtPropiedadCasa){}
 void ContProp::altaPropiedadApto(dtPropiedadApto){}
-void ContProp::eliminarProp(dtPropiedad){}
-
+void ContProp::eliminarProp(string codigoProp){
+    //StringKey* claveP = new StringKey (codigoProp);
+    
+}

@@ -24,8 +24,8 @@ sistema::~sistema() {
 void sistema::altaInmobiliaria(string nombreInm, dtDireccion* ubicacionInm){
 }
     
-dtDepartamento** sistema::listaDepartamentos(){
-     dtDepartamento ** dtD = new dtDepartamento*[2](); 
+dtDepartamento** sistema::listarDepartamento(){
+    dtDepartamento ** dtD = new dtDepartamento*[2](); 
     dtDepartamento* dep1 = new dtDepartamento("1","Departamento 1");
     dtDepartamento* dep2 = new dtDepartamento("2","Departamento 2");
             dtD[0] = dep1;
@@ -33,6 +33,8 @@ dtDepartamento** sistema::listaDepartamentos(){
             return dtD;
 }
 void sistema::seleccionaDepartamento(string letraDepartamento){
+    
+    
 }
 
 dtZonas** sistema::listaZonaDepartamento(string letraDepartamento){
@@ -65,6 +67,6 @@ void sistema::altaPropiedadApto(dtPropiedadApto){
 
 }
     
-void sistema::eliminarProp(dtPropiedad){
+void sistema::eliminarProp(string ){
     
 }

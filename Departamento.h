@@ -31,7 +31,7 @@ public:
     Departamento(const Departamento& orig);
     virtual ~Departamento();
     
-    dtZonas** getZonas(Departamento);
+    dtZonas getZonas(Departamento);
     Zona getZona(string);
     dtDepartamento getDatos();
     dtPropEnDpto** getpropEnDepto(Usuarios inmobiliaria);

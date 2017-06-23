@@ -15,29 +15,37 @@
 #define CONTUSUARIO_H
 
 #include"IContUsuario.h"
+#include"IDictionary.h"
 
 using namespace std;
 
 class ContUsuario : public IContUsuario {
-public:
-    ContUsuario();
-    ContUsuario(const ContUsuario& orig);
-    
-    virtual ~ContUsuario();
-    
-    void altaInmobiliaria(string, dtDireccion*, string);
-    void altaInteresado(string,string,int,string);
-    Usuarios ** usuarioLogueado();
-    void iniciarSesion(string, string);
-    bool verificarContrasena(string, string);
-    void activarUsuario(string, string);
-    void validarPwd(string);
-    void altaSesion();
-    void cancelarAccion();
-    dtReporteInmobiliaria ** obtenerReporteInmobiliarias ();
-    void CerrarSesion(int);
-    private:
+   
+    public:
+        ContUsuario();
+        ContUsuario(const ContUsuario& orig);
+ 
+       virtual ~ContUsuario();
 
+        void altaInmobiliaria(string, dtDireccion*, string);
+        void altaInteresado(string,string,int,string);
+        Usuarios ** usuarioLogueado();
+        void iniciarSesion(string, string);
+        bool verificarContrasena(string, string);
+        void activarUsuario(string, string);
+        void validarPwd(string);
+        void altaSesion();
+        void cancelarAccion();
+        dtReporteInmobiliaria ** obtenerReporteInmobiliarias ();
+        void CerrarSesion(int);
+
+    private:
+        
+        IDictionary * Inmobiliaria;
+        IDictionary * Interesados;
+        IDictionary * Administrador;
+
+      
 };
 
 #endif /* CONTUSUARIO_H */

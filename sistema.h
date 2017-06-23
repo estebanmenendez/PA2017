@@ -36,7 +36,7 @@ public:
     
     void altaInmobiliaria(string nombreInm, dtDireccion* ubicacionInm);
     
-    dtDepartamento** listaDepartamentos();
+    dtDepartamento** listarDepartamento();
     void seleccionaDepartamento(string letraDepartamento);
     
     dtZonas** listaZonaDepartamento(string letraDepartamento);
@@ -46,7 +46,7 @@ public:
     void altaEdificio(dtEdificio edificio);
     string seleccionarEdificio();    
     void altaPropiedadApto(dtPropiedadApto);
-    void eliminarProp(dtPropiedad);
+    void eliminarProp(string);
        
     
 private:
