@@ -27,5 +27,10 @@ class Edificio :public ICollectible {
         int cantpisosEdificio;
         float gastosComunes;
         
+public: 
+    Edificio ();
+    Edificio(const Edificio& orig);
+    virtual ~Edificio();
+        
 };
 #endif /* EDIFICIO_H */

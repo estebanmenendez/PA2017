@@ -29,6 +29,7 @@ class dtPropiedad {
     dtDireccion* direccionProp;
     float mCuadradosEdificado;
     float mCuadradosTotales;
+    
 public:
     dtPropiedad();
     dtPropiedad(const dtPropiedad& orig);

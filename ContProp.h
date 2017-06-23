@@ -13,6 +13,9 @@
 
 #include"IContPorp.h"
 #include"IDictionary.h"
+#include"Edificio.h"
+#include"ICollection.h"
+#include"Lista.h"
 #include <iostream>
 
 #ifndef CONTPROP_H
@@ -22,10 +25,14 @@ using namespace std;
 
  class ContProp : public IContProp {
     private: 
-        IDictionary * Departamento;
-        IDictionary * Edificio;
-        IDictionary * PropInmo;
-        IDictionary * ContUsuario;
+        
+//        IDictionary * Departamento;
+//        IDictionary * Edificio;
+//        IDictionary * PropInmo;
+//        IDictionary * ContUsuario;
+          
+          IDictionary * Diccionario;
+          IDictionary * ICollection;
     
      
     public:
