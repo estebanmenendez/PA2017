@@ -60,3 +60,10 @@ void ContProp::altaPropiedadApto(dtPropiedadApto){
  // if (dtPropiedadApto* empr = dynamic_cast <Apartamento *>(emp[i]))
                 
 }
+
+void ContProp::eliminarProp(string codigo){
+    StringKey * claveP = new StringKey(codigo);
+    //bool estaProp = Diccionario->member(claveP);
+    Propiedad* p = dynamic_cast<Propiedad*>(this->Diccionario->find(claveP));
+    p->
+}

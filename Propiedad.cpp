@@ -30,12 +30,3 @@ void Propiedad::esAptoP(){
 
 void Propiedad::eliminarLinksPropInmo(){
 }
- void Propiedad::esCasaP(){
- }
- void Propiedad::esAptoP(){
-     
- }
- void Propiedad::eliminarLinksPropInmo(){
-     
- }
-

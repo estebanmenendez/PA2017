@@ -49,7 +49,11 @@ private:
     dtDireccion direccionProp;
     float mCuadradosEdificado;
     float mCuadradosTotales;
-
+    
+//    // link con Prop-Inmo  
+//    
+//    PropInmo* propinmo;
+//
 
 };
 
