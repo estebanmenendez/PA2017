@@ -11,40 +11,37 @@
  * Created on 9 de junio de 2017, 08:17 PM
  */
 
-#include"IContPorp.h"
-#include"IDictionary.h"
-<<<<<<< HEAD
-#include "dtEdificio.h"
-#include "ICollection.h"
-=======
-#include"Edificio.h"
-#include"ICollection.h"
-#include"Lista.h"
->>>>>>> 5724056674296bc40ea0fdc49297da178497408f
-#include <iostream>
-
 #ifndef CONTPROP_H
 #define CONTPROP_H
+
+#include"IContPorp.h"
+#include"IDictionary.h"
+
+#include "dtEdificio.h"
+#include "ICollection.h"
+
+#include"Edificio.h"
+#include"Lista.h"
+#include <iostream>
+
+
 
 using namespace std;
 
  class ContProp : public IContProp {
     private: 
-<<<<<<< HEAD
         IDictionary * cosodiccionario;
         ICollection * cosocoleccion;
         
-=======
         
 //        IDictionary * Departamento;
 //        IDictionary * Edificio;
 //        IDictionary * PropInmo;
 //        IDictionary * ContUsuario;
           
-          IDictionary * Diccionario;
-          IDictionary * ICollection;
+         // IDictionary * Diccionario;
+        //  IDictionary * ICollection;
     
->>>>>>> 5724056674296bc40ea0fdc49297da178497408f
      
     public:
         ContProp();
@@ -77,4 +74,7 @@ using namespace std;
     };
 
 #endif /* CONTPROP_H */
+
+
+
 

@@ -12,13 +12,10 @@
  */
 
 #include "ContProp.h"
-<<<<<<< HEAD
 #include "ICollection.h"
 #include "Edificio.h"
 #include "Lista.h"
-=======
 #include "Propiedad.h"
->>>>>>> 5724056674296bc40ea0fdc49297da178497408f
 
 ContProp::ContProp() {
 }
@@ -47,11 +44,9 @@ dtPropiedadDisponible ** ContProp::listaPropiedadesDisponibles(){}
 dtPropiedadInmobiliaria ** ContProp::seleccionaPropiedadDisponible(string){}
 void ContProp::altaInteresado (string,string,int,string){}
 void ContProp::altaEdificio(){}
-void ContProp::altaEdi(dtEdificio *dtedi){
-    
-    cosodiccionario->
+void ContProp::altaEdi(dtEdificio){
+ cout<<"co";}
 
-}
 
 dtReporteInmobiliaria** ContProp::iniciarReporte(Inmobiliaria){}
 void ContProp::altaPropiedadCasa(dtPropiedadCasa){

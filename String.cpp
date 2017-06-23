@@ -11,6 +11,8 @@
  * Created on 22 de junio de 2017, 10:01 PM
  */
 
+#include <cstring>
+
 #include "String.h"
 
 
