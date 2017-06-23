@@ -36,7 +36,6 @@
       <itemPath>Par.h</itemPath>
       <itemPath>PropInmo.h</itemPath>
       <itemPath>Propiedad.h</itemPath>
-      <itemPath>String.h</itemPath>
       <itemPath>StringKey.h</itemPath>
       <itemPath>Usuarios.h</itemPath>
       <itemPath>Venta.h</itemPath>
@@ -98,7 +97,6 @@
       <itemPath>Par.cpp</itemPath>
       <itemPath>PropInmo.cpp</itemPath>
       <itemPath>Propiedad.cpp</itemPath>
-      <itemPath>String.cpp</itemPath>
       <itemPath>StringKey.cpp</itemPath>
       <itemPath>Usuarios.cpp</itemPath>
       <itemPath>Venta.cpp</itemPath>
@@ -284,10 +282,6 @@
       <item path="Propiedad.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Propiedad.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="String.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="String.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="StringKey.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -527,10 +521,6 @@
       <item path="Propiedad.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Propiedad.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="String.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="String.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="StringKey.cpp" ex="false" tool="1" flavor2="0">
       </item>

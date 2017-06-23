@@ -13,19 +13,20 @@
 
 #ifndef STRINGKEY_H
 #define STRINGKEY_H
-#include "String.h"
+#include <string>
 #include "IKey.h"
-
-class StringKey {
+using namespace std;
+class StringKey: public IKey {
 public:
+    
     StringKey();
-    StringKey(String value);
-    String getString();
+    StringKey(string value);
+    string getString();
     bool equals(IKey* key);		
     virtual ~StringKey();
 
 private:
-    String value;
+    string value;
 };
 
 #endif /* STRINGKEY_H */

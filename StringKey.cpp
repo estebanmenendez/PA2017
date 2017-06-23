@@ -16,11 +16,11 @@
 StringKey::StringKey() {
 }
 
-StringKey::StringKey(String value){
+StringKey::StringKey(string value){
 	this->value=value;
 }
 
-String StringKey::getString(){
+string StringKey::getString(){
 	return(this->value);
 }
 

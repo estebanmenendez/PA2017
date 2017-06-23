@@ -7,11 +7,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/juan/Documentos/PA2017/String.h</file>
+            <file>file:/home/juan/Documentos/PA2017/IContPorp.h</file>
             <file>file:/home/juan/Documentos/PA2017/main.cpp</file>
-            <file>file:/home/juan/Documentos/PA2017/dtPropiedad.cpp</file>
-            <file>file:/home/juan/Documentos/PA2017/String.cpp</file>
-            <file>file:/home/juan/Documentos/PA2017/dtPropiedadApto.h</file>
+            <file>file:/home/juan/Documentos/PA2017/Fabrica.cpp</file>
+            <file>file:/home/juan/Documentos/PA2017/IDictionary.h</file>
+            <file>file:/home/juan/Documentos/PA2017/ContProp.h</file>
+            <file>file:/home/juan/Documentos/PA2017/Edificio.h</file>
+            <file>file:/home/juan/Documentos/PA2017/StringKey.h</file>
+            <file>file:/home/juan/Documentos/PA2017/ContProp.cpp</file>
+            <file>file:/home/juan/Documentos/PA2017/Edificio.cpp</file>
+            <file>file:/home/juan/Documentos/PA2017/Casa.h</file>
         </group>
     </open-files>
 </project-private>

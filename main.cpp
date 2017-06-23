@@ -266,7 +266,7 @@ void altaPropiedad(){
     dtDireccion* dir;
     bool lgarage,ventAlq;
         
-    listaDep = i->listaDepartamentos();
+//    listaDep = i->listaDepartamentos();
     cout<<"Ingrese la letra del Departamento: ";
     cin>>letraDep;
     i->seleccionarDepartamentos(letraDep);
@@ -446,11 +446,11 @@ void altaEdificio(){
          cout<<"Ingrese nombre del edificio: "<<endl;
          cin>>nombre;
          cout<<"Ingrese la cantidad de pisos: "<<endl;
-         cin<<pisos;
+         cin>>pisos;
          cout<<"Ingrese el valor de los gastos comunes: "<<endl;
-         cin<<gastosComunes;
-         dtEdificio *dtedi = new dtEdificio(nombre,pisos,gastosComunes);
-       i->altaEdi(dtedi);
+         cin>>gastosComunes;
+      //   dtEdificio *dtedi = new dtEdificio(nombre,pisos,gastosComunes);
+       i->altaEdificio(nombre,pisos,gastosComunes);
        
       cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
 }

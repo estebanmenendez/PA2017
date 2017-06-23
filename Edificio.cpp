@@ -15,4 +15,12 @@
 
     Edificio::Edificio (){}
     Edificio::Edificio(const Edificio& orig){}
+
+Edificio::Edificio(string nombre, int pisos, float gastosComunes) {
+    this->nombreEdificio=nombre;
+    this->cantpisosEdificio=pisos;
+    this->gastosComunes=gastosComunes;
+    
+}
+
     Edificio::~Edificio(){}

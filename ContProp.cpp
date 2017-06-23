@@ -11,11 +11,15 @@
  * Created on 9 de junio de 2017, 08:17 PM
  */
 
+#include <stdexcept>
+
 #include "ContProp.h"
 #include "ICollection.h"
 #include "Edificio.h"
 #include "Lista.h"
 #include "Propiedad.h"
+#include "ListaDicc.h"
+#include "StringKey.h"
 
 ContProp::ContProp() {
 }
@@ -25,7 +29,7 @@ ContProp::ContProp(const ContProp& orig) {
 
 ContProp::~ContProp() {
 }
- dtDepartamento** ContProp::listaDepartamentos(){}
+//ContProp::listaDepartamentos(){}
 void ContProp::seleccionarDepartamentos(string){}
 dtZonas ** ContProp::listaZonasDepartamentos(string){}
 void ContProp::seleccionaZona(string){}
@@ -42,13 +46,19 @@ void ContProp::seleccionaMensaje(string){}
 void ContProp::agregaMensaje(string,string){}
 dtPropiedadDisponible ** ContProp::listaPropiedadesDisponibles(){}
 dtPropiedadInmobiliaria ** ContProp::seleccionaPropiedadDisponible(string){}
-void ContProp::altaInteresado (string,string,int,string){}
-void ContProp::altaEdificio(){}
-void ContProp::altaEdi(dtEdificio){
- cout<<"co";}
+void ContProp::altaInteresado (string,string,int,string){
+}
 
+void ContProp::altaEdificio(string nombre, int pisos, float gastosComunes){
+    
+    Edificio *e=new Edificio(nombre, pisos, gastosComunes);//creo el objeto edificio
+    StringKey *sk=new StringKey(nombre);//creo la clave de edificio que es el nombre
+   if(cosodiccionario->member(sk)!=true)//pregunto si ya existe
+    cosodiccionario->add(e,sk);//agrego el objeto mas la clave a la coleccion dicionario
+   else throw new invalid_argument("Edificio ya existente");
+}
 
-dtReporteInmobiliaria** ContProp::iniciarReporte(Inmobiliaria){}
+    dtReporteInmobiliaria** ContProp::iniciarReporte(Inmobiliaria){}
 void ContProp::altaPropiedadCasa(dtPropiedadCasa){
    
 //    Lista* l = new Lista();

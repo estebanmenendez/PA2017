@@ -54,6 +54,7 @@ string GetNombreEdificio() const {
 public: 
     Edificio ();
     Edificio(const Edificio& orig);
+    Edificio (string,int,float);
     virtual ~Edificio();
         
 };

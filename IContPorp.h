@@ -25,7 +25,7 @@
 #include"dtPropiedadCasa.h"
 #include"dtPropiedadApto.h"
 #include "dtEdificio.h"
-
+#include "IKey.h"
 
 
 using namespace std;
@@ -38,7 +38,7 @@ using namespace std;
        
         virtual ~IContProp();
         
-        virtual dtDepartamento ** listaDepartamentos() = 0;
+//        virtual dtDepartamento ** listaDepartamentos() = 0;
         virtual void seleccionarDepartamentos(string) = 0;
         virtual dtZonas ** listaZonasDepartamentos(string) = 0;
         virtual void seleccionaZona(string) = 0;
@@ -56,8 +56,7 @@ using namespace std;
         virtual dtPropiedadDisponible ** listaPropiedadesDisponibles() = 0;
         virtual dtPropiedadInmobiliaria ** seleccionaPropiedadDisponible(string) = 0;
         virtual void altaInteresado (string,string,int,string) = 0;
-        virtual void altaEdificio() = 0;
-        virtual void altaEdi(dtEdificio)=0;
+        virtual void altaEdificio(string,int,float) = 0;
         virtual dtReporteInmobiliaria** iniciarReporte(Inmobiliaria) = 0;
         virtual void altaPropiedadCasa(dtPropiedadCasa) = 0;
         virtual void altaPropiedadApto(dtPropiedadApto) = 0;
