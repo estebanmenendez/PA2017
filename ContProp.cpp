@@ -21,6 +21,7 @@
 #include "ListaDicc.h"
 #include "StringKey.h"
 #include "Departamento.h"
+#include"Zona.h"
 
 ContProp::ContProp() {
 }
@@ -45,7 +46,24 @@ ListDicc * ContProp::listaDepartamentos(){
 }
 
 void ContProp::seleccionarDepartamentos(string){}
-dtZonas ** ContProp::listaZonasDepartamentos(string){}
+
+ListDicc* ContProp::listaZonasDepartamentos(string letraDepartamento){
+    IIterator *it =IDepartamento->getIteratorObj();
+    ListDicc *resZon=new ListDicc();
+    while (it->hasNext()) {
+        Zona* z = new Zona;
+        Departamento* c= dynamic_cast <Departamento*> (it->getCurrent());
+        StringKey *sk=new StringKey(c->getDatos()->getletraDepartamento());
+        resZon->add(c->getZonas(letraDepartamento),sk);
+        it->next();
+    }
+    delete it;
+    return resZon;
+
+}
+
+StringKey* k = new StringKey(Propiedad.)
+
 void ContProp::seleccionaZona(string){}
 dtPropiedadMensaje ** ContProp::listaPropiedades(string){}
 dtPropiedadMensaje ** ContProp::seleccionaPropiedad(string,int){}
@@ -73,8 +91,9 @@ void ContProp::altaEdificio(string nombre, int pisos, float gastosComunes){
 }
 
     dtReporteInmobiliaria** ContProp::iniciarReporte(Inmobiliaria){}
-void ContProp::altaPropiedadCasa(dtPropiedadCasa){
-   
+void ContProp::altaPropiedadCasa(dtPropiedadCasa*){
+    Propiedad* p= new Propiedad(dtPropiedadCasa*)
+    StringKey* k = new StringKey(Propiedad.codigoProp)
 //    Lista* l = new Lista();
 //    Propiedad* p = new Propiedad(dtPropiedadCasa);
 //    if (dtPropiedadCasa* empr = dynamic_cast <Casa *>(emp[i]))
