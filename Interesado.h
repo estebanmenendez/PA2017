@@ -23,6 +23,7 @@ class Interesado :public Usuarios{
         public:
             int getEdad();
             void setEdad();
+            Interesado(string nombre, string apellido,int edad, string email);
             Interesado();
             virtual ~Interesado();
 };
