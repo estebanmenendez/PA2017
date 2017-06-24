@@ -26,7 +26,11 @@
 #include"dtPropiedadApto.h"
 #include "dtEdificio.h"
 #include "IKey.h"
+<<<<<<< HEAD
 #include "ListaDicc.h"
+=======
+#include "ListDicc.h"
+>>>>>>> fe743ba460fa2875b05b51a376a0e17eeb6bf988
 
 
 using namespace std;
@@ -41,26 +45,26 @@ using namespace std;
         
         virtual ListDicc * listaDepartamentos() = 0;
         virtual void seleccionarDepartamentos(string) = 0;
-        virtual dtZonas ** listaZonasDepartamentos(string) = 0;
+        virtual ListDicc * listaZonasDepartamentos(string) = 0;
         virtual void seleccionaZona(string) = 0;
-        virtual dtPropiedadMensaje ** listaPropiedades(string) = 0;
-        virtual dtPropiedadMensaje ** seleccionaPropiedad(string,int) = 0;
+        virtual dtPropiedadMensaje * listaPropiedades(string) = 0;
+        virtual dtPropiedadMensaje * seleccionaPropiedad(string,int) = 0;
         virtual void enviarMensaje(string) = 0;
         virtual string ingesrarCodProp(string) = 0;
         virtual void modifPropCasa(dtPropiedadCasa) = 0;
         virtual void modifPropApto(dtPropiedadApto) = 0;
-        virtual dtConversaInmobiliaria ** listaConversacionesInmobiliarias() = 0;
+        virtual dtConversaInmobiliaria * listaConversacionesInmobiliarias() = 0;
         virtual void seleccionaConversacion(string) = 0;
-        virtual dtMensajes ** listaUltimosCincoMensajes() = 0;
+        virtual dtMensajes * listaUltimosCincoMensajes() = 0;
         virtual void seleccionaMensaje(string) = 0;
         virtual void agregaMensaje(string,string) = 0;
-        virtual dtPropiedadDisponible ** listaPropiedadesDisponibles() = 0;
-        virtual dtPropiedadInmobiliaria ** seleccionaPropiedadDisponible(string) = 0;
+        virtual dtPropiedadDisponible * listaPropiedadesDisponibles() = 0;
+        virtual dtPropiedadInmobiliaria * seleccionaPropiedadDisponible(string) = 0;
         virtual void altaInteresado (string,string,int,string) = 0;
         virtual void altaEdificio(string,int,float) = 0;
-        virtual dtReporteInmobiliaria** iniciarReporte(Inmobiliaria) = 0;
-        virtual void altaPropiedadCasa(dtPropiedadCasa) = 0;
-        virtual void altaPropiedadApto(dtPropiedadApto) = 0;
+        virtual dtReporteInmobiliaria* iniciarReporte(Inmobiliaria) = 0;
+        virtual void altaPropiedadCasa(dtPropiedadCasa*) = 0;
+        virtual void altaPropiedadApto(dtPropiedadApto*) = 0;
         virtual void eliminarProp(string) = 0;
     };
 

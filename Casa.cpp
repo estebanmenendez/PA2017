@@ -23,3 +23,7 @@ Casa::Casa(const Casa& orig) {
 Casa::~Casa() {
 
 }
+Casa::Casa(int , int , int ,bool , dtDireccion* , float , float ,float , bool, float metrosVerdes ) {
+    this->metrosVerdes= metrosVerdes;
+}
+

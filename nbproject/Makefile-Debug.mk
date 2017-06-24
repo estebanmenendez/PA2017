@@ -15,8 +15,8 @@ NM=nm
 CCADMIN=CCadmin
 RANLIB=ranlib
 CC=gcc
-CCC=g++-4.9
-CXX=g++-4.9
+CCC=g++
+CXX=g++
 FC=gfortran
 AS=as
 
@@ -53,11 +53,11 @@ OBJECTFILES= \
 	${OBJECTDIR}/IKey.o \
 	${OBJECTDIR}/Inmobiliaria.o \
 	${OBJECTDIR}/Interesado.o \
+	${OBJECTDIR}/ListDicc.o \
 	${OBJECTDIR}/ListDiccIterator.o \
 	${OBJECTDIR}/ListDiccIteratorKey.o \
 	${OBJECTDIR}/ListDiccIteratorObj.o \
 	${OBJECTDIR}/Lista.o \
-	${OBJECTDIR}/ListaDicc.o \
 	${OBJECTDIR}/ListaIterator.o \
 	${OBJECTDIR}/Mensaje.o \
 	${OBJECTDIR}/Nodo.o \
@@ -87,8 +87,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/dtPropiedadMensaje.o \
 	${OBJECTDIR}/dtReporteInmobiliaria.o \
 	${OBJECTDIR}/dtZonas.o \
-	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/sistema.o
+	${OBJECTDIR}/main.o
 
 
 # C Compiler Flags
@@ -109,11 +108,11 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/pa2017
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/progavanzada2017
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/pa2017: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/progavanzada2017: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/pa2017 ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/progavanzada2017 ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/Administrador.o: Administrador.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -205,6 +204,11 @@ ${OBJECTDIR}/Interesado.o: Interesado.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Interesado.o Interesado.cpp
 
+${OBJECTDIR}/ListDicc.o: ListDicc.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ListDicc.o ListDicc.cpp
+
 ${OBJECTDIR}/ListDiccIterator.o: ListDiccIterator.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -224,11 +228,6 @@ ${OBJECTDIR}/Lista.o: Lista.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Lista.o Lista.cpp
-
-${OBJECTDIR}/ListaDicc.o: ListaDicc.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ListaDicc.o ListaDicc.cpp
 
 ${OBJECTDIR}/ListaIterator.o: ListaIterator.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -379,11 +378,6 @@ ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
-
-${OBJECTDIR}/sistema.o: sistema.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/sistema.o sistema.cpp
 
 # Subprojects
 .build-subprojects:

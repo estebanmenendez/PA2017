@@ -42,4 +42,5 @@ void dtZonas::setCodigoZona(string codigoZona) {
 }
 
 
-
+    dtZonas seleccionaZona(string codigoZona){}
+    dtZonas listaZonaDepartamento(){}

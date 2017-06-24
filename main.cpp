@@ -21,18 +21,16 @@
 #include"dtPropiedadCasa.h"
 #include"dtPropiedad.h"
 #include"Fabrica.h"
-#include"sistema.h"
 #include"PropInmo.h"
 #include"Propiedad.h"
 #include"ICollection.h"
 #include"Inmobiliaria.h"
 #include"Interesado.h"
-#include"ListaDicc.h"
+#include"ListDicc.h"
 #include"Usuarios.h"
 #include"ListaIterator.h"
 #include"string.h"
 #include"ContProp.h"
-
 
 using namespace std;
 
@@ -232,7 +230,7 @@ void cargaDatosPrueba(){}
 
 void altaInmobiliaria (){
     string nombre, ciudad, calle, numero;
-    sistema* s= new sistema();
+   // sistema* s= new sistema();
     dtDireccion* dir;
     
     system ("clear");
@@ -246,7 +244,7 @@ void altaInmobiliaria (){
     cout<<"Ingrese Número: ";
     cin>>numero;
     dir = new dtDireccion(ciudad,numero,calle);
-    s->altaInmobiliaria(nombre,dir);
+  //  s->altaInmobiliaria(nombre,dir);
     cout<<"Inmobiliaria dada de Alta ";
 }
 
@@ -254,8 +252,8 @@ void altaPropiedad(){
     Fabrica* f = Fabrica::getInstance();
     IContProp * i = f->getContProp();  //EJEMPLO
     
-    dtDepartamento ** listaDep;
-    dtZonas** listaZona;
+    ListDicc * listaDep;
+    ListDicc* listaZona;
     
     dtEdificio edif;
     string letraDep, codigoZona,ciudad, calle, numero,nEdif;
@@ -307,7 +305,7 @@ void altaPropiedad(){
     cout<<"Ingrese Valor de Venta/ Alquiler \n";
     cin>>valor; 
     dtPropC = new dtPropiedadCasa(cAmb,cBanios,cDorm,lgarage,dir,mEdif,mVerdes,valor,ventAlq);
-    i->altaPropiedadCasa(*dtPropC);
+    i->altaPropiedadCasa(dtPropC);
    
     }else{
 //        i->
@@ -346,7 +344,7 @@ void altaPropiedad(){
     cout<<"Ingrese Valor de Venta/ Alquiler \n";
     cin>>valor; 
     dtPropA = new dtPropiedadApto(cAmb,cBanios,cDorm,lgarage,dir,mEdif,nEdif,valor,ventAlq);
-    i->altaPropiedadApto(*dtPropA);
+    i->altaPropiedadApto(dtPropA);
     }
 }
 

@@ -27,7 +27,7 @@ public:
     dtEdificio (string nombreEdificio, int picantPisosEdificiosos, float gastosComunesEdificio);
     
     dtEdificio seleccionarEdificio(string nombreEdificio);
-    dtEdificio** listarEdificioZona();
+    dtEdificio* listarEdificioZona();
     void altaEdificio(string nombreEdificio);
     
     string getnombreEdificio() const;

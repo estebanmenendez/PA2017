@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include <iostream>
 #include "dtDireccion.h"
+#include "ICollection.h"
 
 
 #ifndef DTPROPIEDADAPTO_H
@@ -17,7 +18,7 @@
 
 using namespace std;
 
-class dtPropiedadApto{
+class dtPropiedadApto:public ICollectible {
     public:
         dtPropiedadApto();
         dtPropiedadApto(const dtPropiedadApto& orig);
