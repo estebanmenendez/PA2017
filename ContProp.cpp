@@ -22,6 +22,7 @@
 #include "StringKey.h"
 #include "Departamento.h"
 #include"Zona.h"
+#include "Interesado.h"
 
 ContProp::ContProp() {
 }
@@ -78,7 +79,9 @@ void ContProp::seleccionaMensaje(string){}
 void ContProp::agregaMensaje(string,string){}
 dtPropiedadDisponible * ContProp::listaPropiedadesDisponibles(){}
 dtPropiedadInmobiliaria * ContProp::seleccionaPropiedadDisponible(string){}
-void ContProp::altaInteresado (string,string,int,string){
+void ContProp::altaInteresado (string nombre, string apellido, int edad, string email){
+    Interesado * i = new Interesado(nombre, apellido, edad, email);
+    
 }
 
 void ContProp::altaEdificio(string nombre, int pisos, float gastosComunes){
