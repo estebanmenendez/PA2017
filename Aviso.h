@@ -29,7 +29,6 @@ public:
     virtual ~Aviso();
        
     virtual Aviso getAviso();
-    
     virtual void crearAvisoProp(Propiedad);
     virtual void altaAlquiler(float);
     virtual void altaVenta(float);

@@ -33,7 +33,9 @@ void PropInmo::enviarMensaje(Propiedad propiedad, string mensaje){
 }
 
 void PropInmo::altaPropEnInmob(Propiedad, string){
-	
+
+      
+    
 }
 
 void PropInmo::eliminarLinks(){

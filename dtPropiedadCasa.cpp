@@ -7,8 +7,9 @@
 #include "dtPropiedadCasa.h"
 
 dtPropiedadCasa::dtPropiedadCasa(int cantAmbiente, int cantBanios, int cantDormitorios,
-        bool garage, dtDireccion* direccionProp, float mCuadradosEdificado, float metrosVerdes,
-        float valor, bool ventAlq){
+bool garage, dtDireccion* direccionProp, float mCuadradosEdificado, float metrosVerdes,
+float valor, bool ventAlq){
+    
     this->cantAmbiente = cantAmbiente;
     this->cantBanios = cantBanios;
     this->cantDormitorios = cantDormitorios;

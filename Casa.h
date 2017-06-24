@@ -19,7 +19,7 @@
 class Casa: public Propiedad  {
 public:
     Casa();
-   // Casa(dtPropiedadCasa);
+    Casa(int , int , int ,bool , dtDireccion* , float , float ,float , bool, float);
     Casa(const Casa& orig);
     virtual ~Casa();
     void esCasa();

@@ -12,11 +12,33 @@
  */
 
 #include "Propiedad.h"
+#include "dtPropiedadCasa.h"
 
 Propiedad::Propiedad() {
 }    
 
 Propiedad::Propiedad(const Propiedad& orig) {
+}
+
+void Propiedad::PropiedadC(dtPropiedadCasa*){  
+    
+//    this->cantAmbientes = dtPropiedadCasa.getcantAmbiente();
+//    this->cantBanios = dtPropiedadCasa.getcantBanios();
+//    this->cantDormitorios = dtPropiedadCasa.getcantDormitorios();
+//    this->direccionProp = dtPropiedadCasa.getdireccionProp();
+//    this->garage = dtPropiedadCasa.getgarage();
+//    this->mCuadradosEdificado = dtPropiedadCasa.;
+//    
+}
+
+void Propiedad::PropiedadA(dtPropiedadApto*){
+    
+//    this->cantAmbientes = dtPropiedadApto.getcantAmbiente();
+//    this->cantBanios = dtPropiedadApto.getcantBanios();
+//    this->cantDormitorios = dtPropiedadApto.getcantDormitorios();
+//    this->direccionProp = dtPropiedadApto.getdireccionProp();
+//    this->garage = dtPropiedadApto.getgarage();
+//    this->mCuadradosEdificado = dtPropiedadApto.getmCuadradosEdificado();
 }
 
 Propiedad::~Propiedad() {

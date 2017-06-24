@@ -19,7 +19,7 @@ Zona::Zona(const Zona& orig) {}
 
 Zona::~Zona() {}
 
-dtZonas getZona(){}
+dtZonas getZona(string){}
 
 dtPropZonas getPropZonaDpto(Usuarios){}
 

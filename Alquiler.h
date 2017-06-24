@@ -12,7 +12,7 @@
  * Created on 12 de junio de 2017, 12:48 PM
  */
 #include"Aviso.h"
-#include"dtPropiedad.h"
+
 
 #ifndef ALQUILER_H
 #define ALQUILER_H
@@ -23,7 +23,7 @@ private:
 public:
     
     Alquiler();
-    Alquiler(const Alquiler & orig);
+
     virtual ~Alquiler();
     
     void altaAlquiler(float); 

@@ -20,6 +20,7 @@
 #include"dtPropiedadApto.h"
 #include"dtPropZonas.h"
 
+
 #ifndef ZONA_H
 #define ZONA_H
 
@@ -31,13 +32,13 @@ public:
     Zona(const Zona& orig);
     virtual ~Zona();
     
-     dtZonas getZona();
-     dtPropZonas getPropZonaDpto(Usuarios);
+    dtZonas getZona(string);
+    dtPropZonas getPropZonaDpto(Usuarios);
     Propiedad getPropiedad();
 private:
     string codigoZona;
     string nombreZona;
-    Propiedad* propiedad;
+    //IDictionary * IPropiedad;
 };
 
 #endif /* ZONA_H */

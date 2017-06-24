@@ -5,7 +5,7 @@
  *      Author: apias
  */
 
-#include "ListaDicc.h"
+#include "ListDicc.h"
 #include "ListDiccIteratorObj.h"
 #include <string>
 using namespace std;

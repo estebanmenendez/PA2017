@@ -31,16 +31,16 @@ public:
     Departamento(const Departamento& orig);
     virtual ~Departamento();
     
-    dtZonas getZonas(Departamento);
+    dtZonas* getZonas(string);
     Zona getZona(string);
     dtDepartamento *getDatos();
-    dtPropEnDpto** getpropEnDepto(Usuarios inmobiliaria);
+    dtPropEnDpto* getpropEnDepto(Usuarios inmobiliaria);
     Zona * getZona();
     
 private:
     string letraDpto;
     string nombreDpto;
-    Zona* zona;
+    //IDictionary* IZona;
 
 };
 

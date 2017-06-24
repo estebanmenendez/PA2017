@@ -8,14 +8,14 @@
 #include <stdio.h>
 #include <iostream>
 #include "dtDireccion.h"
-
+#include "ICollection.h"
 
 #ifndef DTPROPIEDADCASA_H
 #define DTPROPIEDADCASA_H
 
 using namespace std;
 
-class dtPropiedadCasa{
+class dtPropiedadCasa:public ICollectible{
     public:
         dtPropiedadCasa();
         dtPropiedadCasa(const dtPropiedadCasa& orig);

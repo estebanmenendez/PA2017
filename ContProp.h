@@ -16,16 +16,14 @@
 
 #include"IContPorp.h"
 #include"IDictionary.h"
-
-#include "dtEdificio.h"
-#include "ICollection.h"
-
+#include"dtEdificio.h"
+#include"ICollection.h"
 #include"Edificio.h"
 #include"Lista.h"
 #include"ICollection.h"
-#include "ListaDicc.h"
-#include "ContUsuario.h"
-#include <iostream>
+#include"ListDicc.h"
+#include"ContUsuario.h"
+#include<iostream>
 
 
 
@@ -34,41 +32,37 @@ using namespace std;
  class ContProp : public IContProp {
     private: 
         
-      IDictionary * IDepartamento;
+        IDictionary * IDepartamento;
         IDictionary * IEdificio;
-ICollection * PropInmo;
-ContUsuario * ControladorUsuario;
-          
-         // IDictionary * Diccionario;
-        //  IDictionary * ICollection;
-    
-     
+        ICollection * PropInmo;
+        ContUsuario * ControladorUsuario;
+
     public:
         ContProp();
         ContProp(const ContProp& orig);
         virtual ~ContProp();
         ListDicc * listaDepartamentos();
         void seleccionarDepartamentos(string);
-        dtZonas ** listaZonasDepartamentos(string);
+        ListDicc * listaZonasDepartamentos(string);
         void seleccionaZona(string);
-        dtPropiedadMensaje ** listaPropiedades(string);
-        dtPropiedadMensaje ** seleccionaPropiedad(string,int);
+        dtPropiedadMensaje * listaPropiedades(string);
+        dtPropiedadMensaje * seleccionaPropiedad(string,int);
         void enviarMensaje(string);
         string ingesrarCodProp(string);
         void modifPropCasa(dtPropiedadCasa);
         void modifPropApto(dtPropiedadApto);
-        dtConversaInmobiliaria ** listaConversacionesInmobiliarias();
+        dtConversaInmobiliaria * listaConversacionesInmobiliarias();
         void seleccionaConversacion(string);
-        dtMensajes ** listaUltimosCincoMensajes();
+        dtMensajes * listaUltimosCincoMensajes();
         void seleccionaMensaje(string);
         void agregaMensaje(string,string);
-        dtPropiedadDisponible ** listaPropiedadesDisponibles();
-        dtPropiedadInmobiliaria ** seleccionaPropiedadDisponible(string);
+        dtPropiedadDisponible * listaPropiedadesDisponibles();
+        dtPropiedadInmobiliaria * seleccionaPropiedadDisponible(string);
         void altaInteresado (string,string,int,string);
         void altaEdificio(string,int,float);
-        dtReporteInmobiliaria** iniciarReporte(Inmobiliaria);
-        void altaPropiedadCasa(dtPropiedadCasa);
-        void altaPropiedadApto(dtPropiedadApto);
+        dtReporteInmobiliaria* iniciarReporte(Inmobiliaria);
+        void altaPropiedadCasa(dtPropiedadCasa*);
+        void altaPropiedadApto(dtPropiedadApto*);
         void eliminarProp(string);
         
     };

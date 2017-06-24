@@ -18,7 +18,7 @@
 #include "Edificio.h"
 #include "Lista.h"
 #include "Propiedad.h"
-#include "ListaDicc.h"
+#include "ListDicc.h"
 #include "StringKey.h"
 #include "Departamento.h"
 #include"Zona.h"
@@ -52,9 +52,9 @@ ListDicc* ContProp::listaZonasDepartamentos(string letraDepartamento){
     ListDicc *resZon=new ListDicc();
     while (it->hasNext()) {
         Zona* z = new Zona;
-        Departamento* c= dynamic_cast <Departamento*> (it->getCurrent());
-        StringKey *sk=new StringKey(c->getDatos()->getletraDepartamento());
-        resZon->add(c->getZonas(letraDepartamento),sk);
+        Departamento* d= dynamic_cast <Departamento*> (it->getCurrent());
+        StringKey *sk=new StringKey(d->getDatos()->getletraDepartamento());
+        resZon->add(d->getZonas(letraDepartamento),sk);
         it->next();
     }
     delete it;
@@ -62,22 +62,22 @@ ListDicc* ContProp::listaZonasDepartamentos(string letraDepartamento){
 
 }
 
-StringKey* k = new StringKey(Propiedad.)
+
 
 void ContProp::seleccionaZona(string){}
-dtPropiedadMensaje ** ContProp::listaPropiedades(string){}
-dtPropiedadMensaje ** ContProp::seleccionaPropiedad(string,int){}
+dtPropiedadMensaje * ContProp::listaPropiedades(string){}
+dtPropiedadMensaje * ContProp::seleccionaPropiedad(string,int){}
 void ContProp::enviarMensaje(string){}
 string ContProp::ingesrarCodProp(string){}
 void ContProp::modifPropCasa(dtPropiedadCasa){}
 void ContProp::modifPropApto(dtPropiedadApto){}
-dtConversaInmobiliaria ** ContProp::listaConversacionesInmobiliarias(){}
+dtConversaInmobiliaria * ContProp::listaConversacionesInmobiliarias(){}
 void ContProp::seleccionaConversacion(string){}
-dtMensajes ** ContProp::listaUltimosCincoMensajes(){}
+dtMensajes * ContProp::listaUltimosCincoMensajes(){}
 void ContProp::seleccionaMensaje(string){}
 void ContProp::agregaMensaje(string,string){}
-dtPropiedadDisponible ** ContProp::listaPropiedadesDisponibles(){}
-dtPropiedadInmobiliaria ** ContProp::seleccionaPropiedadDisponible(string){}
+dtPropiedadDisponible * ContProp::listaPropiedadesDisponibles(){}
+dtPropiedadInmobiliaria * ContProp::seleccionaPropiedadDisponible(string){}
 void ContProp::altaInteresado (string,string,int,string){
 }
 
@@ -90,10 +90,10 @@ void ContProp::altaEdificio(string nombre, int pisos, float gastosComunes){
    else throw new invalid_argument("Edificio ya existente");
 }
 
-    dtReporteInmobiliaria** ContProp::iniciarReporte(Inmobiliaria){}
+    dtReporteInmobiliaria* ContProp::iniciarReporte(Inmobiliaria){}
 void ContProp::altaPropiedadCasa(dtPropiedadCasa*){
-    Propiedad* p= new Propiedad(dtPropiedadCasa*)
-    StringKey* k = new StringKey(Propiedad.codigoProp)
+//    Propiedad* p= new Propiedad(dtPropiedadCasa*)
+//    StringKey* k = new StringKey(Propiedad.codigoProp)
 //    Lista* l = new Lista();
 //    Propiedad* p = new Propiedad(dtPropiedadCasa);
 //    if (dtPropiedadCasa* empr = dynamic_cast <Casa *>(emp[i]))
@@ -105,7 +105,7 @@ void ContProp::altaPropiedadCasa(dtPropiedadCasa*){
 //    Propiedad* p = new Propiedad(dtPropiedadCasa);
 }
 
-void ContProp::altaPropiedadApto(dtPropiedadApto){
+void ContProp::altaPropiedadApto(dtPropiedadApto*){
     
  // if (dtPropiedadApto* empr = dynamic_cast <Apartamento *>(emp[i]))
                 

@@ -16,17 +16,18 @@
 #include <string.h>
 #include <stdio.h>
 #include <iostream>
+#include "ICollectible.h"
 
 using namespace std;
 
-class dtZonas {
+class dtZonas: public ICollectible {
 public:
     dtZonas();
     dtZonas(const dtZonas& orig);
     virtual ~dtZonas();
     dtZonas(string codigoZona, string nombreZona);
     dtZonas seleccionaZona(string codigoZona);
-    dtZonas** listaZonaDepartamento();
+    dtZonas listaZonaDepartamento();
     
     
      void setNombreZona(string nombreZona);

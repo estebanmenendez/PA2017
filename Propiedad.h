@@ -20,6 +20,8 @@
 #include"dtPropiedadMensaje.h"
 #include"dtMensajes.h"
 #include"dtPropiedad.h"
+#include"dtPropiedadCasa.h"
+#include"dtPropiedadApto.h"
 
 #ifndef PROPIEDAD_H
 #define PROPIEDAD_H
@@ -29,6 +31,8 @@ using namespace std;
 class Propiedad :public ICollectible {
 public:
     Propiedad();
+    void PropiedadC(dtPropiedadCasa*);
+    void PropiedadA(dtPropiedadApto*);
     Propiedad(const Propiedad& orig);
     virtual ~Propiedad();
     

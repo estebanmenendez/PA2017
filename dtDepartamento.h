@@ -28,7 +28,7 @@ public:
     virtual ~dtDepartamento();
     dtDepartamento(string letraDepartamento, string nombreDepartamento);
   //  dtDepartamento seleccionaDepartamento(string letraDepartamento);
-    dtDepartamento** listarDepartamento();
+    dtDepartamento* listarDepartamento();
     
     string getletraDepartamento() const;
     string getnombreDepartamento() const;    
