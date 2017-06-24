@@ -26,6 +26,7 @@
 #include"dtPropiedadApto.h"
 #include "dtEdificio.h"
 #include "IKey.h"
+#include "ListaDicc.h"
 
 
 using namespace std;
@@ -38,7 +39,7 @@ using namespace std;
        
         virtual ~IContProp();
         
-//        virtual dtDepartamento ** listaDepartamentos() = 0;
+        virtual ListDicc * listaDepartamentos() = 0;
         virtual void seleccionarDepartamentos(string) = 0;
         virtual dtZonas ** listaZonasDepartamentos(string) = 0;
         virtual void seleccionaZona(string) = 0;

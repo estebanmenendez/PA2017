@@ -38,6 +38,8 @@ using namespace std;
         IDictionary * IEdificio;
 ICollection * PropInmo;
 ContUsuario * ControladorUsuario;
+ListaIterator *ListaIterator
+       ;
           
          // IDictionary * Diccionario;
         //  IDictionary * ICollection;

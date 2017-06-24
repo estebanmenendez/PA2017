@@ -44,7 +44,17 @@ ListDicc * ContProp::listaDepartamentos(){
 
 }
 
-void ContProp::seleccionarDepartamentos(string){}
+void ContProp::seleccionarDepartamentos(string letraDepto){
+    bool encontre=false;
+    ListaIterator* iter=this->IDepartamento->getIteratorObj();
+    Departamento *depto;
+    while ((!encontre)&& iter->hasNext()) {
+        depto=(Departamento*)iter->getCurrent();
+        encontre=depto->
+        
+    }
+
+}
 dtZonas ** ContProp::listaZonasDepartamentos(string){}
 void ContProp::seleccionaZona(string){}
 dtPropiedadMensaje ** ContProp::listaPropiedades(string){}
