@@ -26,11 +26,8 @@
 #include"dtPropiedadApto.h"
 #include "dtEdificio.h"
 #include "IKey.h"
-<<<<<<< HEAD
-#include "ListaDicc.h"
-=======
 #include "ListDicc.h"
->>>>>>> fe743ba460fa2875b05b51a376a0e17eeb6bf988
+
 
 
 using namespace std;
