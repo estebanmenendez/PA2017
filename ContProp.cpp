@@ -46,6 +46,20 @@ ListDicc * ContProp::listaDepartamentos(){
 
 }
 
+<<<<<<< HEAD
+void ContProp::seleccionarDepartamentos(string letraDepto){
+    bool encontre=false;
+    ListaIterator* iter=this->IDepartamento->getIteratorObj();
+    Departamento *depto;
+    while ((!encontre)&& iter->hasNext()) {
+        depto=(Departamento*)iter->getCurrent();
+        encontre=depto->
+        
+    }
+
+}
+dtZonas ** ContProp::listaZonasDepartamentos(string){}
+=======
 void ContProp::seleccionarDepartamentos(string){}
 
 ListDicc* ContProp::listaZonasDepartamentos(string letraDepartamento){
@@ -65,6 +79,7 @@ ListDicc* ContProp::listaZonasDepartamentos(string letraDepartamento){
 
 
 
+>>>>>>> fe743ba460fa2875b05b51a376a0e17eeb6bf988
 void ContProp::seleccionaZona(string){}
 dtPropiedadMensaje * ContProp::listaPropiedades(string){}
 dtPropiedadMensaje * ContProp::seleccionaPropiedad(string,int){}

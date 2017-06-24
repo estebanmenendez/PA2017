@@ -34,9 +34,21 @@ using namespace std;
         
         IDictionary * IDepartamento;
         IDictionary * IEdificio;
+<<<<<<< HEAD
+ICollection * PropInmo;
+ContUsuario * ControladorUsuario;
+ListaIterator *ListaIterator
+       ;
+          
+         // IDictionary * Diccionario;
+        //  IDictionary * ICollection;
+    
+     
+=======
         ICollection * PropInmo;
         ContUsuario * ControladorUsuario;
 
+>>>>>>> fe743ba460fa2875b05b51a376a0e17eeb6bf988
     public:
         ContProp();
         ContProp(const ContProp& orig);
