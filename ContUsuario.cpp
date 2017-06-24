@@ -12,6 +12,8 @@
  */
 
 #include "ContUsuario.h"
+#include "Interesado.h"
+#include "ICollection.h"
 #include <iostream>
 #include<string.h>
 #include <stdexcept>
@@ -27,6 +29,13 @@ using namespace std;
     }
 
       void ContUsuario::altaInteresado(string nombre, string apellido, int edad, string email){
+          
+        Interesado * i = new Interesado(nombre, apellido, edad, email);
+        StringKey * skEmail = new StringKey(email);  //GENERO LA CLAVE 
+        if(Interesados->member(skEmail)!=true)//pregunto si ya existe
+            Interesados->add(i,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
+        else throw new invalid_argument("Usuario interesado ya existente");
+        
     }
       void ContUsuario::altaSesion(){
 
