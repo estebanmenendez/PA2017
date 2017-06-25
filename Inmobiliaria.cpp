@@ -24,5 +24,5 @@ Inmobiliaria::~Inmobiliaria(){
 Inmobiliaria::Inmobiliaria(string nombre, dtDireccion* dir, string email){
     this->nombreInm = nombre;
     this->direccion = dir;
-    Usuarios::getEmail();
+    Usuarios::getEmail()=email;
 }

@@ -13,24 +13,16 @@
 #include "ContProp.h"
 #include "ICollection.h"
 #include "Edificio.h"
-<<<<<<< HEAD
 #include "Lista.h"
-=======
-#include "Propiedad.h"
->>>>>>> 3d6417311bb5557f064f3bb6f052fa850298a12a
 #include "ListDicc.h"
 #include "StringKey.h"
 #include "PropInmo.h"
 #include "Departamento.h"
-<<<<<<< HEAD
 #include "Propiedad.h"
 #include "dtPropiedadCasa.h"
-#include"Zona.h"
-=======
 #include "Zona.h"
 #include "Interesado.h"
 #include <stdexcept>
->>>>>>> 3d6417311bb5557f064f3bb6f052fa850298a12a
 
 ContProp::ContProp() {
     
@@ -55,7 +47,6 @@ ListDicc * ContProp::listaDepartamentos(){
 
 }
 
-<<<<<<< HEAD
 Departamento* ContProp::seleccionarDepartamentos(string letraDepto){
     IIterator *it=IDepartamento->getIteratorObj();
     StringKey *sk=new StringKey(letraDepto);
@@ -64,31 +55,6 @@ Departamento* ContProp::seleccionarDepartamentos(string letraDepto){
     else {throw invalid_argument("No existe ese Departamento");}
   
 }
-
-
-
- //ListDicc * ContProp::listaZonasDepartamentos(string){}
-
-=======
-
-void ContProp::seleccionarDepartamentos(string letraDepto){
-    
-        
-    
-}
- ListDicc * listaZonasDepartamentos(string){
-     
- }
-
-<<<<<<< HEAD
-void ContProp::seleccionarDepartamentos(string){}
->>>>>>> ba7536a33636d3110b1875f2b412a3be6d307305
-=======
-void seleccionarDepartamentos(string){
-    
-}
->>>>>>> e1c4e125832188d58bbbf66180139338b7502a74
-
 ListDicc* ContProp::listaZonasDepartamentos(string letraDepartamento){
     IIterator *it =IDepartamento->getIteratorObj();
     ListDicc *resZon=new ListDicc();
@@ -104,12 +70,6 @@ ListDicc* ContProp::listaZonasDepartamentos(string letraDepartamento){
     
 
 }
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> ba7536a33636d3110b1875f2b412a3be6d307305
 void ContProp::seleccionaZona(string){}
 dtPropiedadMensaje * ContProp::listaPropiedades(string){}
 dtPropiedadMensaje * ContProp::seleccionaPropiedad(string,int){}
@@ -171,12 +131,10 @@ void ContProp::altaPropiedadApto(dtPropiedadApto* propA){
 }
 
 void ContProp::eliminarProp(string codigo){
-<<<<<<< HEAD
     StringKey* claveP = new StringKey(codigo);
     
-=======
+
    // StringKey* claveP = new StringKey(codigo);
->>>>>>> 3d6417311bb5557f064f3bb6f052fa850298a12a
     //bool estaProp = Diccionario->member(claveP);
 //    Propiedad* p = dynamic_cast<Propiedad*>(this->Diccionario->find(claveP));
     

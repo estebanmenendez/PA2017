@@ -29,21 +29,22 @@ class ContUsuario : public IContUsuario {
 
         void altaInmobiliaria(string, dtDireccion*, string);
         void altaInteresado(string,string,int,string);
-        Usuarios ** usuarioLogueado();
+        Usuarios * usuarioLogueado();
         void iniciarSesion(string, string);
         bool verificarContrasena(string, string);
         void activarUsuario(string, string);
         void validarPwd(string);
         void altaSesion();
         void cancelarAccion();
-        dtReporteInmobiliaria ** obtenerReporteInmobiliarias ();
+        dtReporteInmobiliaria * obtenerReporteInmobiliarias ();
         void CerrarSesion(int);
 
     private:
         
-        IDictionary * Inmobiliaria;
-        IDictionary * Interesados;
-        IDictionary * Administrador;
+        IDictionary * IInmobiliaria;
+        IDictionary * IInteresado;
+        IDictionary * IAdministrador;
+        IDictionary * IUsuario;
 
       
 };

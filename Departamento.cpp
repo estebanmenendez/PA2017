@@ -20,7 +20,7 @@ Departamento::Departamento(const Departamento& orig) {
 }
 
 Departamento::~Departamento() {
-    
+    }
 
     dtZonas* Departamento::getZonas(string letraDepto){}
     Zona* Departamento::getZona(string letraDepto){}
@@ -28,7 +28,7 @@ Departamento::~Departamento() {
     dtPropEnDpto* Departamento::getpropEnDepto(Usuarios inmobiliaria){}
     Zona* getZona(){}
 
-}
+
 
     
     
