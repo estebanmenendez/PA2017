@@ -30,7 +30,7 @@ public:
         
 	int getCantidadMensajes(Usuarios);
 	void enviarMensaje(Propiedad, string);
-	void altaPropEnInmob(Propiedad, string);
+	void altaPropEnInmob(Propiedad, Usuarios);
 	void eliminarLinks();
 	dtAvisoPropiedad ** getAvisos();
     
