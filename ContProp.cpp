@@ -24,6 +24,7 @@
 #include"Zona.h"
 
 ContProp::ContProp() {
+    
 }
 
 ContProp::ContProp(const ContProp& orig) {
@@ -45,21 +46,19 @@ ListDicc * ContProp::listaDepartamentos(){
 
 }
 
-<<<<<<< HEAD
-void ContProp::seleccionarDepartamentos(string letraDepto){
-    bool encontre=false;
-    ListaIterator* iter=this->IDepartamento->getIteratorObj();
-    Departamento *depto;
-    while ((!encontre)&& iter->hasNext()) {
-        depto=(Departamento*)iter->getCurrent();
-        encontre=depto->
-        
-    }
-
+Departamento* ContProp::seleccionarDepartamentos(string letraDepto){
+    IIterator *it=IDepartamento->getIteratorObj();
+    StringKey *sk=new StringKey(letraDepto);
+    Departamento *d=dynamic_cast<Departamento*>(IDepartamento->find(sk));
+    if(d!=NULL){return d;}
+    else {throw invalid_argument("No existe ese Departamento");}
+  
 }
-dtZonas ** ContProp::listaZonasDepartamentos(string){}
-=======
-void ContProp::seleccionarDepartamentos(string){}
+
+
+
+ //ListDicc * ContProp::listaZonasDepartamentos(string){}
+
 
 ListDicc* ContProp::listaZonasDepartamentos(string letraDepartamento){
     IIterator *it =IDepartamento->getIteratorObj();
@@ -73,12 +72,12 @@ ListDicc* ContProp::listaZonasDepartamentos(string letraDepartamento){
     }
     delete it;
     return resZon;
+    
 
 }
 
 
 
->>>>>>> fe743ba460fa2875b05b51a376a0e17eeb6bf988
 void ContProp::seleccionaZona(string){}
 dtPropiedadMensaje * ContProp::listaPropiedades(string){}
 dtPropiedadMensaje * ContProp::seleccionaPropiedad(string,int){}
@@ -127,7 +126,7 @@ void ContProp::altaPropiedadApto(dtPropiedadApto*){
 }
 
 void ContProp::eliminarProp(string codigo){
-    StringKey* claveP = new StringKey(codigo);
+   // StringKey* claveP = new StringKey(codigo);
     //bool estaProp = Diccionario->member(claveP);
 //    Propiedad* p = dynamic_cast<Propiedad*>(this->Diccionario->find(claveP));
     

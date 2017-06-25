@@ -32,7 +32,7 @@ public:
     virtual ~Departamento();
     
     dtZonas* getZonas(string);
-    Zona getZona(string);
+    Zona *getZona(string);
     dtDepartamento *getDatos();
     dtPropEnDpto* getpropEnDepto(Usuarios inmobiliaria);
     Zona * getZona();
