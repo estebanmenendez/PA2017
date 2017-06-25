@@ -34,6 +34,7 @@ using namespace std;
         
         IDictionary * IDepartamento;
         IDictionary * IEdificio;
+        IDictionary * IPropiedad;
         ICollection * PropInmo;
         ContUsuario * ControladorUsuario;
 
@@ -60,7 +61,7 @@ using namespace std;
         dtPropiedadInmobiliaria * seleccionaPropiedadDisponible(string);
         void altaInteresado (string,string,int,string);
         void altaEdificio(string,int,float);
-        dtReporteInmobiliaria* iniciarReporte(Inmobiliaria);
+        dtReporteInmobiliaria * iniciarReporte(Inmobiliaria);
         void altaPropiedadCasa(dtPropiedadCasa*);
         void altaPropiedadApto(dtPropiedadApto*);
         void eliminarProp(string);

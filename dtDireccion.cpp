@@ -23,7 +23,7 @@ dtDireccion::dtDireccion(const dtDireccion& orig) {
 dtDireccion::~dtDireccion() {
 }
 
-dtDireccion::dtDireccion(string ciudad, string numero, string calle){
+dtDireccion::dtDireccion(string ciudad, string calle , string numero){
     this->ciudad = ciudad;
     this->numero = numero;
     this->calle = calle;

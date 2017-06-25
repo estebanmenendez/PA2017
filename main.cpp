@@ -29,7 +29,6 @@
 #include"ListDicc.h"
 #include"Usuarios.h"
 #include"ListaIterator.h"
-#include"string.h"
 #include"ContProp.h"
 
 using namespace std;
@@ -336,7 +335,7 @@ void altaPropiedad(){
     cin>>calle;
     cout<<"Ingrese Número: ";
     cin>>numero;
-    dir = new dtDireccion(ciudad,numero,calle);
+    dir = new dtDireccion(ciudad,calle,numero);
     cout<<"Ingrese Metros Cuadrados Edif: \n";
     cin>>mEdif;
     cout<<"Indique si  Venta o Alquiler : A/V \n";

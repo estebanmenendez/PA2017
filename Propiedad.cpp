@@ -14,31 +14,42 @@
 #include "Propiedad.h"
 #include "dtPropiedadCasa.h"
 
+
+
 Propiedad::Propiedad() {
 }    
 
 Propiedad::Propiedad(const Propiedad& orig) {
 }
 
-void Propiedad::PropiedadC(dtPropiedadCasa*){  
+Propiedad::Propiedad(dtPropiedadCasa pc){  
     
-//    this->cantAmbientes = dtPropiedadCasa.getcantAmbiente();
-//    this->cantBanios = dtPropiedadCasa.getcantBanios();
-//    this->cantDormitorios = dtPropiedadCasa.getcantDormitorios();
-//    this->direccionProp = dtPropiedadCasa.getdireccionProp();
-//    this->garage = dtPropiedadCasa.getgarage();
-//    this->mCuadradosEdificado = dtPropiedadCasa.;
-//    
+    string casa = "CASA1";
+    this->codigoProp = casa;
+    this->cantAmbientes = pc.getcantAmbiente();
+    this->cantBanios = pc.getcantBanios();
+    this->cantDormitorios = pc.getcantDormitorios();
+    this->direccionProp = pc.getdireccionProp();
+    this->garage = pc.getgarage();
+    this->mCuadradosEdificado = pc.getmCuadradosEdificado();
+    this->mCuadradosTotales = pc.getmetrosVerdes()+ pc.getmCuadradosEdificado();
+    
+    
+    
+    
 }
 
-void Propiedad::PropiedadA(dtPropiedadApto*){
+Propiedad::Propiedad(dtPropiedadApto pa){
     
-//    this->cantAmbientes = dtPropiedadApto.getcantAmbiente();
-//    this->cantBanios = dtPropiedadApto.getcantBanios();
-//    this->cantDormitorios = dtPropiedadApto.getcantDormitorios();
-//    this->direccionProp = dtPropiedadApto.getdireccionProp();
-//    this->garage = dtPropiedadApto.getgarage();
-//    this->mCuadradosEdificado = dtPropiedadApto.getmCuadradosEdificado();
+    string apto = "APTO1";
+    this->codigoProp = apto;
+    this->cantAmbientes = pa.getcantAmbiente();
+    this->cantBanios = pa.getcantBanios();
+    this->cantDormitorios = pa.getcantDormitorios();
+    this->direccionProp = pa.getdireccionProp();
+    this->garage = pa.getgarage();
+    this->mCuadradosEdificado = pa.getmCuadradosEdificado();
+    this->mCuadradosTotales = pa.getmCuadradosEdificado();
 }
 
 Propiedad::~Propiedad() {
@@ -52,3 +63,7 @@ void Propiedad::esAptoP(){
 
 void Propiedad::eliminarLinksPropInmo(){
 }
+string Propiedad::getCodigoProp(){
+  return this->codigoProp;
+}
+//Casa * Propiedad::getMetrosVerdes(){}

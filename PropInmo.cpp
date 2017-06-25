@@ -28,11 +28,13 @@ int PropInmo::getCantidadMensajes(Usuarios){
 	
 }
 
-void PropInmo::enviarMensaje(Propiedad propiedad, string mensaje){
+void PropInmo::enviarMensaje(Propiedad  propiedad, string mensaje){
 	
 }
 
-void PropInmo::altaPropEnInmob(Propiedad, string){
+void PropInmo::altaPropEnInmob(Propiedad prop, Usuarios inmo){
+    
+    
 
       
     

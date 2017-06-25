@@ -28,6 +28,7 @@ public:
     virtual ~Venta();
     
     void altaVenta(float);
+    
     bool esVenta();
     bool esAlquiler();
     

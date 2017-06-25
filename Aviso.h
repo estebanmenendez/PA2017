@@ -21,22 +21,23 @@
 
 using namespace std;
 
-class Aviso {
+class Aviso:public ICollectible {
        
 public:
     Aviso();
     Aviso(const Aviso& orig);
     virtual ~Aviso();
-       
+    
+    virtual bool esVenta();
+    virtual bool esAlquiler();
+        
     virtual Aviso getAviso();
     virtual void crearAvisoProp(Propiedad);
     virtual void altaAlquiler(float);
     virtual void altaVenta(float);
 
 private:    
-    /*Alquiler *propEnAlq;
-    Venta * propEnVenta;*/
-  
+
 
 };
 

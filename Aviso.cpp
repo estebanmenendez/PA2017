@@ -37,3 +37,6 @@ void Aviso::altaAlquiler(float precio ){
 
 void Aviso::altaVenta(float precio){
 }
+
+    bool Aviso::esVenta(){}
+    bool Aviso::esAlquiler(){}

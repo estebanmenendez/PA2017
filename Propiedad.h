@@ -31,18 +31,20 @@ using namespace std;
 class Propiedad :public ICollectible {
 public:
     Propiedad();
-    void PropiedadC(dtPropiedadCasa*);
-    void PropiedadA(dtPropiedadApto*);
+    Propiedad(dtPropiedadCasa);
+    Propiedad(dtPropiedadApto);
     Propiedad(const Propiedad& orig);
     virtual ~Propiedad();
     
   void esCasaP();
   void esAptoP();
   bool perteneceInmobiliaria(Usuarios inmobiliaria);
-  dtPropiedadMensaje ** getPropiedad(Usuarios usu );
-  dtMensajes** getUltimosCinco(Usuarios usu);
+  dtPropiedadMensaje * getPropiedad(Usuarios usu );
+  dtMensajes* getUltimosCinco(Usuarios usu);
   void eliminarLinksPropInmo();
+  string getCodigoProp();
   //dtPropiedad** getPropiedad();
+//  Casa * getMetrosVerdes();
     
 private:
     string codigoProp;
@@ -50,7 +52,7 @@ private:
     int cantBanios;
     int cantDormitorios;
     bool garage;
-    dtDireccion direccionProp;
+    dtDireccion * direccionProp;
     float mCuadradosEdificado;
     float mCuadradosTotales;
     

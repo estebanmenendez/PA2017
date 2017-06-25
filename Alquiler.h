@@ -23,13 +23,12 @@ private:
 public:
     
     Alquiler();
-
     virtual ~Alquiler();
     
-    void altaAlquiler(float); 
     bool esVenta();
     bool esAlquiler();
     
+    void altaAlquiler(float); 
     float getPrecioAlquiler();
     void setPrecioAlquiler(float);
 

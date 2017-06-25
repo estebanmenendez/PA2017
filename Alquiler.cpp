@@ -11,32 +11,15 @@
  * Created on 11 de junio de 2017, 06:44 PM
  */
 
-#include "Alquiler.h"
+#include"Alquiler.h"
 
 
-using namespace std;
+Alquiler::Alquiler() {}
+Alquiler::~Alquiler() {}
 
-Alquiler::Alquiler() {
-	
-}
+bool Alquiler::esVenta(){}
+bool Alquiler::esAlquiler(){}
 
-Alquiler::~Alquiler() {
-	
-}
-
-float Alquiler::getPrecioAlquiler(){
-          
-}
-
-void Alquiler::setPrecioAlquiler(float precio){
-    this->precioALquiler=precio;
-}
-
-void Alquiler::altaAlquiler(float precio){
-    
-	
-}
-
-bool Alquiler::esVenta(){
-    
-}
+float Alquiler::getPrecioAlquiler(){}
+void Alquiler::altaAlquiler(float precio){}
+void Alquiler::setPrecioAlquiler(float precio){}
