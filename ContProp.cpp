@@ -10,19 +10,16 @@
  * 
  * Created on 9 de junio de 2017, 08:17 PM
  */
-
-#include <stdexcept>
-
 #include "ContProp.h"
 #include "ICollection.h"
 #include "Edificio.h"
-#include "Lista.h"
 #include "Propiedad.h"
 #include "ListDicc.h"
 #include "StringKey.h"
 #include "Departamento.h"
-#include"Zona.h"
+#include "Zona.h"
 #include "Interesado.h"
+#include <stdexcept>
 
 ContProp::ContProp() {
 }
@@ -52,9 +49,13 @@ void ContProp::seleccionarDepartamentos(string letraDepto){
         
     
 }
-dtZonas ** ContProp::listaZonasDepartamentos(string){}
+ ListDicc * listaZonasDepartamentos(string){
+     
+ }
 
-void ContProp::seleccionarDepartamentos(string){}
+void seleccionarDepartamentos(string){
+    
+}
 
 ListDicc* ContProp::listaZonasDepartamentos(string letraDepartamento){
     IIterator *it =IDepartamento->getIteratorObj();

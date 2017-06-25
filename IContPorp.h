@@ -40,7 +40,7 @@ using namespace std;
        
         virtual ~IContProp();
         
-        virtual ListDicc * listaDepartamentos() = 0;
+        virtual ListDicc * listaDepartamentos(string) = 0;
         virtual void seleccionarDepartamentos(string) = 0;
         virtual ListDicc * listaZonasDepartamentos(string) = 0;
         virtual void seleccionaZona(string) = 0;
@@ -63,6 +63,7 @@ using namespace std;
         virtual void altaPropiedadCasa(dtPropiedadCasa*) = 0;
         virtual void altaPropiedadApto(dtPropiedadApto*) = 0;
         virtual void eliminarProp(string) = 0;
+        
     };
 
 

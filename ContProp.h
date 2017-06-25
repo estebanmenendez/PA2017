@@ -20,7 +20,6 @@
 #include"ICollection.h"
 #include"Edificio.h"
 #include"Lista.h"
-#include"ICollection.h"
 #include"ListDicc.h"
 #include"ContUsuario.h"
 #include<iostream>
@@ -30,25 +29,17 @@
 using namespace std;
 
  class ContProp : public IContProp {
+     
     private: 
         
-        IDictionary * IDepartamento;
-        IDictionary * IEdificio;
-<<<<<<< HEAD
-ICollection * PropInmo;
-ContUsuario * ControladorUsuario;
-ListaIterator *ListaIterator
-       ;
-          
+    IDictionary * IDepartamento;
+    IDictionary * IEdificio;
+    ICollection * PropInmo;
+    ContUsuario * ControladorUsuario;
+    ListaIterator * ListIterator;
          // IDictionary * Diccionario;
         //  IDictionary * ICollection;
-    
-     
-=======
-        ICollection * PropInmo;
-        ContUsuario * ControladorUsuario;
 
->>>>>>> fe743ba460fa2875b05b51a376a0e17eeb6bf988
     public:
         ContProp();
         ContProp(const ContProp& orig);
