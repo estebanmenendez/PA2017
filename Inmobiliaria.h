@@ -22,6 +22,7 @@ class Inmobiliaria : public Usuarios{
         dtDireccion* direccion;
     public:
         Inmobiliaria();
+        Inmobiliaria(string nombre, dtDireccion* dir, string email);
         virtual ~Inmobiliaria();
         
 };

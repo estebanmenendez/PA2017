@@ -133,45 +133,6 @@ void interesadoOpciones(){
     
 }
 
-void iniciarSesion(){
-    Usuarios * usu;
-    
-    string datos = "n";
-    cout<<"Desea precargar datos? ";
-    cin>>datos;
-       
-    if (datos=="s"){
-        cout<<"precargarDatos();";
-    }
-    
-    cout<<"\nIngrese email: ";
-    cin>>us;
-    
-    cout<<"\nIngrese contrasenia: ";
-    cin>>pwd;
-    
-    // usu = recorrerUsuarios(us, pwd); Recorrer colección de usuarios
-    // ESTO ES SOLO PARA PROBAR EL MENU
-    system ("clear");
-    cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
-    cout<<"\nSeleccione tipo de usuario: ";
-    cout<<"\n1 - Administrador"<<endl;
-    cout<<"2 - Inmobiliaria"<<endl;
-    cout<<"3 - Interesado"<<endl;
-        
-    int opUsr=1;
-        
-    while (opUsr !=  0){
-                cin >> opUsr;
-        switch (opUsr){
-                case 1 : administradorOpciones(); break;
-                case 2 : inmobiliariaOpciones(); break;
-                case 3 : interesadoOpciones(); break;
-           }
-        }
-    
-}
-
 void adminOpciones(int opAdmin){
      //int opAdmin=1;    
     while (opAdmin !=  0){
@@ -227,8 +188,48 @@ void interOpciones(int opInter){
 
 void cargaDatosPrueba(){}
 
+void iniciarSesion(){
+    Usuarios * usu;
+    
+    string datos = "n";
+    cout<<"Desea precargar datos? ";
+    cin>>datos;
+       
+    if (datos=="s"){
+        cout<<"precargarDatos();";
+    }
+    
+    cout<<"\nIngrese email: ";
+    cin>>us;
+    
+    cout<<"\nIngrese contrasenia: ";
+    cin>>pwd;
+    
+    // usu = recorrerUsuarios(us, pwd); Recorrer colección de usuarios
+    // ESTO ES SOLO PARA PROBAR EL MENU
+    system ("clear");
+    cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
+    cout<<"\nSeleccione tipo de usuario: ";
+    cout<<"\n1 - Administrador"<<endl;
+    cout<<"2 - Inmobiliaria"<<endl;
+    cout<<"3 - Interesado"<<endl;
+        
+    int opUsr=1;
+        
+    while (opUsr !=  0){
+                cin >> opUsr;
+        switch (opUsr){
+                case 1 : administradorOpciones(); break;
+                case 2 : inmobiliariaOpciones(); break;
+                case 3 : interesadoOpciones(); break;
+           }
+        }
+    
+}
 void altaInmobiliaria (){
-    string nombre, ciudad, calle, numero;
+    Fabrica* f = Fabrica::getInstance();
+    IContUsuario * in = f->getContUsuario();  //EJEMPLO
+    string nombre, ciudad, calle, numero, email;
    // sistema* s= new sistema();
     dtDireccion* dir;
     
@@ -236,6 +237,8 @@ void altaInmobiliaria (){
     cout<<"\n1 - Alta inmobiliaria\n";
     cout<<"Ingrese Nombre: ";
     cin>>nombre;
+    cout<<"Ingrese Email: ";
+    cin>>email;
     cout<<"Ingrese Ciudad: ";
     cin>>ciudad;
     cout<<"Ingrese Calle: ";
@@ -243,7 +246,7 @@ void altaInmobiliaria (){
     cout<<"Ingrese Número: ";
     cin>>numero;
     dir = new dtDireccion(ciudad,numero,calle);
-  //  s->altaInmobiliaria(nombre,dir);
+    in->altaInmobiliaria(nombre, dir);
     cout<<"Inmobiliaria dada de Alta ";
 }
 

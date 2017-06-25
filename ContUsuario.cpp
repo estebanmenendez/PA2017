@@ -12,8 +12,11 @@
  */
 
 #include "ContUsuario.h"
+#include "Interesado.h"
+#include "ICollection.h"
+#include "Inmobiliaria.h"
 #include <iostream>
-#include<string.h>
+#include <string.h>
 #include <stdexcept>
 using namespace std;
 
@@ -27,7 +30,24 @@ using namespace std;
     }
 
       void ContUsuario::altaInteresado(string nombre, string apellido, int edad, string email){
+          
+        Interesado * i = new Interesado(nombre, apellido, edad, email);
+        StringKey * skEmail = new StringKey(email);  //GENERO LA CLAVE 
+        if(Interesados->member(skEmail)!=true)//pregunto si ya existe
+            Interesados->add(i,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
+        else throw new invalid_argument("Usuario interesado ya existente");
+        
     }
+      void ContUsuario::altaInmobiliaria( string nombre, dtDireccion * direccion, string email){
+             
+      Inmobiliaria * inmo = new Inmobiliaria(nombre, direccion, email);
+      StringKey * skEmail = new StringKey(email);  //GENERO LA CLAVE 
+      //StringKey * skEmail = new StringKey(nombre);
+        if(Inmobiliaria->member(skEmail)!=true)//pregunto si ya existe
+            Inmobiliaria->add(inmo,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
+        else throw new invalid_argument("Usuario inmobiliaria ya existente");
+            
+  }
       void ContUsuario::altaSesion(){
 
     }
@@ -40,14 +60,11 @@ using namespace std;
 Usuarios ** ContUsuario::usuarioLogueado(){
 }
 
-
-  void ContUsuario::altaInmobiliaria( string nombre, dtDireccion * direccion, string email){
-      
-  }
-
-        void ContUsuario::iniciarSesion(string tipoUsuario , string email){}
-        bool ContUsuario::verificarContrasena(string pwd , string pwdConfirmacion ){}
-        void ContUsuario::activarUsuario(string tipoUsuario ,string email ){ }
-        void ContUsuario::validarPwd( string contrasena ){ }
-        void ContUsuario::CerrarSesion( int idSesion ){ }
+void ContUsuario::iniciarSesion(string tipoUsuario , string email){
+    
+}
+bool ContUsuario::verificarContrasena(string pwd , string pwdConfirmacion ){}
+void ContUsuario::activarUsuario(string tipoUsuario ,string email ){ }
+void ContUsuario::validarPwd( string contrasena ){ }
+void ContUsuario::CerrarSesion( int idSesion ){ }
 
