@@ -44,8 +44,13 @@ using namespace std;
        
         virtual ~IContProp();
         
+<<<<<<< HEAD
         virtual ListDicc * listaDepartamentos() = 0;
         virtual Departamento* seleccionarDepartamentos(string) = 0;
+=======
+        virtual ListDicc * listaDepartamentos(string) = 0;
+        virtual void seleccionarDepartamentos(string) = 0;
+>>>>>>> e1c4e125832188d58bbbf66180139338b7502a74
         virtual ListDicc * listaZonasDepartamentos(string) = 0;
         virtual void seleccionaZona(string) = 0;
         virtual dtPropiedadMensaje * listaPropiedades(string) = 0;
@@ -67,6 +72,7 @@ using namespace std;
         virtual void altaPropiedadCasa(dtPropiedadCasa*) = 0;
         virtual void altaPropiedadApto(dtPropiedadApto*) = 0;
         virtual void eliminarProp(string) = 0;
+        
     };
 
 
