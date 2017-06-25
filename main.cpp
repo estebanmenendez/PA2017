@@ -229,7 +229,9 @@ void interOpciones(int opInter){
 void cargaDatosPrueba(){}
 
 void altaInmobiliaria (){
-    string nombre, ciudad, calle, numero;
+    Fabrica* f = Fabrica::getInstance();
+    IContUsuario * in = f->getContUsuario();  //EJEMPLO
+    string nombre, ciudad, calle, numero, email;
    // sistema* s= new sistema();
     dtDireccion* dir;
     
@@ -237,6 +239,8 @@ void altaInmobiliaria (){
     cout<<"\n1 - Alta inmobiliaria\n";
     cout<<"Ingrese Nombre: ";
     cin>>nombre;
+    cout<<"Ingrese Email: ";
+    cin>>email;
     cout<<"Ingrese Ciudad: ";
     cin>>ciudad;
     cout<<"Ingrese Calle: ";
@@ -244,7 +248,7 @@ void altaInmobiliaria (){
     cout<<"Ingrese Número: ";
     cin>>numero;
     dir = new dtDireccion(ciudad,numero,calle);
-  //  s->altaInmobiliaria(nombre,dir);
+    in->altaInmobiliaria(nombre, dir);
     cout<<"Inmobiliaria dada de Alta ";
 }
 

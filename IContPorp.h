@@ -27,7 +27,11 @@
 #include "dtEdificio.h"
 #include "IKey.h"
 #include "ListDicc.h"
+<<<<<<< HEAD
 #include "Departamento.h"
+=======
+
+>>>>>>> ba7536a33636d3110b1875f2b412a3be6d307305
 
 
 using namespace std;

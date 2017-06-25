@@ -22,6 +22,7 @@
 #include "StringKey.h"
 #include "Departamento.h"
 #include"Zona.h"
+#include "Interesado.h"
 
 ContProp::ContProp() {
     
@@ -46,6 +47,7 @@ ListDicc * ContProp::listaDepartamentos(){
 
 }
 
+<<<<<<< HEAD
 Departamento* ContProp::seleccionarDepartamentos(string letraDepto){
     IIterator *it=IDepartamento->getIteratorObj();
     StringKey *sk=new StringKey(letraDepto);
@@ -59,6 +61,17 @@ Departamento* ContProp::seleccionarDepartamentos(string letraDepto){
 
  //ListDicc * ContProp::listaZonasDepartamentos(string){}
 
+=======
+
+void ContProp::seleccionarDepartamentos(string letraDepto){
+    
+        
+    
+}
+dtZonas ** ContProp::listaZonasDepartamentos(string){}
+
+void ContProp::seleccionarDepartamentos(string){}
+>>>>>>> ba7536a33636d3110b1875f2b412a3be6d307305
 
 ListDicc* ContProp::listaZonasDepartamentos(string letraDepartamento){
     IIterator *it =IDepartamento->getIteratorObj();
@@ -77,7 +90,10 @@ ListDicc* ContProp::listaZonasDepartamentos(string letraDepartamento){
 }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ba7536a33636d3110b1875f2b412a3be6d307305
 void ContProp::seleccionaZona(string){}
 dtPropiedadMensaje * ContProp::listaPropiedades(string){}
 dtPropiedadMensaje * ContProp::seleccionaPropiedad(string,int){}
@@ -92,7 +108,9 @@ void ContProp::seleccionaMensaje(string){}
 void ContProp::agregaMensaje(string,string){}
 dtPropiedadDisponible * ContProp::listaPropiedadesDisponibles(){}
 dtPropiedadInmobiliaria * ContProp::seleccionaPropiedadDisponible(string){}
-void ContProp::altaInteresado (string,string,int,string){
+void ContProp::altaInteresado (string nombre, string apellido, int edad, string email){
+    Interesado * i = new Interesado(nombre, apellido, edad, email);
+    
 }
 
 void ContProp::altaEdificio(string nombre, int pisos, float gastosComunes){
