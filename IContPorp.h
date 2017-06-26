@@ -28,8 +28,16 @@
 #include "IKey.h"
 #include "ListDicc.h"
 #include "Departamento.h"
+<<<<<<< HEAD
+=======
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2da1de9f7ce9debf1fa717f8aef613110af47d6e
+
+>>>>>>> origin/master
 using namespace std;
 
  class IContProp {
@@ -39,12 +47,28 @@ using namespace std;
     public:
        
         virtual ~IContProp();
+<<<<<<< HEAD
 
+
+//        virtual ListDicc * listaDepartamentos() = 0;
+=======
+<<<<<<< HEAD
+        
 
 //        virtual ListDicc * listaDepartamentos() = 0;
         virtual Departamento* seleccionarDepartamentos(string) = 0;
         virtual ListDicc * listaDepartamentos() = 0;
+      //  virtual void seleccionarDepartamentos(string) = 0;
+=======
+        virtual ListDicc * listaDepartamentos() = 0;
+>>>>>>> origin/master
+        virtual Departamento* seleccionarDepartamentos(string) = 0;
+<<<<<<< HEAD
+        virtual ListDicc * listaDepartamentos() = 0;
       //  virtual void seleccionarDepartamentos(string) = 0;        
+=======
+>>>>>>> 2da1de9f7ce9debf1fa717f8aef613110af47d6e
+>>>>>>> origin/master
         virtual ListDicc * listaZonasDepartamentos(string) = 0;
         virtual Zona* seleccionaZona(string) = 0;
         virtual dtPropiedadMensaje * listaPropiedades(string) = 0;
