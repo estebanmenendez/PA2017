@@ -21,7 +21,7 @@
 
 using namespace std;
 
-class Aviso:public ICollectible {
+class Aviso {
        
 public:
     Aviso();
@@ -32,12 +32,12 @@ public:
     virtual bool esAlquiler();
         
     virtual Aviso getAviso();
-    virtual void crearAvisoProp(Propiedad);
+    virtual void crearAvisoProp();
     virtual void altaAlquiler(float);
     virtual void altaVenta(float);
 
 private:    
-
+    
 
 };
 

@@ -24,8 +24,8 @@ Propiedad::Propiedad(const Propiedad& orig) {
 
 Propiedad::Propiedad(dtPropiedadCasa pc){  
     
-    string casa = "CASA1";
-    this->codigoProp = casa;
+    string codCasa = "CASA1";
+    this->codigoProp = codCasa;
     this->cantAmbientes = pc.getcantAmbiente();
     this->cantBanios = pc.getcantBanios();
     this->cantDormitorios = pc.getcantDormitorios();
@@ -41,8 +41,8 @@ Propiedad::Propiedad(dtPropiedadCasa pc){
 
 Propiedad::Propiedad(dtPropiedadApto pa){
     
-    string apto = "APTO1";
-    this->codigoProp = apto;
+    string codApto = "APTO1";
+    this->codigoProp = codApto;
     this->cantAmbientes = pa.getcantAmbiente();
     this->cantBanios = pa.getcantBanios();
     this->cantDormitorios = pa.getcantDormitorios();

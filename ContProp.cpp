@@ -109,10 +109,17 @@ void ContProp::altaPropiedadCasa(dtPropiedadCasa* propC){
      IPropiedad->add(p,sk);//agrego el objeto mas la clave a la coleccion dicionario
      else throw new invalid_argument("Propiedad ya existente");
      
+     string email;
+     //Inmobiliaria->getEmail();
+     PropInmo* pi = new PropInmo();
+     //pi->altaPropEnInmob(p,email);
      
-//     string email;
-//     PropInmo* pi = new PropInmo;
-//     pi->altaPropEnInmob(p,  )
+     
+     Aviso* av = new Aviso();
+     if(propC->getVentaAlq())
+     av->crearAvisoProp();   
+     
+     
      
      
      

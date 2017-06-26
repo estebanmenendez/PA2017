@@ -34,8 +34,8 @@ using namespace std;
           
         Interesado * i = new Interesado(nombre, apellido, edad, email);
         StringKey * skEmail = new StringKey(email);  //GENERO LA CLAVE 
-        if(IInteresado->member(skEmail)!=true)//pregunto si ya existe
-            IInteresado->add(i,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
+        if(IUsuario->member(skEmail)!=true)//pregunto si ya existe
+            IUsuario->add(i,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
         else throw new invalid_argument("Usuario interesado ya existente");
         
     }
@@ -44,8 +44,8 @@ using namespace std;
       Inmobiliaria * inmo = new Inmobiliaria(nombre, direccion, email);
       StringKey * skEmail = new StringKey(email);  //GENERO LA CLAVE 
       //StringKey * skEmail = new StringKey(nombre);
-        if(IInmobiliaria->member(skEmail)!=true)//pregunto si ya existe
-            IInmobiliaria->add(inmo,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
+        if(IUsuario->member(skEmail)!=true)//pregunto si ya existe
+            IUsuario->add(inmo,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
         else throw new invalid_argument("Usuario inmobiliaria ya existente");
             
   }

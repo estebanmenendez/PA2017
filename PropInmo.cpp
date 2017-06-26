@@ -16,6 +16,7 @@
 using namespace std;
 
 PropInmo::PropInmo() {
+        
 }
 
 PropInmo::PropInmo(const PropInmo& orig) {
@@ -28,22 +29,15 @@ int PropInmo::getCantidadMensajes(Usuarios){
 	
 }
 
-void PropInmo::enviarMensaje(Propiedad  propiedad, string mensaje){
+void PropInmo::enviarMensaje(Propiedad * propiedad, string mensaje){
 	
 }
 
-void PropInmo::altaPropEnInmob(Propiedad prop, Usuarios inmo){
-    
-    
-
-      
-    
-}
 
 void PropInmo::eliminarLinks(){
 	
 }
 
-dtAvisoPropiedad** PropInmo::getAvisos(){
+dtAvisoPropiedad* PropInmo::getAvisos(){
 	
 }

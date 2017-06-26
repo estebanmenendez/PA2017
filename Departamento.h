@@ -40,7 +40,7 @@ public:
 private:
     string letraDpto;
     string nombreDpto;
-    //IDictionary* IZona;
+    IDictionary* IZona;
 
 };
 

@@ -18,6 +18,7 @@
 #include"IDictionary.h"
 #include"dtEdificio.h"
 #include"ICollection.h"
+#include"PropInmo.h"
 #include"Edificio.h"
 #include"Lista.h"
 #include"ListDicc.h"
@@ -32,11 +33,11 @@ using namespace std;
  class ContProp : public IContProp {
      
     private: 
+        Zona * z;
         
         IDictionary * IDepartamento;
-        IDictionary * IEdificio;
         IDictionary * IPropiedad;
-        ICollection * PropInmo;
+        IDictionary * IEdificio;
         ContUsuario * ControladorUsuario;
         
     public:
