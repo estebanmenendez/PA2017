@@ -19,16 +19,14 @@ Departamento::Departamento() {
 Departamento::Departamento(const Departamento& orig) {
 }
 
-Departamento::~Departamento() {
-    
+Departamento::~Departamento() {    
+}
 
-    dtZonas* Departamento::getZonas(string letraDepto){}
+dtZonas* Departamento::getZonas(string letraDepto){}
     Zona* Departamento::getZona(string letraDepto){}
     dtDepartamento* Departamento::getDatos(){}
     dtPropEnDpto* Departamento::getpropEnDepto(Usuarios inmobiliaria){}
     Zona* getZona(){}
-
-}
 
     
     

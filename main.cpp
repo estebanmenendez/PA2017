@@ -247,7 +247,8 @@ void altaInmobiliaria (){
     cout<<"Ingrese Número: ";
     cin>>numero;
     dir = new dtDireccion(ciudad,numero,calle);
-    in->altaInmobiliaria(nombre, dir);
+   // in->altaInmobiliaria(nombre,dir);
+    //taInmobiliaria(nombre, dir)
     cout<<"Inmobiliaria dada de Alta ";
 }
 

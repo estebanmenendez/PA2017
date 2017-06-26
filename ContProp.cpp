@@ -44,7 +44,7 @@ ListDicc * ContProp::listaDepartamentos(){
 
 }
 
-<<<<<<< HEAD
+
 Departamento* ContProp::seleccionarDepartamentos(string letraDepto){
     IIterator *it=IDepartamento->getIteratorObj();
     StringKey *sk=new StringKey(letraDepto);
@@ -55,37 +55,24 @@ Departamento* ContProp::seleccionarDepartamentos(string letraDepto){
 }
 
 
-
- //ListDicc * ContProp::listaZonasDepartamentos(string){}
-
-=======
-
-void ContProp::seleccionarDepartamentos(string letraDepto){
-    
-        
-    
+Zona* ContProp::seleccionaZona(string letrazona){
+    IIterator * it=IZona->getIteratorObj();
+    StringKey *sk= new StringKey(letrazona);
+    Zona *z=dynamic_cast<Zona*>(IDepartamento->find(sk));
+    if(z!=NULL){return z;}
+    else {throw invalid_argument("No existe ese Departamento");}
 }
- ListDicc * listaZonasDepartamentos(string){
-     
- }
-
-<<<<<<< HEAD
-void ContProp::seleccionarDepartamentos(string){}
->>>>>>> ba7536a33636d3110b1875f2b412a3be6d307305
-=======
-void seleccionarDepartamentos(string){
-    
-}
->>>>>>> e1c4e125832188d58bbbf66180139338b7502a74
 
 ListDicc* ContProp::listaZonasDepartamentos(string letraDepartamento){
     IIterator *it =IDepartamento->getIteratorObj();
     ListDicc *resZon=new ListDicc();
+    string letra;
+    Zona *zon1=new Zona;
     while (it->hasNext()) {
-        Zona* z = new Zona;
         Departamento* d= dynamic_cast <Departamento*> (it->getCurrent());
-        StringKey *sk=new StringKey(d->getDatos()->getletraDepartamento());
-        resZon->add(d->getZonas(letraDepartamento),sk);
+        zon1=d->getZona(letra);
+        StringKey *sk=new StringKey(zon1->getCodigoZona());
+        resZon->add(zon1,sk);
         it->next();
     }
     delete it;
@@ -95,11 +82,6 @@ ListDicc* ContProp::listaZonasDepartamentos(string letraDepartamento){
 }
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> ba7536a33636d3110b1875f2b412a3be6d307305
-void ContProp::seleccionaZona(string){}
 dtPropiedadMensaje * ContProp::listaPropiedades(string){}
 dtPropiedadMensaje * ContProp::seleccionaPropiedad(string,int){}
 void ContProp::enviarMensaje(string){}

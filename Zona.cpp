@@ -15,6 +15,22 @@
 
 Zona::Zona() {}
 
+void Zona::setNombreZona(string nombreZona) {
+    this->nombreZona = nombreZona;
+}
+
+string Zona::getNombreZona() const {
+    return nombreZona;
+}
+
+void Zona::setCodigoZona(string codigoZona) {
+    this->codigoZona = codigoZona;
+}
+
+string Zona::getCodigoZona() const {
+    return codigoZona;
+}
+
 Zona::Zona(const Zona& orig) {}
 
 Zona::~Zona() {}

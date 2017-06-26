@@ -33,31 +33,20 @@ using namespace std;
      
     private: 
         
-<<<<<<< HEAD
+
         IDictionary * IDepartamento;
         IDictionary * IEdificio;
         ICollection * PropInmo;
         ContUsuario * ControladorUsuario;
-
-public:
-=======
-    IDictionary * IDepartamento;
-    IDictionary * IEdificio;
-    ICollection * PropInmo;
-    ContUsuario * ControladorUsuario;
-    ListaIterator * ListIterator;
-         // IDictionary * Diccionario;
-        //  IDictionary * ICollection;
-
+        IDictionary * IZona;
     public:
->>>>>>> e1c4e125832188d58bbbf66180139338b7502a74
         ContProp();
         ContProp(const ContProp& orig);
         virtual ~ContProp();
         ListDicc * listaDepartamentos();
         Departamento* seleccionarDepartamentos(string);
         ListDicc * listaZonasDepartamentos(string);
-        void seleccionaZona(string);
+        Zona* seleccionaZona(string);
         dtPropiedadMensaje * listaPropiedades(string);
         dtPropiedadMensaje * seleccionaPropiedad(string,int);
         void enviarMensaje(string);

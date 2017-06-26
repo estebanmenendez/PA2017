@@ -41,9 +41,9 @@ class ContUsuario : public IContUsuario {
 
     private:
         
-        IDictionary * Inmobiliaria;
-        IDictionary * Interesados;
-        IDictionary * Administrador;
+        IDictionary * IInmobiliaria;
+        IDictionary * IInteresados;
+        IDictionary * IAdministrador;
 
       
 };

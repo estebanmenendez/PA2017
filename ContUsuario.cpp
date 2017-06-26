@@ -33,18 +33,18 @@ using namespace std;
           
         Interesado * i = new Interesado(nombre, apellido, edad, email);
         StringKey * skEmail = new StringKey(email);  //GENERO LA CLAVE 
-        if(Interesados->member(skEmail)!=true)//pregunto si ya existe
-            Interesados->add(i,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
+        if(IInteresados->member(skEmail)!=true)//pregunto si ya existe
+            IInteresados->add(i,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
         else throw new invalid_argument("Usuario interesado ya existente");
         
     }
       void ContUsuario::altaInmobiliaria( string nombre, dtDireccion * direccion, string email){
              
-      Inmobiliaria * inmo = new Inmobiliaria(nombre, direccion, email);
+      Inmobiliaria * coso = new Inmobiliaria(nombre, direccion, email);
       StringKey * skEmail = new StringKey(email);  //GENERO LA CLAVE 
       //StringKey * skEmail = new StringKey(nombre);
-        if(Inmobiliaria->member(skEmail)!=true)//pregunto si ya existe
-            Inmobiliaria->add(inmo,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
+        if(IInmobiliaria->member(skEmail)!=true)//pregunto si ya existe
+            IInmobiliaria->add(coso,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
         else throw new invalid_argument("Usuario inmobiliaria ya existente");
             
   }

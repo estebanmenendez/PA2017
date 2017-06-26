@@ -35,6 +35,10 @@ public:
     dtZonas getZona(string);
     dtPropZonas getPropZonaDpto(Usuarios);
     Propiedad getPropiedad();
+    void setNombreZona(string nombreZona);
+    string getNombreZona() const;
+    void setCodigoZona(string codigoZona);
+    string getCodigoZona() const;
 private:
     string codigoZona;
     string nombreZona;
