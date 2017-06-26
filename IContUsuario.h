@@ -30,7 +30,7 @@ public:
     virtual void iniciarSesion(string, string)= 0;
     virtual bool verificarContrasena(string, string)= 0;
     virtual void activarUsuario(string, string)= 0;
-    virtual void validarPwd(string)= 0;
+    virtual bool validarPwd(string)= 0;
     virtual void altaSesion()= 0;
     virtual void cancelarAccion()= 0;
     virtual dtReporteInmobiliaria * obtenerReporteInmobiliarias ()= 0;

@@ -34,10 +34,28 @@ using namespace std;
           
         Interesado * i = new Interesado(nombre, apellido, edad, email);
         StringKey * skEmail = new StringKey(email);  //GENERO LA CLAVE 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+        if(IInteresados->member(skEmail)!=true)//pregunto si ya existe
+            IInteresados->add(i,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
+
+        if(IUsuario->member(skEmail)!=true)//pregunto si ya existe
+            IUsuario->add(i,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
+
+=======
+<<<<<<< HEAD
+>>>>>>> 37caf4e79946b6296f661a8c589fa37e9e16c6fa
         if(IInteresados->member(skEmail)!=true)//pregunto si ya existe
             IInteresados->add(i,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
         if(IUsuario->member(skEmail)!=true)//pregunto si ya existe
             IUsuario->add(i,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
+<<<<<<< HEAD
+=======
+>>>>>>> 2da1de9f7ce9debf1fa717f8aef613110af47d6e
+>>>>>>> origin/master
+>>>>>>> 37caf4e79946b6296f661a8c589fa37e9e16c6fa
         else throw new invalid_argument("Usuario interesado ya existente");
         
     }
@@ -46,6 +64,7 @@ using namespace std;
       Inmobiliaria * coso = new Inmobiliaria(nombre, direccion, email);
       StringKey * skEmail = new StringKey(email);  //GENERO LA CLAVE 
       //StringKey * skEmail = new StringKey(nombre);
+<<<<<<< HEAD
 
         if(IInmobiliaria->member(skEmail)!=true)//pregunto si ya existe
             IInmobiliaria->add(coso,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
@@ -53,6 +72,26 @@ using namespace std;
         if(IUsuario->member(skEmail)!=true)//pregunto si ya existe
            IUsuario->add(coso,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
 
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master
+        if(IInmobiliaria->member(skEmail)!=true)//pregunto si ya existe
+            IInmobiliaria->add(coso,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
+<<<<<<< HEAD
+
+        //if(IUsuario->member(skEmail)!=true)//pregunto si ya existe
+            //IUsuario->add(inmo,skEmail);agrego el objeto mas la clave a la coleccion dicionario
+
+=======
+=======
+        if(IUsuario->member(skEmail)!=true)//pregunto si ya existe
+            IUsuario->add(inmo,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
+>>>>>>> 2da1de9f7ce9debf1fa717f8aef613110af47d6e
+>>>>>>> origin/master
+>>>>>>> 37caf4e79946b6296f661a8c589fa37e9e16c6fa
         else throw new invalid_argument("Usuario inmobiliaria ya existente");
             
   }
@@ -68,11 +107,47 @@ using namespace std;
 Usuarios * ContUsuario::usuarioLogueado(){
 }
 
-void ContUsuario::iniciarSesion(string tipoUsuario , string email){
+void ContUsuario::iniciarSesion(string email , string pwd){
+    
+    
+//IIterator *it = IUsuario->getIteratorObj();
+//ListDicc * result = new ListDicc();
+//int op = 1;
+//
+//while (it->hasNext()) {
+//    Usuarios * us = dynamic_cast <Usuarios*> (it->getCurrent());
+//    StringKey * sk = new StringKey(us->getTipo());
+//        if(sk->getString()!="Administrador"){ // Si no es admin, es interesado o inmo
+
+//it->next();
+//}
+    
     
 }
-bool ContUsuario::verificarContrasena(string pwd , string pwdConfirmacion ){}
-void ContUsuario::activarUsuario(string tipoUsuario ,string email ){ }
-void ContUsuario::validarPwd( string contrasena ){ }
+bool ContUsuario::verificarContrasena(string pwd , string pwdConfirmacion ){
+    
+    if(pwd==pwdConfirmacion){
+        return true;
+    }else{
+        invalid_argument("Contraseña incorrecta");
+        return false;
+    }
+}
+void ContUsuario::activarUsuario(string tipoUsuario ,string email ){
+
+}
+
+bool ContUsuario::validarPwd(string contrasena){ 
+    string ok="s";
+    StringKey * skPwd = new StringKey(contrasena);
+    
+    if(IUsuario->find(skPwd)!= NULL){
+        return true;
+    }else{
+        return false;
+    }
+        
+    
+}
 void ContUsuario::CerrarSesion( int idSesion ){ }
 
