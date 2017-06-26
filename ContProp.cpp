@@ -55,14 +55,26 @@ Departamento* ContProp::seleccionarDepartamentos(string letraDepto){
     else {throw invalid_argument("No existe ese Departamento");}
   
 }
+Zona* ContProp::seleccionaZona(string letrazona){
+    IIterator * it=IZona->getIteratorObj();
+    StringKey *sk= new StringKey(letrazona);
+    Zona *z=dynamic_cast<Zona*>(IDepartamento->find(sk));
+    if(z!=NULL){return z;}
+    else {throw invalid_argument("No existe ese Departamento");
+    }
+}
+
+
 ListDicc* ContProp::listaZonasDepartamentos(string letraDepartamento){
     IIterator *it =IDepartamento->getIteratorObj();
     ListDicc *resZon=new ListDicc();
+    string letra;
+    Zona *zon1=new Zona;
     while (it->hasNext()) {
-        Zona* z = new Zona;
         Departamento* d= dynamic_cast <Departamento*> (it->getCurrent());
-        StringKey *sk=new StringKey(d->getDatos()->getletraDepartamento());
-        resZon->add(d->getZonas(letraDepartamento),sk);
+        zon1=d->getZona(letra);
+        StringKey *sk=new StringKey(zon1->getCodigoZona());
+        resZon->add(zon1,sk);
         it->next();
     }
     delete it;
@@ -70,7 +82,7 @@ ListDicc* ContProp::listaZonasDepartamentos(string letraDepartamento){
     
 
 }
-void ContProp::seleccionaZona(string){}
+
 dtPropiedadMensaje * ContProp::listaPropiedades(string){}
 dtPropiedadMensaje * ContProp::seleccionaPropiedad(string,int){}
 void ContProp::enviarMensaje(string){}
@@ -109,10 +121,17 @@ void ContProp::altaPropiedadCasa(dtPropiedadCasa* propC){
      IPropiedad->add(p,sk);//agrego el objeto mas la clave a la coleccion dicionario
      else throw new invalid_argument("Propiedad ya existente");
      
+     string email;
+     //Inmobiliaria->getEmail();
+     PropInmo* pi = new PropInmo();
+     //pi->altaPropEnInmob(p,email);
      
-//     string email;
-//     PropInmo* pi = new PropInmo;
-//     pi->altaPropEnInmob(p,  )
+     
+     Aviso* av = new Aviso();
+     if(propC->getVentaAlq())
+     av->crearAvisoProp();   
+     
+     
      
      
      

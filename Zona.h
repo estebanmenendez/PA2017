@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <iostream>
 #include"ICollectible.h"
+#include"IDictionary.h"
 #include"Propiedad.h"
 #include"Usuarios.h"
 #include"dtZonas.h"
@@ -35,10 +36,14 @@ public:
     dtZonas getZona(string);
     dtPropZonas getPropZonaDpto(Usuarios);
     Propiedad getPropiedad();
+    void setNombreZona(string nombreZona);
+    string getNombreZona() const;
+    void setCodigoZona(string codigoZona);
+    string getCodigoZona() const;
 private:
     string codigoZona;
     string nombreZona;
-    //IDictionary * IPropiedad;
+    IDictionary * IPropiedad;
 };
 
 #endif /* ZONA_H */

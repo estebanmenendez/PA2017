@@ -17,22 +17,21 @@
 #include <string.h>
 #include <stdio.h>
 #include <iostream>
-#include "Usuarios.h"
 #include "Propiedad.h"
 #include "Chat.h"
 #include "Aviso.h"
 #include "dtAvisoPropiedad.h"
 
-class PropInmo {
+class PropInmo: public ICollectible{
           
         
 public:
         
 	int getCantidadMensajes(Usuarios);
-	void enviarMensaje(Propiedad, string);
-	void altaPropEnInmob(Propiedad, Usuarios);
+	void enviarMensaje(Propiedad*, string);
+	void altaPropEnInmob(Propiedad*, string);
 	void eliminarLinks();
-	dtAvisoPropiedad ** getAvisos();
+	dtAvisoPropiedad * getAvisos();
     
         PropInmo();
         PropInmo(const PropInmo& orig);
@@ -40,10 +39,10 @@ public:
         
 private:
         //links
-        Aviso * aviPropInmo;
-        Chat * chatPropInmo;
+        Aviso * aviPropInmo[2];
+        ICollection   * chatPropInmo;
         Propiedad * prop;
-        Usuarios * inmo;
+
 
 };
 
