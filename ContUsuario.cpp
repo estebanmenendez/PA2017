@@ -15,6 +15,7 @@
 #include "Interesado.h"
 #include "ICollection.h"
 #include "Inmobiliaria.h"
+#include "ContProp.h"
 #include <iostream>
 #include <string.h>
 #include <stdexcept>
@@ -33,8 +34,13 @@ using namespace std;
           
         Interesado * i = new Interesado(nombre, apellido, edad, email);
         StringKey * skEmail = new StringKey(email);  //GENERO LA CLAVE 
+<<<<<<< HEAD
         if(IInteresados->member(skEmail)!=true)//pregunto si ya existe
             IInteresados->add(i,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
+=======
+        if(IUsuario->member(skEmail)!=true)//pregunto si ya existe
+            IUsuario->add(i,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
+>>>>>>> 2da1de9f7ce9debf1fa717f8aef613110af47d6e
         else throw new invalid_argument("Usuario interesado ya existente");
         
     }
@@ -43,8 +49,13 @@ using namespace std;
       Inmobiliaria * coso = new Inmobiliaria(nombre, direccion, email);
       StringKey * skEmail = new StringKey(email);  //GENERO LA CLAVE 
       //StringKey * skEmail = new StringKey(nombre);
+<<<<<<< HEAD
         if(IInmobiliaria->member(skEmail)!=true)//pregunto si ya existe
             IInmobiliaria->add(coso,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
+=======
+        if(IUsuario->member(skEmail)!=true)//pregunto si ya existe
+            IUsuario->add(inmo,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
+>>>>>>> 2da1de9f7ce9debf1fa717f8aef613110af47d6e
         else throw new invalid_argument("Usuario inmobiliaria ya existente");
             
   }
@@ -54,10 +65,10 @@ using namespace std;
       void ContUsuario::cancelarAccion(){
 
     }
-    dtReporteInmobiliaria ** ContUsuario::obtenerReporteInmobiliarias (){}
+    dtReporteInmobiliaria * ContUsuario::obtenerReporteInmobiliarias (){}
 
 
-Usuarios ** ContUsuario::usuarioLogueado(){
+Usuarios * ContUsuario::usuarioLogueado(){
 }
 
 void ContUsuario::iniciarSesion(string tipoUsuario , string email){

@@ -26,14 +26,14 @@ public:
     
     virtual void altaInmobiliaria(string, dtDireccion *, string)= 0;
     virtual void altaInteresado(string,string,int,string)= 0;
-    virtual Usuarios ** usuarioLogueado()= 0;
+    virtual Usuarios * usuarioLogueado()= 0;
     virtual void iniciarSesion(string, string)= 0;
     virtual bool verificarContrasena(string, string)= 0;
     virtual void activarUsuario(string, string)= 0;
     virtual void validarPwd(string)= 0;
     virtual void altaSesion()= 0;
     virtual void cancelarAccion()= 0;
-    virtual dtReporteInmobiliaria ** obtenerReporteInmobiliarias ()= 0;
+    virtual dtReporteInmobiliaria * obtenerReporteInmobiliarias ()= 0;
     virtual void CerrarSesion(int)= 0;
     
     private:

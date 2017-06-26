@@ -11,10 +11,6 @@
  * Created on 9 de junio de 2017, 08:26 PM
  */
 
-#include<string.h>
-#include <stdio.h>
-#include <iostream>
-
 #include "Venta.h"
 
 Venta::Venta() {
@@ -29,15 +25,11 @@ Venta::~Venta() {
 
 float Venta::getPrecioVenta(){
     return this->precioTotalVenta ;
-	
 }
 
 void Venta::altaVenta(float precio){   
     this->precioTotalVenta = precio;
 }
-bool Venta::esVenta(){
-    return true;
-	
-}
-bool Venta::esAlquiler(){
-}
+
+bool Venta::esVenta(){}
+bool Venta::esAlquiler(){}

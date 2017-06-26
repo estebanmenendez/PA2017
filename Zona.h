@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <iostream>
 #include"ICollectible.h"
+#include"IDictionary.h"
 #include"Propiedad.h"
 #include"Usuarios.h"
 #include"dtZonas.h"
@@ -42,7 +43,7 @@ public:
 private:
     string codigoZona;
     string nombreZona;
-    //IDictionary * IPropiedad;
+    IDictionary * IPropiedad;
 };
 
 #endif /* ZONA_H */

@@ -19,8 +19,13 @@ Departamento::Departamento() {
 Departamento::Departamento(const Departamento& orig) {
 }
 
+<<<<<<< HEAD
 Departamento::~Departamento() {    
 }
+=======
+Departamento::~Departamento() {
+    }
+>>>>>>> 2da1de9f7ce9debf1fa717f8aef613110af47d6e
 
 dtZonas* Departamento::getZonas(string letraDepto){}
     Zona* Departamento::getZona(string letraDepto){}
@@ -28,5 +33,10 @@ dtZonas* Departamento::getZonas(string letraDepto){}
     dtPropEnDpto* Departamento::getpropEnDepto(Usuarios inmobiliaria){}
     Zona* getZona(){}
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 2da1de9f7ce9debf1fa717f8aef613110af47d6e
     
     

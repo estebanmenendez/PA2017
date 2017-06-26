@@ -27,6 +27,7 @@ class Usuarios :public ICollectible {
 private:
     string email;
     string pwd;
+    
 public:
     Usuarios* getUsuario();
     bool esInteresado();

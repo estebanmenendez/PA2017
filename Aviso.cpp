@@ -28,7 +28,7 @@ Aviso Aviso::getAviso(){
 	return Aviso::getAviso();
 }
 
-void Aviso::crearAvisoProp(Propiedad pi){
+void Aviso::crearAvisoProp(){
 }
 
 void Aviso::altaAlquiler(float precio ){
@@ -37,3 +37,6 @@ void Aviso::altaAlquiler(float precio ){
 
 void Aviso::altaVenta(float precio){
 }
+
+    bool Aviso::esVenta(){}
+    bool Aviso::esAlquiler(){}

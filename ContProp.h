@@ -18,6 +18,7 @@
 #include"IDictionary.h"
 #include"dtEdificio.h"
 #include"ICollection.h"
+#include"PropInmo.h"
 #include"Edificio.h"
 #include"Lista.h"
 #include"ListDicc.h"
@@ -32,13 +33,21 @@ using namespace std;
  class ContProp : public IContProp {
      
     private: 
+        Zona * z;
         
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2da1de9f7ce9debf1fa717f8aef613110af47d6e
         IDictionary * IDepartamento;
+        IDictionary * IPropiedad;
         IDictionary * IEdificio;
-        ICollection * PropInmo;
         ContUsuario * ControladorUsuario;
+<<<<<<< HEAD
         IDictionary * IZona;
+=======
+        
+>>>>>>> 2da1de9f7ce9debf1fa717f8aef613110af47d6e
     public:
         ContProp();
         ContProp(const ContProp& orig);
@@ -62,7 +71,7 @@ using namespace std;
         dtPropiedadInmobiliaria * seleccionaPropiedadDisponible(string);
         void altaInteresado (string,string,int,string);
         void altaEdificio(string,int,float);
-        dtReporteInmobiliaria* iniciarReporte(Inmobiliaria);
+        dtReporteInmobiliaria * iniciarReporte(Inmobiliaria);
         void altaPropiedadCasa(dtPropiedadCasa*);
         void altaPropiedadApto(dtPropiedadApto*);
         void eliminarProp(string);

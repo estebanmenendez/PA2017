@@ -13,10 +13,13 @@
 #include "ContProp.h"
 #include "ICollection.h"
 #include "Edificio.h"
-#include "Propiedad.h"
+#include "Lista.h"
 #include "ListDicc.h"
 #include "StringKey.h"
+#include "PropInmo.h"
 #include "Departamento.h"
+#include "Propiedad.h"
+#include "dtPropiedadCasa.h"
 #include "Zona.h"
 #include "Interesado.h"
 #include <stdexcept>
@@ -44,7 +47,10 @@ ListDicc * ContProp::listaDepartamentos(){
 
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2da1de9f7ce9debf1fa717f8aef613110af47d6e
 Departamento* ContProp::seleccionarDepartamentos(string letraDepto){
     IIterator *it=IDepartamento->getIteratorObj();
     StringKey *sk=new StringKey(letraDepto);
@@ -53,6 +59,7 @@ Departamento* ContProp::seleccionarDepartamentos(string letraDepto){
     else {throw invalid_argument("No existe ese Departamento");}
   
 }
+<<<<<<< HEAD
 
 
 Zona* ContProp::seleccionaZona(string letrazona){
@@ -63,6 +70,8 @@ Zona* ContProp::seleccionaZona(string letrazona){
     else {throw invalid_argument("No existe ese Departamento");}
 }
 
+=======
+>>>>>>> 2da1de9f7ce9debf1fa717f8aef613110af47d6e
 ListDicc* ContProp::listaZonasDepartamentos(string letraDepartamento){
     IIterator *it =IDepartamento->getIteratorObj();
     ListDicc *resZon=new ListDicc();
@@ -80,8 +89,12 @@ ListDicc* ContProp::listaZonasDepartamentos(string letraDepartamento){
     
 
 }
+<<<<<<< HEAD
 
 
+=======
+void ContProp::seleccionaZona(string){}
+>>>>>>> 2da1de9f7ce9debf1fa717f8aef613110af47d6e
 dtPropiedadMensaje * ContProp::listaPropiedades(string){}
 dtPropiedadMensaje * ContProp::seleccionaPropiedad(string,int){}
 void ContProp::enviarMensaje(string){}
@@ -103,34 +116,55 @@ void ContProp::altaInteresado (string nombre, string apellido, int edad, string 
 void ContProp::altaEdificio(string nombre, int pisos, float gastosComunes){
     
     Edificio* e=new Edificio(nombre, pisos, gastosComunes);//creo el objeto edificio
-    StringKey *sk=new StringKey(nombre);//creo la clave de edificio que es el nombre
-   if(IDepartamento->member(sk)!=true)//pregunto si ya existe
+    StringKey* sk=new StringKey(nombre);//creo la clave de edificio que es el nombre
+    if(IDepartamento->member(sk)!=true)//pregunto si ya existe
     IDepartamento->add(e,sk);//agrego el objeto mas la clave a la coleccion dicionario
-   else throw new invalid_argument("Edificio ya existente");
+    else throw new invalid_argument("Edificio ya existente");
 }
 
     dtReporteInmobiliaria* ContProp::iniciarReporte(Inmobiliaria){}
-void ContProp::altaPropiedadCasa(dtPropiedadCasa*){
-//    Propiedad* p= new Propiedad(dtPropiedadCasa*)
-//    StringKey* k = new StringKey(Propiedad.codigoProp)
-//    Lista* l = new Lista();
-//    Propiedad* p = new Propiedad(dtPropiedadCasa);
-//    if (dtPropiedadCasa* empr = dynamic_cast <Casa *>(emp[i]))
-//    cout<<empr;
-//
-//    else
-//    break;
-//
-//    Propiedad* p = new Propiedad(dtPropiedadCasa);
+    
+    
+void ContProp::altaPropiedadCasa(dtPropiedadCasa* propC){
+    
+     Propiedad* p= new Propiedad(*propC);
+     StringKey* sk=new StringKey(p->getCodigoProp());//creo la clave de edificio que es el nombre
+     if(IPropiedad->member(sk)!=true)//pregunto si ya existe
+     IPropiedad->add(p,sk);//agrego el objeto mas la clave a la coleccion dicionario
+     else throw new invalid_argument("Propiedad ya existente");
+     
+     string email;
+     //Inmobiliaria->getEmail();
+     PropInmo* pi = new PropInmo();
+     //pi->altaPropEnInmob(p,email);
+     
+     
+     Aviso* av = new Aviso();
+     if(propC->getVentaAlq())
+     av->crearAvisoProp();   
+     
+     
+     
+     
+     
 }
 
-void ContProp::altaPropiedadApto(dtPropiedadApto*){
+void ContProp::altaPropiedadApto(dtPropiedadApto* propA){
     
- // if (dtPropiedadApto* empr = dynamic_cast <Apartamento *>(emp[i]))
+     Propiedad* p= new Propiedad(*propA);
+     StringKey* sk=new StringKey(p->getCodigoProp());//creo la clave de edificio que es el nombre
+     if(IPropiedad->member(sk)!=true)//pregunto si ya existe
+     IPropiedad->add(p,sk);//agrego el objeto mas la clave a la coleccion dicionario
+     else throw new invalid_argument("Propiedad ya existente");
+     
+     
                 
 }
 
 void ContProp::eliminarProp(string codigo){
+    StringKey* claveP = new StringKey(codigo);
+    
+
    // StringKey* claveP = new StringKey(codigo);
     //bool estaProp = Diccionario->member(claveP);
 //    Propiedad* p = dynamic_cast<Propiedad*>(this->Diccionario->find(claveP));
