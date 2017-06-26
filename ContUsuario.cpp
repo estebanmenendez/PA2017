@@ -34,28 +34,15 @@ using namespace std;
           
         Interesado * i = new Interesado(nombre, apellido, edad, email);
         StringKey * skEmail = new StringKey(email);  //GENERO LA CLAVE 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-        if(IInteresados->member(skEmail)!=true)//pregunto si ya existe
+
+       /* if(IInteresados->member(skEmail)!=true)//pregunto si ya existe
             IInteresados->add(i,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
-
+        */
         if(IUsuario->member(skEmail)!=true)//pregunto si ya existe
             IUsuario->add(i,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
 
-=======
-<<<<<<< HEAD
->>>>>>> 37caf4e79946b6296f661a8c589fa37e9e16c6fa
-        if(IInteresados->member(skEmail)!=true)//pregunto si ya existe
-            IInteresados->add(i,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
-        if(IUsuario->member(skEmail)!=true)//pregunto si ya existe
-            IUsuario->add(i,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
-<<<<<<< HEAD
-=======
->>>>>>> 2da1de9f7ce9debf1fa717f8aef613110af47d6e
->>>>>>> origin/master
->>>>>>> 37caf4e79946b6296f661a8c589fa37e9e16c6fa
+
         else throw new invalid_argument("Usuario interesado ya existente");
         
     }
@@ -64,34 +51,13 @@ using namespace std;
       Inmobiliaria * coso = new Inmobiliaria(nombre, direccion, email);
       StringKey * skEmail = new StringKey(email);  //GENERO LA CLAVE 
       //StringKey * skEmail = new StringKey(nombre);
-<<<<<<< HEAD
 
-        if(IInmobiliaria->member(skEmail)!=true)//pregunto si ya existe
+
+       /* if(IInmobiliaria->member(skEmail)!=true)//pregunto si ya existe
             IInmobiliaria->add(coso,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
-
+        */
         if(IUsuario->member(skEmail)!=true)//pregunto si ya existe
            IUsuario->add(coso,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
-
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/master
-        if(IInmobiliaria->member(skEmail)!=true)//pregunto si ya existe
-            IInmobiliaria->add(coso,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
-<<<<<<< HEAD
-
-        //if(IUsuario->member(skEmail)!=true)//pregunto si ya existe
-            //IUsuario->add(inmo,skEmail);agrego el objeto mas la clave a la coleccion dicionario
-
-=======
-=======
-        if(IUsuario->member(skEmail)!=true)//pregunto si ya existe
-            IUsuario->add(inmo,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
->>>>>>> 2da1de9f7ce9debf1fa717f8aef613110af47d6e
->>>>>>> origin/master
->>>>>>> 37caf4e79946b6296f661a8c589fa37e9e16c6fa
         else throw new invalid_argument("Usuario inmobiliaria ya existente");
             
   }

@@ -26,21 +26,9 @@
 #include"dtPropiedadApto.h"
 #include "dtEdificio.h"
 #include "IKey.h"
-#include "ListDicc.h"
+#include "Lista.h"
 #include "Departamento.h"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 2da1de9f7ce9debf1fa717f8aef613110af47d6e
->>>>>>> 37caf4e79946b6296f661a8c589fa37e9e16c6fa
-
->>>>>>> origin/master
 using namespace std;
 
  class IContProp {
@@ -50,36 +38,11 @@ using namespace std;
     public:
        
         virtual ~IContProp();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-//        virtual ListDicc * listaDepartamentos() = 0;
-=======
-<<<<<<< HEAD
->>>>>>> 37caf4e79946b6296f661a8c589fa37e9e16c6fa
-        
-
-//        virtual ListDicc * listaDepartamentos() = 0;
-      //  virtual Departamento* seleccionarDepartamentos(string) = 0;
-      //  virtual ListDicc * listaDepartamentos() = 0;
-      //  virtual void seleccionarDepartamentos(string) = 0;
-        virtual ListDicc * listaDepartamentos() = 0;
->>>>>>> origin/master
-        virtual Departamento* seleccionarDepartamentos(string) = 0;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        virtual ListDicc * listaDepartamentos() = 0;
-      //  virtual void seleccionarDepartamentos(string) = 0;        
-=======
->>>>>>> 2da1de9f7ce9debf1fa717f8aef613110af47d6e
->>>>>>> origin/master
->>>>>>> 37caf4e79946b6296f661a8c589fa37e9e16c6fa
-        virtual ListDicc * listaZonasDepartamentos(string) = 0;
+       virtual Departamento* seleccionarDepartamentos(string) = 0;
+       virtual Lista * listaDepartamentos() = 0;
+       virtual Lista * listaZonasDepartamentos(string) = 0;
         virtual Zona* seleccionaZona(string) = 0;
-        virtual dtPropiedadMensaje * listaPropiedades(string) = 0;
+        virtual Lista * listaPropiedades(string) = 0;
         virtual dtPropiedadMensaje * seleccionaPropiedad(string,int) = 0;
         virtual void enviarMensaje(string) = 0;
         virtual string ingesrarCodProp(string) = 0;

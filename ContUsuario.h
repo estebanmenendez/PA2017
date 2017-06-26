@@ -41,18 +41,7 @@ class ContUsuario : public IContUsuario {
 
     private:
         
-        IDictionary * IInmobiliaria;
-        IDictionary * IInteresados;
-<<<<<<< HEAD
-=======
-        IDictionary * IAdministrador;
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/master
->>>>>>> 37caf4e79946b6296f661a8c589fa37e9e16c6fa
-        IDictionary * IUsuario;
+    IDictionary * IUsuario;
 
 
       

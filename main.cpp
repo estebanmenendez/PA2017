@@ -328,7 +328,6 @@ void altaInmobiliaria (){
     cout<<"Ingrese Número: ";
     cin>>numero;
     dir = new dtDireccion(ciudad,numero,calle);
-<<<<<<< HEAD
 
    // in->altaInmobiliaria(nombre,dir);
     //taInmobiliaria(nombre, dir)
@@ -341,8 +340,8 @@ void altaPropiedad(){
     Fabrica* f = Fabrica::getInstance();
     IContProp * i = f->getContProp();  //EJEMPLO
     
-    ListDicc * listaDep;
-    ListDicc* listaZona;
+    Lista * listaDep;
+    Lista* listaZona;
     
     dtEdificio edif;
     string letraDep, codigoZona,ciudad, calle, numero,nEdif;
@@ -439,7 +438,41 @@ void altaPropiedad(){
 
 void enviarMsjInmobiliaria(){}
 
-void enviarMsjInteresado(){}
+void enviarMsjInteresado(){
+    string letraDpto;
+    Departamento *depto;
+    
+    cout << "Caso Uso Enviar Mensaje Interesado\n";
+    
+    Fabrica* f = Fabrica::getInstance();
+    IContProp * i = f->getContProp();
+    ICollection* colDtDep= NULL;
+    try{
+    colDtDep = i->listaDepartamentos();
+    
+    IIterator *dt =colDtDep->iterator();
+    //dtDepartamento *dt=dynamic_cast<dtDepartamento*>(colDtDep->iterator());
+    cout<<"Departamentos Disponibles\n";
+    
+    while(dt->hasNext()){
+        dtDepartamento *dtD=dynamic_cast<dtDepartamento*>(dt->getCurrent());
+        cout<<dtD->getletraDepartamento()<<"-"<<dtD->getnombreDepartamento()<<"\n";
+        dt->next();        
+    }
+    cout<<"Elegir Letra Departamento\n";
+    cin>>letraDpto;
+    depto = i->seleccionarDepartamentos(letraDpto);
+    i->listaZonasDepartamentos(letraDpto);
+    
+    
+    
+    
+    
+    
+    }catch(invalid_argument & e){
+	cout << e.what();
+    }
+}
 //
 void altaInteresado(){
 
@@ -540,7 +573,4 @@ void altaEdificio(){
        
       cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
 }
-=======
->>>>>>> 37caf4e79946b6296f661a8c589fa37e9e16c6fa
 
-    in->altaInmobiliaria(nombre, dir, email);
