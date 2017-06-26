@@ -42,7 +42,7 @@ using namespace std;
        virtual Lista * listaDepartamentos() = 0;
        virtual Lista * listaZonasDepartamentos(Departamento*) = 0;
         virtual void seleccionaZona(string) = 0;
-        virtual Lista * listaPropiedades(string) = 0;
+        virtual Lista * listaPropiedades() = 0;
         virtual dtPropiedadMensaje * seleccionaPropiedad(string,int) = 0;
         virtual void enviarMensaje(string) = 0;
         virtual string ingesrarCodProp(string) = 0;

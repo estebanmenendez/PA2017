@@ -26,6 +26,7 @@ public:
     dtDireccion(const dtDireccion& orig);
     virtual ~dtDireccion();
     
+    string getDireccion();
     string getCalle() const;
     string getNumero() const;    
     string getCiudad() const; 

@@ -18,27 +18,28 @@
 #include <stdio.h>
 #include <iostream>
 #include"dtDireccion.h"
+#include"ICollectible.h"
 
 using namespace std;
 
-class dtPropiedadMensaje {
-void setCantMensajesEnviados(int cantMensajesEnviados);
-void setDireccionProp(dtDireccion* direccionProp);
-dtDireccion* getDireccionProp() const;
-void setCodigoProp(string codigoProp);
-string getCodigoProp() const;
+class dtPropiedadMensaje:public ICollectible {
+    
+
+
 private:
     string codigoProp;
     dtDireccion* direccionProp;
     int cantMensajesEnviados;
-private:    
+public:    
 dtPropiedadMensaje(string codigoProp, dtDireccion* direccionProp, int cantMensajesEnviados);
 dtPropiedadMensaje();
 dtPropiedadMensaje(const dtPropiedadMensaje& orig);
 ~dtPropiedadMensaje();
+
 string getcodigoProp() const;
-dtDireccion* getdireccionProp() const;
-int getCantMensajesEnviados() const;
+string getdireccionProp() const;
+string getCantMensajesEnviados() const;
+
 
 };
 #endif /* DTPROPIEDADMENSAJE_H */

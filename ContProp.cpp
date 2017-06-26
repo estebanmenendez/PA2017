@@ -65,12 +65,12 @@ Lista* ContProp::listaZonasDepartamentos(Departamento* depto){
     return resZon;
 }
 
-void ContProp::seleccionaZona(string letrazona){
-    
+void ContProp::seleccionaZona(string letraZona){
+    zona = dep->getZona(letraZona);
 }
 
 
-Lista * ContProp::listaPropiedades(string){}
+Lista * ContProp::listaPropiedades(){}
 
 dtPropiedadMensaje * ContProp::seleccionaPropiedad(string,int){}
 void ContProp::enviarMensaje(string){}

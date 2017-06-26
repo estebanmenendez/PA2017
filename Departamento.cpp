@@ -29,7 +29,7 @@ IIterator *it=IZona->getIteratorObj();
     Lista *resul=new Lista();
     while (it->hasNext()) {
         Zona* z= dynamic_cast <Zona*> (it->getCurrent());
-        resul->add(z->getZona());
+        resul->add(z->getZonas());
         it->next();
     }
     delete it;

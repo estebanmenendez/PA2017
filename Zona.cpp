@@ -35,7 +35,7 @@ Zona::Zona(const Zona& orig) {}
 
 Zona::~Zona() {}
 
-dtZonas* Zona::getZona(){
+dtZonas* Zona::getZonas(){
     return new dtZonas(codigoZona, nombreZona);
 }
 

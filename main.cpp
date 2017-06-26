@@ -441,6 +441,7 @@ void enviarMsjInmobiliaria(){}
 void enviarMsjInteresado(){
     string letraDpto, codigoZona;
     Departamento *depto;
+     
     
     cout << "Caso Uso Enviar Mensaje Interesado\n";
     
@@ -478,8 +479,22 @@ void enviarMsjInteresado(){
     
     cout<<"Elegir Código Zona\n";
     cin>>codigoZona;
+    i->seleccionaZona(codigoZona);
     
     
+    ICollection* colDtPropMensaje= NULL;
+    colDtPropMensaje = i->listaPropiedades();
+    
+    cout<<"Propiedades y Mensajes\n";
+    IIterator *dtPM = colDtPropMensaje->iterator();
+    while(dtPM->hasNext()){
+        dtPropiedadMensaje *dtPMens=dynamic_cast<dtPropiedadMensaje*>(dtPM->getCurrent());
+        cout<<dtPMens->getcodigoProp()<<"-"<<dtPMens->getdireccionProp()<<"-"<<dtPMens->getCantMensajesEnviados()<<"\n";
+        dtPM->next();        
+    }
+    
+    cout<<"Elegir Código Zona\n";
+    cin>>codigoZona;
     
     
     

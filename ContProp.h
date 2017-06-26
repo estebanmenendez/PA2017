@@ -50,7 +50,7 @@ using namespace std;
         Lista * listaZonasDepartamentos(Departamento*);
         void seleccionaZona(string);
 
-        Lista * listaPropiedades(string);
+        Lista * listaPropiedades();
         dtPropiedadMensaje * seleccionaPropiedad(string,int);
         void enviarMensaje(string);
         string ingesrarCodProp(string);
