@@ -38,7 +38,7 @@ Lista * ContProp::listaDepartamentos(){
     Lista *resul=new Lista();
     while (it->hasNext()) {
         Departamento* c= dynamic_cast <Departamento*> (it->getCurrent());
-        StringKey *sk=new StringKey(c->getDatos()->getletraDepartamento());
+        //StringKey *sk=new StringKey(c->getDatos()->getletraDepartamento());
         resul->add(c->getDatos());
         it->next();
     }
@@ -47,45 +47,28 @@ Lista * ContProp::listaDepartamentos(){
 
 }
 
-Departamento* ContProp::seleccionarDepartamentos(string letraDepto){
+void ContProp::seleccionarDepartamentos(string letraDepto){
     IIterator *it=IDepartamento->getIteratorObj();
     StringKey *sk=new StringKey(letraDepto);
     Departamento *d=dynamic_cast<Departamento*>(IDepartamento->find(sk));
     if(d!=NULL){
-        return d;
+        dep = d;
     }
     else {throw invalid_argument("No existe ese Departamento");}
   
 }
-Zona* ContProp::seleccionaZona(string letrazona){
-    //IIterator * it=IZona->getIteratorObj();
-    StringKey *sk= new StringKey(letrazona);
-    Zona *z=dynamic_cast<Zona*>(IDepartamento->find(sk));
-    if(z!=NULL){return z;}
-    else {throw invalid_argument("No existe ese Departamento");
-    }
-}
 
 
-Lista* ContProp::listaZonasDepartamentos(string letraDepartamento){
-    StringKey *sk=new StringKey(letraDepartamento);
-
-    IIterator *it =IDepartamento->getIteratorObj();
+Lista* ContProp::listaZonasDepartamentos(Departamento* depto){   
     Lista *resZon=new Lista();
-    string letra;
-    Zona *zon1=new Zona;
-    while (it->hasNext()) {
-        Departamento* d= dynamic_cast <Departamento*> (it->getCurrent());
-        zon1=d->getZona(letra);
-        StringKey *sk=new StringKey(zon1->getCodigoZona());
-        resZon->add(zon1);
-        it->next();
-    }
-    delete it;
+    resZon = depto->getZonas();
     return resZon;
-    
-
 }
+
+void ContProp::seleccionaZona(string letrazona){
+    
+}
+
 
 Lista * ContProp::listaPropiedades(string){}
 

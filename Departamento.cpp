@@ -23,9 +23,34 @@ Departamento::~Departamento() {
 }
 
 
-dtZonas* Departamento::getZonas(string letraDepto){}
-    Zona* Departamento::getZona(string letraDepto){}
+Lista* Departamento::getZonas(){
+IIterator *it=IZona->getIteratorObj();
+   
+    Lista *resul=new Lista();
+    while (it->hasNext()) {
+        Zona* z= dynamic_cast <Zona*> (it->getCurrent());
+        resul->add(z->getZona());
+        it->next();
+    }
+    delete it;
+    return resul;
+}
+    Zona* Departamento::getZona(string letraZona){
+        
+    IIterator * it=IZona->getIteratorObj();
+    StringKey *sk= new StringKey(letraZona);
+    Zona *z=dynamic_cast<Zona*>(IZona->find(sk));
+    if(z!=NULL)
+        return z;   
+    else 
+        throw invalid_argument("No existe esa Zona");
+    }
+    
+    
     dtDepartamento* Departamento::getDatos(){}
     dtPropEnDpto* Departamento::getpropEnDepto(Usuarios inmobiliaria){}
     Zona* getZona(){}
 
+string Departamento::getLetraDpto(){
+    return this->letraDpto;
+}

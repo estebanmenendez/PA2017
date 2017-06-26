@@ -339,7 +339,7 @@ void altaInmobiliaria (){
 void altaPropiedad(){
     Fabrica* f = Fabrica::getInstance();
     IContProp * i = f->getContProp();  //EJEMPLO
-    
+    Departamento* depto;
     Lista * listaDep;
     Lista* listaZona;
     
@@ -357,7 +357,7 @@ void altaPropiedad(){
     cout<<"Ingrese la letra del Departamento: ";
     cin>>letraDep;
     i->seleccionarDepartamentos(letraDep);
-    listaZona = i->listaZonasDepartamentos(letraDep);
+    listaZona = i->listaZonasDepartamentos(depto);
     cout<<"Seleccione la Zona: ";
     i->seleccionaZona(codigoZona);
     cout<<"\n Ingresa Una Casa o Un Apto? C / A \n";
@@ -439,7 +439,7 @@ void altaPropiedad(){
 void enviarMsjInmobiliaria(){}
 
 void enviarMsjInteresado(){
-    string letraDpto;
+    string letraDpto, codigoZona;
     Departamento *depto;
     
     cout << "Caso Uso Enviar Mensaje Interesado\n";
@@ -451,7 +451,6 @@ void enviarMsjInteresado(){
     colDtDep = i->listaDepartamentos();
     
     IIterator *dt =colDtDep->iterator();
-    //dtDepartamento *dt=dynamic_cast<dtDepartamento*>(colDtDep->iterator());
     cout<<"Departamentos Disponibles\n";
     
     while(dt->hasNext()){
@@ -459,11 +458,26 @@ void enviarMsjInteresado(){
         cout<<dtD->getletraDepartamento()<<"-"<<dtD->getnombreDepartamento()<<"\n";
         dt->next();        
     }
+    
     cout<<"Elegir Letra Departamento\n";
     cin>>letraDpto;
-    depto = i->seleccionarDepartamentos(letraDpto);
-    i->listaZonasDepartamentos(letraDpto);
+    i->seleccionarDepartamentos(letraDpto);
     
+     ICollection* colDtZona= NULL;
+    colDtZona= i->listaZonasDepartamentos(depto);
+    
+    
+    IIterator *dtZ =colDtZona->iterator();
+    cout<<"Zonas Disponibles\n";
+    
+    while(dtZ->hasNext()){
+        dtZonas *dtZona=dynamic_cast<dtZonas*>(dtZ->getCurrent());
+        cout<<dtZona->getCodigoZona()<<"-"<<dtZona->getNombreZona()<<"\n";
+        dtZ->next();        
+    }
+    
+    cout<<"Elegir Código Zona\n";
+    cin>>codigoZona;
     
     
     

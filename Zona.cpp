@@ -35,7 +35,9 @@ Zona::Zona(const Zona& orig) {}
 
 Zona::~Zona() {}
 
-dtZonas getZona(string){}
+dtZonas* Zona::getZona(){
+    return new dtZonas(codigoZona, nombreZona);
+}
 
 dtPropZonas getPropZonaDpto(Usuarios){}
 

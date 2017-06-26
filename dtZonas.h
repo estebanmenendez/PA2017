@@ -26,13 +26,7 @@ public:
     dtZonas(const dtZonas& orig);
     virtual ~dtZonas();
     dtZonas(string codigoZona, string nombreZona);
-    dtZonas seleccionaZona(string codigoZona);
-    dtZonas listaZonaDepartamento();
-    
-    
-     void setNombreZona(string nombreZona);
      string getNombreZona() const;
-     void setCodigoZona(string codigoZona);
      string getCodigoZona() const; 
     
 private:

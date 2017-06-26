@@ -33,7 +33,7 @@ public:
     Zona(const Zona& orig);
     virtual ~Zona();
     
-    dtZonas getZona(string);
+    dtZonas* getZona();
     dtPropZonas getPropZonaDpto(Usuarios);
     Propiedad getPropiedad();
     void setNombreZona(string nombreZona);

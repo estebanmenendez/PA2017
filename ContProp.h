@@ -33,7 +33,8 @@ using namespace std;
  class ContProp : public IContProp {
      
     private: 
-        Zona * z;
+        Zona * zona;
+        Departamento* dep;
 
         IDictionary * IDepartamento;
         IDictionary * IPropiedad;
@@ -45,9 +46,9 @@ using namespace std;
         ContProp(const ContProp& orig);
         virtual ~ContProp();
         Lista * listaDepartamentos();
-        Departamento* seleccionarDepartamentos(string);
-        Lista * listaZonasDepartamentos(string);
-        Zona* seleccionaZona(string);
+        void seleccionarDepartamentos(string);
+        Lista * listaZonasDepartamentos(Departamento*);
+        void seleccionaZona(string);
 
         Lista * listaPropiedades(string);
         dtPropiedadMensaje * seleccionaPropiedad(string,int);
