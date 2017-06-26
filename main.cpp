@@ -246,12 +246,11 @@ void altaInmobiliaria (){
     cout<<"Ingrese Número: ";
     cin>>numero;
     dir = new dtDireccion(ciudad,numero,calle);
-<<<<<<< HEAD
+
    // in->altaInmobiliaria(nombre,dir);
     //taInmobiliaria(nombre, dir)
-=======
+
     in->altaInmobiliaria(nombre, dir, email);
->>>>>>> 2da1de9f7ce9debf1fa717f8aef613110af47d6e
     cout<<"Inmobiliaria dada de Alta ";
 }
 

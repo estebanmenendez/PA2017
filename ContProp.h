@@ -34,20 +34,12 @@ using namespace std;
      
     private: 
         Zona * z;
-        
-<<<<<<< HEAD
-
-=======
->>>>>>> 2da1de9f7ce9debf1fa717f8aef613110af47d6e
+       
         IDictionary * IDepartamento;
         IDictionary * IPropiedad;
         IDictionary * IEdificio;
         ContUsuario * ControladorUsuario;
-<<<<<<< HEAD
         IDictionary * IZona;
-=======
-        
->>>>>>> 2da1de9f7ce9debf1fa717f8aef613110af47d6e
     public:
         ContProp();
         ContProp(const ContProp& orig);
