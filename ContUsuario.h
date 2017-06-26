@@ -33,7 +33,7 @@ class ContUsuario : public IContUsuario {
         void iniciarSesion(string, string);
         bool verificarContrasena(string, string);
         void activarUsuario(string, string);
-        void validarPwd(string);
+        bool validarPwd(string);
         void altaSesion();
         void cancelarAccion();
         dtReporteInmobiliaria * obtenerReporteInmobiliarias ();
