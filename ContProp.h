@@ -23,6 +23,7 @@
 #include"Lista.h"
 #include"ListDicc.h"
 #include"ContUsuario.h"
+#include"Usuarios.h"
 #include "Departamento.h"
 #include<iostream>
 
@@ -35,6 +36,7 @@ using namespace std;
     private: 
         Zona * zona;
         Departamento* dep;
+        Usuarios* usuario;
 
         IDictionary * IDepartamento;
         IDictionary * IPropiedad;
@@ -47,7 +49,7 @@ using namespace std;
         virtual ~ContProp();
         Lista * listaDepartamentos();
         void seleccionarDepartamentos(string);
-        Lista * listaZonasDepartamentos(Departamento*);
+        Lista * listaZonasDepartamentos();
         void seleccionaZona(string);
 
         Lista * listaPropiedades();

@@ -357,7 +357,7 @@ void altaPropiedad(){
     cout<<"Ingrese la letra del Departamento: ";
     cin>>letraDep;
     i->seleccionarDepartamentos(letraDep);
-    listaZona = i->listaZonasDepartamentos(depto);
+    listaZona = i->listaZonasDepartamentos();
     cout<<"Seleccione la Zona: ";
     i->seleccionaZona(codigoZona);
     cout<<"\n Ingresa Una Casa o Un Apto? C / A \n";
@@ -439,8 +439,8 @@ void altaPropiedad(){
 void enviarMsjInmobiliaria(){}
 
 void enviarMsjInteresado(){
-    string letraDpto, codigoZona;
-    Departamento *depto;
+    string letraDpto, codigoZona,codigoProp;
+    //Departamento *depto;
      
     
     cout << "Caso Uso Enviar Mensaje Interesado\n";
@@ -465,7 +465,7 @@ void enviarMsjInteresado(){
     i->seleccionarDepartamentos(letraDpto);
     
      ICollection* colDtZona= NULL;
-    colDtZona= i->listaZonasDepartamentos(depto);
+    colDtZona= i->listaZonasDepartamentos();
     
     
     IIterator *dtZ =colDtZona->iterator();
@@ -493,8 +493,8 @@ void enviarMsjInteresado(){
         dtPM->next();        
     }
     
-    cout<<"Elegir Código Zona\n";
-    cin>>codigoZona;
+    cout<<"Elegir Código Propiedad\n";
+    cin>>codigoProp;
     
     
     

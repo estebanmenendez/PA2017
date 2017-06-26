@@ -40,7 +40,7 @@ using namespace std;
         virtual ~IContProp();
        virtual void seleccionarDepartamentos(string) = 0;
        virtual Lista * listaDepartamentos() = 0;
-       virtual Lista * listaZonasDepartamentos(Departamento*) = 0;
+       virtual Lista * listaZonasDepartamentos() = 0;
         virtual void seleccionaZona(string) = 0;
         virtual Lista * listaPropiedades() = 0;
         virtual dtPropiedadMensaje * seleccionaPropiedad(string,int) = 0;

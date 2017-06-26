@@ -59,9 +59,9 @@ void ContProp::seleccionarDepartamentos(string letraDepto){
 }
 
 
-Lista* ContProp::listaZonasDepartamentos(Departamento* depto){   
+Lista* ContProp::listaZonasDepartamentos(){   
     Lista *resZon=new Lista();
-    resZon = depto->getZonas();
+    resZon = dep->getZonas();
     return resZon;
 }
 
@@ -70,7 +70,15 @@ void ContProp::seleccionaZona(string letraZona){
 }
 
 
-Lista * ContProp::listaPropiedades(){}
+Lista * ContProp::listaPropiedades(){
+
+    Lista* resProp = new Lista();
+    resProp = zona->listaPropiedades(this->usuario);
+
+
+
+
+}
 
 dtPropiedadMensaje * ContProp::seleccionaPropiedad(string,int){}
 void ContProp::enviarMensaje(string){}

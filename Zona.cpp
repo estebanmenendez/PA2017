@@ -39,6 +39,9 @@ dtZonas* Zona::getZonas(){
     return new dtZonas(codigoZona, nombreZona);
 }
 
+Lista* Zona::listaPropiedades(Usuarios* usuario){
+    
+}
 dtPropZonas getPropZonaDpto(Usuarios){}
 
 Propiedad getPropiedad(){}
