@@ -61,11 +61,47 @@ using namespace std;
 Usuarios * ContUsuario::usuarioLogueado(){
 }
 
-void ContUsuario::iniciarSesion(string tipoUsuario , string email){
+void ContUsuario::iniciarSesion(string email , string pwd){
+    
+    
+//IIterator *it = IUsuario->getIteratorObj();
+//ListDicc * result = new ListDicc();
+//int op = 1;
+//
+//while (it->hasNext()) {
+//    Usuarios * us = dynamic_cast <Usuarios*> (it->getCurrent());
+//    StringKey * sk = new StringKey(us->getTipo());
+//        if(sk->getString()!="Administrador"){ // Si no es admin, es interesado o inmo
+
+//it->next();
+//}
+    
     
 }
-bool ContUsuario::verificarContrasena(string pwd , string pwdConfirmacion ){}
-void ContUsuario::activarUsuario(string tipoUsuario ,string email ){ }
-void ContUsuario::validarPwd( string contrasena ){ }
+bool ContUsuario::verificarContrasena(string pwd , string pwdConfirmacion ){
+    
+    if(pwd==pwdConfirmacion){
+        return true;
+    }else{
+        invalid_argument("Contraseña incorrecta");
+        return false;
+    }
+}
+void ContUsuario::activarUsuario(string tipoUsuario ,string email ){
+
+}
+
+bool ContUsuario::validarPwd(string contrasena){ 
+    string ok="s";
+    StringKey * skPwd = new StringKey(contrasena);
+    
+    if(IUsuario->find(skPwd)!= NULL){
+        return true;
+    }else{
+        return false;
+    }
+        
+    
+}
 void ContUsuario::CerrarSesion( int idSesion ){ }
 
