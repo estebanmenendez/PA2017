@@ -12,10 +12,15 @@
  */
 
 #include"ICollectible.h"
+<<<<<<< HEAD
 #include "IDictionary.h"
+=======
+#include"Propiedad.h"
+>>>>>>> fe34853a63c88723e46550e1d1017a7e36ef272d
 #include<string.h>
-#include <stdio.h>
-#include <iostream>
+#include<stdio.h>
+#include<iostream>
+
 
 #ifndef USUARIOS_H
 #define USUARIOS_H
@@ -36,6 +41,7 @@ public:
     string getPwd();
     string getTipo();
     Usuarios();
+   
     virtual ~Usuarios();
     string getAlquilerOVenta(string codProp);
     

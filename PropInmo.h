@@ -29,13 +29,17 @@ public:
         
 	int getCantidadMensajes(Usuarios);
 	void enviarMensaje(Propiedad*, string);
-	void altaPropEnInmob(Propiedad*, string);
+	void altaPropEnInmob(Propiedad*);
 	void eliminarLinks();
 	dtAvisoPropiedad * getAvisos();
         string esAlquileroVenta();
         PropInmo();
         PropInmo(const PropInmo& orig);
         virtual ~PropInmo();
+        
+        void crearAvisoProp(bool,float);
+
+
         
 private:
         //links

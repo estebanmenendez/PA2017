@@ -15,8 +15,8 @@
 #include <stdio.h>
 #include <iostream>
 #include"ICollectible.h"
-#include "dtDireccion.h"
-#include"Usuarios.h"
+#include"dtDireccion.h"
+
 #include"dtPropiedadMensaje.h"
 #include"dtMensajes.h"
 #include"dtPropiedad.h"
@@ -39,9 +39,9 @@ public:
     
   void esCasaP();
   void esAptoP();
-  bool perteneceInmobiliaria(Usuarios inmobiliaria);
-  dtPropiedadMensaje * getPropiedad(Usuarios usu );
-  dtMensajes* getUltimosCinco(Usuarios usu);
+  bool perteneceInmobiliaria();
+  dtPropiedadMensaje * getPropiedad( );
+  dtMensajes* getUltimosCinco( );
   void eliminarLinksPropInmo();
   string getCodigoProp();
   dtPropiedadDisponible* getPropiedadDisponible(Usuarios *usu);

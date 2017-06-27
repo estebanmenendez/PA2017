@@ -32,7 +32,7 @@ public:
     virtual bool esAlquiler();
         
     virtual Aviso getAviso();
-    virtual void crearAvisoProp();
+    
     virtual void altaAlquiler(float);
     virtual void altaVenta(float);
 

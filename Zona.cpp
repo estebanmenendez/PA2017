@@ -74,3 +74,11 @@ Propiedad * Zona::seleccionaPropDisponible(string codprop){
 dtPropZonas getPropZonaDpto(Usuarios){}
 
 Propiedad getPropiedad(){}
+
+void Zona::altaPropiedad(Propiedad * p, StringKey* sk){
+     
+    if(IPropiedad->member(sk)!=true)
+    IPropiedad->add(p,sk);
+    else throw new invalid_argument("Propiedad ya existente");    
+
+}

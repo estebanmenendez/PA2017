@@ -61,37 +61,27 @@ using namespace std;
         else throw new invalid_argument("Usuario inmobiliaria ya existente");
             
   }
-      void ContUsuario::altaSesion(){
+void ContUsuario::altaSesion(Usuarios * usu){
+    usuLog = usu;
+}
+void ContUsuario::cancelarAccion(){
+    
+}
 
-    }
-      void ContUsuario::cancelarAccion(){
-
-    }
-    dtReporteInmobiliaria * ContUsuario::obtenerReporteInmobiliarias (){}
+dtReporteInmobiliaria * ContUsuario::obtenerReporteInmobiliarias (){
+    
+}
 
 
 Usuarios * ContUsuario::usuarioLogueado(){
+    return usuLog;
 }
 
 void ContUsuario::iniciarSesion(string email , string pwd){
-    
-    
-//IIterator *it = IUsuario->getIteratorObj();
-//ListDicc * result = new ListDicc();
-//int op = 1;
-//
-//while (it->hasNext()) {
-//    Usuarios * us = dynamic_cast <Usuarios*> (it->getCurrent());
-//    StringKey * sk = new StringKey(us->getTipo());
-//        if(sk->getString()!="Administrador"){ // Si no es admin, es interesado o inmo
-
-//it->next();
-//}
-    
-    
+    Usuarios * usu = new Usuarios();
+    altaSesion(usu);  
 }
 bool ContUsuario::verificarContrasena(string pwd , string pwdConfirmacion ){
-    
     if(pwd==pwdConfirmacion){
         return true;
     }else{
@@ -99,8 +89,11 @@ bool ContUsuario::verificarContrasena(string pwd , string pwdConfirmacion ){
         return false;
     }
 }
-void ContUsuario::activarUsuario(string tipoUsuario ,string email ){
-
+void ContUsuario::activarUsuario(string pwd ,string email){
+    Usuarios * u = new Usuarios();
+    StringKey *sk = new StringKey(email);
+    IUsuario->add(u, sk);
+    
 }
 
 bool ContUsuario::validarPwd(string contrasena){ 
@@ -112,8 +105,9 @@ bool ContUsuario::validarPwd(string contrasena){
     }else{
         return false;
     }
-        
-    
 }
-void ContUsuario::CerrarSesion( int idSesion ){ }
+
+void ContUsuario::CerrarSesion(){ 
+usuLog = NULL;
+}
 

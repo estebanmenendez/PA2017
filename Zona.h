@@ -44,7 +44,11 @@ public:
     string getNombreZona() const;
     void setCodigoZona(string codigoZona);
     string getCodigoZona() const;
+<<<<<<< HEAD
     Propiedad *seleccionaPropDisponible(string codprop);
+=======
+    void altaPropiedad(Propiedad *, StringKey *);
+>>>>>>> fe34853a63c88723e46550e1d1017a7e36ef272d
 private:
     string codigoZona;
     string nombreZona;
