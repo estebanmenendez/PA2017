@@ -31,3 +31,14 @@ Interesado::Interesado(string nombre, string apellido,int edad, string email){
   Interesado::~Interesado(){
       
   }
+  int Interesado::cantMensajesPropiedad(string codProp){
+    int cantMensajes= 0;
+    IIterator * it=IChatInteresado->iterator();
+    while (it->hasNext()) {
+        Chat *ch=dynamic_cast<Chat*>(it->getCurrent());
+        cantMensajes += ch->getCantidadMensaje();
+        it->next();
+    }
+    delete it;
+    return cantMensajes;
+  }

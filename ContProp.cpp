@@ -72,13 +72,16 @@ void ContProp::seleccionaZona(string letraZona){
 
 Lista * ContProp::listaPropiedades(){
     Lista* resProp = new Lista();
-    resProp = zona->listaPropiedades(this->usuario);
+    resProp = zona->listaPropiedades(dynamic_cast<Inmobiliaria*>(this->usuario));
 
 }
 
-Lista * ContProp::seleccionaPropiedad(string){
+Lista * ContProp::seleccionaPropiedad(string codigoProp){
+    Lista* colDtMensajes = new Lista();
+    colDtMensajes = zona->ultimosCincoMensajes(codigoProp);
     
-    
+    return colDtMensajes;
+  
 }
 
 

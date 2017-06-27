@@ -11,7 +11,7 @@
  * Created on 11 de junio de 2017, 06:42 PM
  */
 
-#include"Propiedad.h"
+//#include"Propiedad.h"
 #include"dtPropiedad.h"
 
 

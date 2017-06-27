@@ -14,14 +14,15 @@
 #include <string.h>
 #include <stdio.h>
 #include <iostream>
+//#include"Inmobiliaria.h"
 #include"ICollectible.h"
 #include"dtDireccion.h"
-
 #include"dtPropiedadMensaje.h"
 #include"dtMensajes.h"
 #include"dtPropiedad.h"
 #include"dtPropiedadCasa.h"
 #include"dtPropiedadApto.h"
+
 
 #ifndef PROPIEDAD_H
 #define PROPIEDAD_H
@@ -34,17 +35,16 @@ public:
     Propiedad(dtPropiedadCasa);
     Propiedad(dtPropiedadApto);
     Propiedad(const Propiedad& orig);
-    virtual ~Propiedad();
-    
-  void esCasaP();
-  void esAptoP();
-  bool perteneceInmobiliaria();
-  dtPropiedadMensaje * getPropiedad( );
-  dtMensajes* getUltimosCinco( );
-  void eliminarLinksPropInmo();
-  string getCodigoProp();
-  //dtPropiedad** getPropiedad();
-//  Casa * getMetrosVerdes();
+    virtual ~Propiedad();    
+    void esCasaP();
+    void esAptoP();
+    bool perteneceInmobiliaria();
+    dtPropiedadMensaje* getPropiedad(int);
+    dtMensajes* getUltimosCinco( );
+    void eliminarLinksPropInmo();
+    string getCodigoProp();
+    //dtPropiedad** getPropiedad();
+    //  Casa * getMetrosVerdes();
     
 private:
     string codigoProp;
@@ -59,9 +59,6 @@ private:
 //    // link con Prop-Inmo  
 //    
 //    PropInmo* propinmo;
-//
-
 };
 
 #endif /* PROPIEDAD_H */
-

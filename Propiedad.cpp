@@ -12,7 +12,7 @@
  */
 
 #include "Propiedad.h"
-#include "dtPropiedadCasa.h"
+
 
 
 
@@ -66,4 +66,13 @@ void Propiedad::eliminarLinksPropInmo(){
 string Propiedad::getCodigoProp(){
   return this->codigoProp;
 }
+
+dtPropiedadMensaje * Propiedad::getPropiedad(int cantidad){
+    
+    return new dtPropiedadMensaje(this->codigoProp,this->direccionProp,cantidad);
+}
+
+ dtMensajes* Propiedad::getUltimosCinco( ){
+     
+ }
 //Casa * Propiedad::getMetrosVerdes(){}

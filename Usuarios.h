@@ -12,7 +12,7 @@
  */
 
 #include"ICollectible.h"
-#include"Propiedad.h"
+//#include"Propiedad.h"
 #include<string.h>
 #include<stdio.h>
 #include<iostream>
@@ -36,9 +36,9 @@ public:
     string getEmail();
     string getPwd();
     string getTipo();
-    Usuarios();
-   
+    Usuarios();  
     virtual ~Usuarios();
+    //virtual int cantMensajesPropiedad(string);
     
 };
 #endif /* USUARIOS_H */

@@ -8,6 +8,8 @@ class Administrador : public Usuarios{
     public:
         Administrador();
         virtual ~Administrador();      
+        //int cantMensajesPropiedad(string);
+       
    
 };
 #endif /* ADMINISTRADOR_H */

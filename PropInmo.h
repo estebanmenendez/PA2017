@@ -21,13 +21,15 @@
 #include "Chat.h"
 #include "Aviso.h"
 #include "dtAvisoPropiedad.h"
+#include "Venta.h"
+#include "Alquiler.h"
 
 class PropInmo: public ICollectible{
           
         
 public:
         
-	int getCantidadMensajes(Usuarios);
+	int getCantidadMensajes();
 	void enviarMensaje(Propiedad*, string);
 	void altaPropEnInmob(Propiedad*);
 	void eliminarLinks();
@@ -44,7 +46,7 @@ public:
 private:
         //links
         Aviso * aviPropInmo[2];
-        ICollection   * chatPropInmo;
+        ICollection  * IChatPropInmo;
         Propiedad * prop;
 
 

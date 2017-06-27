@@ -17,11 +17,12 @@
 #include"IDictionary.h"
 #include"Propiedad.h"
 #include"Usuarios.h"
+#include"Interesado.h"
 #include"dtZonas.h"
 #include"dtPropiedadApto.h"
 #include"dtPropZonas.h"
 #include"dtPropiedadMensaje.h"
-#include"Usuarios.h"
+
 #include"Lista.h"
 
 
@@ -45,6 +46,7 @@ public:
     void setCodigoZona(string codigoZona);
     string getCodigoZona() const;
     void altaPropiedad(Propiedad *, StringKey *);
+    Lista* ultimosCincoMensajes(string codProp);
 private:
     string codigoZona;
     string nombreZona;
