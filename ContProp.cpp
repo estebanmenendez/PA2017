@@ -83,7 +83,7 @@ Lista * ContProp::seleccionaPropiedad(string){
 
 
 //void ContProp::enviarMensaje(string){}
-string ContProp::ingesrarCodProp(string){}
+string ContProp::ingesrarCodProp(string codigo){}
 void ContProp::modifPropCasa(dtPropiedadCasa){}
 void ContProp::modifPropApto(dtPropiedadApto){}
 dtConversaInmobiliaria * ContProp::listaConversacionesInmobiliarias(){}

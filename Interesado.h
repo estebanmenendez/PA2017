@@ -20,9 +20,13 @@ class Interesado :public Usuarios{
         int edad;
         string nombreInt;
         string apellidoInt;
+        
         public:
             int getEdad();
             void setEdad();
+            string getTipo();
+            string getPwd();
+            string getEmail();
             Interesado(string nombre, string apellido,int edad, string email);
             Interesado();
             virtual ~Interesado();

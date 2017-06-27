@@ -26,7 +26,7 @@ Inmobiliaria::~Inmobiliaria(){
 Inmobiliaria::Inmobiliaria(string nombre, dtDireccion* dir, string email){
     this->nombreInm = nombre;
     this->direccion = dir;
-    Usuarios::getEmail()=email;
+    this->getEmail()=email;
 }     
 
 void Inmobiliaria::altaPropEnInmob(Propiedad *p){
@@ -35,6 +35,17 @@ void Inmobiliaria::altaPropEnInmob(Propiedad *p){
      if(IPropInmo->member(sk)!=true){//pregunto si ya existe
      IPropInmo->add(pi,sk);//agrego el objeto mas la clave a la coleccion dicionario
      }
-     else throw new invalid_argument("Propiedad en Inmobiliaria ya existente");  
-         
+     else throw new invalid_argument("Propiedad en Inmobiliaria ya existente");      
+}
+
+string Inmobiliaria::getTipo(){
+  return "Inmobiliaria";
+}
+
+string Inmobiliaria::getPwd(){
+    return this->getPwd();
+}
+
+string Inmobiliaria::getEmail(){
+   return this->getEmail();
 }

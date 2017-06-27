@@ -26,8 +26,17 @@ Interesado::Interesado(string nombre, string apellido,int edad, string email){
     this->nombreInt = nombre;
     this->apellidoInt = apellido;
     this->edad = edad;
-    Usuarios::getEmail() = email;
+    this->getEmail() = email;
 }
   Interesado::~Interesado(){
       
   }
+string Interesado::getTipo(){
+  return "Interesado";
+}
+string Interesado::getPwd(){
+    return this->getPwd();
+}
+string Interesado::getEmail(){
+    return this->getEmail();
+}

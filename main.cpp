@@ -30,21 +30,22 @@
 #include"Usuarios.h"
 #include"ListaIterator.h"
 #include"ContProp.h"
+#include "Administrador.h"
 
 using namespace std;
 
 //CASOS DE USO
-void iniciarSesion();
-void cerrarSesion();
-void altaInmobiliaria();
-void altaInteresado();
-void altaEdificio();
-void altaPropiedad();
-dtPropiedad consultarPropiedad();
+void iniciarSesion(); // HECHO
+void cerrarSesion(); // HECHO
+void altaInmobiliaria(); // HECHO
+void altaInteresado(); // HECHO
+void altaEdificio(); // HECHO
+void altaPropiedad(); // HECHO
+dtPropiedad consultarPropiedad(); // HECHO
 void modificarPropiedad();
-void eliminarPropiedad();
-void enviarMsjInteresado();
-void enviarMsjInmobiliaria();
+void eliminarPropiedad(); 
+void enviarMsjInteresado(); // HECHO 90%
+void enviarMsjInmobiliaria(); 
 dtReporteInmobiliaria obtenerReporteInmo();
 
 
@@ -277,16 +278,16 @@ void iniciarSesion(){
     cin>>us;
     cout<<"\nIngrese contrasenia: ";
     cin>>pwd;
+    //usuario = usuTipo->getTipo();
     
-    usuario = usuTipo->getTipo();
     
-    if( usuario == "Administrador"){
+    if(dynamic_cast<Administrador*>(usuTipo)->getTipo() == "Administrador"){
         opUsr == 1;
     }
-    if(usuario == "Interesado"){
+    if(dynamic_cast<Interesado*>(usuTipo)->getTipo() == "Interesado"){
         opUsr == 2;
     }
-    if(usuario == "Inmobiliaria"){
+    if(dynamic_cast<Inmobiliaria*>(usuTipo)->getTipo() == "Inmobiliaria"){
         opUsr == 3;
     }
     

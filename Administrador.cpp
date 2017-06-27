@@ -20,3 +20,16 @@ Administrador::Administrador(){
 Administrador::~Administrador(){
     
 }
+Administrador::Administrador(string pwd, string email){
+    this->getEmail() = "adminsis";
+    this->getPwd() = "pass1";
+}
+string Administrador::getTipo(){
+  return "Administrador";
+}
+string Administrador::getEmail(){
+    return this->getEmail();
+}
+string Administrador::getPwd(){
+   return this->getPwd();
+}

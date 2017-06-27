@@ -49,17 +49,12 @@ ContProp();
 ContProp(const ContProp& orig);
 
 ~ContProp();
-       Lista * listaDepartamentos();
-        void seleccionarDepartamentos(string);
+        Lista * listaDepartamentos(); 
+        void seleccionarDepartamentos(string); 
         Lista * listaZonasDepartamentos();
-<<<<<<< HEAD
-        void seleccionaZona(string);
-=======
->>>>>>> origin/master
         Lista * listaPropiedades();
         void seleccionaZona(string letrazona);
         Lista * seleccionaPropiedad(string);
-
         string ingesrarCodProp(string);
         void modifPropCasa(dtPropiedadCasa);
         void modifPropApto(dtPropiedadApto);

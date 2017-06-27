@@ -28,6 +28,9 @@ class Inmobiliaria : public Usuarios{
         Inmobiliaria();
         Inmobiliaria(string nombre, dtDireccion* dir, string email);
         virtual ~Inmobiliaria();
+        string getTipo();
+        string getPwd();
+        string getEmail();
         
         void altaPropEnInmob(Propiedad *p);
 };
