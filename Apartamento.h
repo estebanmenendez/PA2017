@@ -17,7 +17,7 @@
 
 using namespace std;
 
-class Apartamento: public Propiedad {
+class Apartamento: public Prop {
 public:
     Apartamento();
     Apartamento(const Apartamento& orig);

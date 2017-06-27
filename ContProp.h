@@ -24,6 +24,7 @@
 #include"ListDicc.h"
 #include"ContUsuario.h"
 #include"Usuarios.h"
+#include"Inmobiliaria.h"
 #include "Departamento.h"
 #include<iostream>
 
@@ -52,8 +53,9 @@ ContProp(const ContProp& orig);
         Lista * listaDepartamentos(); 
         void seleccionarDepartamentos(string); 
         Lista * listaZonasDepartamentos();
+        void seleccionaZona(string);
         Lista * listaPropiedades();
-        void seleccionaZona(string letrazona);
+//        void seleccionaZona(string letrazona);
         Lista * seleccionaPropiedad(string);
         string ingesrarCodProp(string);
         void modifPropCasa(dtPropiedadCasa);
@@ -63,7 +65,7 @@ ContProp(const ContProp& orig);
         dtMensajes * listaUltimosCincoMensajes();
         void seleccionaMensaje(string);
         void agregaMensaje(string,string);
-        dtPropiedadDisponible * listaPropiedadesDisponibles();
+        Lista * listaPropiedadesDisponibles(Usuarios*);
         dtPropiedadInmobiliaria * seleccionaPropiedadDisponible(string);
         void altaInteresado (string,string,int,string);
         void altaEdificio(string,int,float);

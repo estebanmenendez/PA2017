@@ -11,6 +11,8 @@
  * Created on 9 de junio de 2017, 06:07 PM
  */
 #include"Usuarios.h"
+#include"ICollection.h"
+#include "Chat.h"
 
 #ifndef INTERESADO_H
 #define INTERESADO_H
@@ -20,7 +22,7 @@ class Interesado :public Usuarios{
         int edad;
         string nombreInt;
         string apellidoInt;
-        
+        ICollection* IChatInteresado;
         public:
             int getEdad();
             void setEdad();
@@ -28,6 +30,7 @@ class Interesado :public Usuarios{
             string getPwd();
             string getEmail();
             Interesado(string nombre, string apellido,int edad, string email);
+            int cantMensajesPropiedad(string);
             Interesado();
             virtual ~Interesado();
 };

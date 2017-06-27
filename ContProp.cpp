@@ -58,6 +58,20 @@ void ContProp::seleccionarDepartamentos(string letraDepto){
   
 }
 
+dtPropiedadInmobiliaria * ContProp::seleccionaPropiedadDisponible(string letraProp){
+    IIterator *it=IPropiedad->getIteratorObj();
+    StringKey *sk=new StringKey(letraProp);
+    dtPropiedadDisponible *d=dynamic_cast<dtPropiedadDisponible*>(IPropiedad->find(sk));
+    if(d==NULL)throw invalid_argument("No esxiste la propiedad");
+    
+    delete it;
+
+    return d;
+         
+    
+   
+        
+}
 
 Lista* ContProp::listaZonasDepartamentos(){   
     Lista *resZon=new Lista();
@@ -69,35 +83,32 @@ void ContProp::seleccionaZona(string letraZona){
     zona = dep->getZona(letraZona);
 }
 
-
+Lista * ContProp::listaPropiedadesDisponibles(){
+    Lista *resul=new Lista();
+   return resul=zona->listaPropDisponible(usu);
+}
 Lista * ContProp::listaPropiedades(){
     Lista* resProp = new Lista();
-    resProp = zona->listaPropiedades(this->usuario);
+    resProp = zona->listaPropiedades(dynamic_cast<Inmobiliaria*>(this->usuario));
 
 }
 
-Lista * ContProp::seleccionaPropiedad(string){
+Lista * ContProp::seleccionaPropiedad(string codigoProp){
+    Lista* colDtMensajes = new Lista();
+    colDtMensajes = zona->ultimosCincoMensajes(codigoProp);
     
-    
+    return colDtMensajes;
+  
 }
 
+dtPropiedadMensaje * ContProp::seleccionaPropiedad(string,int){
 
-//void ContProp::enviarMensaje(string){}
+}
+void ContProp::enviarMensaje(string){}
 string ContProp::ingesrarCodProp(string codigo){}
-void ContProp::modifPropCasa(dtPropiedadCasa){}
-void ContProp::modifPropApto(dtPropiedadApto){}
-dtConversaInmobiliaria * ContProp::listaConversacionesInmobiliarias(){}
-void ContProp::seleccionaConversacion(string){}
-dtMensajes * ContProp::listaUltimosCincoMensajes(){}
-void ContProp::seleccionaMensaje(string){}
-void ContProp::agregaMensaje(string,string){}
+string ContProp::ingesrarCodProp(string){}
 dtPropiedadDisponible * ContProp::listaPropiedadesDisponibles(){}
 dtPropiedadInmobiliaria * ContProp::seleccionaPropiedadDisponible(string){}
-
-void ContProp::altaInteresado (string nombre, string apellido, int edad, string email){
-    Interesado * i = new Interesado(nombre, apellido, edad, email);
-    
-}
 
 void ContProp::altaEdificio(string nombre, int pisos, float gastosComunes){
     

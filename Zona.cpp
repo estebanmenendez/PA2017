@@ -11,7 +11,12 @@
  * Created on 9 de junio de 2017, 06:45 PM
  */
 
+#include <stdexcept>
+
 #include "Zona.h"
+#include "Inmobiliaria.h"
+#include "PropInmo.h"
+#include "IContUsuario.h"
 
 Zona::Zona() {}
 
@@ -40,7 +45,54 @@ dtZonas* Zona::getZonas(){
 }
 
 Lista* Zona::listaPropiedades(Usuarios* usuario){
+    int cantidad= 0;
+    IIterator *it =IPropiedad->getIteratorObj();
+    Lista *resul=new Lista();
+    while (it->hasNext()) {
+        Propiedad* p= dynamic_cast <Propiedad*> (it->getCurrent());
+        cantidad = dynamic_cast<Interesado*>(usuario)->cantMensajesPropiedad(p->getCodigoProp());
+        resul->add(p->getPropiedad(cantidad));
+        it->next();
+    }
+    delete it;
+    return resul;
+}
+
+Lista* Zona::ultimosCincoMensajes(string codProp){
+   Lista *resul=new Lista();
+    StringKey *sk= new StringKey(codProp);
+    Propiedad *p=dynamic_cast<Propiedad*>(IPropiedad->find(sk));
+    if(p!=NULL)
+        p->getUltimosCinco();
+    else 
+        throw invalid_argument("No existe esa Propiedad");
     
+return resul;
+}
+Lista * Zona::listaPropDisponible(Usuarios *usu){
+    IIterator *it=IPropiedad->getIteratorObj();
+    Lista *resul=new Lista();
+    while (it->hasNext()) {
+        
+        dtPropiedadDisponible*p= dynamic_cast<dtPropiedadDisponible*>(it->getCurrent());
+       
+        resul->add(p->getPropiedadDisponible(usu));
+    
+    }
+    delete it;
+    return resul;
+}
+
+Propiedad * Zona::seleccionaPropDisponible(string codprop){
+     IIterator *it=IPropiedad->getIteratorObj();
+    StringKey *sk=new StringKey(codprop);
+    Propiedad *p=dynamic_cast<Propiedad*>(IPropiedad->find(sk));
+    if(p!=NULL){
+        return p;
+    }
+    else
+    throw invalid_argument("No existe esa Propiedad");
+  
 }
 dtPropZonas getPropZonaDpto(Usuarios){}
 

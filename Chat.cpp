@@ -15,6 +15,7 @@
 #include <stdio.h>
 #include <iostream>
 #include "Chat.h"
+#include "Mensaje.h"
 
 int Chat::getChat(){
 	return Chat::getChat();
@@ -37,15 +38,23 @@ void Chat::eliminarLinksMensajes(){
 	
 }
 
-bool Chat::esDelUsuario(Usuarios ){
+bool Chat::esDelUsuario(){
 	
 }
 
 int Chat::getCantidadMensaje(){
-	
+    int cantMensajes = 0;
+    IIterator * it=IMensajes->iterator();
+    while (it->hasNext()) {
+        Mensaje *m=dynamic_cast<Mensaje*>(it->getCurrent());
+        cantMensajes ++;
+        it->next();
+    }
+    delete it;
+    return cantMensajes;
 }
 
-bool Chat::pertPropUsuario(Propiedad ,Usuarios){
+bool Chat::pertPropUsuario(){
 	
 }
 

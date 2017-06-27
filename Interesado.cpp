@@ -40,3 +40,14 @@ string Interesado::getPwd(){
 string Interesado::getEmail(){
     return this->getEmail();
 }
+  int Interesado::cantMensajesPropiedad(string codProp){
+    int cantMensajes= 0;
+    IIterator * it=IChatInteresado->iterator();
+    while (it->hasNext()) {
+        Chat *ch=dynamic_cast<Chat*>(it->getCurrent());
+        cantMensajes += ch->getCantidadMensaje();
+        it->next();
+    }
+    delete it;
+    return cantMensajes;
+  }

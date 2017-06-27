@@ -15,31 +15,34 @@
 #ifndef CHAT_H
 #define CHAT_H
 
-#include<string.h>
+#include <string.h>
 #include <stdio.h>
 #include <iostream>
-#include"Propiedad.h"
-#include "Usuarios.h"
-#include"dtMensajes.h"
+//#include "Propiedad.h"
+//#include "Usuarios.h"
+#include "dtMensajes.h"
+#include "ICollectible.h"
+#include "ICollection.h"
+
 using namespace std;
 
-class Chat {
+class Chat: public ICollectible {
 public:
+    
     Chat();
     Chat(const Chat& orig);
     virtual ~Chat();
     int getChat();
-    void setChat(int);
-    
+    void setChat(int);    
     void eliminarLinksMensajes();
-    bool esDelUsuario(Usuarios);
+    bool esDelUsuario();
     int getCantidadMensaje();
-    bool pertPropUsuario(Propiedad,Usuarios);
+    bool pertPropUsuario();
     dtMensajes ** getUltimosCinco();
     void enviaMensaje(string);
 
 private: 
-    //Mensaje * msje;
+    ICollection * IMensajes;
 
 };
 

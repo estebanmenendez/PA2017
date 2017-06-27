@@ -53,7 +53,7 @@ using namespace std;
         virtual dtMensajes * listaUltimosCincoMensajes() = 0;
         virtual void seleccionaMensaje(string) = 0;
         virtual void agregaMensaje(string,string) = 0;
-        virtual dtPropiedadDisponible * listaPropiedadesDisponibles() = 0;
+        virtual Lista * listaPropiedadesDisponibles() = 0;
         virtual dtPropiedadInmobiliaria * seleccionaPropiedadDisponible(string) = 0;
         virtual void altaInteresado (string,string,int,string) = 0;
         virtual void altaEdificio(string,int,float) = 0;
@@ -61,7 +61,7 @@ using namespace std;
         virtual void altaPropiedadCasa(dtPropiedadCasa*) = 0;
         virtual void altaPropiedadApto(dtPropiedadApto*) = 0;
         virtual void eliminarProp(string) = 0;
-        
+        //virtual Lista* consultarPropiedadDisponible()=0;
     };
 
 

@@ -12,8 +12,7 @@
  */
 
 #include "PropInmo.h"
-#include "Venta.h"
-#include "Alquiler.h"
+
 
 using namespace std;
 
@@ -27,10 +26,28 @@ PropInmo::PropInmo(const PropInmo& orig) {
 PropInmo::~PropInmo() {
 }
 
-int PropInmo::getCantidadMensajes(Usuarios){
-	
+int PropInmo::getCantidadMensajes(){
+    int cantMensajes= 0;
+    IIterator * it=IChatPropInmo->iterator();
+    while (it->hasNext()) {
+        Chat *ch=dynamic_cast<Chat*>(it->getCurrent());
+        cantMensajes += ch->getCantidadMensaje();
+        it->next();
+    }
+    delete it;
+    return cantMensajes;
+    
 }
-
+string PropInmo ::esAlquileroVenta(){
+if(this->aviPropInmo[0]->esVenta())
+    return "V";
+if(this->aviPropInmo[1]->esVenta())
+    return "V";
+if(this->aviPropInmo[0]->esAlquiler())
+    return "A";
+if(this->aviPropInmo[1]->esAlquiler())
+    return "A";
+}
 void PropInmo::enviarMensaje(Propiedad * propiedad, string mensaje){
 	
 }

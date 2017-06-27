@@ -12,6 +12,7 @@
  */
 #include"Usuarios.h"
 #include"dtDireccion.h"
+#include"Propiedad.h"
 #include"IDictionary.h"
 #include"PropInmo.h"
 
@@ -31,6 +32,7 @@ class Inmobiliaria : public Usuarios{
         string getTipo();
         string getPwd();
         string getEmail();
+        int cantMensajesPropiedad(string);
         
         void altaPropEnInmob(Propiedad *p);
 };

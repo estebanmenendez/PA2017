@@ -11,20 +11,23 @@
  * Created on 9 de junio de 2017, 06:46 PM
  */
 
+#ifndef PROPIEDAD_H
+#define PROPIEDAD_H
+
+
 #include <string.h>
 #include <stdio.h>
 #include <iostream>
+//#include"Inmobiliaria.h"
 #include"ICollectible.h"
 #include"dtDireccion.h"
-
 #include"dtPropiedadMensaje.h"
 #include"dtMensajes.h"
 #include"dtPropiedad.h"
 #include"dtPropiedadCasa.h"
 #include"dtPropiedadApto.h"
+#include "dtPropiedadDisponible.h"
 
-#ifndef PROPIEDAD_H
-#define PROPIEDAD_H
 
 using namespace std;
 
@@ -39,13 +42,12 @@ public:
   void esCasaP();
   void esAptoP();
   bool perteneceInmobiliaria();
-  dtPropiedadMensaje * getPropiedad( );
-  dtMensajes* getUltimosCinco( );
+  dtPropiedadMensaje * getPropiedad();
+  dtMensajes* getUltimosCinco();
   void eliminarLinksPropInmo();
   string getCodigoProp();
-  //dtPropiedad** getPropiedad();
-//  Casa * getMetrosVerdes();
-    
+  dtPropiedadDisponible* getPropiedadDisponible(Usuarios *usu);
+
 private:
     string codigoProp;
     int cantAmbientes;
@@ -59,9 +61,6 @@ private:
 //    // link con Prop-Inmo  
 //    
 //    PropInmo* propinmo;
-//
-
 };
-
-#endif /* PROPIEDAD_H */
+#endif	// PROPIEDAD_H
 

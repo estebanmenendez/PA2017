@@ -11,6 +11,8 @@
  * Created on 9 de junio de 2017, 06:33 PM
  */
 
+#include <stdexcept>
+
 #include "Departamento.h"
 
 Departamento::Departamento() {
@@ -41,9 +43,9 @@ IIterator *it=IZona->getIteratorObj();
     StringKey *sk= new StringKey(letraZona);
     Zona *z=dynamic_cast<Zona*>(IZona->find(sk));
     if(z!=NULL)
-        return z;   
+    return z;   
     else 
-        throw invalid_argument("No existe esa Zona");
+     throw invalid_argument("No existe esa Zona");
     }
     
     

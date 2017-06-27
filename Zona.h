@@ -17,11 +17,12 @@
 #include"IDictionary.h"
 #include"Propiedad.h"
 #include"Usuarios.h"
+#include"Interesado.h"
 #include"dtZonas.h"
 #include"dtPropiedadApto.h"
 #include"dtPropZonas.h"
 #include"dtPropiedadMensaje.h"
-#include"Usuarios.h"
+
 #include"Lista.h"
 
 
@@ -35,7 +36,7 @@ public:
     Zona();
     Zona(const Zona& orig);
     virtual ~Zona();
-    
+    Lista * listaPropDisponible(Usuarios *);
     dtZonas* getZonas();
     dtPropZonas getPropZonaDpto(Usuarios);
     Propiedad getPropiedad();
@@ -44,12 +45,4 @@ public:
     string getNombreZona() const;
     void setCodigoZona(string codigoZona);
     string getCodigoZona() const;
-    void altaPropiedad(Propiedad *, StringKey *);
-private:
-    string codigoZona;
-    string nombreZona;
-    IDictionary * IPropiedad;
-};
-
-#endif /* ZONA_H */
-
+    Propiedad *seleccionaPropDisponible(string codprop);

@@ -4,22 +4,19 @@
  * and open the template in the editor.
  */
 
-/* 
- * File:   Usuarios.h
- * Author: ernesto
- *
- * Created on 9 de junio de 2017, 05:41 PM
- */
+
 
 #include"ICollectible.h"
+#include "IDictionary.h"
+#ifndef USUARIOS_H
+#define USUARIOS_H
+
 #include"Propiedad.h"
 #include<string.h>
 #include<stdio.h>
 #include<iostream>
 
 
-#ifndef USUARIOS_H
-#define USUARIOS_H
 
 
 
@@ -29,7 +26,7 @@ class Usuarios :public ICollectible {
 private:
     string email;
     string pwd;
-    
+    IDictionary * IPropInmo;
 public:
     Usuarios* getUsuario();
     bool esInteresado();
@@ -39,6 +36,11 @@ public:
     
     Usuarios();
     virtual ~Usuarios();
+    string getAlquilerOVenta(string codProp);
     
 };
-#endif /* USUARIOS_H */
+
+
+#endif	// USUARIOS_H
+
+
