@@ -6,15 +6,16 @@
  * Created on 9 de junio de 2017, 07:36 PM
  */
 
+
+#ifndef DTPROPIEDADAPTO_H
+#define DTPROPIEDADAPTO_H
+
+
 #include <string.h>
 #include <stdio.h>
 #include <iostream>
 #include "dtDireccion.h"
 #include "ICollection.h"
-
-
-#ifndef DTPROPIEDADAPTO_H
-#define DTPROPIEDADAPTO_H
 
 using namespace std;
 
@@ -50,4 +51,9 @@ class dtPropiedadApto:public ICollectible {
 };
 
 
-#endif /* DTPROPIEDADAPTO_H */
+
+
+
+
+#endif	// DTPROPIEDADAPTO_H
+

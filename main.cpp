@@ -41,6 +41,7 @@ void altaInteresado();
 void altaEdificio();
 void altaPropiedad();
 dtPropiedad consultarPropiedad();
+Lista * consultarPropiedadDisponible();
 void modificarPropiedad();
 void eliminarPropiedad();
 void enviarMsjInteresado();
@@ -117,14 +118,71 @@ int administradorOpciones(string us, string pwd){
     adminOpciones(opAdmin);
 
 }
+Lista consultarPropiedadDisponible(){
+     string letraDpto, codigoZona,codigoProp;
+    //Departamento *depto;
+     
+    
+    cout << "Caso Uso Consultar Propiedad Interesado\n";
+    
+    Fabrica* f = Fabrica::getInstance();
+    IContProp * i = f->getContProp();
+    ICollection* colDtDep= NULL;
+   
+    try{
+    colDtDep = i->listaDepartamentos();
+    
+    IIterator *dt =colDtDep->iterator();
+    cout<<"Departamentos Disponibles\n";
+    
+    while(dt->hasNext()){
+        dtDepartamento *dtD=dynamic_cast<dtDepartamento*>(dt->getCurrent());
+        cout<<dtD->getletraDepartamento()<<"-"<<dtD->getnombreDepartamento()<<"\n";
+        dt->next();        
+    }
+    cout<<"Elegir Letra Departamento\n";
+    cin>>letraDpto;
+    i->seleccionarDepartamentos(letraDpto);
+    ICollection* colDtZona= NULL;
+    colDtZona= i->listaZonasDepartamentos();
+    IIterator *dtZ =colDtZona->iterator();
+    cout<<"Zonas Disponibles\n";
+    while(dtZ->hasNext()){
+        dtZonas *dtZona=dynamic_cast<dtZonas*>(dtZ->getCurrent());
+        cout<<dtZona->getCodigoZona()<<"-"<<dtZona->getNombreZona()<<"\n";
+        dtZ->next();        
+    }
+    
+    cout<<"Elegir Código Zona\n";
+    cin>>codigoZona;
+    i->seleccionaZona(codigoZona);
 
+    ICollection* colDtPropDispo=NULL;
+    colDtPropDispo=i->listaPropiedadesDisponibles();
+    IIterator *dtprop=colDtPropDispo->iterator();
+    
+    while (dtprop->hasNext()) {
+        dtPropiedadDisponible* dtpro=dynamic_cast<dtPropiedadDisponible*>(dtprop->getCurrent());
+        cout<<dtpro->getCodigoProp()<<"-"<<dtpro->getAlquilerOVenta();
+        dtprop->next();
+
+        }
+    cout<<"Elegir Código Propiedad\n";
+    cin>>codigoProp;
+    i->seleccionaPropiedadDisponible(codigoProp);
+       
+    }
+  
+
+
+}
+void inmobiliariaOpciones(string us, string pwd){
 int inmobiliariaOpciones(string us, string pwd){
     string op="s";
     string confPwd;
     Fabrica* f = Fabrica::getInstance();
     IContUsuario * isInmo = f->getContUsuario();  //EJEMPLO
-    
-    cout<<"\n Inicia sesion por primera vez?";
+   cout<<"\n Inicia sesion por primera vez?";
     while(op=="s"){ 
         try{
             cin>>op;
@@ -577,10 +635,10 @@ void eliminarPropiedad(){
     
 }
 
-dtPropiedad consultarPropiedad(){
+Lista* consultarPropiedad(){
     Fabrica *f = Fabrica::getInstance();
     IContProp *i=f->getContProp();
-    
+    i->listaPropiedadesDisponibles();
 }
 
 void altaEdificio(){

@@ -11,6 +11,10 @@
  * Created on 9 de junio de 2017, 06:46 PM
  */
 
+#ifndef PROPIEDAD_H
+#define PROPIEDAD_H
+
+
 #include <string.h>
 #include <stdio.h>
 #include <iostream>
@@ -22,10 +26,8 @@
 #include"dtPropiedad.h"
 #include"dtPropiedadCasa.h"
 #include"dtPropiedadApto.h"
+#include "dtPropiedadDisponible.h"
 
-
-#ifndef PROPIEDAD_H
-#define PROPIEDAD_H
 
 using namespace std;
 
@@ -35,17 +37,17 @@ public:
     Propiedad(dtPropiedadCasa);
     Propiedad(dtPropiedadApto);
     Propiedad(const Propiedad& orig);
-    virtual ~Propiedad();    
-    void esCasaP();
-    void esAptoP();
-    bool perteneceInmobiliaria();
-    dtPropiedadMensaje* getPropiedad(int);
-    dtMensajes* getUltimosCinco( );
-    void eliminarLinksPropInmo();
-    string getCodigoProp();
-    //dtPropiedad** getPropiedad();
-    //  Casa * getMetrosVerdes();
+    virtual ~Propiedad();
     
+  void esCasaP();
+  void esAptoP();
+  bool perteneceInmobiliaria();
+  dtPropiedadMensaje * getPropiedad();
+  dtMensajes* getUltimosCinco();
+  void eliminarLinksPropInmo();
+  string getCodigoProp();
+  dtPropiedadDisponible* getPropiedadDisponible(Usuarios *usu);
+
 private:
     string codigoProp;
     int cantAmbientes;
@@ -60,5 +62,5 @@ private:
 //    
 //    PropInmo* propinmo;
 };
+#endif	// PROPIEDAD_H
 
-#endif /* PROPIEDAD_H */

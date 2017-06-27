@@ -55,3 +55,7 @@ void dtPropiedadDisponible::setCodigoProp(string codigoProp) {
 string dtPropiedadDisponible::getCodigoProp() const {
     return codigoProp;
 }
+  dtPropiedadDisponible * dtPropiedadDisponible::getPropiedadDisponible(Usuarios* usu){
+ 
+  
+  }

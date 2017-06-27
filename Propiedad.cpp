@@ -12,7 +12,10 @@
  */
 
 #include "Propiedad.h"
-
+#include "dtPropiedadCasa.h"
+#include "PropInmo.h"
+#include "Alquiler.h"
+#include "Venta.h"
 
 
 

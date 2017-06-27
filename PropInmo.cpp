@@ -38,7 +38,16 @@ int PropInmo::getCantidadMensajes(){
     return cantMensajes;
     
 }
-
+string PropInmo ::esAlquileroVenta(){
+if(this->aviPropInmo[0]->esVenta())
+    return "V";
+if(this->aviPropInmo[1]->esVenta())
+    return "V";
+if(this->aviPropInmo[0]->esAlquiler())
+    return "A";
+if(this->aviPropInmo[1]->esAlquiler())
+    return "A";
+}
 void PropInmo::enviarMensaje(Propiedad * propiedad, string mensaje){
 	
 }

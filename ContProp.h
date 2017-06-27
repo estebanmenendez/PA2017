@@ -66,7 +66,7 @@ ContProp(const ContProp& orig);
         dtMensajes * listaUltimosCincoMensajes();
         void seleccionaMensaje(string);
         void agregaMensaje(string,string);
-        dtPropiedadDisponible * listaPropiedadesDisponibles();
+        Lista * listaPropiedadesDisponibles(Usuarios*);
         dtPropiedadInmobiliaria * seleccionaPropiedadDisponible(string);
         void altaInteresado (string,string,int,string);
         void altaEdificio(string,int,float);
