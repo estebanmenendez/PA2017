@@ -110,38 +110,20 @@ void ContProp::altaEdificio(string nombre, int pisos, float gastosComunes){
     
     
 void ContProp::altaPropiedadCasa(dtPropiedadCasa* propC){
-    
-     Propiedad* p= new Propiedad(*propC);
-     StringKey* sk=new StringKey(p->getCodigoProp());//creo la clave de edificio que es el nombre
-     if(IPropiedad->member(sk)!=true)//pregunto si ya existe
-     IPropiedad->add(p,sk);//agrego el objeto mas la clave a la coleccion dicionario
-     else throw new invalid_argument("Propiedad ya existente");
-     
-     string email;
-     //Inmobiliaria->getEmail();
-     PropInmo* pi = new PropInmo();
-     //pi->altaPropEnInmob(p,email);
-     
-     
-     Aviso* av = new Aviso();
-     if(propC->getVentaAlq())
-     av->crearAvisoProp();   
-     
-     
-     
-     
-     
+
+    Propiedad* p= new Propiedad(*propC);
+    StringKey* sk=new StringKey(p->getCodigoProp());
+    zona->altaPropiedad(p, sk);
+    dynamic_cast<Inmobiliaria*>(usuario)->altaPropEnInmob(p);
+
 }
 
 void ContProp::altaPropiedadApto(dtPropiedadApto* propA){
     
-     Propiedad* p= new Propiedad(*propA);
-     StringKey* sk=new StringKey(p->getCodigoProp());//creo la clave de edificio que es el nombre
-     if(IPropiedad->member(sk)!=true)//pregunto si ya existe
-     IPropiedad->add(p,sk);//agrego el objeto mas la clave a la coleccion dicionario
-     else throw new invalid_argument("Propiedad ya existente");
-     
-     
+    Propiedad* p= new Propiedad(*propA);
+    StringKey* sk=new StringKey(p->getCodigoProp());
+    zona->altaPropiedad(p, sk);
+
                 
 }
 

@@ -344,7 +344,7 @@ void altaPropiedad(){
     Lista* listaZona;
     
     dtEdificio edif;
-    string letraDep, codigoZona,ciudad, calle, numero,nEdif;
+    string letraDep, codigoZona,ciudad, calle, numero,nEdif, VoA;
     int cAmb,cBanios,cDorm;
     float mEdif,mVerdes,valor;
     char opt,garage;
@@ -388,10 +388,17 @@ void altaPropiedad(){
     cin>>mEdif;
     cout<<"Ingrese Metros Verdes: \n";
     cin>>mVerdes;
-    cout<<"Indique si  Venta o Alquiler : A/V \n";
-    cin>>ventAlq; 
-    cout<<"Ingrese Valor de Venta/ Alquiler \n";
+    cout<<"Indique si  Venta o Alquiler : V/A \n";
+    cin>> VoA;
+    if (VoA == "A"||VoA=="a"){
+    ventAlq = true;
+    cout<<"Ingrese Valor del Alquiler \n";
     cin>>valor; 
+    }else{
+    ventAlq = false;
+    cout<<"Ingrese Valor de Venta \n";
+    cin>>valor;
+    }
     dtPropC = new dtPropiedadCasa(cAmb,cBanios,cDorm,lgarage,dir,mEdif,mVerdes,valor,ventAlq);
     i->altaPropiedadCasa(dtPropC);
    

@@ -39,7 +39,6 @@ using namespace std;
         Usuarios* usuario;
 
         IDictionary * IDepartamento;
-        IDictionary * IPropiedad;
         IDictionary * IEdificio;
         ContUsuario * ControladorUsuario;
 
