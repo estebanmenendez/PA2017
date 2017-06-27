@@ -22,6 +22,7 @@
 #include"dtPropiedad.h"
 #include"dtPropiedadCasa.h"
 #include"dtPropiedadApto.h"
+#include "dtPropiedadDisponible.h"
 
 #ifndef PROPIEDAD_H
 #define PROPIEDAD_H
@@ -43,7 +44,7 @@ public:
   dtMensajes* getUltimosCinco(Usuarios usu);
   void eliminarLinksPropInmo();
   string getCodigoProp();
-  //dtPropiedad** getPropiedad();
+  dtPropiedadDisponible* getPropiedadDisponible(Usuarios *usu);
 //  Casa * getMetrosVerdes();
     
 private:

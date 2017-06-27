@@ -12,6 +12,7 @@
  */
 
 #include "Usuarios.h"
+#include "PropInmo.h"
 
 Usuarios::Usuarios(){
     
@@ -34,4 +35,12 @@ Usuarios::~Usuarios(){
     }
     string Usuarios::getTipo(){
         
+    }
+    
+    string Usuarios::getAlquilerOVenta(string codProp){
+        IIterator *it = IPropInmo->getIteratorObj();
+        StringKey*sk=new StringKey(codProp);
+        PropInmo *c=dynamic_cast<PropInmo*>(IPropInmo->find(sk));
+       return c->esAlquileroVenta();
+                    
     }

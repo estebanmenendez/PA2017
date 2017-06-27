@@ -12,6 +12,7 @@
  */
 
 #include"ICollectible.h"
+#include "IDictionary.h"
 #include<string.h>
 #include <stdio.h>
 #include <iostream>
@@ -27,7 +28,7 @@ class Usuarios :public ICollectible {
 private:
     string email;
     string pwd;
-    
+    IDictionary * IPropInmo;
 public:
     Usuarios* getUsuario();
     bool esInteresado();
@@ -36,6 +37,7 @@ public:
     string getTipo();
     Usuarios();
     virtual ~Usuarios();
+    string getAlquilerOVenta(string codProp);
     
 };
 #endif /* USUARIOS_H */

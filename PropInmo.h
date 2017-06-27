@@ -32,7 +32,7 @@ public:
 	void altaPropEnInmob(Propiedad*, string);
 	void eliminarLinks();
 	dtAvisoPropiedad * getAvisos();
-    
+        string esAlquileroVenta();
         PropInmo();
         PropInmo(const PropInmo& orig);
         virtual ~PropInmo();

@@ -15,14 +15,16 @@
 #include <stdio.h>
 #include <iostream>
 #include "dtDireccion.h"
-
+#include "ICollectible.h"
+#include "Usuarios.h"
+#include "ICollectible.h"
 #ifndef DTPROPIEDADDSIPONIBLE_H
 #define DTPROPIEDADDSIPONIBLE_H
 
 using namespace std;
 
-class dtPropiedadDisponible{
-    public:
+class dtPropiedadDisponible:public ICollectible{
+public:
         dtPropiedadDisponible();
         dtPropiedadDisponible(const dtPropiedadDisponible& orig);
         virtual ~dtPropiedadDisponible();
@@ -37,7 +39,7 @@ class dtPropiedadDisponible{
         dtDireccion* getDireccionProp() const;
         void setCodigoProp(string codigoProp);
         string getCodigoProp() const;
-        
+        dtPropiedadDisponible * getPropiedadDisponible(Usuarios*);
     private:
         string codigoProp;
         dtDireccion* direccionProp;

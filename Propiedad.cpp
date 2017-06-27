@@ -13,6 +13,9 @@
 
 #include "Propiedad.h"
 #include "dtPropiedadCasa.h"
+#include "PropInmo.h"
+#include "Alquiler.h"
+#include "Venta.h"
 
 
 
@@ -67,3 +70,7 @@ string Propiedad::getCodigoProp(){
   return this->codigoProp;
 }
 //Casa * Propiedad::getMetrosVerdes(){}
+
+dtPropiedadDisponible * Propiedad::getPropiedadDisponible(Usuarios *usu){
+    
+return new dtPropiedadDisponible(codigoProp,direccionProp,usu->getAlquilerOVenta(codigoProp));}

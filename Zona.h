@@ -35,7 +35,7 @@ public:
     Zona();
     Zona(const Zona& orig);
     virtual ~Zona();
-    
+    Lista * listaPropDisponible(Usuarios *);
     dtZonas* getZonas();
     dtPropZonas getPropZonaDpto(Usuarios);
     Propiedad getPropiedad();
@@ -44,6 +44,7 @@ public:
     string getNombreZona() const;
     void setCodigoZona(string codigoZona);
     string getCodigoZona() const;
+    Propiedad *seleccionaPropDisponible(string codprop);
 private:
     string codigoZona;
     string nombreZona;
