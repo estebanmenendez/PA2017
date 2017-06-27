@@ -50,7 +50,6 @@ using namespace std;
         void seleccionarDepartamentos(string);
         Lista * listaZonasDepartamentos();
         void seleccionaZona(string);
-
         Lista * listaPropiedades();
         dtPropiedadMensaje * seleccionaPropiedad(string,int);
         void enviarMensaje(string);

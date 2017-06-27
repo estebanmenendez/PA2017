@@ -12,6 +12,8 @@
  */
 
 #include "PropInmo.h"
+#include "Venta.h"
+#include "Alquiler.h"
 
 using namespace std;
 
@@ -38,8 +40,21 @@ void PropInmo::eliminarLinks(){
 	
 }
 
+
 dtAvisoPropiedad* PropInmo::getAvisos(){
 	
 }
 
-void PropInmo::crearAvisoProp(){}
+void PropInmo::crearAvisoProp(bool ventAlq,float valor){
+     Aviso* pi= new Aviso();
+     if (ventAlq=true){
+     
+     pi = aviPropInmo [1] = new Alquiler();
+     dynamic_cast<Alquiler*>(prop)->altaAlquiler(valor);
+     }else{
+      
+     pi = aviPropInmo [2] = new Venta();
+     dynamic_cast<Venta*>(prop)->altaVenta(valor);
+     }
+}
+   

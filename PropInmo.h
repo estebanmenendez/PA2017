@@ -29,7 +29,7 @@ public:
         
 	int getCantidadMensajes(Usuarios);
 	void enviarMensaje(Propiedad*, string);
-	void altaPropEnInmob(Propiedad*, string);
+	void altaPropEnInmob(Propiedad*);
 	void eliminarLinks();
 	dtAvisoPropiedad * getAvisos();
     
@@ -37,7 +37,7 @@ public:
         PropInmo(const PropInmo& orig);
         virtual ~PropInmo();
         
-        void crearAvisoProp();
+        void crearAvisoProp(bool,float);
 
 
         

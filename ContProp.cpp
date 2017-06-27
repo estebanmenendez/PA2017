@@ -123,7 +123,7 @@ void ContProp::altaPropiedadApto(dtPropiedadApto* propA){
     Propiedad* p= new Propiedad(*propA);
     StringKey* sk=new StringKey(p->getCodigoProp());
     zona->altaPropiedad(p, sk);
-
+    dynamic_cast<Inmobiliaria*>(usuario)->altaPropEnInmob(p);
                 
 }
 
