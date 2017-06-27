@@ -71,17 +71,18 @@ void ContProp::seleccionaZona(string letraZona){
 
 
 Lista * ContProp::listaPropiedades(){
-
     Lista* resProp = new Lista();
     resProp = zona->listaPropiedades(this->usuario);
 
-
-
-
 }
 
-dtPropiedadMensaje * ContProp::seleccionaPropiedad(string,int){}
-void ContProp::enviarMensaje(string){}
+Lista * ContProp::seleccionaPropiedad(string){
+    
+    
+}
+
+
+//void ContProp::enviarMensaje(string){}
 string ContProp::ingesrarCodProp(string){}
 void ContProp::modifPropCasa(dtPropiedadCasa){}
 void ContProp::modifPropApto(dtPropiedadApto){}
@@ -92,6 +93,7 @@ void ContProp::seleccionaMensaje(string){}
 void ContProp::agregaMensaje(string,string){}
 dtPropiedadDisponible * ContProp::listaPropiedadesDisponibles(){}
 dtPropiedadInmobiliaria * ContProp::seleccionaPropiedadDisponible(string){}
+
 void ContProp::altaInteresado (string nombre, string apellido, int edad, string email){
     Interesado * i = new Interesado(nombre, apellido, edad, email);
     
