@@ -90,10 +90,8 @@ bool ContUsuario::verificarContrasena(string pwd , string pwdConfirmacion ){
     }
 }
 void ContUsuario::activarUsuario(string pwd ,string email){
-    
-    Usuarios * u = new Usuarios(pwd, email);
+    Usuarios * u = new Usuarios();
     StringKey *sk = new StringKey(email);
-    
     IUsuario->add(u, sk);
     
 }

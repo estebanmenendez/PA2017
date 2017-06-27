@@ -82,7 +82,7 @@ Lista * ContProp::seleccionaPropiedad(string){
 }
 
 
-void ContProp::enviarMensaje(string){}
+//void ContProp::enviarMensaje(string){}
 string ContProp::ingesrarCodProp(string){}
 void ContProp::modifPropCasa(dtPropiedadCasa){}
 void ContProp::modifPropApto(dtPropiedadApto){}

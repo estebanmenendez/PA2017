@@ -41,28 +41,21 @@ using namespace std;
         IDictionary * IDepartamento;
         IDictionary * IEdificio;
         ContUsuario * ControladorUsuario;
+                
+ public:
+        
+ContProp();
 
-    public:
-        ContProp();
-        ContProp(const ContProp& orig);
-        virtual ~ContProp();
-<<<<<<< HEAD
-        Lista * listaDepartamentos();
+ContProp(const ContProp& orig);
+
+~ContProp();
+       Lista * listaDepartamentos();
         void seleccionarDepartamentos(string);
         Lista * listaZonasDepartamentos();
-        void seleccionaZona(string);
-
         Lista * listaPropiedades();
+        void seleccionaZona(string letrazona);
         Lista * seleccionaPropiedad(string);
-=======
-        ListDicc * listaDepartamentos();
-        Departamento* seleccionarDepartamentos(string);
-        ListDicc * listaZonasDepartamentos(string);
-        dtPropiedadMensaje * listaPropiedades(string);
-        Zona* seleccionaZona(string letrazona);
-        dtPropiedadMensaje * seleccionaPropiedad(string,int);
->>>>>>> 78e491e29d971aaaabca1d4a5daea0cb41feb28e
-        void enviarMensaje(string);
+
         string ingesrarCodProp(string);
         void modifPropCasa(dtPropiedadCasa);
         void modifPropApto(dtPropiedadApto);
@@ -83,7 +76,6 @@ using namespace std;
     };
 
 #endif /* CONTPROP_H */
-
 
 
 

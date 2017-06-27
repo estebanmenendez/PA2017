@@ -42,6 +42,7 @@ class ContUsuario : public IContUsuario {
     private:
         
     IDictionary * IUsuario;
+    Usuarios* usuLog;
 
 
       

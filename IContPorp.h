@@ -44,7 +44,7 @@ using namespace std;
         virtual void seleccionaZona(string) = 0;
         virtual Lista * listaPropiedades() = 0;
         virtual Lista * seleccionaPropiedad(string) = 0;
-        virtual void enviarMensaje(string) = 0;
+        //virtual void enviarMensaje(string) = 0;
         virtual string ingesrarCodProp(string) = 0;
         virtual void modifPropCasa(dtPropiedadCasa) = 0;
         virtual void modifPropApto(dtPropiedadApto) = 0;

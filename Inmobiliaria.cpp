@@ -34,6 +34,7 @@ void Inmobiliaria::altaPropEnInmob(Propiedad *p){
      StringKey* sk=new StringKey(p->getCodigoProp());//creo la clave de edificio que es el nombre
      if(IPropInmo->member(sk)!=true){//pregunto si ya existe
      IPropInmo->add(pi,sk);//agrego el objeto mas la clave a la coleccion dicionario
+     }
      else throw new invalid_argument("Propiedad en Inmobiliaria ya existente");  
          
 }
