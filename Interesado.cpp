@@ -51,3 +51,14 @@ string Interesado::getEmail(){
     delete it;
     return cantMensajes;
   }
+  int Interesado::cantMensajesPropiedad(string codProp){
+    int cantMensajes= 0;
+    IIterator * it=IChatInteresado->iterator();
+    while (it->hasNext()) {
+        Chat *ch=dynamic_cast<Chat*>(it->getCurrent());
+        cantMensajes += ch->getCantidadMensaje();
+        it->next();
+    }
+    delete it;
+    return cantMensajes;
+  }

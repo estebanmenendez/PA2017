@@ -101,14 +101,49 @@ Lista * ContProp::seleccionaPropiedad(string codigoProp){
   
 }
 
+<<<<<<< HEAD
+dtPropiedadMensaje * ContProp::seleccionaPropiedad(string,int){
+=======
+<<<<<<< HEAD
 dtPropiedadMensaje * ContProp::seleccionaPropiedad(string,int){
 
 }
 void ContProp::enviarMensaje(string){}
+=======
+>>>>>>> origin/master
+
+<<<<<<< HEAD
+}
+void ContProp::enviarMensaje(string){}
 string ContProp::ingesrarCodProp(string codigo){}
+=======
+//void ContProp::enviarMensaje(string){}
+>>>>>>> fe34853a63c88723e46550e1d1017a7e36ef272d
+>>>>>>> origin/master
 string ContProp::ingesrarCodProp(string){}
+<<<<<<< HEAD
+=======
+void ContProp::modifPropCasa(dtPropiedadCasa){}
+void ContProp::modifPropApto(dtPropiedadApto){}
+dtConversaInmobiliaria * ContProp::listaConversacionesInmobiliarias(){}
+void ContProp::seleccionaConversacion(string){}
+dtMensajes * ContProp::listaUltimosCincoMensajes(){}
+void ContProp::seleccionaMensaje(string){}
+void ContProp::agregaMensaje(string,string){}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/master
 dtPropiedadDisponible * ContProp::listaPropiedadesDisponibles(){}
 dtPropiedadInmobiliaria * ContProp::seleccionaPropiedadDisponible(string){}
+<<<<<<< HEAD
+=======
+>>>>>>> fe34853a63c88723e46550e1d1017a7e36ef272d
+
+void ContProp::altaInteresado (string nombre, string apellido, int edad, string email){
+    Interesado * i = new Interesado(nombre, apellido, edad, email);
+    
+}
+>>>>>>> origin/master
 
 void ContProp::altaEdificio(string nombre, int pisos, float gastosComunes){
     
