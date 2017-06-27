@@ -61,3 +61,4 @@ int Inmobiliaria::cantMensajesPropiedad(string codProp){
     //delete it;
     return cantMensajes;
     }
+    

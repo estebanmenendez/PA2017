@@ -74,7 +74,7 @@ Lista * Zona::listaPropDisponible(Usuarios *usu){
     Lista *resul=new Lista();
     while (it->hasNext()) {
         
-        dtPropiedadDisponible*p= dynamic_cast<dtPropiedadDisponible*>(it->getCurrent());
+        dtPropiedadDisponible* p= dynamic_cast<dtPropiedadDisponible*>(it->getCurrent());
        
         resul->add(p->getPropiedadDisponible(usu));
     
@@ -83,12 +83,12 @@ Lista * Zona::listaPropDisponible(Usuarios *usu){
     return resul;
 }
 
-Propiedad * Zona::seleccionaPropDisponible(string codprop){
+dtPropiedadInmobiliaria * Zona::seleccionaPropDisponible(string codprop){
      IIterator *it=IPropiedad->getIteratorObj();
     StringKey *sk=new StringKey(codprop);
     Propiedad *p=dynamic_cast<Propiedad*>(IPropiedad->find(sk));
     if(p!=NULL){
-        return p;
+        return p->getPropiedadDisponible();
     }
     else
     throw invalid_argument("No existe esa Propiedad");

@@ -33,6 +33,7 @@ class Inmobiliaria : public Usuarios{
         string getPwd();
         string getEmail();
         int cantMensajesPropiedad(string);
+        string getAlquilerOVenta(string codProp);
         
         void altaPropEnInmob(Propiedad *p);
 };

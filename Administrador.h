@@ -13,6 +13,7 @@ class Administrador : public Usuarios{
         Administrador();
         Administrador(string, string);
         virtual ~Administrador();      
+        
         //int cantMensajesPropiedad(string);
        
    

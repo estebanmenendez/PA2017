@@ -31,5 +31,5 @@ string Administrador::getEmail(){
     return this->getEmail();
 }
 string Administrador::getPwd(){
-   return this->getPwd();
+   return this->getPwd();    
 }

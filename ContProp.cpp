@@ -59,18 +59,7 @@ void ContProp::seleccionarDepartamentos(string letraDepto){
 }
 
 dtPropiedadInmobiliaria * ContProp::seleccionaPropiedadDisponible(string letraProp){
-    IIterator *it=IPropiedad->getIteratorObj();
-    StringKey *sk=new StringKey(letraProp);
-    dtPropiedadDisponible *d=dynamic_cast<dtPropiedadDisponible*>(IPropiedad->find(sk));
-    if(d==NULL)throw invalid_argument("No esxiste la propiedad");
-    
-    delete it;
-
-    return d;
-         
-    
-   
-        
+    return zona->seleccionaPropDisponible(letraProp);      
 }
 
 Lista* ContProp::listaZonasDepartamentos(){   
@@ -84,8 +73,9 @@ void ContProp::seleccionaZona(string letraZona){
 }
 
 Lista * ContProp::listaPropiedadesDisponibles(){
+    
     Lista *resul=new Lista();
-   return resul=zona->listaPropDisponible(usu);
+   return resul=zona->listaPropDisponible(this->usuario);
 }
 Lista * ContProp::listaPropiedades(){
     Lista* resProp = new Lista();
@@ -101,49 +91,24 @@ Lista * ContProp::seleccionaPropiedad(string codigoProp){
   
 }
 
-<<<<<<< HEAD
-dtPropiedadMensaje * ContProp::seleccionaPropiedad(string,int){
-=======
-<<<<<<< HEAD
-dtPropiedadMensaje * ContProp::seleccionaPropiedad(string,int){
-
-}
-void ContProp::enviarMensaje(string){}
-=======
->>>>>>> origin/master
-
-<<<<<<< HEAD
-}
-void ContProp::enviarMensaje(string){}
-string ContProp::ingesrarCodProp(string codigo){}
-=======
 //void ContProp::enviarMensaje(string){}
->>>>>>> fe34853a63c88723e46550e1d1017a7e36ef272d
->>>>>>> origin/master
+
 string ContProp::ingesrarCodProp(string){}
-<<<<<<< HEAD
-=======
+
 void ContProp::modifPropCasa(dtPropiedadCasa){}
 void ContProp::modifPropApto(dtPropiedadApto){}
-dtConversaInmobiliaria * ContProp::listaConversacionesInmobiliarias(){}
+Lista * ContProp::listaConversacionesInmobiliarias(){}
 void ContProp::seleccionaConversacion(string){}
-dtMensajes * ContProp::listaUltimosCincoMensajes(){}
+Lista * ContProp::listaUltimosCincoMensajes(){}
 void ContProp::seleccionaMensaje(string){}
 void ContProp::agregaMensaje(string,string){}
-<<<<<<< HEAD
-=======
->>>>>>> origin/master
-dtPropiedadDisponible * ContProp::listaPropiedadesDisponibles(){}
-dtPropiedadInmobiliaria * ContProp::seleccionaPropiedadDisponible(string){}
-<<<<<<< HEAD
-=======
->>>>>>> fe34853a63c88723e46550e1d1017a7e36ef272d
+
 
 void ContProp::altaInteresado (string nombre, string apellido, int edad, string email){
     Interesado * i = new Interesado(nombre, apellido, edad, email);
     
 }
->>>>>>> origin/master
+
 
 void ContProp::altaEdificio(string nombre, int pisos, float gastosComunes){
     
@@ -154,7 +119,7 @@ void ContProp::altaEdificio(string nombre, int pisos, float gastosComunes){
     else throw new invalid_argument("Edificio ya existente");
 }
 
-    dtReporteInmobiliaria* ContProp::iniciarReporte(Inmobiliaria){}
+    Lista* ContProp::iniciarReporte(Inmobiliaria){}
     
     
 void ContProp::altaPropiedadCasa(dtPropiedadCasa* propC){

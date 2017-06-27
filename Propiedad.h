@@ -18,7 +18,8 @@
 #include <string.h>
 #include <stdio.h>
 #include <iostream>
-//#include"Inmobiliaria.h"
+#include"Lista.h"
+#include"Usuarios.h"
 #include"ICollectible.h"
 #include"dtDireccion.h"
 #include"dtPropiedadMensaje.h"
@@ -26,7 +27,7 @@
 #include"dtPropiedad.h"
 #include"dtPropiedadCasa.h"
 #include"dtPropiedadApto.h"
-#include "dtPropiedadDisponible.h"
+#include "dtPropiedadInmobiliaria.h"
 
 
 using namespace std;
@@ -42,11 +43,11 @@ public:
   void esCasaP();
   void esAptoP();
   bool perteneceInmobiliaria();
-  dtPropiedadMensaje * getPropiedad();
-  dtMensajes* getUltimosCinco();
+  dtPropiedadMensaje * getPropiedad(int);
+  Lista* getUltimosCinco();
   void eliminarLinksPropInmo();
   string getCodigoProp();
-  dtPropiedadDisponible* getPropiedadDisponible(Usuarios *usu);
+  dtPropiedadInmobiliaria* getPropiedadDisponible();
 
 private:
     string codigoProp;

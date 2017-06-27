@@ -1,5 +1,9 @@
 # Prerequisites
 *.d
+**/build
+**/dist
+**/nbproject
+**/
 
 # Compiled Object files
 *.slo

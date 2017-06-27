@@ -6,12 +6,12 @@
 
 
 
-#include"ICollectible.h"
-#include "IDictionary.h"
+
 #ifndef USUARIOS_H
 #define USUARIOS_H
-
-#include"Propiedad.h"
+#include"ICollectible.h"
+#include "IDictionary.h"
+//#include"Propiedad.h"
 #include<string.h>
 #include<stdio.h>
 #include<iostream>
@@ -28,19 +28,13 @@ private:
     string pwd;
     IDictionary * IPropInmo;
 public:
-    Usuarios* getUsuario();
-    bool esInteresado();
-    string getEmail();
-    string getPwd();
-    string getTipo();
+    //Usuarios* getUsuario();
+    virtual bool esInteresado();
     Usuarios();  
     virtual string getEmail();
     virtual string getPwd();
-    virtual string getTipo();
-    
-    Usuarios();
+    virtual string getTipo();    
     virtual ~Usuarios();
-    string getAlquilerOVenta(string codProp);
     
 };
 

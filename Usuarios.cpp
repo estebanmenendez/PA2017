@@ -12,5 +12,24 @@
  */
 
 #include "Usuarios.h"
+Usuarios::Usuarios(){
+    
+}
+Usuarios::~Usuarios(){
+    
+}
 
-#include "Inmobiliaria.h"
+ 
+    bool Usuarios::esInteresado(){
+        
+    }
+    string Usuarios::getEmail(){
+        
+    }
+    string Usuarios::getPwd(){
+        
+    }
+    string Usuarios::getTipo(){
+        
+    }
+    

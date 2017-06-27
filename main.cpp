@@ -41,8 +41,8 @@ void altaInmobiliaria();
 void altaInteresado();
 void altaEdificio();
 void altaPropiedad();
-dtPropiedad consultarPropiedad();
-Lista * consultarPropiedadDisponible();
+void consultarPropiedad();
+void consultarPropiedadDisponible();
 void modificarPropiedad();
 void eliminarPropiedad(); 
 void enviarMsjInteresado(); // HECHO 90%
@@ -53,9 +53,9 @@ dtReporteInmobiliaria obtenerReporteInmo();
 // MENU GENERAL DE OPCIONES ADMIN/INTER/INMO/CARGAR PRUEBA
 void opcionesGenerales(); 
 void cargaDatosPrueba();
-int administradorOpciones(string, string);
-int inmobiliariaOpciones(string, string);
-int interesadoOpciones(string, string);
+void administradorOpciones(string, string);
+void inmobiliariaOpciones(string, string);
+void interesadoOpciones(string, string);
 void adminOpciones(int opAdmin);
 void inmoOpciones(int opInmo);
 void interOpciones(int opInter);
@@ -92,7 +92,7 @@ void opcionesGenerales(){
     cout << "0 - Salir" << endl; 
 }
 
-int administradorOpciones(string us, string pwd){
+void administradorOpciones(string us, string pwd){
     Usuarios *usu;
     Fabrica* f = Fabrica::getInstance();
     IContUsuario * isAdmin = f->getContUsuario();  //EJEMPLO
@@ -119,7 +119,7 @@ int administradorOpciones(string us, string pwd){
     adminOpciones(opAdmin);
 
 }
-Lista consultarPropiedadDisponible(){
+void consultarPropiedadDisponible(){
      string letraDpto, codigoZona,codigoProp;
     //Departamento *depto;
      
@@ -172,13 +172,16 @@ Lista consultarPropiedadDisponible(){
     cin>>codigoProp;
     i->seleccionaPropiedadDisponible(codigoProp);
        
-    }
+    }catch(invalid_argument & e){
+            cout<<e.what();
+        } 
   
 
 
 }
+
+
 void inmobiliariaOpciones(string us, string pwd){
-int inmobiliariaOpciones(string us, string pwd){
     string op="s";
     string confPwd;
     Fabrica* f = Fabrica::getInstance();
@@ -220,7 +223,7 @@ int inmobiliariaOpciones(string us, string pwd){
     inmoOpciones(opInmo); 
 }
 
-int interesadoOpciones(string us, string pwd){
+void interesadoOpciones(string us, string pwd){
     string op="s";
     string confPwd;
     Fabrica* f = Fabrica::getInstance();
@@ -636,7 +639,7 @@ void eliminarPropiedad(){
     
 }
 
-Lista* consultarPropiedad(){
+void consultarPropiedad(){
     Fabrica *f = Fabrica::getInstance();
     IContProp *i=f->getContProp();
     i->listaPropiedadesDisponibles();

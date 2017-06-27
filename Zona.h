@@ -22,6 +22,7 @@
 #include"dtPropiedadApto.h"
 #include"dtPropZonas.h"
 #include"dtPropiedadMensaje.h"
+#include"dtPropiedadDisponible.h"
 
 #include"Lista.h"
 
@@ -45,4 +46,13 @@ public:
     string getNombreZona() const;
     void setCodigoZona(string codigoZona);
     string getCodigoZona() const;
-    Propiedad *seleccionaPropDisponible(string codprop);
+    dtPropiedadInmobiliaria *seleccionaPropDisponible(string codprop);    
+    void altaPropiedad(Propiedad *, StringKey *);
+    Lista* ultimosCincoMensajes(string codProp);
+private:
+    string codigoZona;
+    string nombreZona;
+    IDictionary * IPropiedad;
+};
+
+#endif /* ZONA_H */
