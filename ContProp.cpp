@@ -71,16 +71,17 @@ void ContProp::seleccionaZona(string letraZona){
 
 
 Lista * ContProp::listaPropiedades(){
-
     Lista* resProp = new Lista();
     resProp = zona->listaPropiedades(this->usuario);
 
-
-
-
 }
 
-dtPropiedadMensaje * ContProp::seleccionaPropiedad(string,int){}
+Lista * ContProp::seleccionaPropiedad(string){
+    
+    
+}
+
+
 void ContProp::enviarMensaje(string){}
 string ContProp::ingesrarCodProp(string){}
 void ContProp::modifPropCasa(dtPropiedadCasa){}

@@ -43,7 +43,7 @@ using namespace std;
        virtual Lista * listaZonasDepartamentos() = 0;
         virtual void seleccionaZona(string) = 0;
         virtual Lista * listaPropiedades() = 0;
-        virtual dtPropiedadMensaje * seleccionaPropiedad(string,int) = 0;
+        virtual Lista * seleccionaPropiedad(string) = 0;
         virtual void enviarMensaje(string) = 0;
         virtual string ingesrarCodProp(string) = 0;
         virtual void modifPropCasa(dtPropiedadCasa) = 0;

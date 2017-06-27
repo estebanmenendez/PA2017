@@ -53,7 +53,7 @@ using namespace std;
         void seleccionaZona(string);
 
         Lista * listaPropiedades();
-        dtPropiedadMensaje * seleccionaPropiedad(string,int);
+        Lista * seleccionaPropiedad(string);
         void enviarMensaje(string);
         string ingesrarCodProp(string);
         void modifPropCasa(dtPropiedadCasa);

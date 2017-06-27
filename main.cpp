@@ -440,9 +440,7 @@ void enviarMsjInmobiliaria(){}
 
 void enviarMsjInteresado(){
     string letraDpto, codigoZona,codigoProp;
-    //Departamento *depto;
-     
-    
+    //Departamento *depto;    
     cout << "Caso Uso Enviar Mensaje Interesado\n";
     
     Fabrica* f = Fabrica::getInstance();
@@ -496,6 +494,8 @@ void enviarMsjInteresado(){
     cout<<"Elegir Código Propiedad\n";
     cin>>codigoProp;
     
+    ICollection* colDtMensajes = NULL;
+    colDtMensajes = i->seleccionaPropiedad(codigoProp);
     
     
     }catch(invalid_argument & e){
