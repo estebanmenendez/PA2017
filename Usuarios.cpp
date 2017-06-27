@@ -34,4 +34,9 @@ Usuarios::~Usuarios(){
     }
     string Usuarios::getTipo(){
         
+        
+    }
+    Usuarios::Usuarios(string pwd, string email){
+        this->email = email;
+        this->pwd = pwd;
     }

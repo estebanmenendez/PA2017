@@ -35,6 +35,7 @@ public:
     string getPwd();
     string getTipo();
     Usuarios();
+    Usuarios(string, string);
     virtual ~Usuarios();
     
 };

@@ -55,9 +55,7 @@ Departamento* ContProp::seleccionarDepartamentos(string letraDepto){
     else {throw invalid_argument("No existe ese Departamento");}
   
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
 Zona* ContProp::seleccionaZona(string letrazona){
     IIterator * it=IZona->getIteratorObj();
     StringKey *sk= new StringKey(letrazona);
@@ -68,25 +66,6 @@ Zona* ContProp::seleccionaZona(string letrazona){
 }
 
 
-=======
-<<<<<<< HEAD
-
->>>>>>> 37caf4e79946b6296f661a8c589fa37e9e16c6fa
-
-Zona* ContProp::seleccionaZona(string letrazona){
-    IIterator * it=IZona->getIteratorObj();
-    StringKey *sk= new StringKey(letrazona);
-    Zona *z=dynamic_cast<Zona*>(IDepartamento->find(sk));
-    if(z!=NULL){return z;}
-    else {throw invalid_argument("No existe ese Departamento");}
-}
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 2da1de9f7ce9debf1fa717f8aef613110af47d6e
->>>>>>> origin/master
->>>>>>> 37caf4e79946b6296f661a8c589fa37e9e16c6fa
 ListDicc* ContProp::listaZonasDepartamentos(string letraDepartamento){
     IIterator *it =IDepartamento->getIteratorObj();
     ListDicc *resZon=new ListDicc();
@@ -104,21 +83,8 @@ ListDicc* ContProp::listaZonasDepartamentos(string letraDepartamento){
     
 
 }
-<<<<<<< HEAD
-Lista * ContProp::listaPropiedades(string){}
-=======
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-
-=======
-void ContProp::seleccionaZona(string){}
->>>>>>> 2da1de9f7ce9debf1fa717f8aef613110af47d6e
->>>>>>> origin/master
 dtPropiedadMensaje * ContProp::listaPropiedades(string){}
->>>>>>> 37caf4e79946b6296f661a8c589fa37e9e16c6fa
 dtPropiedadMensaje * ContProp::seleccionaPropiedad(string,int){}
 void ContProp::enviarMensaje(string){}
 string ContProp::ingesrarCodProp(string){}
@@ -131,6 +97,7 @@ void ContProp::seleccionaMensaje(string){}
 void ContProp::agregaMensaje(string,string){}
 dtPropiedadDisponible * ContProp::listaPropiedadesDisponibles(){}
 dtPropiedadInmobiliaria * ContProp::seleccionaPropiedadDisponible(string){}
+
 void ContProp::altaInteresado (string nombre, string apellido, int edad, string email){
     Interesado * i = new Interesado(nombre, apellido, edad, email);
     
