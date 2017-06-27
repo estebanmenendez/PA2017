@@ -28,8 +28,6 @@ Aviso Aviso::getAviso(){
 	return Aviso::getAviso();
 }
 
-void Aviso::crearAvisoProp(){
-}
 
 void Aviso::altaAlquiler(float precio ){
 

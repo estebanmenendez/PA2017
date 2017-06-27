@@ -37,6 +37,10 @@ public:
         PropInmo(const PropInmo& orig);
         virtual ~PropInmo();
         
+        void crearAvisoProp();
+
+
+        
 private:
         //links
         Aviso * aviPropInmo[2];

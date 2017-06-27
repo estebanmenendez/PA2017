@@ -44,6 +44,7 @@ public:
     string getNombreZona() const;
     void setCodigoZona(string codigoZona);
     string getCodigoZona() const;
+    void altaPropiedad(Propiedad *, StringKey *);
 private:
     string codigoZona;
     string nombreZona;

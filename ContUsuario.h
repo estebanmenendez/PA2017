@@ -16,6 +16,7 @@
 
 #include"IContUsuario.h"
 #include"IDictionary.h"
+#include"Usuarios.h"
 
 using namespace std;
 
@@ -24,20 +25,19 @@ class ContUsuario : public IContUsuario {
     public:
         ContUsuario();
         ContUsuario(const ContUsuario& orig);
- 
-       virtual ~ContUsuario();
+        virtual ~ContUsuario();
 
-        void altaInmobiliaria(string, dtDireccion*, string);
-        void altaInteresado(string,string,int,string);
-        Usuarios * usuarioLogueado();
-        void iniciarSesion(string, string);
-        bool verificarContrasena(string, string);
-        void activarUsuario(string, string);
-        bool validarPwd(string);
-        void altaSesion();
+        void altaInmobiliaria(string, dtDireccion*, string); // HECHO
+        void altaInteresado(string,string,int,string); // HECHO
+        Usuarios * usuarioLogueado(); // HECHO
+        void iniciarSesion(string, string); // HECHO
+        bool verificarContrasena(string, string); // HECHO
+        void activarUsuario(string, string); // HECHO
+        bool validarPwd(string); // HECHO
+        void altaSesion(Usuarios * usu);
         void cancelarAccion();
-        dtReporteInmobiliaria * obtenerReporteInmobiliarias ();
-        void CerrarSesion(int);
+        dtReporteInmobiliaria * obtenerReporteInmobiliarias();
+        void CerrarSesion();
 
     private:
         

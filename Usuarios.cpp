@@ -12,6 +12,7 @@
  */
 
 #include "Usuarios.h"
+#include "Inmobiliaria.h"
 
 Usuarios::Usuarios(){
     

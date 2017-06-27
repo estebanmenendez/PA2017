@@ -41,3 +41,5 @@ void PropInmo::eliminarLinks(){
 dtAvisoPropiedad* PropInmo::getAvisos(){
 	
 }
+
+void PropInmo::crearAvisoProp(){}

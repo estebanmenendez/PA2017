@@ -12,9 +12,11 @@
  */
 
 #include"ICollectible.h"
+#include"Propiedad.h"
 #include<string.h>
-#include <stdio.h>
-#include <iostream>
+#include<stdio.h>
+#include<iostream>
+
 
 #ifndef USUARIOS_H
 #define USUARIOS_H
@@ -35,6 +37,7 @@ public:
     string getPwd();
     string getTipo();
     Usuarios();
+   
     virtual ~Usuarios();
     
 };
