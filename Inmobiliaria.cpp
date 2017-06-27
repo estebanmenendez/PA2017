@@ -27,14 +27,13 @@ Inmobiliaria::Inmobiliaria(string nombre, dtDireccion* dir, string email){
     this->nombreInm = nombre;
     this->direccion = dir;
     Usuarios::getEmail()=email;
-
 }     
 
-void Inmobiliaria::altaPropEnInmob(Propiedad *p, string email){
+void Inmobiliaria::altaPropEnInmob(Propiedad *p){
      PropInmo* pi= new PropInmo();
      StringKey* sk=new StringKey(p->getCodigoProp());//creo la clave de edificio que es el nombre
      if(IPropInmo->member(sk)!=true){//pregunto si ya existe
      IPropInmo->add(pi,sk);//agrego el objeto mas la clave a la coleccion dicionario
-     }else {throw new invalid_argument("Propiedad ya existente");}          
+     else throw new invalid_argument("Propiedad en Inmobiliaria ya existente");  
+         
 }
-

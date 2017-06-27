@@ -12,6 +12,7 @@
  */
 
 #include "Usuarios.h"
+#include "Inmobiliaria.h"
 
 Usuarios::Usuarios(){
     
@@ -34,9 +35,4 @@ Usuarios::~Usuarios(){
     }
     string Usuarios::getTipo(){
         
-        
-    }
-    Usuarios::Usuarios(string pwd, string email){
-        this->email = email;
-        this->pwd = pwd;
     }

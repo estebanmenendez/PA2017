@@ -13,7 +13,6 @@
 #include"Usuarios.h"
 #include"dtDireccion.h"
 #include"IDictionary.h"
-#include"Propiedad.h"
 #include"PropInmo.h"
 
 #ifndef INMOBILIARIA_H
@@ -30,7 +29,7 @@ class Inmobiliaria : public Usuarios{
         Inmobiliaria(string nombre, dtDireccion* dir, string email);
         virtual ~Inmobiliaria();
         
-        void altaPropEnInmob(Propiedad *p, string email);
+        void altaPropEnInmob(Propiedad *p);
 };
 
 #endif /* INMOBILIARIA_H */

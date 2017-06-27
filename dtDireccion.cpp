@@ -28,3 +28,6 @@ dtDireccion::dtDireccion(string ciudad, string calle , string numero){
     this->numero = numero;
     this->calle = calle;
 }
+string dtDireccion::getDireccion(){
+    return this->ciudad+this->calle+this->numero;
+}

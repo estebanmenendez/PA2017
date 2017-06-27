@@ -33,13 +33,13 @@ ContProp::ContProp(const ContProp& orig) {
 
 ContProp::~ContProp() {
 }
-ListDicc * ContProp::listaDepartamentos(){
+Lista * ContProp::listaDepartamentos(){
     IIterator *it =IDepartamento->getIteratorObj();
-    ListDicc *resul=new ListDicc();
+    Lista *resul=new Lista();
     while (it->hasNext()) {
         Departamento* c= dynamic_cast <Departamento*> (it->getCurrent());
-        StringKey *sk=new StringKey(c->getDatos()->getletraDepartamento());
-        resul->add(c->getDatos(),sk);
+        //StringKey *sk=new StringKey(c->getDatos()->getletraDepartamento());
+        resul->add(c->getDatos());
         it->next();
     }
     delete it;
@@ -47,44 +47,39 @@ ListDicc * ContProp::listaDepartamentos(){
 
 }
 
-Departamento* ContProp::seleccionarDepartamentos(string letraDepto){
+void ContProp::seleccionarDepartamentos(string letraDepto){
     IIterator *it=IDepartamento->getIteratorObj();
     StringKey *sk=new StringKey(letraDepto);
     Departamento *d=dynamic_cast<Departamento*>(IDepartamento->find(sk));
-    if(d!=NULL){return d;}
+    if(d!=NULL){
+        dep = d;
+    }
     else {throw invalid_argument("No existe ese Departamento");}
   
 }
 
-Zona* ContProp::seleccionaZona(string letrazona){
-    IIterator * it=IZona->getIteratorObj();
-    StringKey *sk= new StringKey(letrazona);
-    Zona *z=dynamic_cast<Zona*>(IDepartamento->find(sk));
-    if(z!=NULL){return z;}
-    else {throw invalid_argument("No existe ese Departamento");
-    }
-}
 
-
-ListDicc* ContProp::listaZonasDepartamentos(string letraDepartamento){
-    IIterator *it =IDepartamento->getIteratorObj();
-    ListDicc *resZon=new ListDicc();
-    string letra;
-    Zona *zon1=new Zona;
-    while (it->hasNext()) {
-        Departamento* d= dynamic_cast <Departamento*> (it->getCurrent());
-        zon1=d->getZona(letra);
-        StringKey *sk=new StringKey(zon1->getCodigoZona());
-        resZon->add(zon1,sk);
-        it->next();
-    }
-    delete it;
+Lista* ContProp::listaZonasDepartamentos(){   
+    Lista *resZon=new Lista();
+    resZon = dep->getZonas();
     return resZon;
-    
+}
+
+void ContProp::seleccionaZona(string letraZona){
+    zona = dep->getZona(letraZona);
+}
+
+
+Lista * ContProp::listaPropiedades(){
+
+    Lista* resProp = new Lista();
+    resProp = zona->listaPropiedades(this->usuario);
+
+
+
 
 }
 
-dtPropiedadMensaje * ContProp::listaPropiedades(string){}
 dtPropiedadMensaje * ContProp::seleccionaPropiedad(string,int){}
 void ContProp::enviarMensaje(string){}
 string ContProp::ingesrarCodProp(string){}
@@ -116,38 +111,20 @@ void ContProp::altaEdificio(string nombre, int pisos, float gastosComunes){
     
     
 void ContProp::altaPropiedadCasa(dtPropiedadCasa* propC){
-    
-     Propiedad* p= new Propiedad(*propC);
-     StringKey* sk=new StringKey(p->getCodigoProp());//creo la clave de edificio que es el nombre
-     if(IPropiedad->member(sk)!=true)//pregunto si ya existe
-     IPropiedad->add(p,sk);//agrego el objeto mas la clave a la coleccion dicionario
-     else throw new invalid_argument("Propiedad ya existente");
-     
-     string email;
-     //Inmobiliaria->getEmail();
-     PropInmo* pi = new PropInmo();
-     //pi->altaPropEnInmob(p,email);
-     
-     
-     Aviso* av = new Aviso();
-     if(propC->getVentaAlq())
-     av->crearAvisoProp();   
-     
-     
-     
-     
-     
+
+    Propiedad* p= new Propiedad(*propC);
+    StringKey* sk=new StringKey(p->getCodigoProp());
+    zona->altaPropiedad(p, sk);
+    dynamic_cast<Inmobiliaria*>(usuario)->altaPropEnInmob(p);
+
 }
 
 void ContProp::altaPropiedadApto(dtPropiedadApto* propA){
     
-     Propiedad* p= new Propiedad(*propA);
-     StringKey* sk=new StringKey(p->getCodigoProp());//creo la clave de edificio que es el nombre
-     if(IPropiedad->member(sk)!=true)//pregunto si ya existe
-     IPropiedad->add(p,sk);//agrego el objeto mas la clave a la coleccion dicionario
-     else throw new invalid_argument("Propiedad ya existente");
-     
-     
+    Propiedad* p= new Propiedad(*propA);
+    StringKey* sk=new StringKey(p->getCodigoProp());
+    zona->altaPropiedad(p, sk);
+
                 
 }
 

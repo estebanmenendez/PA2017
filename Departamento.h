@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <iostream>
 #include "Zona.h"
+#include "Lista.h"
 #include"dtZonas.h"
 #include"dtPropiedadApto.h"
 #include"dtDepartamento.h"
@@ -31,11 +32,11 @@ public:
     Departamento(const Departamento& orig);
     virtual ~Departamento();
     
-    dtZonas* getZonas(string);
+    Lista* getZonas();
     Zona *getZona(string);
     dtDepartamento *getDatos();
     dtPropEnDpto* getpropEnDepto(Usuarios inmobiliaria);
-    Zona * getZona();
+    string getLetraDpto();
     
 private:
     string letraDpto;

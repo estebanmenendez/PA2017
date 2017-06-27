@@ -328,6 +328,7 @@ void altaInmobiliaria (){
     cout<<"Ingrese Número: ";
     cin>>numero;
     dir = new dtDireccion(ciudad,numero,calle);
+
    // in->altaInmobiliaria(nombre,dir);
     //taInmobiliaria(nombre, dir)
 
@@ -338,12 +339,12 @@ void altaInmobiliaria (){
 void altaPropiedad(){
     Fabrica* f = Fabrica::getInstance();
     IContProp * i = f->getContProp();  //EJEMPLO
-    
-    ListDicc * listaDep;
-    ListDicc* listaZona;
+    Departamento* depto;
+    Lista * listaDep;
+    Lista* listaZona;
     
     dtEdificio edif;
-    string letraDep, codigoZona,ciudad, calle, numero,nEdif;
+    string letraDep, codigoZona,ciudad, calle, numero,nEdif, VoA;
     int cAmb,cBanios,cDorm;
     float mEdif,mVerdes,valor;
     char opt,garage;
@@ -356,7 +357,7 @@ void altaPropiedad(){
     cout<<"Ingrese la letra del Departamento: ";
     cin>>letraDep;
     i->seleccionarDepartamentos(letraDep);
-    listaZona = i->listaZonasDepartamentos(letraDep);
+    listaZona = i->listaZonasDepartamentos();
     cout<<"Seleccione la Zona: ";
     i->seleccionaZona(codigoZona);
     cout<<"\n Ingresa Una Casa o Un Apto? C / A \n";
@@ -387,10 +388,17 @@ void altaPropiedad(){
     cin>>mEdif;
     cout<<"Ingrese Metros Verdes: \n";
     cin>>mVerdes;
-    cout<<"Indique si  Venta o Alquiler : A/V \n";
-    cin>>ventAlq; 
-    cout<<"Ingrese Valor de Venta/ Alquiler \n";
+    cout<<"Indique si  Venta o Alquiler : V/A \n";
+    cin>> VoA;
+    if (VoA == "A"||VoA=="a"){
+    ventAlq = true;
+    cout<<"Ingrese Valor del Alquiler \n";
     cin>>valor; 
+    }else{
+    ventAlq = false;
+    cout<<"Ingrese Valor de Venta \n";
+    cin>>valor;
+    }
     dtPropC = new dtPropiedadCasa(cAmb,cBanios,cDorm,lgarage,dir,mEdif,mVerdes,valor,ventAlq);
     i->altaPropiedadCasa(dtPropC);
    
@@ -428,7 +436,70 @@ void altaPropiedad(){
 
 void enviarMsjInmobiliaria(){}
 
-void enviarMsjInteresado(){}
+void enviarMsjInteresado(){
+    string letraDpto, codigoZona,codigoProp;
+    //Departamento *depto;
+     
+    
+    cout << "Caso Uso Enviar Mensaje Interesado\n";
+    
+    Fabrica* f = Fabrica::getInstance();
+    IContProp * i = f->getContProp();
+    ICollection* colDtDep= NULL;
+    try{
+    colDtDep = i->listaDepartamentos();
+    
+    IIterator *dt =colDtDep->iterator();
+    cout<<"Departamentos Disponibles\n";
+    
+    while(dt->hasNext()){
+        dtDepartamento *dtD=dynamic_cast<dtDepartamento*>(dt->getCurrent());
+        cout<<dtD->getletraDepartamento()<<"-"<<dtD->getnombreDepartamento()<<"\n";
+        dt->next();        
+    }
+    
+    cout<<"Elegir Letra Departamento\n";
+    cin>>letraDpto;
+    i->seleccionarDepartamentos(letraDpto);
+    
+     ICollection* colDtZona= NULL;
+    colDtZona= i->listaZonasDepartamentos();
+    
+    
+    IIterator *dtZ =colDtZona->iterator();
+    cout<<"Zonas Disponibles\n";
+    
+    while(dtZ->hasNext()){
+        dtZonas *dtZona=dynamic_cast<dtZonas*>(dtZ->getCurrent());
+        cout<<dtZona->getCodigoZona()<<"-"<<dtZona->getNombreZona()<<"\n";
+        dtZ->next();        
+    }
+    
+    cout<<"Elegir Código Zona\n";
+    cin>>codigoZona;
+    i->seleccionaZona(codigoZona);
+    
+    
+    ICollection* colDtPropMensaje= NULL;
+    colDtPropMensaje = i->listaPropiedades();
+    
+    cout<<"Propiedades y Mensajes\n";
+    IIterator *dtPM = colDtPropMensaje->iterator();
+    while(dtPM->hasNext()){
+        dtPropiedadMensaje *dtPMens=dynamic_cast<dtPropiedadMensaje*>(dtPM->getCurrent());
+        cout<<dtPMens->getcodigoProp()<<"-"<<dtPMens->getdireccionProp()<<"-"<<dtPMens->getCantMensajesEnviados()<<"\n";
+        dtPM->next();        
+    }
+    
+    cout<<"Elegir Código Propiedad\n";
+    cin>>codigoProp;
+    
+    
+    
+    }catch(invalid_argument & e){
+	cout << e.what();
+    }
+}
 //
 void altaInteresado(){
 

@@ -26,7 +26,7 @@
 #include"dtPropiedadApto.h"
 #include "dtEdificio.h"
 #include "IKey.h"
-#include "ListDicc.h"
+#include "Lista.h"
 #include "Departamento.h"
 
 using namespace std;
@@ -38,18 +38,11 @@ using namespace std;
     public:
        
         virtual ~IContProp();
-//        virtual ListDicc * listaDepartamentos() = 0;
-//        virtual ListDicc * listaDepartamentos() = 0;
-      //  virtual Departamento* seleccionarDepartamentos(string) = 0;
-      //  virtual ListDicc * listaDepartamentos() = 0;
-      //  virtual void seleccionarDepartamentos(string) = 0;
-        virtual ListDicc * listaDepartamentos() = 0;
-        virtual Departamento* seleccionarDepartamentos(string) = 0;
-      //  virtual void seleccionarDepartamentos(string) = 0;   
-       // Lista * listaPropiedades(string);
-        virtual ListDicc * listaZonasDepartamentos(string) = 0;
-        virtual Zona* seleccionaZona(string) = 0;
-        virtual dtPropiedadMensaje * listaPropiedades(string) = 0;
+       virtual void seleccionarDepartamentos(string) = 0;
+       virtual Lista * listaDepartamentos() = 0;
+       virtual Lista * listaZonasDepartamentos() = 0;
+        virtual void seleccionaZona(string) = 0;
+        virtual Lista * listaPropiedades() = 0;
         virtual dtPropiedadMensaje * seleccionaPropiedad(string,int) = 0;
         virtual void enviarMensaje(string) = 0;
         virtual string ingesrarCodProp(string) = 0;

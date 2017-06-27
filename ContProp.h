@@ -23,6 +23,7 @@
 #include"Lista.h"
 #include"ListDicc.h"
 #include"ContUsuario.h"
+#include"Usuarios.h"
 #include "Departamento.h"
 #include<iostream>
 
@@ -33,15 +34,13 @@ using namespace std;
  class ContProp : public IContProp {
      
     private: 
-        Zona * z;
-   
+        Zona * zona;
+        Departamento* dep;
+        Usuarios* usuario;
 
         IDictionary * IDepartamento;
-        IDictionary * IPropiedad;
         IDictionary * IEdificio;
         ContUsuario * ControladorUsuario;
-        IDictionary * IZona;
-
 
     public:
         ContProp();

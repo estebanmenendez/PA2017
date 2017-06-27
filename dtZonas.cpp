@@ -31,16 +31,3 @@ string dtZonas::getCodigoZona() const {
 string dtZonas::getNombreZona() const {
     return this->nombreZona;
 }
-
-void dtZonas::setNombreZona(string nombreZona) {
-    this->nombreZona = nombreZona;
-}
-
-
-void dtZonas::setCodigoZona(string codigoZona) {
-    this->codigoZona = codigoZona;
-}
-
-
-    dtZonas seleccionaZona(string codigoZona){}
-    dtZonas listaZonaDepartamento(){}
