@@ -1,8 +1,8 @@
 
-#include"Usuarios.h"
-
 #ifndef ADMINISTRADOR_H
-#define ADMINISTRADOR_H
+#define ADMINISTRADOR_H// </editor-fold>
+
+#include"Usuarios.h"
 
 class Administrador : public Usuarios{
     public:
@@ -10,4 +10,6 @@ class Administrador : public Usuarios{
         virtual ~Administrador();      
    
 };
-#endif /* ADMINISTRADOR_H */
+
+#endif	// ADMINISTRADOR_H
+

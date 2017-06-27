@@ -11,6 +11,9 @@
  * Created on 9 de junio de 2017, 08:08 PM
  */
 
+#ifndef DTPROPIEDADDISPONIBLE_H
+#define DTPROPIEDADDISPONIBLE_H
+
 #include <string.h>
 #include <stdio.h>
 #include <iostream>
@@ -18,8 +21,7 @@
 #include "ICollectible.h"
 #include "Usuarios.h"
 #include "ICollectible.h"
-#ifndef DTPROPIEDADDSIPONIBLE_H
-#define DTPROPIEDADDSIPONIBLE_H
+
 
 using namespace std;
 
@@ -47,5 +49,7 @@ public:
 };
 
 
-#endif /* DTPROPIEDADDSIPONIBLE_H */
+
+
+#endif	// DTPROPIEDADDISPONIBLE_H
 

@@ -4,26 +4,19 @@
  * and open the template in the editor.
  */
 
-/* 
- * File:   Usuarios.h
- * Author: ernesto
- *
- * Created on 9 de junio de 2017, 05:41 PM
- */
+
 
 #include"ICollectible.h"
-<<<<<<< HEAD
 #include "IDictionary.h"
-=======
+#ifndef USUARIOS_H
+#define USUARIOS_H
+
 #include"Propiedad.h"
->>>>>>> fe34853a63c88723e46550e1d1017a7e36ef272d
 #include<string.h>
 #include<stdio.h>
 #include<iostream>
 
 
-#ifndef USUARIOS_H
-#define USUARIOS_H
 
 
 
@@ -46,4 +39,8 @@ public:
     string getAlquilerOVenta(string codProp);
     
 };
-#endif /* USUARIOS_H */
+
+
+#endif	// USUARIOS_H
+
+

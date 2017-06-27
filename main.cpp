@@ -174,18 +174,15 @@ Lista consultarPropiedadDisponible(){
     }
   
 
-<<<<<<< HEAD
+
 }
 void inmobiliariaOpciones(string us, string pwd){
-=======
 int inmobiliariaOpciones(string us, string pwd){
->>>>>>> fe34853a63c88723e46550e1d1017a7e36ef272d
     string op="s";
     string confPwd;
     Fabrica* f = Fabrica::getInstance();
     IContUsuario * isInmo = f->getContUsuario();  //EJEMPLO
-    
-    cout<<"\n Inicia sesion por primera vez?";
+   cout<<"\n Inicia sesion por primera vez?";
     while(op=="s"){ 
         try{
             cin>>op;
