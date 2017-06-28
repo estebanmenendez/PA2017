@@ -44,6 +44,7 @@ public:
     void enviaMensaje(string);
     void setInteresado(Interesado *);
     void altaMensaje(string mensa,dtFecha* fecha,dtHora* hora, Interesado *);
+    
 private: 
     ICollection * IMensajes;
     Interesado * Inter;
