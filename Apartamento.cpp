@@ -7,7 +7,7 @@
 #include"Apartamento.h"
 
  Apartamento::Apartamento(){
-     
+     this->IPropiedad = new ListDicc();
  }
 Apartamento::Apartamento(const Apartamento& orig){
 

@@ -23,9 +23,14 @@
 #include"dtPropZonas.h"
 #include"dtPropiedadMensaje.h"
 #include"dtPropiedadDisponible.h"
+#include "Inmobiliaria.h"
+#include "PropInmo.h"
+#include "IContUsuario.h"
+#include "ListDicc.h"
+//#include "ContUsuario.h"
 
 #include"Lista.h"
-
+//#include"ContUsuario.h"
 
 #ifndef ZONA_H
 #define ZONA_H
@@ -42,7 +47,7 @@ public:
     dtZonas* getZonas();
     dtPropZonas getPropZonaDpto(Usuarios);
     Propiedad getPropiedad();
-   Lista* listaPropiedades(Usuarios*);
+   Lista* listaPropiedades(string );
     void setNombreZona(string nombreZona);
     string getNombreZona() const;
     void setCodigoZona(string codigoZona);

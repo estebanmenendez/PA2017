@@ -14,11 +14,13 @@
 #include <stdexcept>
 
 #include "Departamento.h"
+#include "ListDicc.h"
 
 Departamento::Departamento() {
     this->letraDpto="L";
     this->nombreDpto="Artigas";
     
+    this->IZona = new ListDicc();
 }
 
 Departamento::Departamento(const Departamento& orig) {

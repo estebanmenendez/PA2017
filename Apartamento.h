@@ -12,9 +12,8 @@
  */
 #include "Propiedad.h"
 #include "dtEdificio.h"
-#include "Lista.h"
+#include "ListDicc.h"
 #include "ICollectible.h"
-#include "ContProp.h"
 
 #ifndef APARTAMENTO_H
 #define APARTAMENTO_H

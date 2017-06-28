@@ -11,21 +11,11 @@
  * Created on 9 de junio de 2017, 08:17 PM
  */
 #include "ContProp.h"
-#include "ICollection.h"
-#include "Edificio.h"
-#include "Lista.h"
-#include "ListDicc.h"
-#include "StringKey.h"
-#include "PropInmo.h"
-#include "Departamento.h"
-#include "Propiedad.h"
-#include "dtPropiedadCasa.h"
-#include "Zona.h"
-#include "Interesado.h"
-#include <stdexcept>
+
 
 ContProp::ContProp() {
-    
+    this->IDepartamento = new ListDicc();
+    this->IEdificio = new ListDicc();
 }
 
 ContProp::ContProp(const ContProp& orig) {
@@ -80,7 +70,7 @@ Lista * ContProp::listaPropiedadesDisponibles(){
 
 Lista * ContProp::listaPropiedades(){
     Lista* resProp = new Lista();
-    resProp = zona->listaPropiedades(dynamic_cast<Inmobiliaria*>(this->usuario));
+    resProp = zona->listaPropiedades("string");
 
 }
 

@@ -23,7 +23,7 @@
 #include "dtAvisoPropiedad.h"
 #include "Venta.h"
 #include "Alquiler.h"
-
+#include "Lista.h"
 class PropInmo: public ICollectible{
           
         

@@ -23,6 +23,7 @@
 using namespace std;
 
     ContUsuario::ContUsuario() {
+        this->IUsuario = new ListDicc();        
     }
 
     ContUsuario::ContUsuario(const ContUsuario& orig) {
@@ -31,12 +32,12 @@ using namespace std;
     ContUsuario::~ContUsuario() {
     }
     void ContUsuario::altaAdministrador(){
-        Administrador * i = new Administrador("admin","admin");
-        StringKey * skEmail = new StringKey("admin");  //GENERO LA CLAVE 
-        if(IUsuario->member(skEmail)!=true)//pregunto si ya existe
+        Administrador * i = new Administrador("adm1@sys.com","Pass1");
+        StringKey * skEmail = new StringKey("adm1@sys.com");  //GENERO LA CLAVE 
+        if(IUsuario->size() == 0)
             IUsuario->add(i,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
-        else 
-            throw new invalid_argument("Usuario Asdministrador ya existente");
+//        else 
+//            throw new invalid_argument("Usuario Asdministrador ya existente");
     }
       void ContUsuario::altaInteresado(string nombre, string apellido, int edad, string email,string contra){
           
@@ -103,17 +104,21 @@ bool ContUsuario::validarPwd(string email,string contrasena){
     Usuarios *u=dynamic_cast<Usuarios*>(IUsuario->find(sk));
     
     if(u != NULL){
-         return true;
+        if (u->getPwd().compare(contrasena)== 0)
+            throw invalid_argument("Clave incorrecta");
     }else{
         throw invalid_argument("No existe ese Usuario");
-        return false;
     }
+    return true;
 }
 
 void ContUsuario::CerrarSesion(){ 
     usuLog = NULL;
 }
 
+int ContUsuario::cantMensajesPropiedad(string){
+    
+}
 void ContUsuario::altamensaje(string inmo, string mensaje, dtFecha*fecha, dtHora*hora, string interesado,string propiedad){
     StringKey *sk,*skinter;
     sk=new StringKey(inmo);

@@ -25,7 +25,15 @@
 #include"ContUsuario.h"
 #include"Usuarios.h"
 #include"Inmobiliaria.h"
+//#include "Departamento.h"
+#include "Edificio.h"
+#include "StringKey.h"
 #include "Departamento.h"
+#include "Propiedad.h"
+#include "dtPropiedadCasa.h"
+#include "Zona.h"
+#include "Interesado.h"
+#include <stdexcept>
 #include<iostream>
 
 

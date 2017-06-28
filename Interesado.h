@@ -22,11 +22,10 @@ class Interesado :public Usuarios{
         int edad;
         string nombreInt;
         string apellidoInt;
-        ICollection* IChatInteresado;
         public:
             int getEdad();
             void setEdad();
-            string getTipo();
+            int getTipo();
             string getPwd();
             string getEmail();
             Interesado(string nombre, string apellido,int edad, string email,string);

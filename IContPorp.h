@@ -27,7 +27,6 @@
 #include "dtEdificio.h"
 #include "IKey.h"
 #include "Lista.h"
-#include "Departamento.h"
 
 using namespace std;
 

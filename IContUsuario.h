@@ -38,6 +38,8 @@ public:
     virtual void cancelarAccion()= 0;
     virtual dtReporteInmobiliaria * obtenerReporteInmobiliarias ()= 0;
     virtual void CerrarSesion()= 0;
+    virtual int cantMensajesPropiedad(string)=0;
+    
     virtual void altamensaje(string,string,dtFecha*,dtHora*,string,string)=0;
     private:
 };

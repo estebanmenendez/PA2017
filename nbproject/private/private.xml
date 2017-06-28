@@ -7,6 +7,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/home/juan/Documentos/obliupdate/obligatorioaltoviaje/PA2017/ContUsuario.cpp</file>
             <file>file:/home/juan/Documentos/obliupdate/obligatorioaltoviaje/PA2017/Apartamento.h</file>
             <file>file:/home/juan/Documentos/obliupdate/obligatorioaltoviaje/PA2017/Chat.h</file>
@@ -24,6 +25,16 @@
             <file>file:/home/juan/Documentos/obliupdate/obligatorioaltoviaje/PA2017/ContUsuario.h</file>
             <file>file:/home/juan/Documentos/obliupdate/obligatorioaltoviaje/PA2017/Fabrica.cpp</file>
             <file>file:/home/juan/Documentos/obliupdate/obligatorioaltoviaje/PA2017/main.cpp</file>
+=======
+            <file>file:/home/ernesto/NetBeansProjects/PA2017/Inmobiliaria.cpp</file>
+            <file>file:/home/ernesto/NetBeansProjects/PA2017/IContUsuario.h</file>
+            <file>file:/home/ernesto/NetBeansProjects/PA2017/Administrador.cpp</file>
+            <file>file:/home/ernesto/NetBeansProjects/PA2017/IDictionary.h</file>
+            <file>file:/home/ernesto/NetBeansProjects/PA2017/ContUsuario.h</file>
+            <file>file:/home/ernesto/NetBeansProjects/PA2017/Interesado.cpp</file>
+            <file>file:/home/ernesto/NetBeansProjects/PA2017/ContUsuario.cpp</file>
+            <file>file:/home/ernesto/NetBeansProjects/PA2017/main.cpp</file>
+>>>>>>> 63047db8060a12dfb013fb41a5563a8d43422af2
         </group>
     </open-files>
 </project-private>

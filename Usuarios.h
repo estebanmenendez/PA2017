@@ -26,7 +26,7 @@ class Usuarios :public ICollectible {
 private:
     string email;
     string pwd;
-    IDictionary * IPropInmo;
+    
 public:
     //Usuarios* getUsuario();
     virtual bool esInteresado();
@@ -34,7 +34,7 @@ public:
     Usuarios(string,string);  
     virtual string getEmail();
     virtual string getPwd();
-    virtual string getTipo();    
+    virtual int getTipo();    
     virtual ~Usuarios();
    // virtual void altaMensaje(string,string,string,string,string,string);
 };

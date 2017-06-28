@@ -24,6 +24,8 @@
 #include "ICollectible.h"
 #include "ICollection.h"
 #include "Interesado.h"
+#include "Mensaje.h"
+#include "Lista.h"
 
 using namespace std;
 

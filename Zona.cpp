@@ -14,14 +14,16 @@
 #include <stdexcept>
 
 #include "Zona.h"
-#include "Inmobiliaria.h"
-#include "PropInmo.h"
-#include "IContUsuario.h"
 
-Zona::Zona() {}
+
+Zona::Zona() {
+    this->IPropiedad = new ListDicc();
+}
 
 void Zona::setNombreZona(string nombreZona) {
     this->nombreZona = nombreZona;
+    this->IPropiedad = new ListDicc();
+
 }
 
 string Zona::getNombreZona() const {
@@ -50,13 +52,13 @@ Zona::Zona(string nombreZ,string codigoZ){
 
 
 
-Lista* Zona::listaPropiedades(Usuarios* usuario){
+Lista* Zona::listaPropiedades(string usuario){
     int cantidad= 0;
     IIterator *it =IPropiedad->getIteratorObj();
     Lista *resul=new Lista();
     while (it->hasNext()) {
         Propiedad* p= dynamic_cast <Propiedad*> (it->getCurrent());
-        cantidad = dynamic_cast<Interesado*>(usuario)->cantMensajesPropiedad(p->getCodigoProp());
+        //cantidad = usuario->cantMensajesPropiedad(p->getCodigoProp());
         resul->add(p->getPropiedad(cantidad));
         it->next();
     }

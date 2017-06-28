@@ -28,8 +28,7 @@ void Chat::setChat(int){
 }
 
 Chat::Chat() {
-    this->IMensajes=new Lista();
-	
+    this->IMensajes= new Lista();	
 }
 
 Chat::~Chat() {

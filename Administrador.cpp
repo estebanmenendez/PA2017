@@ -21,12 +21,12 @@ Administrador::~Administrador(){
     
 }
 
-string Administrador::getTipo(){
-  return "Administrador";
+int Administrador::getTipo(){
+  return 1;
 }
 string Administrador::getEmail(){
-    return this->getEmail();
+    return Usuarios::getEmail();
 }
 string Administrador::getPwd(){
-   return this->getPwd();    
+    return Usuarios::getPwd();
 }

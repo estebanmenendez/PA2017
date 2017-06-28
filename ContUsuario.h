@@ -17,8 +17,7 @@
 #include"IContUsuario.h"
 #include"IDictionary.h"
 #include"Usuarios.h"
-#include"dtFecha.h"
-#include"dtHora.h"
+#include"Propiedad.h"
 
 using namespace std;
 
@@ -39,7 +38,8 @@ class ContUsuario : public IContUsuario {
         Usuarios* altaSesion(string); // HECHO
         void cancelarAccion();
         dtReporteInmobiliaria * obtenerReporteInmobiliarias();
-        void CerrarSesion(); 
+        int cantMensajesPropiedad(string);
+        void CerrarSesion(); // HECHO
         void altamensaje(string,string,dtFecha*,dtHora*,string,string);
 
 
