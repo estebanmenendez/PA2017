@@ -23,15 +23,15 @@ class IContUsuario {
 public:
 
     virtual ~IContUsuario();
-    
-    virtual void altaInmobiliaria(string, dtDireccion *, string)= 0;
-    virtual void altaInteresado(string,string,int,string)= 0;
+    virtual void altaAdministrador()=0;
+    virtual void altaInmobiliaria(string, dtDireccion *, string,string)= 0;
+    virtual void altaInteresado(string,string,int,string,string)= 0;
     virtual Usuarios * usuarioLogueado()= 0;
-    virtual void iniciarSesion(string, string)= 0;
+    virtual void iniciarSesion()= 0;
     virtual bool verificarContrasena(string, string)= 0;
     virtual void activarUsuario(string, string)= 0;
-    virtual bool validarPwd(string)= 0;
-    virtual void altaSesion(Usuarios * usu)= 0;
+    virtual bool validarPwd(string,string)= 0;
+    virtual Usuarios* altaSesion(string)= 0;
     virtual void cancelarAccion()= 0;
     virtual dtReporteInmobiliaria * obtenerReporteInmobiliarias ()= 0;
     virtual void CerrarSesion()= 0;

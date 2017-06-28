@@ -29,7 +29,7 @@ class Interesado :public Usuarios{
             string getTipo();
             string getPwd();
             string getEmail();
-            Interesado(string nombre, string apellido,int edad, string email);
+            Interesado(string nombre, string apellido,int edad, string email,string);
             int cantMensajesPropiedad(string);
             Interesado();
             virtual ~Interesado();

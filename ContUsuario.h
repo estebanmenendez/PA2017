@@ -26,15 +26,15 @@ class ContUsuario : public IContUsuario {
         ContUsuario();
         ContUsuario(const ContUsuario& orig);
         virtual ~ContUsuario();
-
-        void altaInmobiliaria(string, dtDireccion*, string); // HECHO
-        void altaInteresado(string,string,int,string); // HECHO
+        void altaAdministrador();
+        void altaInmobiliaria(string, dtDireccion*, string,string); // HECHO
+        void altaInteresado(string,string,int,string,string); // HECHO
         Usuarios * usuarioLogueado(); // HECHO
-        void iniciarSesion(string, string); // HECHO
+        void iniciarSesion(); // HECHO
         bool verificarContrasena(string, string); // HECHO
         void activarUsuario(string, string); // HECHO
-        bool validarPwd(string); // HECHO
-        void altaSesion(Usuarios * usu); // HECHO
+        bool validarPwd(string,string); // HECHO
+        Usuarios* altaSesion(string); // HECHO
         void cancelarAccion();
         dtReporteInmobiliaria * obtenerReporteInmobiliarias();
         void CerrarSesion(); // HECHO

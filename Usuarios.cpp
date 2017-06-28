@@ -15,6 +15,10 @@
 Usuarios::Usuarios(){
     
 }
+Usuarios::Usuarios(string usu, string pwd){
+    this->email = usu;
+    this->pwd = pwd;
+}
 Usuarios::~Usuarios(){
     
 }

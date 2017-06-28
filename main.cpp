@@ -36,6 +36,7 @@ using namespace std;
 
 //CASOS DE USO
 void iniciarSesion();
+void definoMenu(Usuarios*);
 void cerrarSesion();
 void altaInmobiliaria();
 void altaInteresado();
@@ -68,56 +69,29 @@ int idSesion=0;
 string us, pwd; // LOS DEFINO COMO VARIABLES GLOBALES PARA MOSTRAR EL USUARIO EN CADA CU
 
 int main(int argc, char** argv) {
-    
-	int opcion=1;
+    int opcion=1;
 
-	while (opcion !=  0){
-		opcionesGenerales();
-		cin >> opcion;
-		switch (opcion){
-			case 1 : iniciarSesion();break;
-                        case 0 : break;
-                }
-                
-	}
-	
-    return 0;
+    while (opcion !=  0){
+        opcionesGenerales();
+        cin >> opcion;
+        switch (opcion){
+                case 1 : iniciarSesion();break;
+                case 0 : break;
+        }                
+    }
+    
+return 0;
 }
 
 ///////////////////// NUEVO /////////////////////
 void opcionesGenerales(){
     cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<endl<<endl;
-    cout << "1 - Iniciar Sesion" << endl;
     cout << "0 - Salir" << endl; 
+    cout << "1 - Iniciar Sesion" << endl;
+   
 }
 
-void administradorOpciones(string us, string pwd){
-    Usuarios *usu;
-    Fabrica* f = Fabrica::getInstance();
-    IContUsuario * isAdmin = f->getContUsuario();  //EJEMPLO
-    int opAdmin=0;
-    
-    try{
-        if(isAdmin->validarPwd(pwd)==true){
-            isAdmin->iniciarSesion(us, pwd);
-            cout<<"Sesion iniciada correctamente ";
-            invalid_argument("Contrasena incorrecta");
-        }
-    }catch(invalid_argument & e){
-        cout<<e.what();
-        } 
-    
-    system("clear");
-    cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
-    cout << "\nMENU - USUARIO ADMINISTRADOR" << endl;
-    cout << "1 - Alta inmobiliaria" << endl;
-    cout << "2 - Alta interesado" << endl;
-    cout << "3 - Obtener reporte inmobiliaria" << endl;
-    cout << "4 - Cerrar sesion" << endl; 
-    cin>>opAdmin;
-    adminOpciones(opAdmin);
 
-}
 void consultarPropiedadDisponible(){
      string letraDpto, codigoZona,codigoProp;
     //Departamento *depto;
@@ -165,7 +139,6 @@ void consultarPropiedadDisponible(){
         dtPropiedadDisponible* dtpro=dynamic_cast<dtPropiedadDisponible*>(dtprop->getCurrent());
         cout<<dtpro->getCodigoProp()<<"-"<<dtpro->getAlquilerOVenta();
         dtprop->next();
-
         }
     cout<<"Elegir Código Propiedad\n";
     cin>>codigoProp;
@@ -174,43 +147,42 @@ void consultarPropiedadDisponible(){
     }catch(invalid_argument & e){
             cout<<e.what();
         } 
-  
-
-
 }
 
 
-void inmobiliariaOpciones(string us, string pwd){
-    string op="s";
-    string confPwd;
-    Fabrica* f = Fabrica::getInstance();
-    IContUsuario * isInmo = f->getContUsuario();  //EJEMPLO
-   cout<<"\n Inicia sesion por primera vez?";
-    while(op=="s"){ 
-        try{
-            cin>>op;
-            cout<<"Ingrese contraseña";
-            cin>>pwd;
-            cout<<"Confirmar contraseña";
-            cin>>confPwd;
-            if(isInmo->verificarContrasena(pwd, confPwd)==true){
-                isInmo->activarUsuario(pwd, us);
-                isInmo->iniciarSesion(us, pwd);
-                cout<<"Sesion iniciada correctamente ";
-                invalid_argument("COSO");
-        }
-        }catch(invalid_argument & e){
-            cout<<e.what();
-        } 
-    }
-    isInmo->validarPwd(pwd);
-    isInmo->iniciarSesion(us, pwd);
-    cout<<"Sesion iniciada correctamente ";
+
+
+void administradorOpciones(){
+   int opAdmin=0;
     
+    system("clear");
+    cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
+    cout << "\nMENU - USUARIO ADMINISTRADOR" << endl;
+    cout << "0 - Volver" << endl; 
+    cout << "1 - Alta inmobiliaria" << endl;
+    cout << "2 - Alta interesado" << endl;
+    cout << "3 - Obtener reporte inmobiliaria" << endl;
+    cout << "4 - Cerrar sesion" << endl; 
+    cin>>opAdmin;
+    adminOpciones(opAdmin);
+}
+
+void adminOpciones(int opAdmin){
+    while (opAdmin !=  0){
+        switch (opAdmin){
+            case 1 : altaInmobiliaria(); break;
+            case 2 : altaInteresado(); break;
+            case 3 : obtenerReporteInmo(); break;
+            case 4 : cerrarSesion(); break;
+           }
+        }
+}
+void inmobiliariaOpciones(){ 
     int opInmo=0;
     system ("clear");
     cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
     cout << "MENU - USUARIO INMOBILIARIA" << endl;
+    cout << "0 - Volver" << endl; 
     cout << "1 - Alta propiedad" << endl;
     cout << "2 - Modificar propiedad" << endl; 
     cout << "3 - Eliminar propiedad" << endl;
@@ -222,88 +194,36 @@ void inmobiliariaOpciones(string us, string pwd){
     inmoOpciones(opInmo); 
 }
 
-void interesadoOpciones(string us, string pwd){
-    string op="s";
-    string confPwd;
-    Fabrica* f = Fabrica::getInstance();
-    IContUsuario * isInter = f->getContUsuario();  //EJEMPLO
-    
-    cout<<"\n Inicia sesion por primera vez?";
-    while(op=="s"){ 
-        try{
-            cin>>op;
-            cout<<"Ingrese contraseña";
-            cin>>pwd;
-            cout<<"Confirmar contraseña";
-            cin>>confPwd;
-            if(isInter->verificarContrasena(pwd, confPwd)==true){
-                isInter->activarUsuario(pwd, confPwd);
-                isInter->iniciarSesion(us, pwd);
-                cout<<"Sesion iniciada correctamente ";
-                invalid_argument("Las contraseñas no coinciden");
-        }
-        }catch(invalid_argument & e){
-            cout<<e.what();
-        } 
+void inmoOpciones(int opInmo){
+        
+    while (opInmo !=  0){
+        switch (opInmo){
+            case 1 : altaPropiedad(); break;
+            case 2 : modificarPropiedad(); break;
+            case 3 : eliminarPropiedad(); break;
+            case 4 : consultarPropiedad(); break;
+            case 5 : altaEdificio(); break;
+            case 6 : enviarMsjInmobiliaria(); break;
+            case 7 : cerrarSesion(); break;
+        }    
     }
-    isInter->validarPwd(pwd);
-    isInter->iniciarSesion(us, pwd);
-    cout<<"Sesion iniciada correctamente ";
-    
+}
+
+void interesadoOpciones(){
     int opInter=0;
     system ("clear");
     cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
     cout << "MENU - USUARIO INTERESADO" << endl;
+    cout << "0 - Volver" << endl; 
     cout << "1 - Consultar propiedad" << endl;
     cout << "2 - Enviar mensaje interesado" << endl; 
     cout << "3 - Cerrar sesion" << endl; 
+  
     cin>>opInter;
-    //interOpciones(opInter);
     interOpciones(opInter);
     
 }
-
-void adminOpciones(int opAdmin){
-    while (opAdmin !=  0){
-        switch (opAdmin){
-                case 1 : altaInmobiliaria(); break;
-                case 2 : altaInteresado(); break;
-                case 3 : obtenerReporteInmo(); break;
-                case 4 : cerrarSesion(); break;
-           }
-        }
-}
-
-void inmoOpciones(int opInmo){
-    
-     //int opInmo=1;
-     dtPropiedad propiedad;
-     string prop;
-     string nombre;
-     int pisos;
-     int gastosComunes;
-     string msjInmo;
-        
-    while (opInmo !=  0){
-                //cin >> opInmo;
-        switch (opInmo){
-                case 1 : altaPropiedad(); break;
-                case 2 : modificarPropiedad(); break;
-                case 3 : eliminarPropiedad(); break;
-                case 4 : consultarPropiedad(); break;
-                case 5 : altaEdificio(); break;
-                case 6 : enviarMsjInmobiliaria(); break;
-                case 7 : cerrarSesion(); break;
-           }
-        }
-}
-
-void interOpciones(int opInter){
-    
-    // int opInter=1;
-     string propiedad;
-     string msjInter;
-        
+void interOpciones(int opInter){            
     while (opInter !=  0){
                 //cin >> opAdmin;
         switch (opInter){
@@ -317,71 +237,61 @@ void interOpciones(int opInter){
 void cargaDatosPrueba(){}
 
 void iniciarSesion(){
-//    Fabrica* f = Fabrica::getInstance();
-//    IContUsuario * is = f->getContUsuario();  //EJEMPLO
-    
-    Usuarios * usuTipo;
-    string usuario;
-    int opUsr=1;
-    string datos = "n";
-    // PRECARGA DE DATOS
-    
-    cout<<"Desea precargar datos? ";
-    cin>>datos;
-       
-    if (datos=="s"){
-        cout<<"precargarDatos();";
-    }
-    
-    // SOLICITO DATOS - AGREGAR TRY
+   Fabrica* f = Fabrica::getInstance();
+   IContUsuario * is = f->getContUsuario();  //EJEMPLO
+   is->altaAdministrador();
+     // SOLICITO DATOS - AGREGAR TRY
     cout<<"\nIngrese email: ";
     cin>>us;
     cout<<"\nIngrese contrasenia: ";
     cin>>pwd;
-    //usuario = usuTipo->getTipo();
+    try{
+        if (is->validarPwd(us,pwd))
+            definoMenu(is->altaSesion(us));
+    }catch(invalid_argument & e){
+            cout<<e.what();
+        } 
     
-    
-    if(dynamic_cast<Administrador*>(usuTipo)->getTipo() == "Administrador"){
+}
+
+void definoMenu(Usuarios*  usu){
+    int opUsr=0;
+    if(dynamic_cast<Administrador*>(usu)->getTipo() == "Administrador"){
         opUsr == 1;
     }
-    if(dynamic_cast<Interesado*>(usuTipo)->getTipo() == "Interesado"){
+    if(dynamic_cast<Interesado*>(usu)->getTipo() == "Interesado"){
         opUsr == 2;
     }
-    if(dynamic_cast<Inmobiliaria*>(usuTipo)->getTipo() == "Inmobiliaria"){
+    if(dynamic_cast<Inmobiliaria*>(usu)->getTipo() == "Inmobiliaria"){
         opUsr == 3;
     }
-    
-   /* system ("clear");
-    cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
-    cout<<"\nSeleccione tipo de usuario: ";
-    cout<<"\n1 - Administrador"<<endl;
-    cout<<"2 - Inmobiliaria"<<endl;
-    cout<<"3 - Interesado"<<endl;*/
         
     while (opUsr !=  0){
-                cin >> opUsr;
-        switch (opUsr){
-                case 1 : administradorOpciones(us,pwd); break;
-                case 2 : inmobiliariaOpciones(us,pwd); break;
-                case 3 : interesadoOpciones(us,pwd); break;
-           }
-        }
+        cin >> opUsr;
+    switch (opUsr){
+            case 1 : administradorOpciones(); break;
+            case 2 : inmobiliariaOpciones(); break;
+            case 3 : interesadoOpciones(); break;
+       }
+    }
     
 }
 
 void altaInmobiliaria (){
     Fabrica* f = Fabrica::getInstance();
     IContUsuario * in = f->getContUsuario();  //EJEMPLO
-    string nombre, ciudad, calle, numero, email;
-   // sistema* s= new sistema();
+    string nombre, ciudad, calle, numero, email,contra;
     dtDireccion* dir;
     
     system ("clear");
     cout<<"\n1 - Alta inmobiliaria\n";
     cout<<"Ingrese Nombre: ";
     cin>>nombre;
+    
     cout<<"Ingrese Email: ";
     cin>>email;
+    cout<<"Ingrese Contrasena: ";
+    cin>>contra;
     cout<<"Ingrese Ciudad: ";
     cin>>ciudad;
     cout<<"Ingrese Calle: ";
@@ -393,7 +303,7 @@ void altaInmobiliaria (){
    // in->altaInmobiliaria(nombre,dir);
     //taInmobiliaria(nombre, dir)
 
-    in->altaInmobiliaria(nombre, dir, email);
+    in->altaInmobiliaria(nombre, dir, email,contra);
     cout<<"Inmobiliaria dada de Alta ";
 }
 
@@ -598,7 +508,7 @@ void altaInteresado(){
     Fabrica* f = Fabrica::getInstance();
     IContUsuario * i = f->getContUsuario();  //EJEMPLO
     // buscarUsr(email);
-    string nombre, apellido, email;
+    string nombre, apellido, email,contra;
     int edad;
     string seguir="s";
 
@@ -611,10 +521,11 @@ void altaInteresado(){
             cout<<"Ingrese edad: ";
             cin>>edad;
             cout<<"Ingrese email: ";
-            cin>>email;              
-            i->altaInteresado(nombre, apellido, edad, email);
+            cin>>email;
+            cout<<"Ingrese Contrasena: ";
+            cin>>contra;
+            i->altaInteresado(nombre, apellido, edad, email,contra);
             cout<<"Usuario inmobiliaria creado correctamente ";
-            invalid_argument("COSO");
         }catch(invalid_argument & e){
             cout<<e.what();
         }
@@ -630,17 +541,17 @@ void altaInteresado(){
     
 }
 //
-void cerrarSesion(){}
-//    string opCerrar="n";
-//    cout<<"Cerrar Sesion";
-//    
-//    cout<<"\nDesea cerrar sesion?";
-//    cin>>opCerrar;
-//    if (opCerrar){
-//        //recorrerSesiones(idSesion); // idSesion es una variable global
-//        // Destruir todo
-//    }
-//}
+void cerrarSesion(){
+    char opCerrar='n';
+    cout<<"Cerrar Sesion\n";    
+    cout<<"\nDesea cerrar sesion?\n";
+    cin>>opCerrar;
+    if (opCerrar == 's'){
+        Fabrica* f = Fabrica::getInstance();
+        IContUsuario * i = f->getContUsuario();  //EJEMPLO
+        i->CerrarSesion();
+    }
+}
 void modificarPropiedad(){}
 //    cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
 //    cout<<"\n Modificar Propiedad";
