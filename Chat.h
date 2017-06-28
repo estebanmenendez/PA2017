@@ -23,6 +23,8 @@
 #include "dtMensajes.h"
 #include "ICollectible.h"
 #include "ICollection.h"
+#include "Mensaje.h"
+#include "Lista.h"
 
 using namespace std;
 

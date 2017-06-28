@@ -11,6 +11,9 @@
  * Created on 9 de junio de 2017, 07:06 PM
  */
 #include "Propiedad.h"
+#include "dtEdificio.h"
+#include "ListDicc.h"
+#include "ICollectible.h"
 
 #ifndef APARTAMENTO_H
 #define APARTAMENTO_H
@@ -19,6 +22,8 @@ using namespace std;
 
 class Apartamento: public Propiedad {
 public:
+    
+       
     Apartamento();
     Apartamento(const Apartamento& orig);
     virtual ~Apartamento();
@@ -27,7 +32,7 @@ public:
     void esApto();
 
 private:
-
+    IDictionary* IPropiedad;
 };
 
 #endif /* APARTAMENTO_H */

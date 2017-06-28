@@ -23,8 +23,7 @@
 using namespace std;
 
     ContUsuario::ContUsuario() {
-        this->IUsuario = new ListDicc();
-        
+        this->IUsuario = new ListDicc();        
     }
 
     ContUsuario::ContUsuario(const ContUsuario& orig) {
@@ -105,14 +104,18 @@ bool ContUsuario::validarPwd(string email,string contrasena){
     Usuarios *u=dynamic_cast<Usuarios*>(IUsuario->find(sk));
     
     if(u != NULL){
-         return true;
+        if (u->getPwd()!=contrasena)
+            throw invalid_argument("Clave incorrecta");
     }else{
         throw invalid_argument("No existe ese Usuario");
-        return false;
     }
+    return true;
 }
 
 void ContUsuario::CerrarSesion(){ 
     usuLog = NULL;
 }
 
+int ContUsuario::cantMensajesPropiedad(Propiedad *){
+    
+}

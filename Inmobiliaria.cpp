@@ -14,13 +14,14 @@
 #include <stdexcept>
 
 #include "Inmobiliaria.h"
+#include "ListDicc.h"
 
 Inmobiliaria::Inmobiliaria(){
-    
+    this->IPropInmo = new ListDicc();
 }
 
 Inmobiliaria::~Inmobiliaria(){
-    
+    delete this->IPropInmo;
 }
 
 Inmobiliaria::Inmobiliaria(string nombre, dtDireccion* dir,string email,string contra):Usuarios(email,contra ){
@@ -42,11 +43,11 @@ int Inmobiliaria::getTipo(){
 }
 
 string Inmobiliaria::getPwd(){
-    return this->getPwd();
+    return Usuarios::getPwd();
 }
 
 string Inmobiliaria::getEmail(){
-   return this->getEmail();
+   return Usuarios::getEmail();
 }
 int Inmobiliaria::cantMensajesPropiedad(string codProp){
     int cantMensajes = 0;

@@ -12,6 +12,7 @@
  */
 
 #include "Interesado.h"
+#include "ListDicc.h"
 
   int Interesado::getEdad(){
       
@@ -20,7 +21,6 @@
       
   }
   Interesado::Interesado(){
-      
   }
 Interesado::Interesado(string nombre, string apellido,int edad, string email,string contra):Usuarios(email,contra ){
     this->nombreInt = nombre;
@@ -34,20 +34,10 @@ int Interesado::getTipo(){
   return 3;
 }
 string Interesado::getPwd(){
-    return this->getPwd();
+    return Usuarios::getPwd();
 }
 string Interesado::getEmail(){
-    return this->getEmail();
+    return Usuarios::getEmail();
 }
-  int Interesado::cantMensajesPropiedad(string codProp){
-    int cantMensajes= 0;
-    IIterator * it=IChatInteresado->iterator();
-    while (it->hasNext()) {
-        Chat *ch=dynamic_cast<Chat*>(it->getCurrent());
-        cantMensajes += ch->getCantidadMensaje();
-        it->next();
-    }
-    delete it;
-    return cantMensajes;
-  }
+
     

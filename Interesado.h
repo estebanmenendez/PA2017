@@ -22,7 +22,6 @@ class Interesado :public Usuarios{
         int edad;
         string nombreInt;
         string apellidoInt;
-        ICollection* IChatInteresado;
         public:
             int getEdad();
             void setEdad();

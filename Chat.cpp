@@ -15,7 +15,7 @@
 #include <stdio.h>
 #include <iostream>
 #include "Chat.h"
-#include "Mensaje.h"
+
 
 int Chat::getChat(){
 	return Chat::getChat();
@@ -27,7 +27,7 @@ void Chat::setChat(int){
 }
 
 Chat::Chat() {
-	
+    this->IMensajes= new Lista();	
 }
 
 Chat::~Chat() {

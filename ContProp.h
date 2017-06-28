@@ -25,7 +25,15 @@
 #include"ContUsuario.h"
 #include"Usuarios.h"
 #include"Inmobiliaria.h"
+//#include "Departamento.h"
+#include "Edificio.h"
+#include "StringKey.h"
 #include "Departamento.h"
+#include "Propiedad.h"
+#include "dtPropiedadCasa.h"
+#include "Zona.h"
+#include "Interesado.h"
+#include <stdexcept>
 #include<iostream>
 
 
@@ -38,6 +46,7 @@ using namespace std;
         Zona * zona;
         Departamento* dep;
         Usuarios* usuario;
+        Edificio* edificio;
 
         IDictionary * IDepartamento;
         IDictionary * IEdificio;
@@ -46,16 +55,15 @@ using namespace std;
  public:
         
 ContProp();
-
 ContProp(const ContProp& orig);
-
 ~ContProp();
+
         Lista * listaDepartamentos(); 
         void seleccionarDepartamentos(string); 
         Lista * listaZonasDepartamentos();
         void seleccionaZona(string);
         Lista * listaPropiedades();
-//        void seleccionaZona(string letrazona);
+//      void seleccionaZona(string letrazona);
         Lista * seleccionaPropiedad(string);
         string ingesrarCodProp(string);
         void modifPropCasa(dtPropiedadCasa);
@@ -73,7 +81,8 @@ ContProp(const ContProp& orig);
         void altaPropiedadCasa(dtPropiedadCasa*);
         void altaPropiedadApto(dtPropiedadApto*);
         void eliminarProp(string);
-        
+        Lista* listaEdificiosDisp();
+        void seleccionarEdificio(string);
     };
 
 #endif /* CONTPROP_H */

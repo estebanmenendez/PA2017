@@ -12,6 +12,7 @@
  */
 #include <string.h>
 #include <iostream>
+#include "ICollectible.h"
 using namespace std;
 
 #ifndef DTEDIFICIO_H
@@ -19,7 +20,7 @@ using namespace std;
 
 using namespace std;
 
-class dtEdificio {
+class dtEdificio : public ICollectible {
 public:
     dtEdificio();
     dtEdificio(const dtEdificio& orig);
@@ -30,13 +31,13 @@ public:
     dtEdificio* listarEdificioZona();
     void altaEdificio(string nombreEdificio);
     
-    string getnombreEdificio() const;
+    string getnombreEdificio() ;
     void setGastosComunesEdificio(float gastosComunesEdificio);
-    void getGastosComunesEdificio(float) const;
+    float getGastosComunesEdificio() ;
     void setCantPisosEdificio(int cantPisosEdificio);
-    int getCantPisosEdificio() const;
+    int getCantPisosEdificio() ;
     void setNombreEdificio(string nombreEdificio);
-    string getNombreEdificio() const;    
+   // string getNombreEdificio() ;    
     
     
     

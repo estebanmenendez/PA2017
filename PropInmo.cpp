@@ -14,10 +14,11 @@
 #include "PropInmo.h"
 
 
+
 using namespace std;
 
 PropInmo::PropInmo() {
-        
+    this->IChatPropInmo = new Lista();
 }
 
 PropInmo::PropInmo(const PropInmo& orig) {
@@ -38,6 +39,8 @@ int PropInmo::getCantidadMensajes(){
     return cantMensajes;
     
 }
+
+
 string PropInmo ::esAlquileroVenta(){
 if(this->aviPropInmo[0]->esVenta())
     return "V";

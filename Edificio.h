@@ -12,6 +12,7 @@
  */
 
 #include"ICollectible.h"
+#include "dtEdificio.h"
 #include<string.h>
 #include<stdio.h>
 #include<iostream>
@@ -23,35 +24,22 @@ using namespace std;
 
 class Edificio :public ICollectible {
 
-void SetGastosComunes(float gastosComunes) {
-    this->gastosComunes = gastosComunes;
-}
-
-float GetGastosComunes() const {
-    return gastosComunes;
-}
-
-void SetCantpisosEdificio(int cantpisosEdificio) {
-    this->cantpisosEdificio = cantpisosEdificio;
-}
-
-int GetCantpisosEdificio() const {
-    return cantpisosEdificio;
-}
-
-void SetNombreEdificio(string nombreEdificio) {
-    this->nombreEdificio = nombreEdificio;
-}
-
-string GetNombreEdificio() const {
-    return nombreEdificio;
-}
     private:
         string nombreEdificio;
         int cantpisosEdificio;
         float gastosComunes;
         
 public: 
+    dtEdificio* getEdificio();
+    dtEdificio* getEdificio(string);
+    void SetGastosComunes(float gastosComunes);
+    float GetGastosComunes() const;
+    void SetCantpisosEdificio(int cantpisosEdificio);
+    int GetCantpisosEdificio() const;
+    void SetNombreEdificio(string nombreEdificio);
+    string GetNombreEdificio() const;
+    
+    
     Edificio ();
     Edificio(const Edificio& orig);
     Edificio (string,int,float);
