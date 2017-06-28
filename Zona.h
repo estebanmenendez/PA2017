@@ -36,6 +36,7 @@ class Zona: public ICollectible {
 public:
     Zona();
     Zona(const Zona& orig);
+     Zona(string,string);
     virtual ~Zona();
     Lista * listaPropDisponible(Usuarios *);
     dtZonas* getZonas();

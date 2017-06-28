@@ -29,6 +29,7 @@ using namespace std;
 class Departamento:public ICollectible {
 public:
     Departamento();
+    Departamento(string,string);
     Departamento(const Departamento& orig);
     virtual ~Departamento();
     
@@ -37,6 +38,7 @@ public:
     dtDepartamento *getDatos();
     dtPropEnDpto* getpropEnDepto(Usuarios inmobiliaria);
     string getLetraDpto();
+    void agregarZona(dtZonas*);
     
 private:
     string letraDpto;

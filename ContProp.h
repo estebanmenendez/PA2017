@@ -73,7 +73,8 @@ ContProp(const ContProp& orig);
         void altaPropiedadCasa(dtPropiedadCasa*);
         void altaPropiedadApto(dtPropiedadApto*);
         void eliminarProp(string);
-        
+        void altaZona(string,string,string);
+        void altaDepto(dtDepartamento*);
     };
 
 #endif /* CONTPROP_H */

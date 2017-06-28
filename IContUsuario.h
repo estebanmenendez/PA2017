@@ -16,7 +16,8 @@
 #include"dtDireccion.h"
 #include"dtReporteInmobiliaria.h"
 #include"Usuarios.h"
-
+#include"dtFecha.h"
+#include"dtHora.h"
 using namespace std;
 
 class IContUsuario {
@@ -31,11 +32,11 @@ public:
     virtual bool verificarContrasena(string, string)= 0;
     virtual void activarUsuario(string, string)= 0;
     virtual bool validarPwd(string)= 0;
-    virtual void altaSesion(Usuarios * usu)= 0;
+    virtual void altaSesion(Usuarios*)= 0;
     virtual void cancelarAccion()= 0;
     virtual dtReporteInmobiliaria * obtenerReporteInmobiliarias ()= 0;
     virtual void CerrarSesion()= 0;
-    
+    virtual void altamensaje(string,string,dtFecha*,dtHora*,string,string)=0;
     private:
 };
 

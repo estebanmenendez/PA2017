@@ -52,7 +52,7 @@ using namespace std;
         virtual void seleccionaConversacion(string) = 0;
         virtual Lista * listaUltimosCincoMensajes() = 0;
         virtual void seleccionaMensaje(string) = 0;
-        virtual void agregaMensaje(string,string) = 0;
+     //   virtual void agregaMensaje(string,string,string,string,string,string) = 0;
         virtual Lista * listaPropiedadesDisponibles() = 0;
         virtual dtPropiedadInmobiliaria * seleccionaPropiedadDisponible(string) = 0;
         virtual void altaInteresado (string,string,int,string) = 0;
@@ -62,6 +62,8 @@ using namespace std;
         virtual void altaPropiedadApto(dtPropiedadApto*) = 0;
         virtual void eliminarProp(string) = 0;
         //virtual Lista* consultarPropiedadDisponible()=0;
+         virtual void altaZona(string,string,string)=0;
+         virtual void altaDepto(dtDepartamento*)=0;
     };
 
 

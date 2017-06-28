@@ -19,15 +19,14 @@ public:
     dtHora();
     dtHora(const dtHora& orig);
     virtual ~dtHora();
-    dtHora(int ss, int mm, int hh);
+    dtHora(int mm, int hh);
     
-    int getsegundos() const;
+   // int getsegundos() const;
     int getminutos() const;
     int gethoras() const;
     
 private:
-    int ss;
-    int mm;
+   int mm;
     int hh;
 
 };

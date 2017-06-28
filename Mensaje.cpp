@@ -33,6 +33,13 @@ Mensaje::Mensaje() {
 	
 }
 
+Mensaje::Mensaje(string mensaje, dtFecha* fecha, dtHora* hora) {
+    this->textMsj=mensaje;
+    this->fechaMsj=fecha;
+    this->horaMsj=hora;
+}
+
+
 Mensaje::~Mensaje() {
 	
 }

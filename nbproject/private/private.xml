@@ -7,25 +7,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/ernesto/NetBeansProjects/PA2017/IContPorp.h</file>
-            <file>file:/home/ernesto/NetBeansProjects/PA2017/Inmobiliaria.cpp</file>
-            <file>file:/home/ernesto/NetBeansProjects/PA2017/Propiedad.h</file>
-            <file>file:/home/ernesto/NetBeansProjects/PA2017/Propiedad.cpp</file>
-            <file>file:/home/ernesto/NetBeansProjects/PA2017/ContUsuario.h</file>
-            <file>file:/home/ernesto/NetBeansProjects/PA2017/ContProp.cpp</file>
-            <file>file:/home/ernesto/NetBeansProjects/PA2017/Interesado.cpp</file>
-            <file>file:/home/ernesto/NetBeansProjects/PA2017/PropInmo.cpp</file>
-            <file>file:/home/ernesto/NetBeansProjects/PA2017/Departamento.cpp</file>
-            <file>file:/home/ernesto/NetBeansProjects/PA2017/Usuarios.h</file>
-            <file>file:/home/ernesto/NetBeansProjects/PA2017/Inmobiliaria.h</file>
-            <file>file:/home/ernesto/NetBeansProjects/PA2017/ContProp.h</file>
-            <file>file:/home/ernesto/NetBeansProjects/PA2017/dtPropiedadMensaje.h</file>
-            <file>file:/home/ernesto/NetBeansProjects/PA2017/Chat.cpp</file>
-            <file>file:/home/ernesto/NetBeansProjects/PA2017/Interesado.h</file>
-            <file>file:/home/ernesto/NetBeansProjects/PA2017/Zona.h</file>
-            <file>file:/home/ernesto/NetBeansProjects/PA2017/main.cpp</file>
-            <file>file:/home/ernesto/NetBeansProjects/PA2017/PropInmo.h</file>
-            <file>file:/home/ernesto/NetBeansProjects/PA2017/Zona.cpp</file>
+            <file>file:/home/juan/Documentos/obliupdate/obligatorioaltoviaje/PA2017/IContPorp.h</file>
+            <file>file:/home/juan/Documentos/obliupdate/obligatorioaltoviaje/PA2017/Usuarios.cpp</file>
+            <file>file:/home/juan/Documentos/obliupdate/obligatorioaltoviaje/PA2017/Chat.h</file>
+            <file>file:/home/juan/Documentos/obliupdate/obligatorioaltoviaje/PA2017/Mensaje.cpp</file>
+            <file>file:/home/juan/Documentos/obliupdate/obligatorioaltoviaje/PA2017/PropInmo.cpp</file>
+            <file>file:/home/juan/Documentos/obliupdate/obligatorioaltoviaje/PA2017/ContProp.h</file>
+            <file>file:/home/juan/Documentos/obliupdate/obligatorioaltoviaje/PA2017/PropInmo.h</file>
+            <file>file:/home/juan/Documentos/obliupdate/obligatorioaltoviaje/PA2017/ContProp.cpp</file>
+            <file>file:/home/juan/Documentos/obliupdate/obligatorioaltoviaje/PA2017/Mensaje.h</file>
+            <file>file:/home/juan/Documentos/obliupdate/obligatorioaltoviaje/PA2017/Usuarios.h</file>
+            <file>file:/home/juan/Documentos/obliupdate/obligatorioaltoviaje/PA2017/main.cpp</file>
         </group>
     </open-files>
 </project-private>

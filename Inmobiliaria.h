@@ -34,7 +34,7 @@ class Inmobiliaria : public Usuarios{
         string getEmail();
         int cantMensajesPropiedad(string);
         string getAlquilerOVenta(string codProp);
-        
+        void altaMensaje(dtFecha*,dtHora*,string,Interesado*,string);
         void altaPropEnInmob(Propiedad *p);
 };
 

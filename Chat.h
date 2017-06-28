@@ -23,6 +23,7 @@
 #include "dtMensajes.h"
 #include "ICollectible.h"
 #include "ICollection.h"
+#include "Interesado.h"
 
 using namespace std;
 
@@ -30,6 +31,7 @@ class Chat: public ICollectible {
 public:
     
     Chat();
+    
     Chat(const Chat& orig);
     virtual ~Chat();
     int getChat();
@@ -40,10 +42,11 @@ public:
     bool pertPropUsuario();
     dtMensajes ** getUltimosCinco();
     void enviaMensaje(string);
-
+    void setInteresado(Interesado *);
+    void altaMensaje(string mensa,dtFecha* fecha,dtHora* hora, Interesado *);
 private: 
     ICollection * IMensajes;
-
+    Interesado * Inter;
 };
 
 #endif /* CHAT_H */

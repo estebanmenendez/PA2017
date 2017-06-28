@@ -13,8 +13,8 @@
 
 #include "dtHora.h"
 
-dtHora::dtHora(int ss, int mm, int hh) {
-    this->ss = ss;
+dtHora::dtHora(int mm, int hh) {
+    
     this->mm = mm;
     this->hh = hh;
 }
@@ -28,9 +28,6 @@ dtHora::dtHora(const dtHora& orig) {
 dtHora::~dtHora() {
 }
 
-int dtHora::getsegundos() const{
-    return this->ss;
-}
 
 int dtHora::getminutos() const{
     return this->mm;

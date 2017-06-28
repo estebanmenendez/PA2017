@@ -43,6 +43,12 @@ Zona::~Zona() {}
 dtZonas* Zona::getZonas(){
     return new dtZonas(codigoZona, nombreZona);
 }
+Zona::Zona(string nombreZ,string codigoZ){
+    this->nombreZona=nombreZ;
+    this->codigoZona=codigoZ;
+}
+
+
 
 Lista* Zona::listaPropiedades(Usuarios* usuario){
     int cantidad= 0;
@@ -73,11 +79,8 @@ Lista * Zona::listaPropDisponible(Usuarios *usu){
     IIterator *it=IPropiedad->getIteratorObj();
     Lista *resul=new Lista();
     while (it->hasNext()) {
-        
         dtPropiedadDisponible* p= dynamic_cast<dtPropiedadDisponible*>(it->getCurrent());
-       
         resul->add(p->getPropiedadDisponible(usu));
-    
     }
     delete it;
     return resul;

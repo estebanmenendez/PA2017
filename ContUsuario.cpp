@@ -111,3 +111,12 @@ void ContUsuario::CerrarSesion(){
 usuLog = NULL;
 }
 
+void ContUsuario::altamensaje(string inmo, string mensaje, dtFecha*fecha, dtHora*hora, string interesado,string propiedad){
+    StringKey *sk,*skinter;
+    sk=new StringKey(inmo);
+    skinter=new StringKey(interesado);
+    Inmobiliaria *innmo=dynamic_cast<Inmobiliaria*>(IUsuario->find(sk));
+    Interesado *usu=dynamic_cast<Interesado*>(IUsuario->find(skinter));
+    innmo->altaMensaje(fecha,hora,mensaje,usu,propiedad);
+    
+}

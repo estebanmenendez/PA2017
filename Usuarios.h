@@ -35,7 +35,7 @@ public:
     virtual string getPwd();
     virtual string getTipo();    
     virtual ~Usuarios();
-    
+   // virtual void altaMensaje(string,string,string,string,string,string);
 };
 
 

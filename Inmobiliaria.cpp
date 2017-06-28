@@ -51,14 +51,18 @@ string Inmobiliaria::getEmail(){
 }
 int Inmobiliaria::cantMensajesPropiedad(string codProp){
     int cantMensajes = 0;
-    
     StringKey *sk= new StringKey(codProp);
     PropInmo *p=dynamic_cast<PropInmo*>(IPropInmo->find(sk));
     if(p!=NULL)
         cantMensajes +=  p->getCantidadMensajes();   
     else 
         throw invalid_argument("No existe esa Zona");
-    //delete it;
     return cantMensajes;
     }
     
+void Inmobiliaria::altaMensaje(dtFecha* fecha,dtHora* hora,string mensaje, Interesado * usu,string propiedad){
+     StringKey * sk=new StringKey(propiedad);
+     PropInmo *p=dynamic_cast<PropInmo*>(IPropInmo->find(sk));
+     p->altaMensaje(mensaje,fecha,hora,usu);
+     
+     }
