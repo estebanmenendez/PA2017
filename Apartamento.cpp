@@ -22,3 +22,4 @@ void Apartamento::esCasa(){
 void Apartamento::esApto(){
 
 }
+

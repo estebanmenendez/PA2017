@@ -38,9 +38,9 @@ using namespace std;
     public:
        
         virtual ~IContProp();
-       virtual void seleccionarDepartamentos(string) = 0;
-       virtual Lista * listaDepartamentos() = 0;
-       virtual Lista * listaZonasDepartamentos() = 0;
+        virtual void seleccionarDepartamentos(string) = 0;
+        virtual Lista * listaDepartamentos() = 0;
+        virtual Lista * listaZonasDepartamentos() = 0;
         virtual void seleccionaZona(string) = 0;
         virtual Lista * listaPropiedades() = 0;
         virtual Lista * seleccionaPropiedad(string) = 0;
@@ -55,12 +55,14 @@ using namespace std;
      //   virtual void agregaMensaje(string,string,string,string,string,string) = 0;
         virtual Lista * listaPropiedadesDisponibles() = 0;
         virtual dtPropiedadInmobiliaria * seleccionaPropiedadDisponible(string) = 0;
-        virtual void altaInteresado (string,string,int,string) = 0;
+        virtual void altaInteresado (string,string,int,string,string) = 0;
         virtual void altaEdificio(string,int,float) = 0;
         virtual Lista* iniciarReporte(Inmobiliaria) = 0;
         virtual void altaPropiedadCasa(dtPropiedadCasa*) = 0;
         virtual void altaPropiedadApto(dtPropiedadApto*) = 0;
         virtual void eliminarProp(string) = 0;
+        virtual Lista* listaEdificiosDisp() = 0;
+        virtual void seleccionarEdificio(string) = 0;
         //virtual Lista* consultarPropiedadDisponible()=0;
          virtual void altaZona(string,string,string)=0;
          virtual void altaDepto(dtDepartamento*)=0;

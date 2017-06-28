@@ -38,6 +38,7 @@ using namespace std;
         Zona * zona;
         Departamento* dep;
         Usuarios* usuario;
+        Edificio* edificio;
 
         IDictionary * IDepartamento;
         IDictionary * IEdificio;
@@ -46,16 +47,15 @@ using namespace std;
  public:
         
 ContProp();
-
 ContProp(const ContProp& orig);
-
 ~ContProp();
+
         Lista * listaDepartamentos(); 
         void seleccionarDepartamentos(string); 
         Lista * listaZonasDepartamentos();
         void seleccionaZona(string);
         Lista * listaPropiedades();
-//        void seleccionaZona(string letrazona);
+//      void seleccionaZona(string letrazona);
         Lista * seleccionaPropiedad(string);
         string ingesrarCodProp(string);
         void modifPropCasa(dtPropiedadCasa);
@@ -67,14 +67,19 @@ ContProp(const ContProp& orig);
         void agregaMensaje(string,string);
         Lista * listaPropiedadesDisponibles();
         dtPropiedadInmobiliaria * seleccionaPropiedadDisponible(string);
-        void altaInteresado (string,string,int,string);
+        void altaInteresado (string,string,int,string,string);
         void altaEdificio(string,int,float);
         Lista * iniciarReporte(Inmobiliaria);
         void altaPropiedadCasa(dtPropiedadCasa*);
         void altaPropiedadApto(dtPropiedadApto*);
         void eliminarProp(string);
+<<<<<<< HEAD
         void altaZona(string,string,string);
         void altaDepto(dtDepartamento*);
+=======
+        Lista* listaEdificiosDisp();
+        void seleccionarEdificio(string);
+>>>>>>> 9433d8471c9928d68a97065d9557fa255bb5520e
     };
 
 #endif /* CONTPROP_H */

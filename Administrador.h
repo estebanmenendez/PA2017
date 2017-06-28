@@ -10,8 +10,8 @@ class Administrador : public Usuarios{
         string getTipo();
         string getEmail();
         string getPwd();
-        Administrador();
-        Administrador(string, string);
+        Administrador(string,string);
+        
         virtual ~Administrador();      
         
         //int cantMensajesPropiedad(string);

@@ -30,7 +30,8 @@ private:
 public:
     //Usuarios* getUsuario();
     virtual bool esInteresado();
-    Usuarios();  
+    Usuarios();
+    Usuarios(string,string);  
     virtual string getEmail();
     virtual string getPwd();
     virtual string getTipo();    

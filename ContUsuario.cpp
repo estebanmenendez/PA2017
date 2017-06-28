@@ -16,6 +16,7 @@
 #include "ICollection.h"
 #include "Inmobiliaria.h"
 #include "ContProp.h"
+#include "Administrador.h"
 #include <iostream>
 #include <string.h>
 #include <stdexcept>
@@ -29,40 +30,39 @@ using namespace std;
 
     ContUsuario::~ContUsuario() {
     }
-
-      void ContUsuario::altaInteresado(string nombre, string apellido, int edad, string email){
-          
-        Interesado * i = new Interesado(nombre, apellido, edad, email);
-        StringKey * skEmail = new StringKey(email);  //GENERO LA CLAVE 
-
-
-       /* if(IInteresados->member(skEmail)!=true)//pregunto si ya existe
-            IInteresados->add(i,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
-        */
+    void ContUsuario::altaAdministrador(){
+        Administrador * i = new Administrador("admin","admin");
+        StringKey * skEmail = new StringKey("admin");  //GENERO LA CLAVE 
         if(IUsuario->member(skEmail)!=true)//pregunto si ya existe
             IUsuario->add(i,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
-
-
-        else throw new invalid_argument("Usuario interesado ya existente");
+        else 
+            throw new invalid_argument("Usuario Asdministrador ya existente");
+    }
+      void ContUsuario::altaInteresado(string nombre, string apellido, int edad, string email,string contra){
+          
+        Interesado * i = new Interesado(nombre, apellido, edad, email,contra);
+        StringKey * skEmail = new StringKey(email);  //GENERO LA CLAVE 
+        if(IUsuario->member(skEmail)!=true)//pregunto si ya existe
+            IUsuario->add(i,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
+        else 
+            throw new invalid_argument("Usuario interesado ya existente");
         
     }
-      void ContUsuario::altaInmobiliaria( string nombre, dtDireccion * direccion, string email){
+
+void ContUsuario::altaInmobiliaria( string nombre, dtDireccion * direccion, string email,string contra){
              
-      Inmobiliaria * coso = new Inmobiliaria(nombre, direccion, email);
+      Inmobiliaria * inm = new Inmobiliaria(nombre, direccion, email,contra);
       StringKey * skEmail = new StringKey(email);  //GENERO LA CLAVE 
-      //StringKey * skEmail = new StringKey(nombre);
-
-
-       /* if(IInmobiliaria->member(skEmail)!=true)//pregunto si ya existe
-            IInmobiliaria->add(coso,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
-        */
-        if(IUsuario->member(skEmail)!=true)//pregunto si ya existe
-           IUsuario->add(coso,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
-        else throw new invalid_argument("Usuario inmobiliaria ya existente");
+      if(IUsuario->member(skEmail)!=true)//pregunto si ya existe
+           IUsuario->add(inm,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
+       else throw new invalid_argument("Usuario inmobiliaria ya existente");
             
   }
-void ContUsuario::altaSesion(Usuarios * usu){
-    usuLog = usu;
+Usuarios* ContUsuario::altaSesion(string usu){
+    StringKey *sk=new StringKey(usu);
+    Usuarios *u=dynamic_cast<Usuarios*>(IUsuario->find(sk));
+    usuLog = u;
+    return u;
 }
 void ContUsuario::cancelarAccion(){
     
@@ -77,10 +77,11 @@ Usuarios * ContUsuario::usuarioLogueado(){
     return usuLog;
 }
 
-void ContUsuario::iniciarSesion(string email , string pwd){
-    Usuarios * usu = new Usuarios();
-    altaSesion(usu);  
+void ContUsuario::iniciarSesion(){
+//    Usuarios * usu = new Usuarios();
+//    altaSesion(usu);  
 }
+
 bool ContUsuario::verificarContrasena(string pwd , string pwdConfirmacion ){
     if(pwd==pwdConfirmacion){
         return true;
@@ -90,25 +91,27 @@ bool ContUsuario::verificarContrasena(string pwd , string pwdConfirmacion ){
     }
 }
 void ContUsuario::activarUsuario(string pwd ,string email){
-    Usuarios * u = new Usuarios();
+    Usuarios * u = new Usuarios(email,pwd);
     StringKey *sk = new StringKey(email);
     IUsuario->add(u, sk);
     
 }
 
-bool ContUsuario::validarPwd(string contrasena){ 
-    string ok="s";
-    StringKey * skPwd = new StringKey(contrasena);
+bool ContUsuario::validarPwd(string email,string contrasena){ 
+   
+    StringKey *sk=new StringKey(email);
+    Usuarios *u=dynamic_cast<Usuarios*>(IUsuario->find(sk));
     
-    if(IUsuario->find(skPwd)!= NULL){
-        return true;
+    if(u != NULL){
+         return true;
     }else{
+        throw invalid_argument("No existe ese Usuario");
         return false;
     }
 }
 
 void ContUsuario::CerrarSesion(){ 
-usuLog = NULL;
+    usuLog = NULL;
 }
 
 void ContUsuario::altamensaje(string inmo, string mensaje, dtFecha*fecha, dtHora*hora, string interesado,string propiedad){

@@ -7,6 +7,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/home/juan/Documentos/obliupdate/obligatorioaltoviaje/PA2017/IContPorp.h</file>
             <file>file:/home/juan/Documentos/obliupdate/obligatorioaltoviaje/PA2017/Usuarios.cpp</file>
             <file>file:/home/juan/Documentos/obliupdate/obligatorioaltoviaje/PA2017/Chat.h</file>
@@ -18,6 +19,31 @@
             <file>file:/home/juan/Documentos/obliupdate/obligatorioaltoviaje/PA2017/Mensaje.h</file>
             <file>file:/home/juan/Documentos/obliupdate/obligatorioaltoviaje/PA2017/Usuarios.h</file>
             <file>file:/home/juan/Documentos/obliupdate/obligatorioaltoviaje/PA2017/main.cpp</file>
+=======
+            <file>file:/home/ernesto/NetBeansProjects/PA2017/IContPorp.h</file>
+            <file>file:/home/ernesto/NetBeansProjects/PA2017/Inmobiliaria.cpp</file>
+            <file>file:/home/ernesto/NetBeansProjects/PA2017/Usuarios.cpp</file>
+            <file>file:/home/ernesto/NetBeansProjects/PA2017/Administrador.cpp</file>
+            <file>file:/home/ernesto/NetBeansProjects/PA2017/IContUsuario.cpp</file>
+            <file>file:/home/ernesto/NetBeansProjects/PA2017/ContUsuario.h</file>
+            <file>file:/home/ernesto/NetBeansProjects/PA2017/ContProp.cpp</file>
+            <file>file:/home/ernesto/NetBeansProjects/PA2017/Interesado.cpp</file>
+            <file>file:/home/ernesto/NetBeansProjects/PA2017/ContUsuario.cpp</file>
+            <file>file:/home/ernesto/NetBeansProjects/PA2017/Administrador.h</file>
+            <file>file:/home/ernesto/NetBeansProjects/PA2017/Usuarios.h</file>
+            <file>file:/home/ernesto/NetBeansProjects/PA2017/Inmobiliaria.h</file>
+            <file>file:/home/ernesto/NetBeansProjects/PA2017/IContUsuario.h</file>
+            <file>file:/home/ernesto/NetBeansProjects/PA2017/ContProp.h</file>
+            <file>file:/home/ernesto/NetBeansProjects/PA2017/Interesado.h</file>
+            <file>file:/home/ernesto/NetBeansProjects/PA2017/main.cpp</file>
+            <file>file:/home/ernesto/NetBeansProjects/PA2017/Fabrica.cpp</file>
+            <file>file:/home/lucia/NetBeansProjects/PAUltimo/PA2017/ContProp.h</file>
+            <file>file:/home/lucia/NetBeansProjects/PAUltimo/PA2017/main.cpp</file>
+            <file>file:/home/lucia/NetBeansProjects/PAUltimo/PA2017/Edificio.h</file>
+            <file>file:/home/lucia/NetBeansProjects/PAUltimo/PA2017/ContProp.cpp</file>
+            <file>file:/home/lucia/NetBeansProjects/PAUltimo/PA2017/Edificio.cpp</file>
+            <file>file:/home/lucia/NetBeansProjects/PAUltimo/PA2017/IContPorp.h</file>
+>>>>>>> 9433d8471c9928d68a97065d9557fa255bb5520e
         </group>
     </open-files>
 </project-private>
