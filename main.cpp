@@ -85,7 +85,6 @@ int main(int argc, char** argv) {
 }
 
 ///////////////////// NUEVO /////////////////////
-
 void opcionesGenerales(){
     cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<endl<<endl;
     cout << "1 - Iniciar Sesion" << endl;
@@ -414,6 +413,14 @@ void altaPropiedad(){
     dtPropiedadApto * dtPropA;
     dtDireccion* dir;
     bool lgarage,ventAlq;
+    
+    
+    // PARTE DE SELECCIONAR EDIFICIO
+    string nombreEd;
+    int pisos;
+    float gastosComunes;
+    string opEd = "s";
+    string nomEd;
         
 //    listaDep = i->listaDepartamentos();
     cout<<"Ingrese la letra del Departamento: ";
@@ -465,6 +472,27 @@ void altaPropiedad(){
     i->altaPropiedadCasa(dtPropC);
    
     }else{
+        ICollection* colDtEdif= NULL;
+        
+        
+       colDtEdif = i->listaEdificiosDisp();
+       IIterator *dt =colDtEdif->iterator();
+    cout<<"Edificios Disponibles\n";
+    
+    while(dt->hasNext()){
+        dtEdificio *dtE=dynamic_cast<dtEdificio*>(dt->getCurrent());
+        cout<<dtE->getnombreEdificio()<<"-"<<dtE->getCantPisosEdificio()<<dtE->getGastosComunesEdificio()<<"\n";
+        dt->next();        
+    }
+    cout<<"Elegir Letra Edificio\n";
+    cin>>nomEd;
+    i->seleccionarEdificio(nomEd);
+       
+    cout<<"\n Desea dar de alta el edificio?";
+    cin>>opEd;
+    if(opEd == "s")
+        i->altaEdificio(nombreEd, pisos, gastosComunes);
+        
     cout<<"\nDatos Apartamentos\n";
     cout<<"Ingrese Cantidad Ambientes: \n";
     cin>>cAmb;

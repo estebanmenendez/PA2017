@@ -77,6 +77,7 @@ Lista * ContProp::listaPropiedadesDisponibles(){
     Lista *resul=new Lista();
    return resul=zona->listaPropDisponible(this->usuario);
 }
+
 Lista * ContProp::listaPropiedades(){
     Lista* resProp = new Lista();
     resProp = zona->listaPropiedades(dynamic_cast<Inmobiliaria*>(this->usuario));
@@ -146,7 +147,30 @@ void ContProp::eliminarProp(string codigo){
 
    // StringKey* claveP = new StringKey(codigo);
     //bool estaProp = Diccionario->member(claveP);
-//    Propiedad* p = dynamic_cast<Propiedad*>(this->Diccionario->find(claveP));
+//    Propiedad* p = dynamic_cast<Propiedad*>(this->Diccionario->find(claveP)); 
+}
+
+
+Lista* ContProp::listaEdificiosDisp(){
+     IIterator *it =IEdificio->getIteratorObj();
+    Lista *resul=new Lista();
+    while (it->hasNext()) {
+        Edificio* c= dynamic_cast <Edificio*> (it->getCurrent());
+        //StringKey *sk=new StringKey(c->getDatos()->getletraDepartamento());
+        resul->add(c->getEdificio());
+        it->next();
+    }
+    delete it;
+    return resul;
+}
+
+void ContProp::seleccionarEdificio(string nombreEd){
+    //IIterator *it=IEdificio->getIteratorObj();
+    StringKey *sk=new StringKey(nombreEd);
+    Edificio *e=dynamic_cast<Edificio*>(IEdificio->find(sk));
+    if(e!=NULL){
+        edificio = e;
+    }
+    else {throw invalid_argument("No existe ese edificio");}
     
-   
 }

@@ -29,27 +29,34 @@ dtEdificio::dtEdificio (string nombreEdificio, int picantPisosEdificiosos, float
 dtEdificio::~dtEdificio() {
 }
 
-string dtEdificio::getnombreEdificio() const {
-    return this->nombreEdificio;
-}
-
-void dtEdificio::setGastosComunesEdificio(float gastosComunesEdificio) {
-}
-
-void dtEdificio::setCantPisosEdificio(int cantPisosEdificio) {
-    this->cantPisosEdificio = cantPisosEdificio;
-}
-
-int dtEdificio::getCantPisosEdificio() const {
-    return cantPisosEdificio;
+string dtEdificio::getnombreEdificio()  {
+    return nombreEdificio;
 }
 
 void dtEdificio::setNombreEdificio(string nombreEdificio) {
     this->nombreEdificio = nombreEdificio;
 }
 
-string dtEdificio::getNombreEdificio() const {
-    return nombreEdificio;
+void dtEdificio::setGastosComunesEdificio(float gastosComunesEdificio) {
 }
 
+float dtEdificio::getGastosComunesEdificio(){
+    return gastosComunesEdificio;
+}
+
+int dtEdificio::getCantPisosEdificio() {
+    return cantPisosEdificio;
+}
+
+void dtEdificio::setCantPisosEdificio(int cantPisosEdificio) {
+    this->cantPisosEdificio = cantPisosEdificio;
+}
+
+
+
+
+//
+//string dtEdificio::getNombreEdificio() {
+//    return nombreEdificio;
+//}
 

@@ -37,7 +37,7 @@ class ContUsuario : public IContUsuario {
         void altaSesion(Usuarios * usu); // HECHO
         void cancelarAccion();
         dtReporteInmobiliaria * obtenerReporteInmobiliarias();
-        void CerrarSesion(); // HECHOmain
+        void CerrarSesion(); // HECHO
 
     private:
         

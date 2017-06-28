@@ -12,6 +12,7 @@
  */
 
 #include "Edificio.h"
+#include "dtEdificio.h"
 
     Edificio::Edificio (){}
     Edificio::Edificio(const Edificio& orig){}
@@ -23,4 +24,32 @@ Edificio::Edificio(string nombre, int pisos, float gastosComunes) {
     
 }
 
-    Edificio::~Edificio(){}
+void Edificio::SetGastosComunes(float gastosComunes) {
+    this->gastosComunes = gastosComunes;
+}
+
+float Edificio::GetGastosComunes() const{
+    return gastosComunes;
+}
+
+void Edificio::SetCantpisosEdificio(int cantpisosEdificio) {
+    this->cantpisosEdificio = cantpisosEdificio;
+}
+
+int Edificio::GetCantpisosEdificio() const {
+    return cantpisosEdificio;
+}
+
+void Edificio::SetNombreEdificio(string nombreEdificio) {
+    this->nombreEdificio = nombreEdificio;
+}
+
+string Edificio::GetNombreEdificio() const {
+    return nombreEdificio;
+}
+
+dtEdificio* Edificio::getEdificio(){
+    return new dtEdificio(this->nombreEdificio, this->cantpisosEdificio, this->gastosComunes);
+}
+
+Edificio::~Edificio(){}
