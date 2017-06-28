@@ -30,8 +30,8 @@ Interesado::Interesado(string nombre, string apellido,int edad, string email,str
   Interesado::~Interesado(){
       
   }
-string Interesado::getTipo(){
-  return "Interesado";
+int Interesado::getTipo(){
+  return 3;
 }
 string Interesado::getPwd(){
     return this->getPwd();

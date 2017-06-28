@@ -29,7 +29,7 @@ class Inmobiliaria : public Usuarios{
         Inmobiliaria();
         Inmobiliaria(string, dtDireccion*, string,string);
         virtual ~Inmobiliaria();
-        string getTipo();
+        int getTipo();
         string getPwd();
         string getEmail();
         int cantMensajesPropiedad(string);

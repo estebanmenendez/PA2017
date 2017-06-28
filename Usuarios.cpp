@@ -33,7 +33,7 @@ Usuarios::~Usuarios(){
     string Usuarios::getPwd(){
         
     }
-    string Usuarios::getTipo(){
+    int Usuarios::getTipo(){
         
     }
     

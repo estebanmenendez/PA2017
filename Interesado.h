@@ -26,7 +26,7 @@ class Interesado :public Usuarios{
         public:
             int getEdad();
             void setEdad();
-            string getTipo();
+            int getTipo();
             string getPwd();
             string getEmail();
             Interesado(string nombre, string apellido,int edad, string email,string);

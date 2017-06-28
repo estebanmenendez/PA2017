@@ -37,8 +37,8 @@ void Inmobiliaria::altaPropEnInmob(Propiedad *p){
      else throw new invalid_argument("Propiedad en Inmobiliaria ya existente");      
 }
 
-string Inmobiliaria::getTipo(){
-  return "Inmobiliaria";
+int Inmobiliaria::getTipo(){
+  return 2;
 }
 
 string Inmobiliaria::getPwd(){

@@ -23,6 +23,8 @@
 using namespace std;
 
     ContUsuario::ContUsuario() {
+        this->IUsuario = new ListDicc();
+        
     }
 
     ContUsuario::ContUsuario(const ContUsuario& orig) {
@@ -33,10 +35,10 @@ using namespace std;
     void ContUsuario::altaAdministrador(){
         Administrador * i = new Administrador("admin","admin");
         StringKey * skEmail = new StringKey("admin");  //GENERO LA CLAVE 
-        if(IUsuario->member(skEmail)!=true)//pregunto si ya existe
+        if(IUsuario->size() == 0)
             IUsuario->add(i,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
-        else 
-            throw new invalid_argument("Usuario Asdministrador ya existente");
+//        else 
+//            throw new invalid_argument("Usuario Asdministrador ya existente");
     }
       void ContUsuario::altaInteresado(string nombre, string apellido, int edad, string email,string contra){
           

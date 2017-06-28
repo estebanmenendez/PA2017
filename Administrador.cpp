@@ -21,8 +21,8 @@ Administrador::~Administrador(){
     
 }
 
-string Administrador::getTipo(){
-  return "Administrador";
+int Administrador::getTipo(){
+  return 1;
 }
 string Administrador::getEmail(){
     return this->getEmail();

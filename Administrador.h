@@ -7,7 +7,7 @@
 class Administrador : public Usuarios{
     
     public:
-        string getTipo();
+        int getTipo();
         string getEmail();
         string getPwd();
         Administrador(string,string);
