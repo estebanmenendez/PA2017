@@ -12,6 +12,9 @@
  */
 
 #include "Usuarios.h"
+#include "Interesado.h"
+#include "Propiedad.h"
+#include "Inmobiliaria.h"
 Usuarios::Usuarios(){
     
 }
@@ -22,7 +25,9 @@ Usuarios::Usuarios(string usu, string pwd){
 Usuarios::~Usuarios(){
     
 }
+ 
 
+ 
  
     bool Usuarios::esInteresado(){
         
@@ -36,4 +41,5 @@ Usuarios::~Usuarios(){
     int Usuarios::getTipo(){
         
     }
+    
     

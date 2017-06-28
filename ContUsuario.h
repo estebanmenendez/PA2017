@@ -34,12 +34,15 @@ class ContUsuario : public IContUsuario {
         void iniciarSesion(); // HECHO
         bool verificarContrasena(string, string); // HECHO
         void activarUsuario(string, string); // HECHO
-        bool validarPwd(string,string); // HECHO
+        bool validarPwd(string, string); // HECHO
         Usuarios* altaSesion(string); // HECHO
         void cancelarAccion();
         dtReporteInmobiliaria * obtenerReporteInmobiliarias();
-        int cantMensajesPropiedad(Propiedad *);
+        int cantMensajesPropiedad(string);
         void CerrarSesion(); // HECHO
+        void altamensaje(string,string,dtFecha*,dtHora*,string,string);
+
+
 
     private:
         

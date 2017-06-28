@@ -32,8 +32,8 @@ using namespace std;
     ContUsuario::~ContUsuario() {
     }
     void ContUsuario::altaAdministrador(){
-        Administrador * i = new Administrador("admin","admin");
-        StringKey * skEmail = new StringKey("admin");  //GENERO LA CLAVE 
+        Administrador * i = new Administrador("adm1@sys.com","Pass1");
+        StringKey * skEmail = new StringKey("adm1@sys.com");  //GENERO LA CLAVE 
         if(IUsuario->size() == 0)
             IUsuario->add(i,skEmail);//agrego el objeto mas la clave a la coleccion dicionario
 //        else 
@@ -104,7 +104,7 @@ bool ContUsuario::validarPwd(string email,string contrasena){
     Usuarios *u=dynamic_cast<Usuarios*>(IUsuario->find(sk));
     
     if(u != NULL){
-        if (u->getPwd()!=contrasena)
+        if (u->getPwd().compare(contrasena)== 0)
             throw invalid_argument("Clave incorrecta");
     }else{
         throw invalid_argument("No existe ese Usuario");
@@ -116,6 +116,15 @@ void ContUsuario::CerrarSesion(){
     usuLog = NULL;
 }
 
-int ContUsuario::cantMensajesPropiedad(Propiedad *){
+int ContUsuario::cantMensajesPropiedad(string){
+    
+}
+void ContUsuario::altamensaje(string inmo, string mensaje, dtFecha*fecha, dtHora*hora, string interesado,string propiedad){
+    StringKey *sk,*skinter;
+    sk=new StringKey(inmo);
+    skinter=new StringKey(interesado);
+    Inmobiliaria *innmo=dynamic_cast<Inmobiliaria*>(IUsuario->find(sk));
+    Interesado *usu=dynamic_cast<Interesado*>(IUsuario->find(skinter));
+    innmo->altaMensaje(fecha,hora,mensaje,usu,propiedad);
     
 }

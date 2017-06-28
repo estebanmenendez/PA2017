@@ -24,7 +24,7 @@
 
 using namespace std;
 
-class Mensaje {
+class Mensaje:public ICollectible{
 private:
 	string textMsj;
 	dtFecha * fechaMsj;
@@ -34,6 +34,8 @@ private:
 public:
 	Mensaje();
 	~Mensaje();
+        Mensaje(string,dtFecha*,dtHora*);
+        
         string getTextoMsj();
         dtFecha getFechaMsj();
         dtHora getHoraMsj();

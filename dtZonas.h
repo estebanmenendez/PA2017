@@ -25,7 +25,7 @@ public:
     dtZonas();
     dtZonas(const dtZonas& orig);
     virtual ~dtZonas();
-    dtZonas(string codigoZona, string nombreZona);
+    dtZonas(string , string );
      string getNombreZona() const;
      string getCodigoZona() const; 
     

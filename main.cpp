@@ -162,6 +162,7 @@ void administradorOpciones(){
     cout << "2 - Alta interesado" << endl;
     cout << "3 - Obtener reporte inmobiliaria" << endl;
     cout << "4 - Cerrar sesion" << endl; 
+    cout << "5 - Cargar Datos Prueba" << endl; 
     
     //adminOpciones(opAdmin);
 }
@@ -176,6 +177,7 @@ void adminOpciones(){
             case 2 : altaInteresado(); break;
             case 3 : obtenerReporteInmo(); break;
             case 4 : cerrarSesion(); opAdmin = 0; break;
+            case 5 : cargaDatosPrueba();break;
             case 0 : break;
            }
     }
@@ -239,7 +241,7 @@ void interOpciones( ){
         }
 }
 
-void cargaDatosPrueba(){}
+//void cargaDatosPrueba(){}
 
 void iniciarSesion(){
    Fabrica* f = Fabrica::getInstance();
@@ -608,5 +610,523 @@ void altaEdificio(){
        i->altaEdificio(nombre,pisos,gastosComunes);
        
       cout << endl << "Gestor de Ofertas Inmobiliarias - Mi Casa"<<"\t"<<"Usuario: "<<us<<endl;
+}
+
+//////////////////////CARGAR DATOS YA SABES////////////////////////////////////////
+
+//usuarios
+void cargarUsuInmo(){
+    Fabrica * f = Fabrica::getInstance();
+    IContUsuario* itUInmo = f->getContUsuario();
+    string email, pwd, nombre, ciudad, calle, numero;
+    dtDireccion* dirInmo;
+    
+    email = "inm1@sis.com";
+    pwd = "pass4";
+    nombre = "Selmo";
+    ciudad = "Paysandu";
+    calle = "Benitez";
+    numero = "1134";
+    dirInmo = new dtDireccion(ciudad, calle, numero);
+    itUInmo->altaInmobiliaria(nombre, dirInmo, email, pwd);
+    
+    email = "inm2@sis.com";
+    pwd = "pass5";
+    nombre = "Garcia";
+    ciudad = "Paysandu";
+    calle = "Rivera";
+    numero = "1340";
+    dirInmo = new dtDireccion(ciudad, calle, numero);
+    itUInmo->altaInmobiliaria(nombre, dirInmo, email, pwd);
+   
+    email = "inm3@sis.com";
+    pwd = "pass6";
+    nombre = "Invernissi";
+    ciudad = "Salto";
+    calle = "Comercio";
+    numero = "234";
+    dirInmo = new dtDireccion(ciudad, calle, numero);
+    itUInmo->altaInmobiliaria(nombre, dirInmo, email, pwd);
+    
+    email = "inm4@sis.com";
+    pwd = "pass7";
+    nombre = "Solei";
+    ciudad = "Montevideo";
+    calle = "Inca";
+    numero = "3456";
+    dirInmo = new dtDireccion(ciudad, calle, numero);
+    itUInmo->altaInmobiliaria(nombre, dirInmo, email, pwd);
+    
+}
+
+void cargarUsuInteresado(){
+    Fabrica * f = Fabrica::getInstance();
+    IContUsuario* itUInmo = f->getContUsuario();
+    string email, pwd, nombreInt, apellidoInt, ciudad, calle, numero;
+    int edadInt;
+    
+    email = "int1@sis.com";
+    pwd = "passt1";
+    nombreInt = "Julio";
+    apellidoInt = "Chaz";
+    edadInt = 34;
+    itUInmo->altaInteresado(nombreInt, apellidoInt, edadInt, email, pwd);
+    
+    email = "int2@sis.com";
+    pwd = "passt2";
+    nombreInt = "Andrea";
+    apellidoInt = "Berruti";
+    edadInt = 56;
+    itUInmo->altaInteresado(nombreInt, apellidoInt, edadInt, email, pwd);
+    
+    email = "int3@sis.com";
+    pwd = "passt3";
+    nombreInt = "Sonia";
+    apellidoInt = "Braga";
+    edadInt = 45;
+    itUInmo->altaInteresado(nombreInt, apellidoInt, edadInt, email, pwd);
+    
+    email = "int4@sis.com";
+    pwd = "passt4";
+    nombreInt = "Alfonso";
+    apellidoInt = "Mier";
+    edadInt = 30;
+    itUInmo->altaInteresado(nombreInt, apellidoInt, edadInt, email, pwd);
+    
+    email = "int5@sis.com";
+    pwd = "passt5";
+    nombreInt = "Juan";
+    apellidoInt = "Alpi";
+    edadInt = 60;
+    itUInmo->altaInteresado(nombreInt, apellidoInt, edadInt, email, pwd);
+    
+}
+
+void cargarEdificios(){
+    Fabrica * f = Fabrica::getInstance();
+    IContProp* itE = f->getContProp();
+    string nombreEdificio;
+    int cantPisos;
+    float gastosComunes;
+    
+    nombreEdificio = "Apache Valiente";
+    cantPisos = 4;
+    gastosComunes = 1234;
+    itE->altaEdificio(nombreEdificio, cantPisos, gastosComunes);
+    
+    nombreEdificio = "Mebeo";
+    cantPisos = 20;
+    gastosComunes = 3452;
+    itE->altaEdificio(nombreEdificio, cantPisos, gastosComunes);
+    
+    nombreEdificio = "Socrates";
+    cantPisos = 34;
+    gastosComunes = 456;
+    itE->altaEdificio(nombreEdificio, cantPisos, gastosComunes);
+    
+    nombreEdificio = "El Burdel";
+    cantPisos = 12;
+    gastosComunes = 800;
+    itE->altaEdificio(nombreEdificio, cantPisos, gastosComunes);
+    
+    nombreEdificio = "Milajo";
+    cantPisos = 5;
+    gastosComunes = 900;
+    itE->altaEdificio(nombreEdificio, cantPisos, gastosComunes);
+    
+}
+
+void cargarPropAptos(){
+    Fabrica * f = Fabrica::getInstance();
+    IContProp* itPA = f->getContProp();
+    dtPropiedadApto* PropApto;
+    int cantAmbiente, cantDormitorios, cantBanios;
+    bool garage, ventAlq;
+    dtDireccion* direccionProp;
+    float mCuadradosEdificado, mCuadradosTotales, valor;
+    string nombreEdificio, codigoProp, ciudad, calle, numero, nombreInmo, nombreZona;
+    
+    //////////           Apartamento 1
+    
+    codigoProp = "1111";
+    cantAmbiente = 2;
+    cantDormitorios = 1;
+    cantBanios = 1;
+    garage = false;
+    ciudad = "Montevideo";
+    calle = "Iturria";
+    numero = "1115";
+    direccionProp = new dtDireccion(ciudad, calle, numero);
+    mCuadradosEdificado = 34;
+    mCuadradosTotales = 34;
+    nombreEdificio = "Apache Valiente";
+    nombreInmo = "Selmo";
+    ventAlq = true;
+    valor = 34567;
+    nombreZona = "Zona1";
+    PropApto = new dtPropiedadApto(cantAmbiente, cantDormitorios, cantBanios, garage, direccionProp, mCuadradosEdificado, nombreEdificio, valor, ventAlq);
+    itPA->altaPropiedadApto(PropApto);
+    
+    //////////////       Apartamento 2
+    
+    codigoProp = "1112";
+    cantAmbiente = 3;
+    cantDormitorios = 1;
+    cantBanios = 1;
+    garage = false;
+    ciudad = "Montevideo";
+    calle = "Iturria";
+    numero = "1115";
+    direccionProp = new dtDireccion(ciudad, calle, numero);
+    mCuadradosEdificado = 35;
+    mCuadradosTotales = 35;
+    nombreEdificio = "Apache Valiente";
+    nombreInmo = "Selmo";
+    ventAlq = true;
+    valor = 65789;
+    nombreZona = "Zona1";
+    PropApto = new dtPropiedadApto(cantAmbiente, cantDormitorios, cantBanios, garage, direccionProp, mCuadradosEdificado, nombreEdificio, valor, ventAlq);
+    itPA->altaPropiedadApto(PropApto);
+    
+    ////////////         Apartamento 3
+    
+    codigoProp = "1113";
+    cantAmbiente = 2;
+    cantDormitorios = 1;
+    cantBanios = 1;
+    garage = true;
+    ciudad = "Rivera";
+    calle = "CALLEJON";
+    numero = "456";
+    direccionProp = new dtDireccion(ciudad, calle, numero);
+    mCuadradosEdificado = 45;
+    mCuadradosTotales = 45;
+    nombreEdificio = "Mebeo";
+    nombreInmo = "Garcia";
+    ventAlq = false;
+    valor = 7689;
+    nombreZona = "Zona2";
+    PropApto = new dtPropiedadApto(cantAmbiente, cantDormitorios, cantBanios, garage, direccionProp, mCuadradosEdificado, nombreEdificio, valor, ventAlq);
+    itPA->altaPropiedadApto(PropApto);
+    
+    ////////////////     Apartamento 4
+    
+    codigoProp = "1113";
+    cantAmbiente = 7;
+    cantDormitorios = 3;
+    cantBanios = 2;
+    garage = true;
+    ciudad = "Rivera";
+    calle = "CORCEGA ";
+    numero = "3456";
+    direccionProp = new dtDireccion(ciudad, calle, numero);
+    mCuadradosEdificado = 34;
+    mCuadradosTotales = 34;
+    nombreEdificio = "Socrates";
+    nombreInmo = "Garcia";
+    ventAlq = false;
+    valor = 6789;
+    nombreZona = "Zona3";
+    PropApto = new dtPropiedadApto(cantAmbiente, cantDormitorios, cantBanios, garage, direccionProp, mCuadradosEdificado, nombreEdificio, valor, ventAlq);
+    itPA->altaPropiedadApto(PropApto);
+    
+    /////////////         Apartamento 5
+    
+    codigoProp = "1115";
+    cantAmbiente = 4;
+    cantDormitorios = 1;
+    cantBanios = 1;
+    garage = false;
+    ciudad = "Artigas";
+    calle = "LUCRECIA";
+    numero = "456";
+    direccionProp = new dtDireccion(ciudad, calle, numero);
+    mCuadradosEdificado = 25;
+    mCuadradosTotales = 25;
+    nombreEdificio = "El Burdel";
+    nombreInmo = "Invernissi";
+    ventAlq = false;
+    valor = 7890;
+    nombreZona = "Zona4";
+    PropApto = new dtPropiedadApto(cantAmbiente, cantDormitorios, cantBanios, garage, direccionProp, mCuadradosEdificado, nombreEdificio, valor, ventAlq);
+    itPA->altaPropiedadApto(PropApto);
+    
+    //////////////////      Apartamento 6
+    
+    codigoProp = "1116";
+    cantAmbiente = 2;
+    cantDormitorios = 1;
+    cantBanios = 1;
+    garage = false;
+    ciudad = "Artigas";
+    calle = "LUCRECIA";
+    numero = "456";
+    direccionProp = new dtDireccion(ciudad, calle, numero);
+    mCuadradosEdificado = 17;
+    mCuadradosTotales = 17;
+    nombreEdificio = "El Burdel";
+    nombreInmo = "Solei";
+    ventAlq = false;
+    valor = 768;
+    nombreZona = "Zona4";
+    PropApto = new dtPropiedadApto(cantAmbiente, cantDormitorios, cantBanios, garage, direccionProp, mCuadradosEdificado, nombreEdificio, valor, ventAlq);
+    itPA->altaPropiedadApto(PropApto);
+    
+}
+
+void cargarPropCasa(){
+    Fabrica * f = Fabrica::getInstance();
+    IContProp* itPC = f->getContProp();
+    dtPropiedadCasa* PropCasa;
+    string ciudad, calle, numero, nombreZona, nombreInmo, codigoProp;
+    int cantAmbiente, cantDormitorios, cantBanios;
+    bool garage, ventaAlq;
+    dtDireccion* direccionProp;
+    float mCuadradosEdificado, valor, metrosVerdes, mCuadradosTotales;
+    
+    ///////////     Casa 1
+    
+    codigoProp = "2111";
+    cantAmbiente = 12;
+    cantDormitorios = 5;
+    cantBanios = 1;
+    garage = true;
+    ciudad = "Mdeo";
+    calle = "Chana";
+    numero = "2345";
+    direccionProp = new dtDireccion(ciudad, calle, numero);
+    mCuadradosEdificado = 34;
+    mCuadradosTotales = 44;
+    metrosVerdes = 10;
+    nombreInmo = "Selmo";
+    ventaAlq = true;
+    valor = 45000;
+    nombreZona = "Zona5";    
+    PropCasa = new dtPropiedadCasa(cantAmbiente, cantBanios, cantDormitorios, garage, direccionProp, mCuadradosEdificado, metrosVerdes, valor, ventaAlq);
+    itPC->altaPropiedadCasa(PropCasa);
+    
+    ///////////     Casa 2
+    
+    codigoProp = "2112";
+    cantAmbiente = 2;
+    cantDormitorios = 1;
+    cantBanios = 1;
+    garage = false;
+    ciudad = "Paysandu";
+    calle = "Gloria";
+    numero = "345";
+    direccionProp = new dtDireccion(ciudad, calle, numero);
+    mCuadradosEdificado = 35;
+    mCuadradosTotales = 55;
+    metrosVerdes = 20;
+    nombreInmo = "Selmo";
+    ventaAlq = true;
+    valor = 34560;
+    nombreZona = "Zona1";    
+    PropCasa = new dtPropiedadCasa(cantAmbiente, cantBanios, cantDormitorios, garage, direccionProp, mCuadradosEdificado, metrosVerdes, valor, ventaAlq);
+    itPC->altaPropiedadCasa(PropCasa);
+    
+    ///////////     Casa 3
+    
+    codigoProp = "2113";
+    cantAmbiente = 3;
+    cantDormitorios = 1;
+    cantBanios = 1;
+    garage = false;
+    ciudad = "Salto";
+    calle = "CHAPAZ";
+    numero = "345";
+    direccionProp = new dtDireccion(ciudad, calle, numero);
+    mCuadradosEdificado = 12;
+    mCuadradosTotales = 22;
+    metrosVerdes = 10;
+    nombreInmo = "Garcia";
+    ventaAlq = true;
+    valor = 13000;
+    nombreZona = "Zona1";    
+    PropCasa = new dtPropiedadCasa(cantAmbiente, cantBanios, cantDormitorios, garage, direccionProp, mCuadradosEdificado, metrosVerdes, valor, ventaAlq);
+    itPC->altaPropiedadCasa(PropCasa);
+    
+    ///////////     Casa 4
+    
+    codigoProp = "2114";
+    cantAmbiente = 6;
+    cantDormitorios = 3;
+    cantBanios = 2;
+    garage = true;
+    ciudad = "Canelones";
+    calle = "JUANICO";
+    numero = "456";
+    direccionProp = new dtDireccion(ciudad, calle, numero);
+    mCuadradosEdificado = 34;
+    mCuadradosTotales = 34;
+    metrosVerdes = 0;
+    nombreInmo = "Invernissi";
+    ventaAlq = false;
+    valor = 20000;
+    nombreZona = "Zona2";    
+    PropCasa = new dtPropiedadCasa(cantAmbiente, cantBanios, cantDormitorios, garage, direccionProp, mCuadradosEdificado, metrosVerdes, valor, ventaAlq);
+    itPC->altaPropiedadCasa(PropCasa);
+    
+    ///////////     Casa 5
+    
+    codigoProp = "2115";
+    cantAmbiente = 3;
+    cantDormitorios = 1;
+    cantBanios = 1;
+    garage = false;
+    ciudad = "Fray Bentos";
+    calle = "VENECIA";
+    numero = "3456";
+    direccionProp = new dtDireccion(ciudad, calle, numero);
+    mCuadradosEdificado = 25;
+    mCuadradosTotales = 25;
+    metrosVerdes = 0;
+    nombreInmo = "Solei";
+    ventaAlq = false;
+    valor = 56789;
+    nombreZona = "Zona1";    
+    PropCasa = new dtPropiedadCasa(cantAmbiente, cantBanios, cantDormitorios, garage, direccionProp, mCuadradosEdificado, metrosVerdes, valor, ventaAlq);
+    itPC->altaPropiedadCasa(PropCasa);
+    
+}
+
+void cargarZonas(){
+    Fabrica * f = Fabrica::getInstance();
+    IContProp* itZ = f->getContProp();
+    string nombreZ,codigoZ,Departamento;
+    
+    nombreZ="Zona1";
+    codigoZ="101";
+    Departamento="A";
+    itZ->altaZona(nombreZ,codigoZ,Departamento);
+    nombreZ="Zona2";
+    codigoZ="101";
+    Departamento="A";
+    itZ->altaZona(nombreZ,codigoZ,Departamento);
+    nombreZ="Zona3";
+    codigoZ="101";
+    Departamento="B";
+   itZ->altaZona(nombreZ,codigoZ,Departamento);
+    nombreZ="Zona4";
+    codigoZ="101";
+    Departamento="D";
+    itZ->altaZona(nombreZ,codigoZ,Departamento);
+    nombreZ="Zona5";
+    codigoZ="101";
+    Departamento="V";
+    itZ->altaZona(nombreZ,codigoZ,Departamento);
+     
+}
+
+void cargarDeptos(){
+    Fabrica * f = Fabrica::getInstance();
+    IContProp* itD = f->getContProp();
+    string letraDepto, nombreDepto;
+    dtDepartamento* depto;
+   
+    letraDepto = "A";
+    nombreDepto = "Canelones";
+    depto = new dtDepartamento(letraDepto, nombreDepto);
+    itD->altaDepto(depto);
+   
+    letraDepto = "A";
+    nombreDepto = "Canelones";
+    depto = new dtDepartamento(letraDepto, nombreDepto);
+    itD->altaDepto(depto);
+   
+    letraDepto = "B";
+    nombreDepto = "Maldonado";
+    depto = new dtDepartamento(letraDepto, nombreDepto);
+    itD->altaDepto(depto);
+   
+    letraDepto = "C";
+    nombreDepto = "Rocha";
+    depto = new dtDepartamento(letraDepto, nombreDepto);
+    itD->altaDepto(depto);
+   
+    letraDepto = "D";
+    nombreDepto = "Salto";
+    depto = new dtDepartamento(letraDepto, nombreDepto);
+    itD->altaDepto(depto);
+   
+    letraDepto = "E";
+    nombreDepto = "Montevideo";
+    depto = new dtDepartamento(letraDepto, nombreDepto);
+    itD->altaDepto(depto);
+   
+}
+
+void cargarMensajes(){
+    Fabrica * f = Fabrica::getInstance();
+    IContUsuario* m = f->getContUsuario();
+    string usuario, mensaje, inmobiliaria,propiedad;
+    usuario="T1";
+    mensaje="Estoy Interesado";
+    inmobiliaria="I1";
+    propiedad="C1";
+    dtFecha *fecha =new dtFecha(25,5,2016);
+    dtHora *hora=new dtHora(13,02);
+    m->altamensaje(usuario, mensaje, fecha, hora, inmobiliaria, propiedad);
+    usuario="T2";
+
+    mensaje="Cuanto cuesta?";
+    inmobiliaria="I3";
+    propiedad="C4";
+    dtFecha *fecha0 =new dtFecha();
+    dtHora *hora0=new dtHora(12,30);
+    m->altamensaje(usuario, mensaje, fecha0, hora0, inmobiliaria, propiedad);
+    
+    usuario="T3";
+    mensaje="PERDON ME EQUIVOQUE";
+    inmobiliaria="I1";
+    propiedad="C1";
+    
+    dtFecha *fecha1 =new dtFecha(23,5,2016);
+    dtHora *hora1=new dtHora(12,35);
+    m->altamensaje(usuario, mensaje, fecha1, hora1, inmobiliaria, propiedad);
+    
+    usuario="T4";
+    mensaje="Quiero hacer una oferta ya!";
+    inmobiliaria="I2";
+    propiedad="AP1";
+    dtFecha *fecha2 =new dtFecha(1,6,2016);
+    dtHora *hora2=new dtHora(0,30);
+    m->altamensaje(usuario, mensaje, fecha2, hora2, inmobiliaria, propiedad);
+    
+    usuario="T1";
+    mensaje="Tiene humedad?";
+    inmobiliaria="I4";
+    propiedad="AP2";
+    dtFecha *fecha3 =new dtFecha(2,6,2016);
+    dtHora *hora3=new dtHora(12,45);
+    m->altamensaje(usuario, mensaje, fecha3, hora3, inmobiliaria, propiedad);
+    
+    usuario="T5";
+    mensaje="Cual es el precio?";
+    inmobiliaria="I1";
+    propiedad="AP3";
+    dtFecha *fecha4 =new dtFecha(3,6,2016);
+    dtHora *hora4=new dtHora(2,5);
+    m->altamensaje(usuario, mensaje, fecha4, hora4, inmobiliaria, propiedad);
+    
+    
+}
+
+void cargaDatosPrueba(){
+    cout << "CUCargarDatos()" << endl;
+//    Fabrica * f = Fabrica::getInstance();
+//    IContProp * itp = f->getContProp();	
+    // Par\E1metros 
+	
+    //cargarUsuAdmin();
+    cargarUsuInmo();
+    cargarUsuInteresado();
+    cargarEdificios();
+    cargarPropAptos();
+    cargarPropCasa();
+    cargarZonas();
+    cargarDeptos();
+    cargarMensajes();
 }
 

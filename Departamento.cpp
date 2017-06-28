@@ -17,10 +17,19 @@
 #include "ListDicc.h"
 
 Departamento::Departamento() {
+    this->letraDpto="L";
+    this->nombreDpto="Artigas";
+    
     this->IZona = new ListDicc();
 }
 
 Departamento::Departamento(const Departamento& orig) {
+    this->letraDpto=Departamento().letraDpto;
+    this->nombreDpto=Departamento().nombreDpto;
+}
+Departamento::Departamento(string letradepto,string nombredepto){
+    this->letraDpto=letradepto;
+    this->nombreDpto=nombredepto;
 }
 
 Departamento::~Departamento() {    
@@ -57,4 +66,11 @@ IIterator *it=IZona->getIteratorObj();
 
 string Departamento::getLetraDpto(){
     return this->letraDpto;
+}
+ void Departamento::agregarZona(dtZonas* zon){
+    
+     StringKey *sk=new StringKey(zon->getCodigoZona());
+     Zona *z=new Zona(zon->getNombreZona(),zon->getCodigoZona());
+    IZona->add(z,sk);
+         
 }

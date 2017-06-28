@@ -28,7 +28,7 @@ class PropInmo: public ICollectible{
           
         
 public:
-        
+    void altaMensaje(string ,dtFecha *, dtHora*, Interesado*);
 	int getCantidadMensajes();
 	void enviarMensaje(Propiedad*, string);
 	void altaPropEnInmob(Propiedad*);
@@ -38,9 +38,8 @@ public:
         PropInmo();
         PropInmo(const PropInmo& orig);
         virtual ~PropInmo();
-        
         void crearAvisoProp(bool,float);
-
+        void crearChat();
 
         
 private:

@@ -75,14 +75,19 @@ ContProp(const ContProp& orig);
         void agregaMensaje(string,string);
         Lista * listaPropiedadesDisponibles();
         dtPropiedadInmobiliaria * seleccionaPropiedadDisponible(string);
-        void altaInteresado (string,string,int,string,string);
+        void altaInteresado(string,string,int,string,string);
         void altaEdificio(string,int,float);
         Lista * iniciarReporte(Inmobiliaria);
         void altaPropiedadCasa(dtPropiedadCasa*);
         void altaPropiedadApto(dtPropiedadApto*);
         void eliminarProp(string);
+
+        void altaZona(string,string,string);
+        void altaDepto(dtDepartamento*);
+
         Lista* listaEdificiosDisp();
         void seleccionarEdificio(string);
+
     };
 
 #endif /* CONTPROP_H */

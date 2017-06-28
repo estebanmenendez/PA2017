@@ -92,12 +92,12 @@ Lista * ContProp::listaConversacionesInmobiliarias(){}
 void ContProp::seleccionaConversacion(string){}
 Lista * ContProp::listaUltimosCincoMensajes(){}
 void ContProp::seleccionaMensaje(string){}
+
 void ContProp::agregaMensaje(string,string){}
 
 
 void ContProp::altaInteresado (string nombre, string apellido, int edad, string email,string contra){
     Interesado * i = new Interesado(nombre, apellido, edad, email,contra);
-    
 }
 
 
@@ -163,4 +163,18 @@ void ContProp::seleccionarEdificio(string nombreEd){
     }
     else {throw invalid_argument("No existe ese edificio");}
     
+}
+
+void ContProp::altaZona(string nombreZona,string codigoZona,string letradepto){
+    StringKey *sk=new StringKey(letradepto);
+    Departamento *d=dynamic_cast<Departamento*>(IDepartamento->find(sk));
+    dtZonas *zona =new dtZonas(nombreZona,codigoZona);
+    d->agregarZona(zona);
+    
+}
+
+void ContProp::altaDepto(dtDepartamento* depto){
+    StringKey* sk = new StringKey(depto->getletraDepartamento());
+   Departamento* dpto = new Departamento(depto->getletraDepartamento(), depto->getnombreDepartamento());
+    IDepartamento->add(dpto, sk);
 }

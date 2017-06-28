@@ -15,7 +15,8 @@
 #include <stdio.h>
 #include <iostream>
 #include "Chat.h"
-
+#include "Mensaje.h"
+#include "Lista.h"
 
 int Chat::getChat(){
 	return Chat::getChat();
@@ -65,3 +66,12 @@ dtMensajes** Chat::getUltimosCinco(){
 void Chat::enviaMensaje(string mensaje ){
 	
 }
+void Chat::setInteresado(Interesado *usu){
+    this->Inter=usu;
+}
+void Chat::altaMensaje(string mensa,dtFecha* fecha,dtHora* hora, Interesado * usuario) {
+    setInteresado(usuario);
+    Mensaje *m=new Mensaje(mensa,fecha,hora);
+    IMensajes->add(m);
+}
+
