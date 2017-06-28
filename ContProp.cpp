@@ -102,17 +102,12 @@ Lista * ContProp::listaConversacionesInmobiliarias(){}
 void ContProp::seleccionaConversacion(string){}
 Lista * ContProp::listaUltimosCincoMensajes(){}
 void ContProp::seleccionaMensaje(string){}
-<<<<<<< HEAD
-void ContProp::altaInteresado (string nombre, string apellido, int edad, string email){
-    Interesado * i = new Interesado(nombre, apellido, edad, email);
-=======
+
 void ContProp::agregaMensaje(string,string){}
 
 
 void ContProp::altaInteresado (string nombre, string apellido, int edad, string email,string contra){
     Interesado * i = new Interesado(nombre, apellido, edad, email,contra);
->>>>>>> 9433d8471c9928d68a97065d9557fa255bb5520e
-    
 }
 
 

@@ -31,13 +31,10 @@ public:
     virtual void iniciarSesion()= 0;
     virtual bool verificarContrasena(string, string)= 0;
     virtual void activarUsuario(string, string)= 0;
-<<<<<<< HEAD
-    virtual bool validarPwd(string)= 0;
-    virtual void altaSesion(Usuarios*)= 0;
-=======
+
     virtual bool validarPwd(string,string)= 0;
     virtual Usuarios* altaSesion(string)= 0;
->>>>>>> 9433d8471c9928d68a97065d9557fa255bb5520e
+
     virtual void cancelarAccion()= 0;
     virtual dtReporteInmobiliaria * obtenerReporteInmobiliarias ()= 0;
     virtual void CerrarSesion()= 0;

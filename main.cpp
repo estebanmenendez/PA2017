@@ -618,7 +618,7 @@ void cargarUsuInmo(){
     calle = "Benitez";
     numero = "1134";
     dirInmo = new dtDireccion(ciudad, calle, numero);
-    itUInmo->altaInmobiliaria(nombre, dirInmo, email);
+    itUInmo->altaInmobiliaria(nombre, dirInmo, email, pwd);
     
     email = "inm2@sis.com";
     pwd = "pass5";
@@ -627,7 +627,7 @@ void cargarUsuInmo(){
     calle = "Rivera";
     numero = "1340";
     dirInmo = new dtDireccion(ciudad, calle, numero);
-    itUInmo->altaInmobiliaria(nombre, dirInmo, email);
+    itUInmo->altaInmobiliaria(nombre, dirInmo, email, pwd);
    
     email = "inm3@sis.com";
     pwd = "pass6";
@@ -636,7 +636,7 @@ void cargarUsuInmo(){
     calle = "Comercio";
     numero = "234";
     dirInmo = new dtDireccion(ciudad, calle, numero);
-    itUInmo->altaInmobiliaria(nombre, dirInmo, email);
+    itUInmo->altaInmobiliaria(nombre, dirInmo, email, pwd);
     
     email = "inm4@sis.com";
     pwd = "pass7";
@@ -645,7 +645,7 @@ void cargarUsuInmo(){
     calle = "Inca";
     numero = "3456";
     dirInmo = new dtDireccion(ciudad, calle, numero);
-    itUInmo->altaInmobiliaria(nombre, dirInmo, email);
+    itUInmo->altaInmobiliaria(nombre, dirInmo, email, pwd);
     
 }
 
@@ -660,35 +660,35 @@ void cargarUsuInteresado(){
     nombreInt = "Julio";
     apellidoInt = "Chaz";
     edadInt = 34;
-    itUInmo->altaInteresado(nombreInt, apellidoInt, edadInt, email);
+    itUInmo->altaInteresado(nombreInt, apellidoInt, edadInt, email, pwd);
     
     email = "int2@sis.com";
     pwd = "passt2";
     nombreInt = "Andrea";
     apellidoInt = "Berruti";
     edadInt = 56;
-    itUInmo->altaInteresado(nombreInt, apellidoInt, edadInt, email);
+    itUInmo->altaInteresado(nombreInt, apellidoInt, edadInt, email, pwd);
     
     email = "int3@sis.com";
     pwd = "passt3";
     nombreInt = "Sonia";
     apellidoInt = "Braga";
     edadInt = 45;
-    itUInmo->altaInteresado(nombreInt, apellidoInt, edadInt, email);
+    itUInmo->altaInteresado(nombreInt, apellidoInt, edadInt, email, pwd);
     
     email = "int4@sis.com";
     pwd = "passt4";
     nombreInt = "Alfonso";
     apellidoInt = "Mier";
     edadInt = 30;
-    itUInmo->altaInteresado(nombreInt, apellidoInt, edadInt, email);
+    itUInmo->altaInteresado(nombreInt, apellidoInt, edadInt, email, pwd);
     
     email = "int5@sis.com";
     pwd = "passt5";
     nombreInt = "Juan";
     apellidoInt = "Alpi";
     edadInt = 60;
-    itUInmo->altaInteresado(nombreInt, apellidoInt, edadInt, email);
+    itUInmo->altaInteresado(nombreInt, apellidoInt, edadInt, email, pwd);
     
 }
 

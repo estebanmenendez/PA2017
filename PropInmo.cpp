@@ -54,6 +54,7 @@ void PropInmo::enviarMensaje(Propiedad * propiedad, string mensaje){
 void PropInmo::altaMensaje(string mensaje,dtFecha *fecha, dtHora* hora, Interesado * usu){
     Chat *chatAlta;
     chatAlta->altaMensaje(mensaje,fecha,hora,usu);
+    
 }
 
 void PropInmo::eliminarLinks(){

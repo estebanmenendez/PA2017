@@ -64,4 +64,5 @@ void Inmobiliaria::altaMensaje(dtFecha* fecha,dtHora* hora,string mensaje, Inter
      PropInmo *p=dynamic_cast<PropInmo*>(IPropInmo->find(sk));
      p->altaMensaje(mensaje,fecha,hora,usu);
      
+     
      }

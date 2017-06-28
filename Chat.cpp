@@ -75,3 +75,4 @@ void Chat::altaMensaje(string mensa,dtFecha* fecha,dtHora* hora, Interesado * us
     Mensaje *m=new Mensaje(mensa,fecha,hora);
     IMensajes->add(m);
 }
+
