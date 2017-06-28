@@ -55,7 +55,7 @@ using namespace std;
         virtual void agregaMensaje(string,string) = 0;
         virtual Lista * listaPropiedadesDisponibles() = 0;
         virtual dtPropiedadInmobiliaria * seleccionaPropiedadDisponible(string) = 0;
-        virtual void altaInteresado (string,string,int,string) = 0;
+        virtual void altaInteresado (string,string,int,string,string) = 0;
         virtual void altaEdificio(string,int,float) = 0;
         virtual Lista* iniciarReporte(Inmobiliaria) = 0;
         virtual void altaPropiedadCasa(dtPropiedadCasa*) = 0;

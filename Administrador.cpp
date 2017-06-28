@@ -13,17 +13,14 @@
 
 #include "Administrador.h"
 
-Administrador::Administrador(){
+Administrador::Administrador(string usu,string pwd):Usuarios(usu,pwd){
     
 }
 
 Administrador::~Administrador(){
     
 }
-Administrador::Administrador(string pwd, string email){
-    this->getEmail() = "adminsis";
-    this->getPwd() = "pass1";
-}
+
 string Administrador::getTipo(){
   return "Administrador";
 }

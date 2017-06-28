@@ -104,8 +104,8 @@ void ContProp::seleccionaMensaje(string){}
 void ContProp::agregaMensaje(string,string){}
 
 
-void ContProp::altaInteresado (string nombre, string apellido, int edad, string email){
-    Interesado * i = new Interesado(nombre, apellido, edad, email);
+void ContProp::altaInteresado (string nombre, string apellido, int edad, string email,string contra){
+    Interesado * i = new Interesado(nombre, apellido, edad, email,contra);
     
 }
 

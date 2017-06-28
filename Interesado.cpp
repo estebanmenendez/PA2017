@@ -22,12 +22,11 @@
   Interesado::Interesado(){
       
   }
-Interesado::Interesado(string nombre, string apellido,int edad, string email){
+Interesado::Interesado(string nombre, string apellido,int edad, string email,string contra):Usuarios(email,contra ){
     this->nombreInt = nombre;
     this->apellidoInt = apellido;
     this->edad = edad;
-    this->getEmail() = email;
-}
+}   
   Interesado::~Interesado(){
       
   }

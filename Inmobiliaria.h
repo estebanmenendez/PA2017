@@ -27,7 +27,7 @@ class Inmobiliaria : public Usuarios{
         
     public:
         Inmobiliaria();
-        Inmobiliaria(string nombre, dtDireccion* dir, string email);
+        Inmobiliaria(string, dtDireccion*, string,string);
         virtual ~Inmobiliaria();
         string getTipo();
         string getPwd();

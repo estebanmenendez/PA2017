@@ -23,10 +23,9 @@ Inmobiliaria::~Inmobiliaria(){
     
 }
 
-Inmobiliaria::Inmobiliaria(string nombre, dtDireccion* dir, string email){
+Inmobiliaria::Inmobiliaria(string nombre, dtDireccion* dir,string email,string contra):Usuarios(email,contra ){
     this->nombreInm = nombre;
     this->direccion = dir;
-    this->getEmail()=email;
 }     
 
 void Inmobiliaria::altaPropEnInmob(Propiedad *p){
